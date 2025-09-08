@@ -10,18 +10,18 @@ This challenge was something I could not done last year, hence doing it right no
 
 Loading the binary into the IDA, we see it does not have any obfuscation within the place and seems straightforward enough to navigate initially:
 
-![image.png](/images/image.png)
+![image.png](./images/image.png)
 
 Though, as it appears to be very simple, we see it accepts a command line argument and compares whether it is of size 32 or not. If not, it will end saying wrong key length, very informative. 
 Apart from this, the thing that stands out is the call of `lpAddress` and passing the `Destination` as first argument which contains our provided input. 
 
 As I could not find other function off the bat where `lpAddress` was referenced, checking the cross-references helped in narrowing down where it might and to our surprise, it was in a function called `TlsCallback`
 
-![image.png](/images/image_1.png)
+![image.png](./images/image_1.png)
 
 We see the `TlsCallback_0` registered in the `TlsCallback` table, meaning we are dealing with one of the registered callback that will be ran before we reach the main function. Given, what we see above, the callback function is initializing the shellcode which will gets called during the execution of the `main` .
 
-![image.png](/images/image_2.png)
+![image.png](./images/image_2.png)
 
 ```jsx
 void __fastcall TlsCallback_0(__int64 a1, int a2)
@@ -48,7 +48,7 @@ This functions is also rather straightforward, which does not makes sense as it 
 
 Looking at it, we can guess these are instructions for the assembly, presumably a shellcode which might be something we have to analyze dynamically.
 
-![image.png](/images/image_3.png)
+![image.png](./images/image_3.png)
 
 ---
 
@@ -67,7 +67,7 @@ NTSYSAPI BOOLEAN RtlInstallFunctionTableCallback(
 
 Looking into the x64Dbg for the information, we see that the 4th argument residing in the R9 points to the address of a RUNTIME function located at `1400010B0` 
 
-![image.png](/images/image_4.png)
+![image.png](./images/image_4.png)
 
 The following functions seems to be doing a couple of things, much of them related to our shellcode which is at `lpAddress` , this function is rather simple to understand once we get hang of the structure. 
 
