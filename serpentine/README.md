@@ -1,10 +1,7 @@
 # Serpentine - Flare-On 11 (9th Challenge)
 
----
-Title: FLARE-ON 2024 - Serpentine
 Author: Robin (@D4mianWayne), [PwnFuzz](https://www.pwnfuzz.com)  
-Description: Technical research notes and documented solutions for Flare-On
----
+
 
 This challenge was something I could not done last year, hence doing it right now to learn the missed steps along with good enough writeup to support my understanding. 
 
