@@ -1,0 +1,222 @@
+875F1300 ; __unwind { // __GSHandlerCheck_EH4
+.text:00007FF7875F1300                 push    rbp
+.text:00007FF7875F1302                 push    rbx
+.text:00007FF7875F1303                 push    rsi
+.text:00007FF7875F1304                 push    rdi
+.text:00007FF7875F1305                 push    r12
+.text:00007FF7875F1307                 push    r14
+.text:00007FF7875F1309                 push    r15
+.text:00007FF7875F130B                 lea     rbp, [rsp-27h]
+.text:00007FF7875F1310                 sub     rsp, 0B0h
+.text:00007FF7875F1317                 mov     rax, cs:__security_cookie
+.text:00007FF7875F131E                 xor     rax, rsp
+.text:00007FF7875F1321                 mov     [rbp+57h+var_40], rax
+.text:00007FF7875F1325                 mov     r12, r9
+.text:00007FF7875F1328                 mov     r15, r8
+.text:00007FF7875F132B                 mov     rsi, rdx
+.text:00007FF7875F132E                 mov     r14, rcx
+.text:00007FF7875F1331                 mov     [rbp+57h+var_98], rcx
+.text:00007FF7875F1335                 xor     ebx, ebx
+.text:00007FF7875F1337                 xorps   xmm1, xmm1
+.text:00007FF7875F133A                 movdqu  xmmword ptr [rbp+57h+var_78], xmm1
+.text:00007FF7875F133F                 mov     [rbp+57h+var_68], rbx
+.text:00007FF7875F1343                 mov     edx, 20h ; ' '
+.text:00007FF7875F1348                 lea     rcx, [rbp+57h+var_78]
+.text:00007FF7875F134C                 call    sub_7FF7879A4DA0
+.text:00007FF7875F1351                 xorps   xmm0, xmm0
+.text:00007FF7875F1354                 mov     rdi, [rbp+57h+var_78]
+.text:00007FF7875F1358                 movups  xmmword ptr [rdi], xmm0
+.text:00007FF7875F135B                 movups  xmmword ptr [rdi+10h], xmm0
+.text:00007FF7875F135F                 lea     r9, [rdi+20h]
+.text:00007FF7875F1363                 mov     [rbp+57h+var_78+8], r9
+.text:00007FF7875F1367                 cmp     qword ptr [rsi+18h], 0Fh
+.text:00007FF7875F136C                 jbe     short loc_7FF7875F137A
+.text:00007FF7875F136E                 mov     rdx, [rsi]
+.text:00007FF7875F1371                 add     rdx, [rsi+10h]
+.text:00007FF7875F1375                 mov     rsi, [rsi]
+.text:00007FF7875F1378                 jmp     short loc_7FF7875F1381
+.text:00007FF7875F137A ; ---------------------------------------------------------------------------
+.text:00007FF7875F137A
+.text:00007FF7875F137A loc_7FF7875F137A:                       ; CODE XREF: sub_7FF7875F1300+6C↑j
+.text:00007FF7875F137A                 mov     rdx, [rsi+10h]
+.text:00007FF7875F137E                 add     rdx, rsi
+.text:00007FF7875F1381
+.text:00007FF7875F1381 loc_7FF7875F1381:                       ; CODE XREF: sub_7FF7875F1300+78↑j
+.text:00007FF7875F1381                 mov     r8, rdi
+.text:00007FF7875F1384                 mov     rcx, rsi
+.text:00007FF7875F1387                 call    sub_7FF7879A9850
+.text:00007FF7875F138C                 mov     rcx, [r15+10h]
+.text:00007FF7875F1390                 mov     rdx, [r12+10h]
+.text:00007FF7875F1395                 mov     rax, 7FFFFFFFFFFFFFFFh
+.text:00007FF7875F139F                 sub     rax, rcx
+.text:00007FF7875F13A2                 cmp     rax, rdx
+.text:00007FF7875F13A5                 jb      loc_7FF7875F1580
+.text:00007FF7875F13AB                 cmp     qword ptr [r15+18h], 0Fh
+.text:00007FF7875F13B0                 jbe     short loc_7FF7875F13B5
+.text:00007FF7875F13B2                 mov     r15, [r15]
+.text:00007FF7875F13B5
+.text:00007FF7875F13B5 loc_7FF7875F13B5:                       ; CODE XREF: sub_7FF7875F1300+B0↑j
+.text:00007FF7875F13B5                 cmp     qword ptr [r12+18h], 0Fh
+.text:00007FF7875F13BB                 jbe     short loc_7FF7875F13C1
+.text:00007FF7875F13BD                 mov     r12, [r12]
+.text:00007FF7875F13C1
+.text:00007FF7875F13C1 loc_7FF7875F13C1:                       ; CODE XREF: sub_7FF7875F1300+BB↑j
+.text:00007FF7875F13C1                 mov     [rsp+0E0h+var_B0], rdx ; size_t
+.text:00007FF7875F13C6                 mov     [rsp+0E0h+Src], r12 ; Src
+.text:00007FF7875F13CB                 mov     [rsp+0E0h+Size], rcx ; Size
+.text:00007FF7875F13D0                 mov     r9, r15
+.text:00007FF7875F13D3                 lea     rcx, [rbp+57h+var_60] ; void *
+.text:00007FF7875F13D7                 call    sub_7FF7879A54A0
+.text:00007FF7875F13DC                 nop
+.text:00007FF7875F13DD                 xorps   xmm1, xmm1
+.text:00007FF7875F13E0                 movdqu  xmmword ptr [rbp+57h+Block], xmm1
+.text:00007FF7875F13E5                 mov     [rbp+57h+var_80], rbx
+.text:00007FF7875F13E9                 mov     edx, 20h ; ' '
+.text:00007FF7875F13EE                 lea     rcx, [rbp+57h+Block]
+.text:00007FF7875F13F2                 call    sub_7FF7879A4DA0
+.text:00007FF7875F13F7                 xorps   xmm0, xmm0
+.text:00007FF7875F13FA                 mov     rsi, [rbp+57h+Block]
+.text:00007FF7875F13FE                 movups  xmmword ptr [rsi], xmm0
+.text:00007FF7875F1401                 movups  xmmword ptr [rsi+10h], xmm0
+.text:00007FF7875F1405                 lea     r9, [rsi+20h]
+.text:00007FF7875F1409                 mov     [rbp+57h+Block+8], r9
+.text:00007FF7875F140D                 lea     rcx, [rbp+57h+var_60]
+.text:00007FF7875F1411                 cmp     [rbp+57h+var_48], 0Fh
+.text:00007FF7875F1416                 cmova   rcx, [rbp+57h+var_60]
+.text:00007FF7875F141B                 mov     rdx, [rbp+57h+var_50]
+.text:00007FF7875F141F                 add     rdx, rcx
+.text:00007FF7875F1422                 lea     rcx, [rbp+57h+var_60]
+.text:00007FF7875F1426                 cmp     [rbp+57h+var_48], 0Fh
+.text:00007FF7875F142B                 cmova   rcx, [rbp+57h+var_60]
+.text:00007FF7875F1430                 mov     r8, rsi
+.text:00007FF7875F1433                 call    sub_7FF7879A9850
+.text:00007FF7875F1438                 xorps   xmm0, xmm0
+.text:00007FF7875F143B                 movups  xmmword ptr [r14], xmm0
+.text:00007FF7875F143F                 mov     [r14], rbx
+.text:00007FF7875F1442                 mov     [r14+8], rbx
+.text:00007FF7875F1446                 mov     [r14+10h], rbx
+.text:00007FF7875F144A                 mov     edx, 20h ; ' '
+.text:00007FF7875F144F                 mov     rcx, r14
+.text:00007FF7875F1452                 call    sub_7FF7879A4DA0
+.text:00007FF7875F1457                 mov     rax, [r14]
+.text:00007FF7875F145A                 xorps   xmm0, xmm0
+.text:00007FF7875F145D                 movups  xmmword ptr [rax], xmm0
+.text:00007FF7875F1460                 movups  xmmword ptr [rax+10h], xmm0
+.text:00007FF7875F1464                 add     rax, 20h ; ' '
+.text:00007FF7875F1468                 mov     [r14+8], rax
+.text:00007FF7875F146C                 mov     rcx, [r14]
+.text:00007FF7875F146F                 lea     rdx, [rcx+1Fh]
+.text:00007FF7875F1473                 lea     rax, [rdi+1Fh]
+.text:00007FF7875F1477                 cmp     rcx, rax
+.text:00007FF7875F147A                 ja      short loc_7FF7875F1481
+.text:00007FF7875F147C                 cmp     rdx, rdi
+.text:00007FF7875F147F                 jnb     short loc_7FF7875F1499
+.text:00007FF7875F1481
+.text:00007FF7875F1481 loc_7FF7875F1481:                       ; CODE XREF: sub_7FF7875F1300+17A↑j
+.text:00007FF7875F1481                 lea     rax, [rsi+1Fh]
+.text:00007FF7875F1485                 cmp     rcx, rax
+.text:00007FF7875F1488                 ja      short loc_7FF7875F148F
+.text:00007FF7875F148A                 cmp     rdx, rsi
+.text:00007FF7875F148D                 jnb     short loc_7FF7875F1499
+.text:00007FF7875F148F
+.text:00007FF7875F148F loc_7FF7875F148F:                       ; CODE XREF: sub_7FF7875F1300+188↑j
+.text:00007FF7875F148F                 cmp     rcx, r14
+.text:00007FF7875F1492                 ja      short loc_7FF7875F14BB
+.text:00007FF7875F1494                 cmp     rdx, r14
+.text:00007FF7875F1497                 jb      short loc_7FF7875F14BB
+.text:00007FF7875F1499
+.text:00007FF7875F1499 loc_7FF7875F1499:                       ; CODE XREF: sub_7FF7875F1300+17F↑j
+.text:00007FF7875F1499                                         ; sub_7FF7875F1300+18D↑j
+.text:00007FF7875F1499                 mov     rdx, rsi
+.text:00007FF7875F149C                 sub     rdx, rdi
+.text:00007FF7875F149F                 nop
+.text:00007FF7875F14A0
+.text:00007FF7875F14A0 loc_7FF7875F14A0:                       ; CODE XREF: sub_7FF7875F1300+1B7↓j
+.text:00007FF7875F14A0                 lea     rax, [rdi+rbx]
+.text:00007FF7875F14A4                 movzx   ecx, byte ptr [rdx+rax]
+.text:00007FF7875F14A8                 xor     cl, [rax]
+.text:00007FF7875F14AA                 mov     rax, [r14]
+.text:00007FF7875F14AD                 mov     [rbx+rax], cl
+.text:00007FF7875F14B0                 inc     rbx
+.text:00007FF7875F14B3                 cmp     rbx, 20h ; ' '
+.text:00007FF7875F14B7                 jb      short loc_7FF7875F14A0
+.text:00007FF7875F14B9                 jmp     short loc_7FF7875F14DC
+.text:00007FF7875F14BB ; ---------------------------------------------------------------------------
+.text:00007FF7875F14BB
+.text:00007FF7875F14BB loc_7FF7875F14BB:                       ; CODE XREF: sub_7FF7875F1300+192↑j
+.text:00007FF7875F14BB                                         ; sub_7FF7875F1300+197↑j
+.text:00007FF7875F14BB                 movdqu  xmm1, xmmword ptr [rsi]
+.text:00007FF7875F14BF                 movdqu  xmm0, xmmword ptr [rdi]
+.text:00007FF7875F14C3                 xorps   xmm1, xmm0
+.text:00007FF7875F14C6                 movdqu  xmmword ptr [rcx], xmm1
+.text:00007FF7875F14CA                 movdqu  xmm2, xmmword ptr [rsi+10h]
+.text:00007FF7875F14CF                 movdqu  xmm0, xmmword ptr [rdi+10h]
+.text:00007FF7875F14D4                 xorps   xmm2, xmm0
+.text:00007FF7875F14D7                 movdqu  xmmword ptr [rcx+10h], xmm2
+.text:00007FF7875F14DC
+.text:00007FF7875F14DC loc_7FF7875F14DC:                       ; CODE XREF: sub_7FF7875F1300+1B9↑j
+.text:00007FF7875F14DC                 test    rsi, rsi
+.text:00007FF7875F14DF                 jz      short loc_7FF7875F1519
+.text:00007FF7875F14E1                 mov     rdx, [rbp+57h+var_80]
+.text:00007FF7875F14E5                 sub     rdx, rsi
+.text:00007FF7875F14E8                 mov     rax, rsi
+.text:00007FF7875F14EB                 cmp     rdx, 1000h
+.text:00007FF7875F14F2                 jb      short loc_7FF7875F1510
+.text:00007FF7875F14F4                 add     rdx, 27h ; '''
+.text:00007FF7875F14F8                 mov     rsi, [rsi-8]
+.text:00007FF7875F14FC                 sub     rax, rsi
+.text:00007FF7875F14FF                 add     rax, 0FFFFFFFFFFFFFFF8h
+.text:00007FF7875F1503                 cmp     rax, 1Fh
+.text:00007FF7875F1507                 jbe     short loc_7FF7875F1510
+.text:00007FF7875F1509                 call    cs:_invalid_parameter_noinfo_noreturn
+.text:00007FF7875F1509 ; ---------------------------------------------------------------------------
+.text:00007FF7875F150F                 align 10h
+.text:00007FF7875F1510
+.text:00007FF7875F1510 loc_7FF7875F1510:                       ; CODE XREF: sub_7FF7875F1300+1F2↑j
+.text:00007FF7875F1510                                         ; sub_7FF7875F1300+207↑j
+.text:00007FF7875F1510                 mov     rcx, rsi        ; Block
+.text:00007FF7875F1513                 call    j_j_free
+.text:00007FF7875F1518                 nop
+.text:00007FF7875F1519
+.text:00007FF7875F1519 loc_7FF7875F1519:                       ; CODE XREF: sub_7FF7875F1300+1DF↑j
+.text:00007FF7875F1519                 lea     rcx, [rbp+57h+var_60]
+.text:00007FF7875F151D                 call    sub_7FF78799D3B0
+.text:00007FF7875F1522                 nop
+.text:00007FF7875F1523                 test    rdi, rdi
+.text:00007FF7875F1526                 jz      short loc_7FF7875F155F
+.text:00007FF7875F1528                 mov     rdx, [rbp+57h+var_68]
+.text:00007FF7875F152C                 sub     rdx, rdi
+.text:00007FF7875F152F                 mov     rax, rdi
+.text:00007FF7875F1532                 cmp     rdx, 1000h
+.text:00007FF7875F1539                 jb      short loc_7FF7875F1557
+.text:00007FF7875F153B                 add     rdx, 27h ; '''
+.text:00007FF7875F153F                 mov     rdi, [rdi-8]
+.text:00007FF7875F1543                 sub     rax, rdi
+.text:00007FF7875F1546                 add     rax, 0FFFFFFFFFFFFFFF8h
+.text:00007FF7875F154A                 cmp     rax, 1Fh
+.text:00007FF7875F154E                 jbe     short loc_7FF7875F1557
+.text:00007FF7875F1550                 call    cs:_invalid_parameter_noinfo_noreturn
+.text:00007FF7875F1550 ; ---------------------------------------------------------------------------
+.text:00007FF7875F1556                 db 0CCh
+.text:00007FF7875F1557 ; ---------------------------------------------------------------------------
+.text:00007FF7875F1557
+.text:00007FF7875F1557 loc_7FF7875F1557:                       ; CODE XREF: sub_7FF7875F1300+239↑j
+.text:00007FF7875F1557                                         ; sub_7FF7875F1300+24E↑j
+.text:00007FF7875F1557                 mov     rcx, rdi        ; Block
+.text:00007FF7875F155A                 call    j_j_free
+.text:00007FF7875F155F
+.text:00007FF7875F155F loc_7FF7875F155F:                       ; CODE XREF: sub_7FF7875F1300+226↑j
+.text:00007FF7875F155F                 mov     rax, r14
+.text:00007FF7875F1562                 mov     rcx, [rbp+57h+var_40]
+.text:00007FF7875F1566                 xor     rcx, rsp
+.text:00007FF7875F1569                 call    sub_7FF7879BC220
+.text:00007FF7875F156E                 add     rsp, 0B0h
+.text:00007FF7875F1575                 pop     r15
+.text:00007FF7875F1577                 pop     r14
+.text:00007FF7875F1579                 pop     r12
+.text:00007FF7875F157B                 pop     rdi
+.text:00007FF7875F157C                 pop     rsi
+.text:00007FF7875F157D                 pop     rbx
+.text:00007FF7875F157E                 pop     rbp
+.text:00007FF7875F157F                 retn
+.text:00007FF7875F1580 ; ---------------------------------------------------------------------------

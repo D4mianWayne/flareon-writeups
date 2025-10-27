@@ -1,0 +1,60 @@
+
+00000001400282D3 mov     eax, [rbp+2950h+var_298]
+00000001400282D9 mov     [rbp+2950h+var_25B0], eax
+00000001400282DF mov     rax, cs:off_1400C0A10
+00000001400282E6 mov     rcx, 846211A805BED01Ah
+00000001400282F0 add     rax, rcx
+00000001400282F3 sub     rsp, 20h
+00000001400282F7 lea     rcx, [rbp+2950h+var_1E20]
+00000001400282FE call    rax			; Junk call -> 0x000000014000D080		; mov     rax, rcx
+0000000140028300 add     rsp, 20h
+0000000140028304 mov     rcx, [rax]
+0000000140028307 mov     rax, cs:off_1400B95B8
+000000014002830E mov     rdx, 0C3C95D588BBD7034h
+0000000140028318 add     rax, rdx
+000000014002831B sub     rsp, 20h
+000000014002831F call    rax			; Junk call -> sub_14001DF40		; mov     rax, rcx
+0000000140028321 add     rsp, 20h
+0000000140028325 mov     rcx, [rax]
+0000000140028328 mov     rax, cs:off_1400BB738
+000000014002832F mov     rdx, 8131B0A28FEA70C4h
+0000000140028339 add     rax, rdx
+000000014002833C sub     rsp, 20h
+0000000140028340 call    rax			; Junk call -> sub_14001E6F0		; mov     rax, rcx
+0000000140028342 add     rsp, 20h
+0000000140028346 mov     rcx, [rax]
+0000000140028349 mov     rax, cs:off_1400B17F0
+0000000140028350 mov     rdx, 0FE93DCA7DAFF4260h
+000000014002835A add     rax, rdx
+000000014002835D sub     rsp, 20h
+0000000140028361 call    rax			; Junk call -> sub_14001E310		; mov     rax, rcx
+0000000140028363 add     rsp, 20h
+0000000140028367 mov     rcx, rax
+000000014002836A mov     eax, [rbp+2950h+var_25B0]
+0000000140028370 mov     rcx, [rcx]
+0000000140028373 mov     ecx, [rcx]
+0000000140028375 sub     eax, ecx
+0000000140028377 setnl   cl
+000000014002837A mov     rax, cs:off_1400A2BC0
+0000000140028381 movzx   ecx, cl
+0000000140028384 lea     rcx, [rax+rcx*8+1D0h]
+000000014002838C mov     rax, 864AB646DB1C1E3Ah
+0000000140028396 mov     rcx, [rax+rcx]
+000000014002839A mov     rax, 36285B47FE6A8833h
+00000001400283A4 mov     r9, 0EE284B0AA4750561h
+00000001400283AE cmovl   r9, rax
+00000001400283B2 mov     r8, r9
+00000001400283B5 neg     r8
+00000001400283B8 mov     rax, rcx
+00000001400283BB or      rax, r8
+00000001400283BE mov     rdx, rcx
+00000001400283C1 sub     rdx, r9
+00000001400283C4 sub     rdx, rax
+00000001400283C7 add     rdx, rdx
+00000001400283CA and     rcx, r8
+00000001400283CD sub     rax, rcx
+00000001400283D0 mov     rcx, rax
+00000001400283D3 or      rcx, rdx
+00000001400283D6 and     rax, rdx
+00000001400283D9 add     rax, rcx
+00000001400283DC jmp     rax

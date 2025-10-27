@@ -1,0 +1,1032 @@
+CFF4663                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4667                 retn
+.text:00007FF7BCFF4667 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4668                 align 10h
+.text:00007FF7BCFF4670                 mov     rax, rcx
+.text:00007FF7BCFF4673                 retn
+.text:00007FF7BCFF4673 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4674                 align 20h
+.text:00007FF7BCFF4680                 mov     rax, rcx
+.text:00007FF7BCFF4683                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4687                 retn
+.text:00007FF7BCFF4687 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4688                 align 10h
+.text:00007FF7BCFF4690                 mov     rax, rcx
+.text:00007FF7BCFF4693                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4697                 retn
+.text:00007FF7BCFF4697 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4698                 align 20h
+.text:00007FF7BCFF46A0                 mov     rax, rcx
+.text:00007FF7BCFF46A3                 retn
+.text:00007FF7BCFF46A3 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF46A4                 align 10h
+.text:00007FF7BCFF46B0                 mov     rax, rcx
+.text:00007FF7BCFF46B3                 retn
+.text:00007FF7BCFF46B3 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF46B4                 align 20h
+.text:00007FF7BCFF46C0                 mov     rax, rcx
+.text:00007FF7BCFF46C3                 add     rax, 18h
+.text:00007FF7BCFF46C7                 retn
+.text:00007FF7BCFF46C7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF46C8                 align 10h
+.text:00007FF7BCFF46D0                 mov     rax, rcx
+.text:00007FF7BCFF46D3                 add     rax, 20h ; ' '
+.text:00007FF7BCFF46D7                 retn
+.text:00007FF7BCFF46D7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF46D8                 align 20h
+.text:00007FF7BCFF46E0                 mov     rax, rcx
+.text:00007FF7BCFF46E3                 add     rax, 8
+.text:00007FF7BCFF46E7                 retn
+.text:00007FF7BCFF46E7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF46E8                 align 10h
+.text:00007FF7BCFF46F0                 mov     rax, rcx
+.text:00007FF7BCFF46F3                 add     rax, 18h
+.text:00007FF7BCFF46F7                 retn
+.text:00007FF7BCFF46F7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF46F8                 align 20h
+.text:00007FF7BCFF4700                 mov     rax, rcx
+.text:00007FF7BCFF4703                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4707                 retn
+.text:00007FF7BCFF4707 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4708                 align 10h
+.text:00007FF7BCFF4710                 mov     rax, rcx
+.text:00007FF7BCFF4713                 retn
+.text:00007FF7BCFF4713 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4714                 align 20h
+.text:00007FF7BCFF4720                 mov     rax, rcx
+.text:00007FF7BCFF4723                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4727                 retn
+.text:00007FF7BCFF4727 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4728                 align 10h
+.text:00007FF7BCFF4730                 mov     rax, rcx
+.text:00007FF7BCFF4733                 add     rax, 8
+.text:00007FF7BCFF4737                 retn
+.text:00007FF7BCFF4737 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4738                 align 20h
+.text:00007FF7BCFF4740                 mov     rax, rcx
+.text:00007FF7BCFF4743                 add     rax, 8
+.text:00007FF7BCFF4747                 retn
+.text:00007FF7BCFF4747 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4748                 align 10h
+.text:00007FF7BCFF4750                 mov     rax, rcx
+.text:00007FF7BCFF4753                 add     rax, 8
+.text:00007FF7BCFF4757                 retn
+.text:00007FF7BCFF4757 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4758                 align 20h
+.text:00007FF7BCFF4760                 mov     rax, rcx
+.text:00007FF7BCFF4763                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4767                 retn
+.text:00007FF7BCFF4767 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4768                 align 10h
+.text:00007FF7BCFF4770                 mov     rax, rcx
+.text:00007FF7BCFF4773                 add     rax, 18h
+.text:00007FF7BCFF4777                 retn
+.text:00007FF7BCFF4777 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4778                 align 20h
+.text:00007FF7BCFF4780                 mov     rax, rcx
+.text:00007FF7BCFF4783                 add     rax, 18h
+.text:00007FF7BCFF4787                 retn
+.text:00007FF7BCFF4787 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4788                 align 10h
+.text:00007FF7BCFF4790                 mov     rax, rcx
+.text:00007FF7BCFF4793                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4797                 retn
+.text:00007FF7BCFF4797 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4798                 align 20h
+.text:00007FF7BCFF47A0                 mov     rax, rcx
+.text:00007FF7BCFF47A3                 retn
+.text:00007FF7BCFF47A3 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF47A4                 align 10h
+.text:00007FF7BCFF47B0                 mov     rax, rcx
+.text:00007FF7BCFF47B3                 retn
+.text:00007FF7BCFF47B3 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF47B4                 align 20h
+.text:00007FF7BCFF47C0                 mov     rax, rcx
+.text:00007FF7BCFF47C3                 add     rax, 20h ; ' '
+.text:00007FF7BCFF47C7                 retn
+.text:00007FF7BCFF47C7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF47C8                 align 10h
+.text:00007FF7BCFF47D0                 mov     rax, rcx
+.text:00007FF7BCFF47D3                 add     rax, 20h ; ' '
+.text:00007FF7BCFF47D7                 retn
+.text:00007FF7BCFF47D7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF47D8                 align 20h
+.text:00007FF7BCFF47E0                 mov     rax, rcx
+.text:00007FF7BCFF47E3                 add     rax, 20h ; ' '
+.text:00007FF7BCFF47E7                 retn
+.text:00007FF7BCFF47E7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF47E8                 align 10h
+.text:00007FF7BCFF47F0                 mov     rax, rcx
+.text:00007FF7BCFF47F3                 add     rax, 8
+.text:00007FF7BCFF47F7                 retn
+.text:00007FF7BCFF47F7 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF47F8                 align 20h
+.text:00007FF7BCFF4800                 mov     rax, rcx
+.text:00007FF7BCFF4803                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4807                 retn
+.text:00007FF7BCFF4807 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4808                 align 10h
+.text:00007FF7BCFF4810                 mov     rax, rcx
+.text:00007FF7BCFF4813                 retn
+.text:00007FF7BCFF4813 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4814                 align 20h
+.text:00007FF7BCFF4820                 mov     rax, rcx
+.text:00007FF7BCFF4823                 add     rax, 18h
+.text:00007FF7BCFF4827                 retn
+.text:00007FF7BCFF4827 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4828                 align 10h
+.text:00007FF7BCFF4830                 mov     rax, rcx
+.text:00007FF7BCFF4833                 add     rax, 20h ; ' '
+.text:00007FF7BCFF4837                 retn
+.text:00007FF7BCFF4837 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4838                 align 20h
+.text:00007FF7BCFF4840                 mov     rax, rcx
+.text:00007FF7BCFF4843                 add     rax, 18h
+.text:00007FF7BCFF4847                 retn
+.text:00007FF7BCFF4847 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4848                 align 10h
+.text:00007FF7BCFF4850                 mov     rax, rcx
+.text:00007FF7BCFF4853                 retn
+.text:00007FF7BCFF4853 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4854                 align 20h
+.text:00007FF7BCFF4860
+.text:00007FF7BCFF4860 ; =============== S U B R O U T I N E =======================================
+.text:00007FF7BCFF4860
+.text:00007FF7BCFF4860 ; Attributes: bp-based frame fpd=540h
+.text:00007FF7BCFF4860
+.text:00007FF7BCFF4860 ; int __cdecl main(int argc, const char **argv, const char **envp)
+.text:00007FF7BCFF4860 main            proc near               ; CODE XREF: __scrt_common_main_seh(void)+107↓p
+.text:00007FF7BCFF4860                                         ; DATA XREF: .rdata:stru_7FF7BD01B380↓o ...
+.text:00007FF7BCFF4860
+.text:00007FF7BCFF4860 var_59C         = dword ptr -59Ch
+.text:00007FF7BCFF4860 var_598         = qword ptr -598h
+.text:00007FF7BCFF4860 var_590         = qword ptr -590h
+.text:00007FF7BCFF4860 var_588         = qword ptr -588h
+.text:00007FF7BCFF4860 var_580         = qword ptr -580h
+.text:00007FF7BCFF4860 var_578         = qword ptr -578h
+.text:00007FF7BCFF4860 var_570         = qword ptr -570h
+.text:00007FF7BCFF4860 var_568         = qword ptr -568h
+.text:00007FF7BCFF4860 var_560         = qword ptr -560h
+.text:00007FF7BCFF4860 var_558         = qword ptr -558h
+.text:00007FF7BCFF4860 var_550         = qword ptr -550h
+.text:00007FF7BCFF4860 var_548         = qword ptr -548h
+.text:00007FF7BCFF4860 var_540         = qword ptr -540h
+.text:00007FF7BCFF4860 var_538         = qword ptr -538h
+.text:00007FF7BCFF4860 var_530         = qword ptr -530h
+.text:00007FF7BCFF4860 var_528         = qword ptr -528h
+.text:00007FF7BCFF4860 var_520         = dword ptr -520h
+.text:00007FF7BCFF4860 var_51C         = dword ptr -51Ch
+.text:00007FF7BCFF4860 var_518         = qword ptr -518h
+.text:00007FF7BCFF4860 var_510         = qword ptr -510h
+.text:00007FF7BCFF4860 var_508         = qword ptr -508h
+.text:00007FF7BCFF4860 var_500         = qword ptr -500h
+.text:00007FF7BCFF4860 var_4F8         = qword ptr -4F8h
+.text:00007FF7BCFF4860 var_4F0         = qword ptr -4F0h
+.text:00007FF7BCFF4860 var_4E8         = dword ptr -4E8h
+.text:00007FF7BCFF4860 var_4E4         = dword ptr -4E4h
+.text:00007FF7BCFF4860 var_4E0         = qword ptr -4E0h
+.text:00007FF7BCFF4860 var_4D8         = qword ptr -4D8h
+.text:00007FF7BCFF4860 var_4D0         = qword ptr -4D0h
+.text:00007FF7BCFF4860 var_4C8         = qword ptr -4C8h
+.text:00007FF7BCFF4860 var_4BC         = dword ptr -4BCh
+.text:00007FF7BCFF4860 var_4B8         = qword ptr -4B8h
+.text:00007FF7BCFF4860 var_4B0         = qword ptr -4B0h
+.text:00007FF7BCFF4860 var_4A8         = qword ptr -4A8h
+.text:00007FF7BCFF4860 var_4A0         = qword ptr -4A0h
+.text:00007FF7BCFF4860 var_498         = qword ptr -498h
+.text:00007FF7BCFF4860 var_490         = qword ptr -490h
+.text:00007FF7BCFF4860 var_488         = qword ptr -488h
+.text:00007FF7BCFF4860 var_480         = qword ptr -480h
+.text:00007FF7BCFF4860 var_478         = qword ptr -478h
+.text:00007FF7BCFF4860 var_470         = qword ptr -470h
+.text:00007FF7BCFF4860 var_468         = qword ptr -468h
+.text:00007FF7BCFF4860 var_460         = qword ptr -460h
+.text:00007FF7BCFF4860 var_458         = qword ptr -458h
+.text:00007FF7BCFF4860 var_450         = qword ptr -450h
+.text:00007FF7BCFF4860 var_448         = qword ptr -448h
+.text:00007FF7BCFF4860 var_408         = qword ptr -408h
+.text:00007FF7BCFF4860 var_400         = qword ptr -400h
+.text:00007FF7BCFF4860 var_3F8         = qword ptr -3F8h
+.text:00007FF7BCFF4860 var_3F0         = qword ptr -3F0h
+.text:00007FF7BCFF4860 var_3E8         = qword ptr -3E8h
+.text:00007FF7BCFF4860 var_3E0         = qword ptr -3E0h
+.text:00007FF7BCFF4860 var_3D8         = qword ptr -3D8h
+.text:00007FF7BCFF4860 var_3D0         = qword ptr -3D0h
+.text:00007FF7BCFF4860 var_3C4         = dword ptr -3C4h
+.text:00007FF7BCFF4860 var_3C0         = qword ptr -3C0h
+.text:00007FF7BCFF4860 var_3B8         = qword ptr -3B8h
+.text:00007FF7BCFF4860 var_3B0         = qword ptr -3B0h
+.text:00007FF7BCFF4860 var_3A8         = qword ptr -3A8h
+.text:00007FF7BCFF4860 var_3A0         = qword ptr -3A0h
+.text:00007FF7BCFF4860 var_398         = qword ptr -398h
+.text:00007FF7BCFF4860 var_388         = qword ptr -388h
+.text:00007FF7BCFF4860 var_380         = qword ptr -380h
+.text:00007FF7BCFF4860 var_370         = qword ptr -370h
+.text:00007FF7BCFF4860 var_368         = qword ptr -368h
+.text:00007FF7BCFF4860 var_358         = qword ptr -358h
+.text:00007FF7BCFF4860 var_350         = qword ptr -350h
+.text:00007FF7BCFF4860 var_348         = qword ptr -348h
+.text:00007FF7BCFF4860 var_340         = qword ptr -340h
+.text:00007FF7BCFF4860 var_320         = qword ptr -320h
+.text:00007FF7BCFF4860 var_310         = qword ptr -310h
+.text:00007FF7BCFF4860 var_2F8         = qword ptr -2F8h
+.text:00007FF7BCFF4860 var_2F0         = qword ptr -2F0h
+.text:00007FF7BCFF4860 var_2C0         = qword ptr -2C0h
+.text:00007FF7BCFF4860 var_2B0         = qword ptr -2B0h
+.text:00007FF7BCFF4860 var_2A8         = qword ptr -2A8h
+.text:00007FF7BCFF4860 var_298         = qword ptr -298h
+.text:00007FF7BCFF4860 var_290         = qword ptr -290h
+.text:00007FF7BCFF4860 var_280         = byte ptr -280h
+.text:00007FF7BCFF4860 var_260         = qword ptr -260h
+.text:00007FF7BCFF4860 var_250         = qword ptr -250h
+.text:00007FF7BCFF4860 var_248         = qword ptr -248h
+.text:00007FF7BCFF4860 var_238         = qword ptr -238h
+.text:00007FF7BCFF4860 var_230         = qword ptr -230h
+.text:00007FF7BCFF4860 var_220         = qword ptr -220h
+.text:00007FF7BCFF4860 var_208         = qword ptr -208h
+.text:00007FF7BCFF4860 var_200         = qword ptr -200h
+.text:00007FF7BCFF4860 var_1D0         = qword ptr -1D0h
+.text:00007FF7BCFF4860 var_1C0         = qword ptr -1C0h
+.text:00007FF7BCFF4860 var_1B8         = qword ptr -1B8h
+.text:00007FF7BCFF4860 var_1A8         = qword ptr -1A8h
+.text:00007FF7BCFF4860 var_1A0         = qword ptr -1A0h
+.text:00007FF7BCFF4860 var_198         = qword ptr -198h
+.text:00007FF7BCFF4860 var_190         = byte ptr -190h
+.text:00007FF7BCFF4860 var_160         = byte ptr -160h
+.text:00007FF7BCFF4860 var_148         = byte ptr -148h
+.text:00007FF7BCFF4860 var_130         = byte ptr -130h
+.text:00007FF7BCFF4860 var_98          = byte ptr -98h
+.text:00007FF7BCFF4860 var_70          = qword ptr -70h
+.text:00007FF7BCFF4860 var_68          = dword ptr -68h
+.text:00007FF7BCFF4860 var_60          = dword ptr -60h
+.text:00007FF7BCFF4860 var_50          = dword ptr -50h
+.text:00007FF7BCFF4860 var_48          = qword ptr -48h
+.text:00007FF7BCFF4860 var_20          = qword ptr -20h
+.text:00007FF7BCFF4860 arg_8           = qword ptr  18h
+.text:00007FF7BCFF4860
+.text:00007FF7BCFF4860 ; FUNCTION CHUNK AT .text:00007FF7BCFF6210 SIZE 00000014 BYTES
+.text:00007FF7BCFF4860 ; FUNCTION CHUNK AT .text:00007FF7BCFF6230 SIZE 000000D9 BYTES
+.text:00007FF7BCFF4860
+.text:00007FF7BCFF4860 ; __unwind { // __CxxFrameHandler3
+.text:00007FF7BCFF4860                 push    rbp
+.text:00007FF7BCFF4861                 push    rsi
+.text:00007FF7BCFF4862                 push    rdi
+.text:00007FF7BCFF4863                 push    rbx
+.text:00007FF7BCFF4864                 sub     rsp, 5A8h
+.text:00007FF7BCFF486B                 lea     rbp, [rsp+80h]
+.text:00007FF7BCFF4873                 mov     [rbp+540h+var_20], 0FFFFFFFFFFFFFFFEh
+.text:00007FF7BCFF487E                 mov     [rbp+540h+var_3D0], rdx
+.text:00007FF7BCFF4885                 mov     [rbp+540h+var_3C4], ecx
+.text:00007FF7BCFF488B                 lea     r8, [rbp+540h+var_160]
+.text:00007FF7BCFF4892                 mov     [rbp+540h+var_1A0], r8
+.text:00007FF7BCFF4899                 mov     [rbp+540h+var_1C0], r8
+.text:00007FF7BCFF48A0                 lea     rax, [rbp+540h+var_148]
+.text:00007FF7BCFF48A7                 mov     [rbp+540h+var_1A8], rax
+.text:00007FF7BCFF48AE                 lea     r9, [rbp+540h+var_68]
+.text:00007FF7BCFF48B5                 mov     [rbp+540h+var_1B8], r9
+.text:00007FF7BCFF48BC                 lea     rcx, [rbp+540h+var_190]
+.text:00007FF7BCFF48C3                 mov     [rbp+540h+var_198], rcx
+.text:00007FF7BCFF48CA                 mov     [rbp+540h+var_1D0], r9
+.text:00007FF7BCFF48D1                 mov     [rbp+540h+var_200], rcx
+.text:00007FF7BCFF48D8                 mov     [rbp+540h+var_220], r8
+.text:00007FF7BCFF48DF                 lea     rdx, [rbp+540h+var_98]
+.text:00007FF7BCFF48E6                 mov     [rbp+540h+var_208], rdx
+.text:00007FF7BCFF48ED                 mov     [rbp+540h+var_230], r9
+.text:00007FF7BCFF48F4                 mov     [rbp+540h+var_250], rdx
+.text:00007FF7BCFF48FB                 mov     [rbp+540h+var_238], r8
+.text:00007FF7BCFF4902                 lea     r9, [rbp+540h+var_220]
+.text:00007FF7BCFF4909                 mov     [rbp+540h+var_248], r9
+.text:00007FF7BCFF4910                 mov     [rbp+540h+var_260], rcx
+.text:00007FF7BCFF4917                 lea     r8, [rbp+540h+var_280]
+.text:00007FF7BCFF491E                 mov     [rbp+540h+var_290], r8
+.text:00007FF7BCFF4925                 mov     [rbp+540h+var_2B0], rdx
+.text:00007FF7BCFF492C                 mov     [rbp+540h+var_298], rcx
+.text:00007FF7BCFF4933                 mov     [rbp+540h+var_2A8], r8
+.text:00007FF7BCFF493A                 mov     [rbp+540h+var_2C0], rcx
+.text:00007FF7BCFF4941                 lea     rcx, [rbp+540h+var_1C0]
+.text:00007FF7BCFF4948                 mov     [rbp+540h+var_2F0], rcx
+.text:00007FF7BCFF494F                 lea     rcx, [rbp+540h+var_2B0]
+.text:00007FF7BCFF4956                 mov     [rbp+540h+var_3C0], rcx
+.text:00007FF7BCFF495D                 mov     [rbp+540h+var_310], rcx
+.text:00007FF7BCFF4964                 mov     [rbp+540h+var_2F8], rdx
+.text:00007FF7BCFF496B                 lea     rcx, [rbp+540h+var_250]
+.text:00007FF7BCFF4972                 mov     [rbp+540h+var_320], rcx
+.text:00007FF7BCFF4979                 lea     r10, [rbp+540h+var_310]
+.text:00007FF7BCFF4980                 mov     [rbp+540h+var_340], r10
+.text:00007FF7BCFF4987                 mov     [rbp+540h+var_350], r10
+.text:00007FF7BCFF498E                 mov     [rbp+540h+var_370], r9
+.text:00007FF7BCFF4995                 mov     [rbp+540h+var_358], r9
+.text:00007FF7BCFF499C                 mov     [rbp+540h+var_368], r8
+.text:00007FF7BCFF49A3                 mov     [rbp+540h+var_348], r8
+.text:00007FF7BCFF49AA                 mov     [rbp+540h+var_380], rdx
+.text:00007FF7BCFF49B1                 mov     [rbp+540h+var_3A0], rcx
+.text:00007FF7BCFF49B8                 mov     [rbp+540h+var_388], rax
+.text:00007FF7BCFF49BF                 mov     [rbp+540h+var_398], rax
+.text:00007FF7BCFF49C6                 mov     [rbp+540h+var_48], 13D5h
+.text:00007FF7BCFF49D1                 mov     rax, cs:off_7FF7BD032C20
+.text:00007FF7BCFF49D8                 mov     rcx, 9E35A515A27017ABh
+.text:00007FF7BCFF49E2                 add     rax, rcx
+.text:00007FF7BCFF49E5                 lea     rcx, [rbp+540h+var_340]
+.text:00007FF7BCFF49EC                 call    rax
+.text:00007FF7BCFF49EE                 mov     rcx, [rax]
+.text:00007FF7BCFF49F1                 mov     rax, cs:off_7FF7BD03E0E8
+.text:00007FF7BCFF49F8                 mov     rdx, 0FB46BFF55D1567A9h
+.text:00007FF7BCFF4A02                 add     rax, rdx
+.text:00007FF7BCFF4A05                 call    rax
+.text:00007FF7BCFF4A07                 mov     rcx, [rax]
+.text:00007FF7BCFF4A0A                 mov     rax, cs:off_7FF7BD0240B8
+.text:00007FF7BCFF4A11                 mov     rdx, 0B7B2E476F5DC28B9h
+.text:00007FF7BCFF4A1B                 add     rax, rdx
+.text:00007FF7BCFF4A1E                 call    rax
+.text:00007FF7BCFF4A20                 mov     rcx, [rbp+540h+var_3C0]
+.text:00007FF7BCFF4A27                 mov     rax, [rax]
+.text:00007FF7BCFF4A2A                 mov     qword ptr [rax+28h], 13D5h
+.text:00007FF7BCFF4A32                 mov     rax, cs:off_7FF7BD024F60
+.text:00007FF7BCFF4A39                 mov     rdx, 7F9E14D77541BCEBh
+.text:00007FF7BCFF4A43                 add     rax, rdx
+.text:00007FF7BCFF4A46                 call    rax
+.text:00007FF7BCFF4A48                 mov     rcx, [rbp+540h+var_3C0]
+.text:00007FF7BCFF4A4F                 mov     rax, [rax]
+.text:00007FF7BCFF4A52                 mov     rax, [rax+28h]
+.text:00007FF7BCFF4A56                 imul    r8, rax, 12EDF957h
+.text:00007FF7BCFF4A5D                 mov     rdx, 2C21B2DA413B9829h
+.text:00007FF7BCFF4A67                 mov     [rbp+540h+var_3B8], rdx
+.text:00007FF7BCFF4A6E                 mov     rax, r8
+.text:00007FF7BCFF4A71                 mul     rdx
+.text:00007FF7BCFF4A74                 mov     rax, rdx
+.text:00007FF7BCFF4A77                 mov     rdx, [rbp+540h+var_3B8]
+.text:00007FF7BCFF4A7E                 shr     rax, 1Ah
+.text:00007FF7BCFF4A82                 imul    rax, 17340C1Ah
+.text:00007FF7BCFF4A89                 sub     r8, rax
+.text:00007FF7BCFF4A8C                 mov     rax, r8
+.text:00007FF7BCFF4A8F                 or      rax, 0FFFFFFFFEB65EA04h
+.text:00007FF7BCFF4A95                 mov     r10d, eax
+.text:00007FF7BCFF4A98                 mov     r9d, r8d
+.text:00007FF7BCFF4A9B                 sub     r9d, r10d
+.text:00007FF7BCFF4A9E                 add     r9d, r9d
+.text:00007FF7BCFF4AA1                 add     r9, 0FFFFFFFFD6CBD408h
+.text:00007FF7BCFF4AA8                 and     r8d, 0B65EA04h
+.text:00007FF7BCFF4AAF                 sub     rax, r8
+.text:00007FF7BCFF4AB2                 mov     r8, rax
+.text:00007FF7BCFF4AB5                 or      r8, r9
+.text:00007FF7BCFF4AB8                 and     rax, r9
+.text:00007FF7BCFF4ABB                 add     rax, r8
+.text:00007FF7BCFF4ABE                 mov     [rbp+540h+var_3B0], rax
+.text:00007FF7BCFF4AC5                 mul     rdx
+.text:00007FF7BCFF4AC8                 mov     rax, [rbp+540h+var_3B0]
+.text:00007FF7BCFF4ACF                 shr     rdx, 1Ah
+.text:00007FF7BCFF4AD3                 imul    rdx, 17340C1Ah
+.text:00007FF7BCFF4ADA                 sub     rax, rdx
+.text:00007FF7BCFF4ADD                 mov     [rbp+540h+var_3A8], rax
+.text:00007FF7BCFF4AE4                 mov     rax, cs:off_7FF7BD02FA30
+.text:00007FF7BCFF4AEB                 mov     rdx, 86A50FF05A89B4BFh
+.text:00007FF7BCFF4AF5                 add     rax, rdx
+.text:00007FF7BCFF4AF8                 call    rax
+.text:00007FF7BCFF4AFA                 mov     rcx, [rbp+540h+var_3A8]
+.text:00007FF7BCFF4B01                 mov     rax, [rax]
+.text:00007FF7BCFF4B04                 mov     [rax+28h], rcx
+.text:00007FF7BCFF4B08                 mov     rax, cs:off_7FF7BD042FD0
+.text:00007FF7BCFF4B0F                 mov     rcx, 403154473A52C437h
+.text:00007FF7BCFF4B19                 mov     rcx, [rax+rcx]
+.text:00007FF7BCFF4B1D                 mov     r8, 0F73D01C0B270C6Ch
+.text:00007FF7BCFF4B27                 mov     rax, rcx
+.text:00007FF7BCFF4B2A                 or      rax, r8
+.text:00007FF7BCFF4B2D                 mov     r9, rcx
+.text:00007FF7BCFF4B30                 sub     r9, rax
+.text:00007FF7BCFF4B33                 mov     rdx, 1EE7A038164E18D8h
+.text:00007FF7BCFF4B3D                 lea     rdx, [rdx+r9*2]
+.text:00007FF7BCFF4B41                 and     rcx, r8
+.text:00007FF7BCFF4B44                 sub     rax, rcx
+.text:00007FF7BCFF4B47                 mov     rcx, rax
+.text:00007FF7BCFF4B4A                 or      rcx, rdx
+.text:00007FF7BCFF4B4D                 and     rax, rdx
+.text:00007FF7BCFF4B50                 add     rax, rcx
+.text:00007FF7BCFF4B53                 jmp     rax
+.text:00007FF7BCFF4B55 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4B55                 mov     rax, cs:off_7FF7BD03D9A0
+.text:00007FF7BCFF4B5C                 mov     rcx, 4355A2B87D83EFAAh
+.text:00007FF7BCFF4B66                 add     rax, rcx
+.text:00007FF7BCFF4B69                 lea     rcx, [rbp+540h+var_220]
+.text:00007FF7BCFF4B70                 call    rax
+.text:00007FF7BCFF4B72                 mov     rax, [rax]
+.text:00007FF7BCFF4B75                 mov     rax, [rax+28h]
+.text:00007FF7BCFF4B79                 mov     [rbp+540h+var_3D8], rax
+.text:00007FF7BCFF4B80                 mov     rax, cs:off_7FF7BD042060
+.text:00007FF7BCFF4B87                 mov     rcx, 0D562D9B797CCEF05h
+.text:00007FF7BCFF4B91                 add     rax, rcx
+.text:00007FF7BCFF4B94                 lea     rcx, [rbp+540h+var_1C0]
+.text:00007FF7BCFF4B9B                 call    rax
+.text:00007FF7BCFF4B9D                 mov     rcx, [rbp+540h+var_3D8]
+.text:00007FF7BCFF4BA4                 mov     rax, [rax]
+.text:00007FF7BCFF4BA7                 mov     rax, [rax+20h]
+.text:00007FF7BCFF4BAB                 sub     rax, rcx
+.text:00007FF7BCFF4BAE                 setnz   cl
+.text:00007FF7BCFF4BB1                 mov     rax, cs:off_7FF7BD02AC28
+.text:00007FF7BCFF4BB8                 movzx   ecx, cl
+.text:00007FF7BCFF4BBB                 lea     rcx, [rax+rcx*8]
+.text:00007FF7BCFF4BBF                 mov     rax, 0E3BD5166DD865AAEh
+.text:00007FF7BCFF4BC9                 mov     rcx, [rax+rcx]
+.text:00007FF7BCFF4BCD                 mov     rax, 824265B492E00896h
+.text:00007FF7BCFF4BD7                 mov     r9, 7BBF24FAEB2E54FBh
+.text:00007FF7BCFF4BE1                 cmovz   r9, rax
+.text:00007FF7BCFF4BE5                 mov     r8, r9
+.text:00007FF7BCFF4BE8                 neg     r8
+.text:00007FF7BCFF4BEB                 mov     rax, rcx
+.text:00007FF7BCFF4BEE                 or      rax, r8
+.text:00007FF7BCFF4BF1                 mov     rdx, rcx
+.text:00007FF7BCFF4BF4                 sub     rdx, r9
+.text:00007FF7BCFF4BF7                 sub     rdx, rax
+.text:00007FF7BCFF4BFA                 add     rdx, rdx
+.text:00007FF7BCFF4BFD                 and     rcx, r8
+.text:00007FF7BCFF4C00                 sub     rax, rcx
+.text:00007FF7BCFF4C03                 mov     rcx, rax
+.text:00007FF7BCFF4C06                 or      rcx, rdx
+.text:00007FF7BCFF4C09                 and     rax, rdx
+.text:00007FF7BCFF4C0C                 add     rax, rcx
+.text:00007FF7BCFF4C0F                 jmp     rax
+.text:00007FF7BCFF4C11 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4C11                 mov     rax, cs:off_7FF7BD0402A8
+.text:00007FF7BCFF4C18                 mov     rcx, 905E113C9560385Ch
+.text:00007FF7BCFF4C22                 add     rax, rcx
+.text:00007FF7BCFF4C25                 lea     rcx, [rbp+540h+var_1C0]
+.text:00007FF7BCFF4C2C                 call    rax
+.text:00007FF7BCFF4C2E                 mov     rax, [rax]
+.text:00007FF7BCFF4C31                 add     rax, 18h
+.text:00007FF7BCFF4C35                 mov     [rbp+540h+var_408], rax
+.text:00007FF7BCFF4C3C                 mov     rax, cs:off_7FF7BD033758
+.text:00007FF7BCFF4C43                 mov     rcx, 0FE3CA8AC8FCE4FB1h
+.text:00007FF7BCFF4C4D                 add     rax, rcx
+.text:00007FF7BCFF4C50                 lea     rcx, [rbp+540h+var_340]
+.text:00007FF7BCFF4C57                 mov     [rbp+540h+var_3E8], rcx
+.text:00007FF7BCFF4C5E                 call    rax
+.text:00007FF7BCFF4C60                 mov     rcx, [rax]
+.text:00007FF7BCFF4C63                 mov     rax, cs:off_7FF7BD03D690
+.text:00007FF7BCFF4C6A                 mov     rdx, 12DF826AF5209859h
+.text:00007FF7BCFF4C74                 add     rax, rdx
+.text:00007FF7BCFF4C77                 call    rax
+.text:00007FF7BCFF4C79                 mov     rdx, [rbp+540h+var_408]
+.text:00007FF7BCFF4C80                 mov     rcx, [rbp+540h+var_3E8]
+.text:00007FF7BCFF4C87                 mov     rax, [rax]
+.text:00007FF7BCFF4C8A                 mov     [rax], rdx
+.text:00007FF7BCFF4C8D                 lea     rax, [rbp+540h+var_68]
+.text:00007FF7BCFF4C94                 mov     [rbp+540h+var_400], rax
+.text:00007FF7BCFF4C9B                 mov     rax, [rbp+540h+var_70]
+.text:00007FF7BCFF4CA2                 imul    r8, rax, 0A181245h
+.text:00007FF7BCFF4CA9                 mov     rdx, 2C21B2DA413B9829h
+.text:00007FF7BCFF4CB3                 mov     [rbp+540h+var_3F8], rdx
+.text:00007FF7BCFF4CBA                 mov     rax, r8
+.text:00007FF7BCFF4CBD                 mul     rdx
+.text:00007FF7BCFF4CC0                 mov     rax, rdx
+.text:00007FF7BCFF4CC3                 mov     rdx, [rbp+540h+var_3F8]
+.text:00007FF7BCFF4CCA                 shr     rax, 1Ah
+.text:00007FF7BCFF4CCE                 imul    rax, 17340C1Ah
+.text:00007FF7BCFF4CD5                 sub     r8, rax
+.text:00007FF7BCFF4CD8                 mov     rax, r8
+.text:00007FF7BCFF4CDB                 or      rax, 0FFFFFFFFF18621ACh
+.text:00007FF7BCFF4CE1                 mov     r10d, eax
+.text:00007FF7BCFF4CE4                 mov     r9d, r8d
+.text:00007FF7BCFF4CE7                 sub     r9d, r10d
+.text:00007FF7BCFF4CEA                 add     r9d, r9d
+.text:00007FF7BCFF4CED                 add     r9, 0FFFFFFFFE30C4358h
+.text:00007FF7BCFF4CF4                 and     r8d, 118621ACh
+.text:00007FF7BCFF4CFB                 sub     rax, r8
+.text:00007FF7BCFF4CFE                 mov     r8, rax
+.text:00007FF7BCFF4D01                 or      r8, r9
+.text:00007FF7BCFF4D04                 and     rax, r9
+.text:00007FF7BCFF4D07                 add     rax, r8
+.text:00007FF7BCFF4D0A                 mov     [rbp+540h+var_3F0], rax
+.text:00007FF7BCFF4D11                 mul     rdx
+.text:00007FF7BCFF4D14                 mov     rax, [rbp+540h+var_3F0]
+.text:00007FF7BCFF4D1B                 shr     rdx, 1Ah
+.text:00007FF7BCFF4D1F                 imul    rdx, 17340C1Ah
+.text:00007FF7BCFF4D26                 sub     rax, rdx
+.text:00007FF7BCFF4D29                 mov     [rbp+540h+var_70], rax
+.text:00007FF7BCFF4D30                 mov     rax, cs:off_7FF7BD038210
+.text:00007FF7BCFF4D37                 mov     rdx, 0B64BC6FC97E74DFAh
+.text:00007FF7BCFF4D41                 add     rax, rdx
+.text:00007FF7BCFF4D44                 call    rax
+.text:00007FF7BCFF4D46                 mov     rcx, [rax]
+.text:00007FF7BCFF4D49                 mov     rax, cs:off_7FF7BD03E6F0
+.text:00007FF7BCFF4D50                 mov     rdx, 0C726321A29635AA7h
+.text:00007FF7BCFF4D5A                 add     rax, rdx
+.text:00007FF7BCFF4D5D                 call    rax
+.text:00007FF7BCFF4D5F                 mov     rcx, [rax]
+.text:00007FF7BCFF4D62                 mov     rax, cs:off_7FF7BD0224C8
+.text:00007FF7BCFF4D69                 mov     rdx, 0A4A9784403261919h
+.text:00007FF7BCFF4D73                 add     rax, rdx
+.text:00007FF7BCFF4D76                 call    rax
+.text:00007FF7BCFF4D78                 mov     rcx, [rbp+540h+var_3E8]
+.text:00007FF7BCFF4D7F                 mov     rax, [rax]
+.text:00007FF7BCFF4D82                 mov     rax, [rax+28h]
+.text:00007FF7BCFF4D86                 mov     [rbp+540h+var_3E0], rax
+.text:00007FF7BCFF4D8D                 mov     rax, cs:off_7FF7BD022340
+.text:00007FF7BCFF4D94                 mov     rdx, 72051049A179E2C9h
+.text:00007FF7BCFF4D9E                 add     rax, rdx
+.text:00007FF7BCFF4DA1                 call    rax
+.text:00007FF7BCFF4DA3                 mov     rcx, [rax]
+.text:00007FF7BCFF4DA6                 mov     rax, cs:off_7FF7BD034FD0
+.text:00007FF7BCFF4DAD                 mov     rdx, 3B17A7519A7AF191h
+.text:00007FF7BCFF4DB7                 add     rax, rdx
+.text:00007FF7BCFF4DBA                 call    rax
+.text:00007FF7BCFF4DBC                 mov     rcx, [rax]
+.text:00007FF7BCFF4DBF                 mov     rax, cs:off_7FF7BD03AD00
+.text:00007FF7BCFF4DC6                 mov     rdx, 4ECBBDFD3E06712h
+.text:00007FF7BCFF4DD0                 add     rax, rdx
+.text:00007FF7BCFF4DD3                 call    rax
+.text:00007FF7BCFF4DD5                 mov     rcx, [rbp+540h+var_3E0]
+.text:00007FF7BCFF4DDC                 mov     rax, [rax]
+.text:00007FF7BCFF4DDF                 mov     rax, [rax+20h]
+.text:00007FF7BCFF4DE3                 sub     rax, rcx
+.text:00007FF7BCFF4DE6                 setz    cl
+.text:00007FF7BCFF4DE9                 mov     rax, cs:off_7FF7BD03E6A8
+.text:00007FF7BCFF4DF0                 movzx   ecx, cl
+.text:00007FF7BCFF4DF3                 lea     rcx, [rax+rcx*8+10h]
+.text:00007FF7BCFF4DF8                 mov     rax, 0A2CC1CAC33513D14h
+.text:00007FF7BCFF4E02                 mov     rcx, [rax+rcx]
+.text:00007FF7BCFF4E06                 mov     rax, 7BBF24FAEB2E54FBh
+.text:00007FF7BCFF4E10                 mov     r9, 5CFE0B9D25447553h
+.text:00007FF7BCFF4E1A                 cmovnz  r9, rax
+.text:00007FF7BCFF4E1E                 mov     r8, r9
+.text:00007FF7BCFF4E21                 neg     r8
+.text:00007FF7BCFF4E24                 mov     rax, rcx
+.text:00007FF7BCFF4E27                 or      rax, r8
+.text:00007FF7BCFF4E2A                 mov     rdx, rcx
+.text:00007FF7BCFF4E2D                 sub     rdx, r9
+.text:00007FF7BCFF4E30                 sub     rdx, rax
+.text:00007FF7BCFF4E33                 add     rdx, rdx
+.text:00007FF7BCFF4E36                 and     rcx, r8
+.text:00007FF7BCFF4E39                 sub     rax, rcx
+.text:00007FF7BCFF4E3C                 mov     rcx, rax
+.text:00007FF7BCFF4E3F                 or      rcx, rdx
+.text:00007FF7BCFF4E42                 and     rax, rdx
+.text:00007FF7BCFF4E45                 add     rax, rcx
+.text:00007FF7BCFF4E48                 jmp     rax
+.text:00007FF7BCFF4E48 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF4E4A                 dw 0EBh, 8B48h, 6D05h
+.text:00007FF7BCFF4E50                 dq 53F63DB948000497h, 0C80148F4F11469ADh, 48000003808D8D48h
+.text:00007FF7BCFF4E50                 dq 0D0FF000001308D89h, 4800000140958B48h, 8B48000001308D8Bh
+.text:00007FF7BCFF4E50                 dq 58B481850894800h, 0EF76BA480002C1ACh, 148AAC8A5D02280h
+.text:00007FF7BCFF4E50                 dq 1308D8B48D0FFD0h, 89008B008B480000h, 58B480000010085h
+.text:00007FF7BCFF4E50                 dq 0DA8CBA48000349A4h, 1483630ED494C9Fh, 1009D8B44D0FFD0h
+.text:00007FF7BCFF4E50                 dq 1308D8B480000h, 18488B44008B4800h, 8944CA0944DA8944h
+.text:00007FF7BCFF4E50                 dq 41C88945C80144D8h, 89D6F7DE8944D0F7h, 8941C789C30944F3h
+.text:00007FF7BCFF4E50                 dq 0C229013A548D45DAh, 0D23141D021D08944h, 50048DD08944C289h
+.text:00007FF7BCFF4E50                 dq 0C289DA0945C28941h, 0F741C38941DA0144h, 0D789F309DB8944D3h
+.text:00007FF7BCFF4E50                 dq 2941013E748DDE89h, 3144D22144F289D2h, 8D46F289D28941D6h
+.text:00007FF7BCFF4E50                 dq 44CA0944C2895214h, 0C18941C30945C801h, 108448D47D88945h
+.text:00007FF7BCFF4E50                 dq 41D021C08944C229h, 44C08944C289D031h, 944D2894450048Dh
+.text:00007FF7BCFF4E50                 dq 41C00144D08944C2h, 0C20945D2F741D0F7h, 8D47D08945C18941h
+.text:00007FF7BCFF4E50                 dq 0C08944C229010844h, 44C289D03141D021h, 0D1894150148DC089h
+.text:00007FF7BCFF4E50                 dq 0C80944D089D9F741h, 145D8F741C08941h, 0C289D029CA2144C0h
+.text:00007FF7BCFF4E50                 dq 0D001C02144C20944h, 8B48000001048589h, 0CFBA480004069B05h
+.text:00007FF7BCFF4E50                 dq 48265CD4219B1F9Bh, 4858B44D0FFD001h, 1708D8B48000001h
+.text:00007FF7BCFF4E50                 dq 7C858BC289480000h, 8944128B48000001h, 4908D89480842h
+.text:00007FF7BCFF4E50                 dq 48000003F8858900h, 894800000490858Bh, 58B480000010885h
+.text:00007FF7BCFF4E50                 dq 2AA6B9480004681Ch, 1480C0DD2634945h, 2008D8D48C8h, 58B48088B48D0FFh
+.text:00007FF7BCFF4E50                 dq 54F3BA4800030DFCh, 148126A654D9329h, 8B48088B48D0FFD0h
+.text:00007FF7BCFF4E50                 dq 7ABA48000392FB05h, 480C05562858AE41h, 8858B4CD0FFD001h
+.text:00007FF7BCFF4E50                 dq 8B48108B48000001h, 0CEB9480004D21B05h, 48B311237DA2F387h
+.text:00007FF7BCFF4E50                 dq 4A88D8D48C801h, 0FF00060503B94100h, 2FCB8058B48D0h
+.text:00007FF7BCFF4E50                 dq 0F06F915D7463B948h, 8D8D48C801489991h, 108D894800000290h
+.text:00007FF7BCFF4E50                 dq 8D8B48D0FF000001h, 48008B4800000110h, 0FCD0C0694C28408Bh
+.text:00007FF7BCFF4E50                 dq 413B9829BA480C52h, 189589482C21B2DAh, 0F748C0894C000001h
+.text:00007FF7BCFF4E50                 dq 18958B48D08948E2h, 481AE8C148000001h, 294917340C1AC069h
+.text:00007FF7BCFF4E50                 dq 0BC950D48C0894CC0h, 0C18945C28941F24Fh, 8149C90145D12945h
+.text:00007FF7BCFF4E50                 dq 0E08141E49F792AC1h, 49C0294C124FBC94h, 0C8214CC8094DC089h
+.text:00007FF7BCFF4E50                 dq 120858948C0014Ch, 858B48E2F7480000h, 1AEAC14800000120h
+.text:00007FF7BCFF4E50                 dq 4817340C1AD26948h, 128858948D029h, 2FFC0058B4800h, 0EF1074AA2801BA48h
+.text:00007FF7BCFF4E50                 dq 48D0FFD001487177h, 8B4800000128958Bh, 8B48000001308Dh
+.text:00007FF7BCFF4E50                 dq 85058B4828508948h, 0D5F9C6B8490003BAh, 3ABA48900BFEC912h
+.text:00007FF7BCFF4E50                 dq 4C844C73DD4C2A54h, 4BB6058B48100489h, 2D33ABC4BA480004h
+.text:00007FF7BCFF4E50                 dq 0FFD00148FE970553h, 18C18348088B48D0h, 4800040969058B48h
+.text:00007FF7BCFF4E50                 dq 875657BB478C22BAh
+.text:00007FF7BCFF51C8                 db 72h, 48h, 1, 0D0h, 31h
+.text:00007FF7BCFF51CD ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF51CD
+.text:00007FF7BCFF51CD loc_7FF7BCFF51CD:                       ; DATA XREF: .rdata:00007FF7BD01B388↓o
+.text:00007FF7BCFF51CD ;   try {
+.text:00007FF7BCFF51CD                 sar     bh, cl
+.text:00007FF7BCFF51CF                 shr     bl, 1
+.text:00007FF7BCFF51CF ;   } // starts at 7FF7BCFF51CD
+.text:00007FF7BCFF51D1
+.text:00007FF7BCFF51D1 loc_7FF7BCFF51D1:                       ; DATA XREF: .rdata:00007FF7BD01B390↓o
+.text:00007FF7BCFF51D1                 add     [rax-75h], cl
+.text:00007FF7BCFF51D4                 add     eax, 3D5F7h
+.text:00007FF7BCFF51D9                 mov     rcx, 1034A5C18E266B94h
+.text:00007FF7BCFF51E3                 mov     rax, [rax+rcx]
+.text:00007FF7BCFF51E7                 mov     [rbp+540h+var_478], rax
+.text:00007FF7BCFF51EE                 mov     rax, cs:off_7FF7BD03DCA8
+.text:00007FF7BCFF51F5                 mov     rcx, 74DDD58CE0803D9Eh
+.text:00007FF7BCFF51FF                 add     rax, rcx
+.text:00007FF7BCFF5202                 lea     rcx, [rbp+540h+var_220]
+.text:00007FF7BCFF5209                 mov     [rbp+540h+var_470], rcx
+.text:00007FF7BCFF5210                 call    rax
+.text:00007FF7BCFF5212                 mov     r8, [rbp+540h+var_478]
+.text:00007FF7BCFF5219                 mov     rcx, [rbp+540h+var_470]
+.text:00007FF7BCFF5220                 mov     rax, [rax]
+.text:00007FF7BCFF5223                 mov     rax, [rax+28h]
+.text:00007FF7BCFF5227                 mov     rdx, 3B2ABE1D14FFCAE9h
+.text:00007FF7BCFF5231                 xor     r8, rdx
+.text:00007FF7BCFF5234                 imul    r9, rax, 16F885B8h
+.text:00007FF7BCFF523B                 mov     rax, 7AC136B7EDCC4D6Eh
+.text:00007FF7BCFF5245                 add     r8, rax
+.text:00007FF7BCFF5248                 mov     rdx, 2C21B2DA413B9829h
+.text:00007FF7BCFF5252                 mov     [rbp+540h+var_468], rdx
+.text:00007FF7BCFF5259                 mov     rax, r9
+.text:00007FF7BCFF525C                 mul     rdx
+.text:00007FF7BCFF525F                 mov     rax, rdx
+.text:00007FF7BCFF5262                 mov     rdx, [rbp+540h+var_468]
+.text:00007FF7BCFF5269                 shr     rax, 1Ah
+.text:00007FF7BCFF526D                 imul    rax, 17340C1Ah
+.text:00007FF7BCFF5274                 sub     r9, rax
+.text:00007FF7BCFF5277                 mov     rax, 9B369D2826194D71h
+.text:00007FF7BCFF5281                 or      r8, rax
+.text:00007FF7BCFF5284                 mov     rax, r9
+.text:00007FF7BCFF5287                 or      rax, 0FFFFFFFFFD21C031h
+.text:00007FF7BCFF528D                 mov     r11d, eax
+.text:00007FF7BCFF5290                 mov     r10d, r9d
+.text:00007FF7BCFF5293                 sub     r10d, r11d
+.text:00007FF7BCFF5296                 add     r10d, r10d
+.text:00007FF7BCFF5299                 add     r10, 0FFFFFFFFFA438062h
+.text:00007FF7BCFF52A0                 and     r9d, 1D21C030h
+.text:00007FF7BCFF52A7                 sub     rax, r9
+.text:00007FF7BCFF52AA                 mov     r9, rax
+.text:00007FF7BCFF52AD                 or      r9, r10
+.text:00007FF7BCFF52B0                 and     rax, r10
+.text:00007FF7BCFF52B3                 add     rax, r9
+.text:00007FF7BCFF52B6                 mov     [rbp+540h+var_458], rax
+.text:00007FF7BCFF52BD                 mov     r9, 2C7DB9A7033A098Fh
+.text:00007FF7BCFF52C7                 add     r8, r9
+.text:00007FF7BCFF52CA                 mov     [rbp+540h+var_460], r8
+.text:00007FF7BCFF52D1                 mul     rdx
+.text:00007FF7BCFF52D4                 mov     rax, [rbp+540h+var_460]
+.text:00007FF7BCFF52DB                 mov     r8, rdx
+.text:00007FF7BCFF52DE                 mov     rdx, [rbp+540h+var_458]
+.text:00007FF7BCFF52E5                 shr     r8, 1Ah
+.text:00007FF7BCFF52E9                 imul    r8, 17340C1Ah
+.text:00007FF7BCFF52F0                 sub     rdx, r8
+.text:00007FF7BCFF52F3                 mov     [rbp+540h+var_450], rdx
+.text:00007FF7BCFF52FA                 mov     rdx, 9AEB30056D7DC495h
+.text:00007FF7BCFF5304                 mul     rdx
+.text:00007FF7BCFF5307                 shr     rdx, 3Eh
+.text:00007FF7BCFF530B                 mov     [rbp+540h+var_448], rdx
+.text:00007FF7BCFF5312                 mov     rax, cs:off_7FF7BD02C490
+.text:00007FF7BCFF5319                 mov     rdx, 8D83E10250104D3Ch
+.text:00007FF7BCFF5323                 add     rax, rdx
+.text:00007FF7BCFF5326                 call    rax
+.text:00007FF7BCFF5328                 mov     rcx, [rbp+540h+var_450]
+.text:00007FF7BCFF532F                 mov     rdx, [rbp+540h+var_448]
+.text:00007FF7BCFF5336                 mov     rax, [rax]
+.text:00007FF7BCFF5339                 mov     [rax+28h], rcx
+.text:00007FF7BCFF533D                 mov     rax, 8A1B059D97327BD9h
+.text:00007FF7BCFF5347                 xor     rdx, rax
+.text:00007FF7BCFF534A                 mov     rax, cs:off_7FF7BD03BE28
+.text:00007FF7BCFF5351                 mov     rcx, 542BCA07D2DB458Dh
+.text:00007FF7BCFF535B                 mov     [rax+rcx], rdx
+.text:00007FF7BCFF535F                 lea     rcx, [rbp+540h+var_130]
+.text:00007FF7BCFF5366                 mov     rax, cs:off_7FF7BD02B630
+.text:00007FF7BCFF536D                 mov     rdx, 2C32BCD2CCCC9559h
+.text:00007FF7BCFF5377                 add     rax, rdx
+.text:00007FF7BCFF5377 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF537A                 db 0FFh
+.text:00007FF7BCFF537B ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF537B
+.text:00007FF7BCFF537B loc_7FF7BCFF537B:                       ; DATA XREF: .rdata:00007FF7BD01B398↓o
+.text:00007FF7BCFF537B ;   try {
+.text:00007FF7BCFF537B                 shr     bl, 1
+.text:00007FF7BCFF537D                 add     [rax-75h], cl
+.text:00007FF7BCFF5380                 test    eax, edx
+.text:00007FF7BCFF5382                 add     al, 0
+.text:00007FF7BCFF5384                 add     [rax+69h], cl
+.text:00007FF7BCFF5387                 sar     byte ptr [rdi+48011036h], 89h
+.text:00007FF7BCFF538E                 test    [rax+48000000h], edi
+.text:00007FF7BCFF5394                 mov     ecx, 413B9829h
+.text:00007FF7BCFF5399                 fidiv   dword ptr [rdx-8B7D3DFh]
+.text:00007FF7BCFF539F                 loope   loc_7FF7BCFF53E9
+.text:00007FF7BCFF53A1                 mov     eax, edx
+.text:00007FF7BCFF53A3                 mov     rdx, [rbp+540h+var_488]
+.text:00007FF7BCFF53AA                 shr     rax, 1Ah
+.text:00007FF7BCFF53AE                 imul    rax, 17340C1Ah
+.text:00007FF7BCFF53B5                 sub     rdx, rax
+.text:00007FF7BCFF53B8                 mov     rax, rdx
+.text:00007FF7BCFF53BB                 or      rax, 0FFFFFFFFF09D517Ah
+.text:00007FF7BCFF53C1                 mov     r9d, eax
+.text:00007FF7BCFF53C4                 mov     r8d, edx
+.text:00007FF7BCFF53C7                 sub     r8d, r9d
+.text:00007FF7BCFF53CA                 add     r8d, r8d
+.text:00007FF7BCFF53CD                 add     r8, 0FFFFFFFFE13AA2F4h
+.text:00007FF7BCFF53D4                 and     edx, 109D517Ah
+.text:00007FF7BCFF53DA                 sub     rax, rdx
+.text:00007FF7BCFF53DD                 mov     rdx, rax
+.text:00007FF7BCFF53E0                 or      rdx, r8
+.text:00007FF7BCFF53E3                 and     rax, r8
+.text:00007FF7BCFF53E6                 add     rax, rdx
+.text:00007FF7BCFF53E9
+.text:00007FF7BCFF53E9 loc_7FF7BCFF53E9:                       ; CODE XREF: main+B3F↑j
+.text:00007FF7BCFF53E9                 mov     [rbp+540h+var_480], rax
+.text:00007FF7BCFF53F0                 mul     rcx
+.text:00007FF7BCFF53F3                 mov     rax, [rbp+540h+var_480]
+.text:00007FF7BCFF53FA                 shr     rdx, 1Ah
+.text:00007FF7BCFF53FE                 imul    rcx, rdx, 17340C1Ah
+.text:00007FF7BCFF5405                 sub     rax, rcx
+.text:00007FF7BCFF5408                 mov     [rbp+540h+var_70], rax
+.text:00007FF7BCFF540F                 mov     rax, cs:off_7FF7BD02D058
+.text:00007FF7BCFF5416                 mov     rdx, 8A808D8D34F6F4FDh
+.text:00007FF7BCFF5420                 mov     rcx, 6BF11B67964F21DAh
+.text:00007FF7BCFF542A                 mov     [rax+rcx], rdx
+.text:00007FF7BCFF542E                 mov     rax, cs:off_7FF7BD03B6B0
+.text:00007FF7BCFF5435                 mov     rcx, 0B5C0920D450FAB00h
+.text:00007FF7BCFF543F                 add     rax, rcx
+.text:00007FF7BCFF5442                 call    rax
+.text:00007FF7BCFF5442 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF5444                 db 0EBh
+.text:00007FF7BCFF5444 ;   } // starts at 7FF7BCFF537B
+.text:00007FF7BCFF5445 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF5445
+.text:00007FF7BCFF5445 loc_7FF7BCFF5445:                       ; DATA XREF: .rdata:00007FF7BD01B3A0↓o
+.text:00007FF7BCFF5445                 add     [rax-75h], cl
+.text:00007FF7BCFF5448                 test    eax, edx
+.text:00007FF7BCFF544A                 add     al, 0
+.text:00007FF7BCFF544C                 add     [rax-77h], cl
+.text:00007FF7BCFF544F                 test    [rax+48000000h], esi
+.text:00007FF7BCFF5455                 mov     eax, dword ptr cs:off_7FF7BD039030
+.text:00007FF7BCFF545B                 mov     rcx, 5E3764C550F5AB94h
+.text:00007FF7BCFF5465                 add     rax, rcx
+.text:00007FF7BCFF5468                 lea     rcx, [rbp+540h+var_340]
+.text:00007FF7BCFF546F                 call    rax
+.text:00007FF7BCFF5471                 mov     rcx, [rax]
+.text:00007FF7BCFF5474                 mov     rax, cs:off_7FF7BD0436D0
+.text:00007FF7BCFF547B                 mov     rdx, 8F7068E7678D93F9h
+.text:00007FF7BCFF5485                 add     rax, rdx
+.text:00007FF7BCFF5488                 call    rax
+.text:00007FF7BCFF548A                 mov     rcx, [rbp+540h+var_490]
+.text:00007FF7BCFF5491                 mov     rax, [rax]
+.text:00007FF7BCFF5494                 mov     rax, [rax+20h]
+.text:00007FF7BCFF5498                 sub     rax, rcx
+.text:00007FF7BCFF549B                 setz    cl
+.text:00007FF7BCFF549E                 mov     rax, cs:off_7FF7BD024188
+.text:00007FF7BCFF54A5                 movzx   ecx, cl
+.text:00007FF7BCFF54A8                 lea     rcx, [rax+rcx*8]
+.text:00007FF7BCFF54AC                 mov     rax, 0DCF8C87A48F965F0h
+.text:00007FF7BCFF54B6                 mov     rcx, [rax+rcx]
+.text:00007FF7BCFF54BA                 mov     rax, 0B63886F9E6D3639Fh
+.text:00007FF7BCFF54C4                 mov     r9, 596299392D2AC06Dh
+.text:00007FF7BCFF54CE                 cmovnz  r9, rax
+.text:00007FF7BCFF54D2                 mov     r8, r9
+.text:00007FF7BCFF54D5                 neg     r8
+.text:00007FF7BCFF54D8                 mov     rax, rcx
+.text:00007FF7BCFF54DB                 or      rax, r8
+.text:00007FF7BCFF54DE                 mov     rdx, rcx
+.text:00007FF7BCFF54E1                 sub     rdx, r9
+.text:00007FF7BCFF54E4                 sub     rdx, rax
+.text:00007FF7BCFF54E7                 add     rdx, rdx
+.text:00007FF7BCFF54EA                 and     rcx, r8
+.text:00007FF7BCFF54ED                 sub     rax, rcx
+.text:00007FF7BCFF54F0                 mov     rcx, rax
+.text:00007FF7BCFF54F3                 or      rcx, rdx
+.text:00007FF7BCFF54F6                 and     rax, rdx
+.text:00007FF7BCFF54F9                 add     rax, rcx
+.text:00007FF7BCFF54FC                 jmp     rax
+.text:00007FF7BCFF54FE ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF54FE                 mov     rax, cs:off_7FF7BD036528
+.text:00007FF7BCFF5505                 mov     rcx, 16D35C582C94E0B9h
+.text:00007FF7BCFF550F                 add     rax, rcx
+.text:00007FF7BCFF5512                 lea     rcx, [rbp+540h+var_340]
+.text:00007FF7BCFF5519                 call    rax
+.text:00007FF7BCFF551B                 mov     rcx, [rax]
+.text:00007FF7BCFF551E                 mov     rax, cs:off_7FF7BD0383E8
+.text:00007FF7BCFF5525                 mov     rdx, 0FE24D2E0CCF4434Eh
+.text:00007FF7BCFF552F                 add     rax, rdx
+.text:00007FF7BCFF5532                 call    rax
+.text:00007FF7BCFF5534                 mov     rax, [rax]
+.text:00007FF7BCFF5537                 mov     eax, [rax]
+.text:00007FF7BCFF5539                 mov     [rbp+540h+var_4BC], eax
+.text:00007FF7BCFF553F                 mov     rax, cs:off_7FF7BD020960
+.text:00007FF7BCFF5546                 mov     rcx, 0BF37BBA27378B2E4h
+.text:00007FF7BCFF5550                 add     rax, rcx
+.text:00007FF7BCFF5553                 lea     rcx, [rbp+540h+var_2B0]
+.text:00007FF7BCFF555A                 call    rax
+.text:00007FF7BCFF555C                 mov     rax, [rax]
+.text:00007FF7BCFF555F                 mov     rax, [rax+28h]
+.text:00007FF7BCFF5563                 imul    rax, 0E87DCC9h
+.text:00007FF7BCFF556A                 mov     [rbp+540h+var_4B8], rax
+.text:00007FF7BCFF5571                 mov     rcx, 2C21B2DA413B9829h
+.text:00007FF7BCFF557B                 mul     rcx
+.text:00007FF7BCFF557E                 mov     rax, rdx
+.text:00007FF7BCFF5581                 mov     rdx, [rbp+540h+var_4B8]
+.text:00007FF7BCFF5588                 shr     rax, 1Ah
+.text:00007FF7BCFF558C                 imul    rax, 17340C1Ah
+.text:00007FF7BCFF5593                 sub     rdx, rax
+.text:00007FF7BCFF5596                 mov     rax, rdx
+.text:00007FF7BCFF5599                 or      rax, 0FFFFFFFFF6E4BC76h
+.text:00007FF7BCFF559F                 mov     r9d, eax
+.text:00007FF7BCFF55A2                 mov     r8d, edx
+.text:00007FF7BCFF55A5                 sub     r8d, r9d
+.text:00007FF7BCFF55A8                 add     r8d, r8d
+.text:00007FF7BCFF55AB                 add     r8, 0FFFFFFFFEDC978ECh
+.text:00007FF7BCFF55B2                 and     edx, 16E4BC76h
+.text:00007FF7BCFF55B8                 sub     rax, rdx
+.text:00007FF7BCFF55BB                 mov     rdx, rax
+.text:00007FF7BCFF55BE                 or      rdx, r8
+.text:00007FF7BCFF55C1                 and     rax, r8
+.text:00007FF7BCFF55C4                 add     rax, rdx
+.text:00007FF7BCFF55C7                 mov     [rbp+540h+var_4B0], rax
+.text:00007FF7BCFF55CE                 mul     rcx
+.text:00007FF7BCFF55D1                 mov     rax, [rbp+540h+var_4B0]
+.text:00007FF7BCFF55D8                 shr     rdx, 1Ah
+.text:00007FF7BCFF55DC                 imul    rcx, rdx, 17340C1Ah
+.text:00007FF7BCFF55E3                 sub     rax, rcx
+.text:00007FF7BCFF55E6                 mov     [rbp+540h+var_4A8], rax
+.text:00007FF7BCFF55ED                 mov     rax, cs:off_7FF7BD0245D8
+.text:00007FF7BCFF55F4                 mov     rcx, 0E78BE2E98A27E20Eh
+.text:00007FF7BCFF55FE                 add     rax, rcx
+.text:00007FF7BCFF5601                 lea     rcx, [rbp+540h+var_220]
+.text:00007FF7BCFF5608                 mov     [rbp+540h+var_4A0], rcx
+.text:00007FF7BCFF560F                 call    rax
+.text:00007FF7BCFF5611                 mov     rdx, [rbp+540h+var_4A8]
+.text:00007FF7BCFF5618                 mov     rcx, [rbp+540h+var_4A0]
+.text:00007FF7BCFF561F                 mov     rax, [rax]
+.text:00007FF7BCFF5622                 mov     [rax+28h], rdx
+.text:00007FF7BCFF5626                 mov     rax, cs:off_7FF7BD03E660
+.text:00007FF7BCFF562D                 mov     rdx, 35451B5257BCA44Eh
+.text:00007FF7BCFF5637                 add     rax, rdx
+.text:00007FF7BCFF563A                 call    rax
+.text:00007FF7BCFF563C                 mov     rax, [rax]
+.text:00007FF7BCFF563F                 mov     rax, [rax+28h]
+.text:00007FF7BCFF5643                 mov     [rbp+540h+var_498], rax
+.text:00007FF7BCFF564A                 mov     rax, cs:off_7FF7BD02D090
+.text:00007FF7BCFF5651                 mov     rcx, 6CA4157B6FC47FA0h
+.text:00007FF7BCFF565B                 add     rax, rcx
+.text:00007FF7BCFF565E                 lea     rcx, [rbp+540h+var_1C0]
+.text:00007FF7BCFF5665                 call    rax
+.text:00007FF7BCFF5667                 mov     rcx, [rbp+540h+var_498]
+.text:00007FF7BCFF566E                 mov     rax, [rax]
+.text:00007FF7BCFF5671                 mov     rax, [rax+20h]
+.text:00007FF7BCFF5675                 sub     rax, rcx
+.text:00007FF7BCFF5678                 setz    al
+.text:00007FF7BCFF567B                 movzx   ecx, al
+.text:00007FF7BCFF567E                 mov     rax, 2D8DFE1692EC5733h
+.text:00007FF7BCFF5688                 mov     r9, 0B63886F9E6D3639Fh
+.text:00007FF7BCFF5692                 cmovz   r9, rax
+.text:00007FF7BCFF5696                 shl     ecx, 4
+.text:00007FF7BCFF5699                 mov     rax, cs:off_7FF7BD035618
+.text:00007FF7BCFF56A0                 lea     rcx, [rax+rcx+28h]
+.text:00007FF7BCFF56A5                 mov     rax, 0C12E84B24DCDD7A1h
+.text:00007FF7BCFF56AF                 mov     rcx, [rax+rcx]
+.text:00007FF7BCFF56B3                 mov     r8, r9
+.text:00007FF7BCFF56B6                 neg     r8
+.text:00007FF7BCFF56B9                 mov     rax, rcx
+.text:00007FF7BCFF56BC                 or      rax, r8
+.text:00007FF7BCFF56BF                 mov     rdx, rcx
+.text:00007FF7BCFF56C2                 sub     rdx, r9
+.text:00007FF7BCFF56C5                 sub     rdx, rax
+.text:00007FF7BCFF56C8                 add     rdx, rdx
+.text:00007FF7BCFF56CB                 and     rcx, r8
+.text:00007FF7BCFF56CE                 sub     rax, rcx
+.text:00007FF7BCFF56D1                 mov     rcx, rax
+.text:00007FF7BCFF56D4                 or      rcx, rdx
+.text:00007FF7BCFF56D7                 and     rax, rdx
+.text:00007FF7BCFF56DA                 add     rax, rcx
+.text:00007FF7BCFF56DD                 jmp     rax
+.text:00007FF7BCFF56DF ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF56DF                 jmp     short $+2
+.text:00007FF7BCFF56E1 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF56E1
+.text:00007FF7BCFF56E1 loc_7FF7BCFF56E1:                       ; CODE XREF: main+E7F↑j
+.text:00007FF7BCFF56E1                 mov     rax, cs:off_7FF7BD043AA0
+.text:00007FF7BCFF56E8                 mov     rcx, 0CF8F46E843E4E773h
+.text:00007FF7BCFF56F2                 add     rax, rcx
+.text:00007FF7BCFF56F5                 lea     rcx, [rbp+540h+var_220]
+.text:00007FF7BCFF56FC                 call    rax
+.text:00007FF7BCFF56FE                 mov     rax, [rax]
+.text:00007FF7BCFF5701                 mov     rcx, [rax+28h]
+.text:00007FF7BCFF5705                 mov     rax, [rbp+540h+var_48]
+.text:00007FF7BCFF570C                 sub     rax, rcx
+.text:00007FF7BCFF570F                 setz    cl
+.text:00007FF7BCFF5712                 mov     rax, cs:off_7FF7BD031F30
+.text:00007FF7BCFF5719                 movzx   ecx, cl
+.text:00007FF7BCFF571C                 lea     rcx, [rax+rcx*8]
+.text:00007FF7BCFF5720                 mov     rax, 0CF76F10B4ACE1BFEh
+.text:00007FF7BCFF572A                 mov     rcx, [rax+rcx]
+.text:00007FF7BCFF572E                 mov     rax, 0FC9B9BB67A11F05Eh
+.text:00007FF7BCFF5738                 mov     r9, 6DF3C3BAE63865CFh
+.text:00007FF7BCFF5742                 cmovnz  r9, rax
+.text:00007FF7BCFF5746                 mov     r8, r9
+.text:00007FF7BCFF5749                 neg     r8
+.text:00007FF7BCFF574C                 mov     rax, rcx
+.text:00007FF7BCFF574F                 or      rax, r8
+.text:00007FF7BCFF5752                 mov     rdx, rcx
+.text:00007FF7BCFF5755                 sub     rdx, r9
+.text:00007FF7BCFF5758                 sub     rdx, rax
+.text:00007FF7BCFF575B                 add     rdx, rdx
+.text:00007FF7BCFF575E                 and     rcx, r8
+.text:00007FF7BCFF5761                 sub     rax, rcx
+.text:00007FF7BCFF5764                 mov     rcx, rax
+.text:00007FF7BCFF5767                 or      rcx, rdx
+.text:00007FF7BCFF576A                 and     rax, rdx
+.text:00007FF7BCFF576D                 add     rax, rcx
+.text:00007FF7BCFF5770                 jmp     rax
+.text:00007FF7BCFF5772 ; ---------------------------------------------------------------------------
+.text:00007FF7BCFF5772                 mov     r9d, [rbp+540h+var_4BC]
+.text:00007FF7BCFF5779                 mov     r8d, [rbp+540h+var_50]
+.text:00007FF7BCFF5780                 mov     ecx, r9d
+.text:00007FF7BCFF5783                 or      ecx, r8d
+.text:00007FF7BCFF5786                 mov     eax, r9d
+.text:00007FF7BCFF5789                 add     eax, r8d
+.text:00007FF7BCFF578C                 mov     edx, r8d
+.text:00007FF7BCFF578F                 not     edx
+.text:00007FF7BCFF5791                 mov     r11d, r9d
+.text:00007FF7BCFF5794                 not     r11d
+.text:00007FF7BCFF5797                 mov     edi, r11d
+.text:00007FF7BCFF579A                 or      edi, edx
+.text:00007FF7BCFF579C                 mov     esi, eax
+.text:00007FF7BCFF579E                 mov     r10d, edi
+.text:00007FF7BCFF57A1                 lea     r10d, [r10+rsi+1]
+.text:00007FF7BCFF57A6                 sub     ecx, eax
+.text:00007FF7BCFF57A8                 mov     eax, r10d
+.text:00007FF7BCFF57AB                 and     eax, ecx
+.text:00007FF7BCFF57AD                 xor     r10d, ecx
+.text:00007FF7BCFF57B0                 mov     ecx, eax
+.text:00007FF7BCFF57B2                 mov     eax, r10d
+.text:00007FF7BCFF57B5                 lea     eax, [rax+rcx*2]
+.text:00007FF7BCFF57B8                 mov     r10d, eax
+.text:00007FF7BCFF57BB                 or      r10d, r9d
+.text:00007FF7BCFF57BE                 mov     ecx, eax
+.text:00007FF7BCFF57C0                 add     ecx, r9d
+.text:00007FF7BCFF57C3                 mov     r9d, eax
+.text:00007FF7BCFF57C6                 not     r9d
+.text:00007FF7BCFF57C9                 mov     edi, r9d
+.text:00007FF7BCFF57CC                 or      edi, r11d
+.text:00007FF7BCFF57CF                 mov     esi, ecx
+.text:00007FF7BCFF57D1                 mov     r11d, edi
+.text:00007FF7BCFF57D4                 lea     r11d, [r11+rsi+1]
+.text:00007FF7BCFF57D9                 sub     r10d, ecx
+.text:00007FF7BCFF57DC                 mov     ecx, r11d
+.text:00007FF7BCFF57DF                 and     ecx, r10d
+.text:00007FF7BCFF57E2                 xor     r11d, r10d
+.text:00007FF7BCFF57E5                 mov     r10d, ecx
+.text:00007FF7BCFF57E8                 mov     ecx, r11d
+.text:00007FF7BCFF57EB                 lea     ecx, [rcx+r10*2]
+.text:00007FF7BCFF57EF                 mov     [rbp+540h+var_4E8], ecx
+.text:00007FF7BCFF57F2                 mov     ecx, eax
+.text:00007FF7BCFF57F4                 or      ecx, r8d
+.text:00007FF7BCFF57F7                 add     eax, r8d
+.text:00007FF7BCFF57FA                 or      r9d, edx
+.text:00007FF7BCFF57FD                 mov     r8d, eax
+.text:00007FF7BCFF5800                 mov     edx, r9d
+.text:00007FF7BCFF5803                 lea     edx, [rdx+r8+1]
+.text:00007FF7BCFF5808                 sub     ecx, eax
+.text:00007FF7BCFF580A                 mov     eax, edx
+.text:00007FF7BCFF580C                 and     eax, ecx
+.text:00007FF7BCFF580E                 xor     edx, ecx
+.text:00007FF7BCFF5810                 mov     ecx, eax
+.text:00007FF7BCFF5812                 mov     eax, edx
+.text:00007FF7BCFF5814                 lea     eax, [rax+rcx*2]
+.text:00007FF7BCFF5817                 mov     [rbp+540h+var_4E4], eax
+.text:00007FF7BCFF581A                 mov     rax, [rbp+540h+var_70]
+.text:00007FF7BCFF5821                 imul    rax, 9C84DE4h
+.text:00007FF7BCFF5828                 mov     [rbp+540h+var_4E0], rax
+.text:00007FF7BCFF582C                 mov     rcx, 2C21B2DA413B9829h
+.text:00007FF7BCFF5836                 mul     rcx
+.text:00007FF7BCFF5839                 mov     rax, rdx
+.text:00007FF7BCFF583C                 mov     rdx, [rbp+540h+var_4E0]
+.text:00007FF7BCFF5840                 shr     rax, 1Ah
+.text:00007FF7BCFF5844                 imul    rax, 17340C1Ah
+.text:00007FF7BCFF584B                 sub     rdx, rax
+.text:00007FF7BCFF584E                 mov     rax, rdx
+.text:00007FF7BCFF5851                 or      rax, 0FFFFFFFFF5A48279h
+.text:00007FF7BCFF5857                 mov     r9d, eax
+.text:00007FF7BCFF585A                 mov     r8d, edx
+.text:00007FF7BCFF585D                 sub     r8d, r9d
+.text:00007FF7BCFF5860                 add     r8d, r8d
+.text:00007FF7BCFF5863                 add     r8, 0FFFFFFFFEB4904F2h
+.text:00007FF7BCFF586A                 and     edx, 15A48278h
+.text:00007FF7BCFF5870                 sub     rax, rdx
+.text:00007FF7BCFF5873                 mov     rdx, rax
+.text:00007FF7BCFF5876                 or      rdx, r8
+.text:00007FF7BCFF5879                 and     rax, r8
+.text:00007FF7BCFF587C                 add     rax, rdx
+.text:00007FF7BCFF587F                 mov     [rbp+540h+var_4D8], rax
+.text:00007FF7BCFF5883                 mul     rcx
+.text:00007FF7BCFF5886                 mov     rax, [rbp+540h+var_4D8]
+.text:00007FF7BCFF588A                 shr     rdx, 1Ah
+.text:00007FF7BCFF588E                 imul    rcx, rdx, 17340C1Ah
+.text:00007FF7BCFF5895                 sub     rax, rcx
+.text:00007FF7BCFF5898                 mov     [rbp+540h+var_4D0], rax
+.text:00007FF7BCFF589C                 mov     rax, cs:off_7FF7BD0247B0
+.text:00007FF7BCFF58A3                 mov     rcx, 0B559826F2BEEE58Ah
+.text:00007FF7BCFF58AD                 add     rax, rcx
+.text:00007FF7BCFF58B0                 lea     rcx, [rbp+540h+var_340]
+.text:00007FF7BCFF58B7                 call    rax
+.text:00007FF7BCFF58B9                 mov     rcx, [rax]
+.text:00007FF7BCFF58BC                 mov     rax, cs:off_7FF7BD025200
+.text:00007FF7BCFF58C3                 mov     rdx, 0EB839E7172D1F5FBh
+.text:00007FF7BCFF58CD                 add     rax, rdx
+.text:00007FF7BCFF58D0                 call    rax
+.text:00007FF7BCFF58D2                 mov     rcx, [rbp+540h+var_4D0]
+.text:00007FF7BCFF58D6                 mov     rax, [rax]
+.text:00007FF7BCFF58D9                 mov     [rax+28h], rcx
+.text:00007FF7BCFF58DD                 mov     rax, cs:off_7FF7BD03B760
+.text:00007FF7BCFF58E4                 mov     rcx, 0F2B4E3A7FA36C529h
+.text:00007FF7BCFF58EE                 add     rax, rcx
+.text:00007FF7BCFF58F1                 lea     rcx, [rbp+540h+var_2B0]

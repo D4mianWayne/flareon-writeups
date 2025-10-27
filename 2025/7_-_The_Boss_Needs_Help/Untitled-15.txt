@@ -1,0 +1,288 @@
+00C0                                         ; DATA XREF: .pdata:00007FF7879EB8A0↓o
+.text:00007FF7875C00C0
+.text:00007FF7875C00C0 arg_0           = qword ptr  8
+.text:00007FF7875C00C0 arg_8           = qword ptr  10h
+.text:00007FF7875C00C0 arg_10          = qword ptr  18h
+.text:00007FF7875C00C0 arg_18          = qword ptr  20h
+.text:00007FF7875C00C0
+.text:00007FF7875C00C0                 mov     [rsp+arg_0], rbx
+.text:00007FF7875C00C5                 mov     [rsp+arg_8], rbp
+.text:00007FF7875C00CA                 mov     [rsp+arg_10], rsi
+.text:00007FF7875C00CF                 mov     [rsp+arg_18], rdi
+.text:00007FF7875C00D4                 push    r12
+.text:00007FF7875C00D6                 push    r14
+.text:00007FF7875C00D8                 push    r15
+.text:00007FF7875C00DA                 movzx   eax, byte ptr [rdx]
+.text:00007FF7875C00DD                 lea     r12, cs:7FF787570000h
+.text:00007FF7875C00E4                 mov     [rcx], al
+.text:00007FF7875C00E6                 mov     r11, rcx
+.text:00007FF7875C00E9                 movzx   eax, byte ptr [rdx+1]
+.text:00007FF7875C00ED                 mov     esi, 8
+.text:00007FF7875C00F2                 mov     [rcx+1], al
+.text:00007FF7875C00F5                 mov     r14d, 0Ah
+.text:00007FF7875C00FB                 movzx   eax, byte ptr [rdx+2]
+.text:00007FF7875C00FF                 mov     [rcx+2], al
+.text:00007FF7875C0102                 movzx   eax, byte ptr [rdx+3]
+.text:00007FF7875C0106                 mov     [rcx+3], al
+.text:00007FF7875C0109                 movzx   eax, byte ptr [rdx+4]
+.text:00007FF7875C010D                 mov     [rcx+4], al
+.text:00007FF7875C0110                 movzx   eax, byte ptr [rdx+5]
+.text:00007FF7875C0114                 mov     [rcx+5], al
+.text:00007FF7875C0117                 movzx   eax, byte ptr [rdx+6]
+.text:00007FF7875C011B                 mov     [rcx+6], al
+.text:00007FF7875C011E                 movzx   eax, byte ptr [rdx+7]
+.text:00007FF7875C0122                 mov     [rcx+7], al
+.text:00007FF7875C0125                 movzx   eax, byte ptr [rdx+8]
+.text:00007FF7875C0129                 mov     [rcx+8], al
+.text:00007FF7875C012C                 movzx   eax, byte ptr [rdx+9]
+.text:00007FF7875C0130                 mov     [rcx+9], al
+.text:00007FF7875C0133                 movzx   eax, byte ptr [rdx+0Ah]
+.text:00007FF7875C0137                 mov     [rcx+0Ah], al
+.text:00007FF7875C013A                 movzx   eax, byte ptr [rdx+0Bh]
+.text:00007FF7875C013E                 mov     [rcx+0Bh], al
+.text:00007FF7875C0141                 movzx   eax, byte ptr [rdx+0Ch]
+.text:00007FF7875C0145                 mov     [rcx+0Ch], al
+.text:00007FF7875C0148                 movzx   eax, byte ptr [rdx+0Dh]
+.text:00007FF7875C014C                 mov     [rcx+0Dh], al
+.text:00007FF7875C014F                 movzx   eax, byte ptr [rdx+0Eh]
+.text:00007FF7875C0153                 mov     [rcx+0Eh], al
+.text:00007FF7875C0156                 movzx   eax, byte ptr [rdx+0Fh]
+.text:00007FF7875C015A                 mov     [rcx+0Fh], al
+.text:00007FF7875C015D                 movzx   eax, byte ptr [rdx+10h]
+.text:00007FF7875C0161                 mov     [rcx+10h], al
+.text:00007FF7875C0164                 movzx   eax, byte ptr [rdx+11h]
+.text:00007FF7875C0168                 mov     [rcx+11h], al
+.text:00007FF7875C016B                 movzx   eax, byte ptr [rdx+12h]
+.text:00007FF7875C016F                 mov     [rcx+12h], al
+.text:00007FF7875C0172                 movzx   eax, byte ptr [rdx+13h]
+.text:00007FF7875C0176                 mov     [rcx+13h], al
+.text:00007FF7875C0179                 movzx   eax, byte ptr [rdx+14h]
+.text:00007FF7875C017D                 mov     [rcx+14h], al
+.text:00007FF7875C0180                 movzx   eax, byte ptr [rdx+15h]
+.text:00007FF7875C0184                 mov     [rcx+15h], al
+.text:00007FF7875C0187                 movzx   eax, byte ptr [rdx+16h]
+.text:00007FF7875C018B                 mov     [rcx+16h], al
+.text:00007FF7875C018E                 movzx   eax, byte ptr [rdx+17h]
+.text:00007FF7875C0192                 mov     [rcx+17h], al
+.text:00007FF7875C0195                 movzx   eax, byte ptr [rdx+18h]
+.text:00007FF7875C0199                 mov     [rcx+18h], al
+.text:00007FF7875C019C                 movzx   eax, byte ptr [rdx+19h]
+.text:00007FF7875C01A0                 mov     [rcx+19h], al
+.text:00007FF7875C01A3                 movzx   eax, byte ptr [rdx+1Ah]
+.text:00007FF7875C01A7                 mov     [rcx+1Ah], al
+.text:00007FF7875C01AA                 movzx   eax, byte ptr [rdx+1Bh]
+.text:00007FF7875C01AE                 mov     [rcx+1Bh], al
+.text:00007FF7875C01B1                 movzx   eax, byte ptr [rdx+1Ch]
+.text:00007FF7875C01B5                 mov     [rcx+1Ch], al
+.text:00007FF7875C01B8                 movzx   eax, byte ptr [rdx+1Dh]
+.text:00007FF7875C01BC                 mov     [rcx+1Dh], al
+.text:00007FF7875C01BF                 movzx   eax, byte ptr [rdx+1Eh]
+.text:00007FF7875C01C3                 mov     [rcx+1Eh], al
+.text:00007FF7875C01C6                 movzx   eax, byte ptr [rdx+1Fh]
+.text:00007FF7875C01CA                 mov     [rcx+1Fh], al
+.text:00007FF7875C01CD                 nop     dword ptr [rax]
+.text:00007FF7875C01D0
+.text:00007FF7875C01D0 loc_7FF7875C01D0:                       ; CODE XREF: sub_7FF7875C00C0+44B↓j
+.text:00007FF7875C01D0                 lea     r8d, ds:0FFFFFFFFFFFFFFFCh[rsi*4]
+.text:00007FF7875C01D8                 movzx   eax, byte ptr [r8+r11]
+.text:00007FF7875C01DD                 lea     ecx, [r8+1]
+.text:00007FF7875C01E1                 movzx   edi, byte ptr [rcx+r11]
+.text:00007FF7875C01E6                 lea     ecx, [r8+2]
+.text:00007FF7875C01EA                 movzx   r9d, byte ptr [rcx+r11]
+.text:00007FF7875C01EF                 mov     ebx, edi
+.text:00007FF7875C01F1                 lea     ecx, [r8+3]
+.text:00007FF7875C01F5                 movzx   r10d, byte ptr [rcx+r11]
+.text:00007FF7875C01FA                 mov     ecx, esi
+.text:00007FF7875C01FC                 and     ecx, 7
+.text:00007FF7875C01FF                 jnz     short loc_7FF7875C0237
+.text:00007FF7875C0201                 movzx   ebx, byte ptr [r9+r12+46B8A0h]
+.text:00007FF7875C020A                 movzx   r9d, byte ptr [r10+r12+46B8A0h]
+.text:00007FF7875C0213                 movzx   r10d, byte ptr [rax+r12+46B8A0h]
+.text:00007FF7875C021C                 lea     rax, [r14-2]
+.text:00007FF7875C0220                 shr     rax, 3
+.text:00007FF7875C0224                 movzx   eax, byte ptr [rax+r12+46A530h]
+.text:00007FF7875C022D                 xor     al, [rdi+r12+46B8A0h]
+.text:00007FF7875C0235                 jmp     short loc_7FF7875C0260
+.text:00007FF7875C0237 ; ---------------------------------------------------------------------------
+.text:00007FF7875C0237
+.text:00007FF7875C0237 loc_7FF7875C0237:                       ; CODE XREF: sub_7FF7875C00C0+13F↑j
+.text:00007FF7875C0237                 cmp     ecx, 4
+.text:00007FF7875C023A                 jnz     short loc_7FF7875C0260
+.text:00007FF7875C023C                 movzx   eax, byte ptr [rax+r12+46B8A0h]
+.text:00007FF7875C0245                 movzx   ebx, byte ptr [rdi+r12+46B8A0h]
+.text:00007FF7875C024E                 movzx   r9d, byte ptr [r9+r12+46B8A0h]
+.text:00007FF7875C0257                 movzx   r10d, byte ptr [r10+r12+46B8A0h]
+.text:00007FF7875C0260
+.text:00007FF7875C0260 loc_7FF7875C0260:                       ; CODE XREF: sub_7FF7875C00C0+175↑j
+.text:00007FF7875C0260                                         ; sub_7FF7875C00C0+17A↑j
+.text:00007FF7875C0260                 lea     r8d, ds:0FFFFFFFFFFFFFFE0h[rsi*4]
+.text:00007FF7875C0268                 xor     al, [r8+r11]
+.text:00007FF7875C026C                 lea     ecx, [r8+1]
+.text:00007FF7875C0270                 lea     ebp, ds:0[rsi*4]
+.text:00007FF7875C0277                 mov     [rbp+r11+0], al
+.text:00007FF7875C027C                 xor     bl, [rcx+r11]
+.text:00007FF7875C0280                 lea     ecx, [rbp+1]
+.text:00007FF7875C0283                 mov     [rcx+r11], bl
+.text:00007FF7875C0287                 lea     ecx, [r8+2]
+.text:00007FF7875C028B                 xor     r9b, [rcx+r11]
+.text:00007FF7875C028F                 lea     ecx, [rbp+2]
+.text:00007FF7875C0292                 mov     [rcx+r11], r9b
+.text:00007FF7875C0296                 lea     ecx, [r8+3]
+.text:00007FF7875C029A                 xor     r10b, [rcx+r11]
+.text:00007FF7875C029E                 lea     ecx, [rbp+3]
+.text:00007FF7875C02A1                 mov     [rcx+r11], r10b
+.text:00007FF7875C02A5                 lea     ecx, [rsi+1]
+.text:00007FF7875C02A8                 and     ecx, 7
+.text:00007FF7875C02AB                 jnz     short loc_7FF7875C02F1
+.text:00007FF7875C02AD                 movzx   ecx, r9b
+.text:00007FF7875C02B1                 movzx   edi, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C02BA                 movzx   ecx, r10b
+.text:00007FF7875C02BE                 movzx   r9d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C02C7                 movzx   ecx, al
+.text:00007FF7875C02CA                 lea     rax, [r14-1]
+.text:00007FF7875C02CE                 shr     rax, 3
+.text:00007FF7875C02D2                 movzx   r10d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C02DB                 movzx   eax, byte ptr [rax+r12+46A530h]
+.text:00007FF7875C02E4                 movzx   ecx, bl
+.text:00007FF7875C02E7                 xor     al, [rcx+r12+46B8A0h]
+.text:00007FF7875C02EF                 jmp     short loc_7FF7875C032B
+.text:00007FF7875C02F1 ; ---------------------------------------------------------------------------
+.text:00007FF7875C02F1
+.text:00007FF7875C02F1 loc_7FF7875C02F1:                       ; CODE XREF: sub_7FF7875C00C0+1EB↑j
+.text:00007FF7875C02F1                 movzx   edi, bl
+.text:00007FF7875C02F4                 cmp     ecx, 4
+.text:00007FF7875C02F7                 jnz     short loc_7FF7875C032B
+.text:00007FF7875C02F9                 movzx   ecx, bl
+.text:00007FF7875C02FC                 movzx   eax, al
+.text:00007FF7875C02FF                 movzx   edi, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C0308                 movzx   eax, byte ptr [rax+r12+46B8A0h]
+.text:00007FF7875C0311                 movzx   ecx, r9b
+.text:00007FF7875C0315                 movzx   r9d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C031E                 movzx   ecx, r10b
+.text:00007FF7875C0322                 movzx   r10d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C032B
+.text:00007FF7875C032B loc_7FF7875C032B:                       ; CODE XREF: sub_7FF7875C00C0+22F↑j
+.text:00007FF7875C032B                                         ; sub_7FF7875C00C0+237↑j
+.text:00007FF7875C032B                 lea     ecx, [rbp+4]
+.text:00007FF7875C032E                 lea     r8d, ds:0FFFFFFFFFFFFFFE4h[rsi*4]
+.text:00007FF7875C0336                 xor     al, [r8+r11]
+.text:00007FF7875C033A                 mov     [rcx+r11], al
+.text:00007FF7875C033E                 lea     ecx, [r8+1]
+.text:00007FF7875C0342                 xor     dil, [rcx+r11]
+.text:00007FF7875C0346                 lea     ecx, [rbp+5]
+.text:00007FF7875C0349                 mov     [rcx+r11], dil
+.text:00007FF7875C034D                 lea     ecx, [r8+2]
+.text:00007FF7875C0351                 xor     r9b, [rcx+r11]
+.text:00007FF7875C0355                 lea     ecx, [rbp+6]
+.text:00007FF7875C0358                 mov     [rcx+r11], r9b
+.text:00007FF7875C035C                 lea     ecx, [r8+3]
+.text:00007FF7875C0360                 xor     r10b, [rcx+r11]
+.text:00007FF7875C0364                 lea     ecx, [rbp+7]
+.text:00007FF7875C0367                 mov     [rcx+r11], r10b
+.text:00007FF7875C036B                 lea     ecx, [rsi+2]
+.text:00007FF7875C036E                 and     ecx, 7
+.text:00007FF7875C0371                 jnz     short loc_7FF7875C03B7
+.text:00007FF7875C0373                 movzx   ecx, r9b
+.text:00007FF7875C0377                 movzx   ebx, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C0380                 movzx   ecx, r10b
+.text:00007FF7875C0384                 movzx   r9d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C038D                 movzx   ecx, al
+.text:00007FF7875C0390                 mov     rax, r14
+.text:00007FF7875C0393                 shr     rax, 3
+.text:00007FF7875C0397                 movzx   r10d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C03A0                 movzx   eax, byte ptr [rax+r12+46A530h]
+.text:00007FF7875C03A9                 movzx   ecx, dil
+.text:00007FF7875C03AD                 xor     al, [rcx+r12+46B8A0h]
+.text:00007FF7875C03B5                 jmp     short loc_7FF7875C03F3
+.text:00007FF7875C03B7 ; ---------------------------------------------------------------------------
+.text:00007FF7875C03B7
+.text:00007FF7875C03B7 loc_7FF7875C03B7:                       ; CODE XREF: sub_7FF7875C00C0+2B1↑j
+.text:00007FF7875C03B7                 movzx   ebx, dil
+.text:00007FF7875C03BB                 cmp     ecx, 4
+.text:00007FF7875C03BE                 jnz     short loc_7FF7875C03F3
+.text:00007FF7875C03C0                 movzx   ecx, dil
+.text:00007FF7875C03C4                 movzx   eax, al
+.text:00007FF7875C03C7                 movzx   ebx, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C03D0                 movzx   eax, byte ptr [rax+r12+46B8A0h]
+.text:00007FF7875C03D9                 movzx   ecx, r9b
+.text:00007FF7875C03DD                 movzx   r9d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C03E6                 movzx   ecx, r10b
+.text:00007FF7875C03EA                 movzx   r10d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C03F3
+.text:00007FF7875C03F3 loc_7FF7875C03F3:                       ; CODE XREF: sub_7FF7875C00C0+2F5↑j
+.text:00007FF7875C03F3                                         ; sub_7FF7875C00C0+2FE↑j
+.text:00007FF7875C03F3                 lea     ecx, ds:8[rsi*4]
+.text:00007FF7875C03FA                 lea     r8d, ds:0FFFFFFFFFFFFFFE8h[rsi*4]
+.text:00007FF7875C0402                 xor     al, [r8+r11]
+.text:00007FF7875C0406                 mov     [rcx+r11], al
+.text:00007FF7875C040A                 lea     ecx, [r8+1]
+.text:00007FF7875C040E                 xor     bl, [rcx+r11]
+.text:00007FF7875C0412                 lea     ecx, [rbp+9]
+.text:00007FF7875C0415                 mov     [rcx+r11], bl
+.text:00007FF7875C0419                 lea     ecx, [r8+2]
+.text:00007FF7875C041D                 xor     r9b, [rcx+r11]
+.text:00007FF7875C0421                 lea     ecx, [rbp+0Ah]
+.text:00007FF7875C0424                 mov     [rcx+r11], r9b
+.text:00007FF7875C0428                 lea     ecx, [r8+3]
+.text:00007FF7875C042C                 xor     r10b, [rcx+r11]
+.text:00007FF7875C0430                 lea     ecx, [rbp+0Bh]
+.text:00007FF7875C0433                 mov     [rcx+r11], r10b
+.text:00007FF7875C0437                 lea     ecx, [rsi+3]
+.text:00007FF7875C043A                 and     ecx, 7
+.text:00007FF7875C043D                 jnz     short loc_7FF7875C0483
+.text:00007FF7875C043F                 movzx   ecx, r9b
+.text:00007FF7875C0443                 movzx   edi, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C044C                 movzx   ecx, r10b
+.text:00007FF7875C0450                 movzx   r9d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C0459                 movzx   ecx, al
+.text:00007FF7875C045C                 lea     rax, [r14+1]
+.text:00007FF7875C0460                 shr     rax, 3
+.text:00007FF7875C0464                 movzx   r10d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C046D                 movzx   eax, byte ptr [rax+r12+46A530h]
+.text:00007FF7875C0476                 movzx   ecx, bl
+.text:00007FF7875C0479                 xor     al, [rcx+r12+46B8A0h]
+.text:00007FF7875C0481                 jmp     short loc_7FF7875C04BD
+.text:00007FF7875C0483 ; ---------------------------------------------------------------------------
+.text:00007FF7875C0483
+.text:00007FF7875C0483 loc_7FF7875C0483:                       ; CODE XREF: sub_7FF7875C00C0+37D↑j
+.text:00007FF7875C0483                 movzx   edi, bl
+.text:00007FF7875C0486                 cmp     ecx, 4
+.text:00007FF7875C0489                 jnz     short loc_7FF7875C04BD
+.text:00007FF7875C048B                 movzx   ecx, bl
+.text:00007FF7875C048E                 movzx   eax, al
+.text:00007FF7875C0491                 movzx   edi, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C049A                 movzx   eax, byte ptr [rax+r12+46B8A0h]
+.text:00007FF7875C04A3                 movzx   ecx, r9b
+.text:00007FF7875C04A7                 movzx   r9d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C04B0                 movzx   ecx, r10b
+.text:00007FF7875C04B4                 movzx   r10d, byte ptr [rcx+r12+46B8A0h]
+.text:00007FF7875C04BD
+.text:00007FF7875C04BD loc_7FF7875C04BD:                       ; CODE XREF: sub_7FF7875C00C0+3C1↑j
+.text:00007FF7875C04BD                                         ; sub_7FF7875C00C0+3C9↑j
+.text:00007FF7875C04BD                 lea     r8d, ds:0FFFFFFFFFFFFFFECh[rsi*4]
+.text:00007FF7875C04C5                 add     r14, 4
+.text:00007FF7875C04C9                 xor     al, [r8+r11]
+.text:00007FF7875C04CD                 lea     ecx, ds:0Ch[rsi*4]
+.text:00007FF7875C04D4                 mov     [rcx+r11], al
+.text:00007FF7875C04D8                 add     esi, 4
+.text:00007FF7875C04DB                 lea     eax, [r8+1]
+.text:00007FF7875C04DF                 xor     dil, [rax+r11]
+.text:00007FF7875C04E3                 lea     eax, [rbp+0Dh]
+.text:00007FF7875C04E6                 mov     [rax+r11], dil
+.text:00007FF7875C04EA                 lea     eax, [r8+2]
+.text:00007FF7875C04EE                 xor     r9b, [rax+r11]
+.text:00007FF7875C04F2                 lea     eax, [rbp+0Eh]
+.text:00007FF7875C04F5                 mov     [rax+r11], r9b
+.text:00007FF7875C04F9                 lea     eax, [r8+3]
+.text:00007FF7875C04FD                 xor     r10b, [rax+r11]
+.text:00007FF7875C0501                 lea     eax, [rbp+0Fh]
+.text:00007FF7875C0504                 mov     [rax+r11], r10b
+.text:00007FF7875C0508                 cmp     esi, 3Ch ; '<'
+.text:00007FF7875C050B                 jb      loc_7FF7875C01D0
+.text:00007FF7875C0511                 mov     rbx, [rsp+18h+arg_0]
+.text:00007FF7875C0516                 mov     rbp, [rsp+18h+arg_8]
+.text:00007FF7875C051B                 mov     rsi, [rsp+18h+arg_10]
+.text:00007FF7875C0520                 mov     rdi, [rsp+18h+arg_18]
+.text:00007FF7875C0525                 pop     r15
+.text:00007FF7875C0527                 pop     r14
+.text:00007FF7875C0529                 pop     r12

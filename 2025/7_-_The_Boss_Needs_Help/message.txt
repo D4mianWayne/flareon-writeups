@@ -1,0 +1,2050 @@
+PS C:\Users\Null\Desktop> .\capa.exe -vv .\Flareon-12\#7\hopeanddreams.exe
+md5                     cb24e91188934b9d1fdee2ad64cbb740
+sha1                    dd3833e88c75f2ad09c454704c30f2a37fb050e6
+sha256                  14e60fb48803c06762b4fffdd4e0a2bd2bcac7ae81c92d7393f1198951dbfbbb
+path                    C:/Users/Null/Desktop/Flareon-12/#7/hopeanddreams.exe
+timestamp               2025-09-30 06:55:13.268890
+capa version            9.2.1
+os                      windows
+format                  pe
+arch                    amd64
+analysis                static
+extractor               VivisectFeatureExtractor
+base address            0x140000000
+rules                   C:/Users/Null/AppData/Local/Temp/_MEI31802/rules
+function count          1205
+library function count  107
+total feature count     421745
+
+PEB access (2 matches, only showing first match of library rule)
+author      michael.hunhoff@mandiant.com
+scope       basic block
+mbc         Anti-Behavioral Analysis::Debugger Detection::Process Environment Block [B0001.019]
+references  https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/NtGlobalFlag.cpp
+basic block @ 0x14002CED7 in function 0x14002B170
+  or:
+    and:
+      arch: amd64
+      characteristic: gs access @ 0x14002D210
+      or:
+        offset: 0x60 @ 0x14002CFE0
+
+contain loop (275 matches, only showing first match of library rule)
+author  moritz.raabe@mandiant.com
+scope   function
+function @ 0x140001060
+  or:
+    characteristic: tight loop @ 0x1400010B0
+
+delay execution (3 matches, only showing first match of library rule)
+author      michael.hunhoff@mandiant.com, @ramen0x3f
+scope       basic block
+mbc         Anti-Behavioral Analysis::Dynamic Analysis Evasion::Delayed Execution [B0003.003]
+references  https://docs.microsoft.com/en-us/windows/win32/sync/wait-functions, https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/TimingAttacks/timing.cpp
+basic block @ 0x14012F301 in function 0x14012C6A0
+  or:
+    and:
+      os: windows
+      or:
+        api: Sleep @ 0x14012F349
+
+get OS version (2 matches, only showing first match of library rule)
+author  @mr-tz
+scope   function
+function @ 0x140017470
+  or:
+    api: GetVersionEx @ 0x14001B18A
+
+validate payment card number using luhn algorithm with no lookup table (library rule)
+author  @_re_fox
+scope   function
+mbc     Data::Checksum::Luhn [C0032.002]
+function @ 0x140449C20
+  and:
+    characteristic: loop = Iterate over CC digits @ 0x140449C20
+    basic block:
+      or:
+        and: = Compiler optimized returning checkum % 10
+          mnemonic: shr @ 0x140449C75
+          mnemonic: imul @ 0x140449C6E
+          number: 0x66666667 @ 0x140449C69
+          number: 0x1F @ 0x140449C75
+          number: 0x2 @ 0x140449C70
+    or:
+      instruction:
+        and:
+          offset: -0x30 @ 0x140449C44
+          mnemonic: lea @ 0x140449C44
+        and:
+          offset: -0x30 @ 0x140449C4F
+          mnemonic: lea @ 0x140449C4F
+    or:
+      and:
+        instruction:
+          and:
+            mnemonic: cmp @ 0x140449C47
+            number: 0x9 @ 0x140449C47
+        basic block:
+          or: = 2*Number for Digital Root
+            mnemonic: add = add al, al @ 0x140449CF8
+          or: = 2*Number for Digital Root
+            mnemonic: add = add al, al @ 0x140449C78
+
+check for software breakpoints
+namespace   anti-analysis/anti-debugging/debugger-detection
+author      michael.hunhoff@mandiant.com
+scope       function
+mbc         Anti-Behavioral Analysis::Debugger Detection::Software Breakpoints [B0001.025]
+references  https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/SoftwareBreakpoints.cpp, https://anti-debug.checkpoint.com/techniques/assembly.html
+function @ 0x14000C140
+  and:
+    match: contain loop @ 0x14000C140
+      or:
+        characteristic: loop @ 0x14000C140
+    or:
+      instruction:
+        and:
+          mnemonic: cmp @ 0x14000C378
+          number: 0xCC = INT3 @ 0x14000C378
+
+parse credit card information
+namespace  collection/credit-card
+author     @_re_fox
+scope      function
+mbc        Data::Check String [C0019]
+function @ 0x1404448F0
+  and:
+    not: = if a function also compares these non-hex characters it's most likely NOT parsing CC data
+      and:
+        match: parse credit card information/da1aa6d974cc493797e9f729881561ed
+        match: parse credit card information/6a6c11897fe346c79f50540ee3d2fb01
+        match: parse credit card information/de926f9240ee45bab82deecbd4bfc049
+        match: parse credit card information/f861bccc3d9f4f429d8efe4a35832aa1
+    3 or more:
+      instruction:
+        and:
+          mnemonic: cmp @ 0x140444D87
+          number: 0x5E = '^' (Track 1 separator) @ 0x140444D87
+      instruction:
+        and:
+          mnemonic: cmp @ 0x140444AC0
+          number: 0x42 = 'B' (Format code) @ 0x140444AC0
+      instruction:
+        and:
+          mnemonic: cmp @ 0x140444E5A
+          number: 0x3F = '?' (Track 1 & 2 end sentinel) @ 0x140444E5A
+
+receive data
+namespace    communication
+author       william.ballenthin@mandiant.com
+scope        function
+mbc          Command and Control::C2 Communication::Receive Data [B0030.002]
+description  all known techniques for receiving data from a potential C2 server
+function @ 0x140002C00
+  or:
+    match: receive data on socket @ 0x140002C00
+      or:
+        api: recv @ 0x140002C1E, 0x140002C97
+
+send data
+namespace    communication
+author       william.ballenthin@mandiant.com, joakim@intezer.com
+scope        function
+mbc          Command and Control::C2 Communication::Send Data [B0030.001]
+description  all known techniques for sending data to a potential C2 server
+function @ 0x140005510
+  or:
+    and:
+      os: windows
+      or:
+        match: send data on socket @ 0x140005510
+          or:
+            api: send @ 0x14000562F, 0x140005687
+
+resolve DNS (2 matches)
+namespace  communication/dns
+author     william.ballenthin@mandiant.com, johnk3r, joakim@intezer.com, michael.hunhoff@mandiant.com
+scope      function
+mbc        Communication::DNS Communication::Resolve [C0011.001]
+function @ 0x140003290
+  or:
+    api: getnameinfo @ 0x14000330C
+function @ 0x14042E900
+  or:
+    api: getaddrinfo @ 0x14042E9A9
+
+check HTTP status code (2 matches)
+namespace  communication/http/client
+author     @mr-tz
+scope      function
+mbc        Communication::HTTP Communication::Read Header [C0002.014]
+function @ 0x140081590
+  and:
+    os: windows
+    instruction:
+      and:
+        or:
+          mnemonic: cmp @ 0x1400AF587
+        or:
+          number: 0xC8 = OK @ 0x1400AF587
+    or:
+      number: 0x13 = HTTP_QUERY_STATUS_CODE @ 0x1400860F9, 0x14008930A, 0x140092F99, 0x1400ADBDA
+function @ 0x1400D3E60
+  and:
+    os: windows
+    instruction:
+      and:
+        or:
+          mnemonic: cmp @ 0x140104F04
+        or:
+          number: 0xC8 = OK @ 0x140104F04
+    or:
+      number: 0x13 = HTTP_QUERY_STATUS_CODE @ 0x1400EF6A1, 0x1400F28B9, 0x140116DBB, 0x140123FA0
+
+connect socket
+namespace    communication/socket
+author       moritz.raabe@mandiant.com, joakim@intezer.com, mrhafizfarhad@gmail.com
+scope        basic block
+description  Detects socket connection attempts using common APIs or ConnectEx setup.
+basic block @ 0x140002FC0 in function 0x140002FC0
+  or:
+    api: connect @ 0x14000300B
+
+get socket information
+namespace  communication/socket
+author     michael.hunhoff@mandiant.com
+scope      function
+att&ck     Discovery::System Network Configuration Discovery [T1016]
+function @ 0x140005750
+  or:
+    api: getsockname @ 0x14000578B
+
+initialize Winsock library
+namespace  communication/socket
+author     michael.hunhoff@mandiant.com
+scope      function
+mbc        Communication::Socket Communication::Initialize Winsock Library [C0001.009]
+function @ 0x140001000
+  or:
+    api: WSAStartup @ 0x140001023
+
+set socket configuration (2 matches)
+namespace  communication/socket
+author     michael.hunhoff@mandiant.com
+scope      function
+mbc        Communication::Socket Communication::Set Socket Config [C0001.001]
+function @ 0x140002FC0
+  or:
+    api: setsockopt @ 0x140003210, 0x14000325B
+    api: ioctlsocket @ 0x140002FFA, 0x1400031C2
+function @ 0x14042E900
+  or:
+    api: setsockopt @ 0x14042EACA, 0x14042EAF4, 0x14042ECEA
+
+receive data on socket
+namespace  communication/socket/receive
+author     moritz.raabe@mandiant.com, joakim@intezer.com, michael.hunhoff@mandiant.com
+scope      function
+mbc        Communication::Socket Communication::Receive Data [C0001.006]
+function @ 0x140002C00
+  or:
+    api: recv @ 0x140002C1E, 0x140002C97
+
+send data on socket
+namespace  communication/socket/send
+author     moritz.raabe@mandiant.com, joakim@intezer.com, anushka.virgaonkar@mandiant.com
+scope      function
+mbc        Communication::Socket Communication::Send Data [C0001.007]
+function @ 0x140005510
+  or:
+    api: send @ 0x14000562F, 0x140005687
+
+validate payment card number using luhn algorithm
+namespace  data-manipulation/checksum/luhn
+author     @_re_fox
+scope      function
+mbc        Data::Checksum::Luhn [C0032.002]
+function @ 0x140449C20
+  or:
+    match: validate payment card number using luhn algorithm with no lookup table @ 0x140449C20
+      and:
+        characteristic: loop = Iterate over CC digits @ 0x140449C20
+        basic block:
+          or:
+            and: = Compiler optimized returning checkum % 10
+              mnemonic: shr @ 0x140449C75
+              mnemonic: imul @ 0x140449C6E
+              number: 0x66666667 @ 0x140449C69
+              number: 0x1F @ 0x140449C75
+              number: 0x2 @ 0x140449C70
+        or:
+          instruction:
+            and:
+              offset: -0x30 @ 0x140449C44
+              mnemonic: lea @ 0x140449C44
+            and:
+              offset: -0x30 @ 0x140449C4F
+              mnemonic: lea @ 0x140449C4F
+        or:
+          and:
+            instruction:
+              and:
+                mnemonic: cmp @ 0x140449C47
+                number: 0x9 @ 0x140449C47
+            basic block:
+              or: = 2*Number for Digital Root
+                mnemonic: add = add al, al @ 0x140449CF8
+              or: = 2*Number for Digital Root
+                mnemonic: add = add al, al @ 0x140449C78
+
+encode data using Base64
+namespace  data-manipulation/encoding/base64
+author     moritz.raabe@mandiant.com, anushka.virgaonkar@mandiant.com, michael.hunhoff@mandiant.com
+scope      function
+att&ck     Defense Evasion::Obfuscated Files or Information [T1027]
+mbc        Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02], Data::Encode Data::Base64 [C0026.001]
+function @ 0x140002300
+  or:
+    and:
+      mnemonic: shl @ 0x140002390, 0x14000242C
+      mnemonic: shr @ 0x1400023B0
+      number: 0x3F = modulo 64 @ 0x1400023C9, 0x140002435
+      or:
+        number: 0x3D = '=' @ 0x14000249D, 0x1400024A5
+      match: contain loop @ 0x140002300
+        or:
+          characteristic: loop @ 0x140002300
+      optional:
+        number: 0x2 @ 0x1400023B0
+        number: 0x3 @ 0x140002475, 0x1400024B4
+        number: 0x6 @ 0x1400023A5, 0x14000240C
+        number: 0xF @ 0x14000232F, 0x140002354, 0x1400023E9, 0x140002455, and 1 more...
+        string: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/" @ 0x14000237B, 0x140002405
+
+reference Base64 string
+namespace  data-manipulation/encoding/base64
+author     moritz.raabe@mandiant.com
+scope      file
+att&ck     Defense Evasion::Obfuscated Files or Information [T1027]
+mbc        Data::Encode Data::Base64 [C0026.001], Data::Check String [C0019]
+regex: /ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+  - "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/" @ file+0x467720
+
+encode data using XOR (74 matches)
+namespace  data-manipulation/encoding/xor
+author     moritz.raabe@mandiant.com
+scope      basic block
+att&ck     Defense Evasion::Obfuscated Files or Information [T1027]
+mbc        Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02], Data::Encode Data::XOR [C0026.002]
+basic block @ 0x1400505A0 in function 0x140050560
+  and:
+    characteristic: tight loop @ 0x1400505A0
+    characteristic: nzxor @ 0x1400505A5
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050670 in function 0x140050560
+  and:
+    characteristic: tight loop @ 0x140050670
+    characteristic: nzxor @ 0x140050683, 0x14005069D, 0x1400506A7, 0x1400506AA, and 14 more...
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050740 in function 0x140050560
+  and:
+    characteristic: tight loop @ 0x140050740
+    characteristic: nzxor @ 0x140050744
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050820 in function 0x140050560
+  and:
+    characteristic: tight loop @ 0x140050820
+    characteristic: nzxor @ 0x140050829
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050890 in function 0x140050860
+  and:
+    characteristic: tight loop @ 0x140050890
+    characteristic: nzxor @ 0x1400508D0, 0x1400508E8, 0x1400508FD, 0x140050913, and 66 more...
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050B30 in function 0x140050AF0
+  and:
+    characteristic: tight loop @ 0x140050B30
+    characteristic: nzxor @ 0x140050B39
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050C10 in function 0x140050AF0
+  and:
+    characteristic: tight loop @ 0x140050C10
+    characteristic: nzxor @ 0x140050C14
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050CF0 in function 0x140050AF0
+  and:
+    characteristic: tight loop @ 0x140050CF0
+    characteristic: nzxor @ 0x140050CF4
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050D70 in function 0x140050D20
+  and:
+    characteristic: tight loop @ 0x140050D70
+    characteristic: nzxor @ 0x140050D75
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140050E20 in function 0x140050DC0
+  and:
+    characteristic: tight loop @ 0x140050E20
+    characteristic: nzxor @ 0x140050E24
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1400814A0 in function 0x140081300
+  and:
+    characteristic: tight loop @ 0x1400814A0
+    characteristic: nzxor @ 0x1400814A8
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402CEA30 in function 0x1402CEA10
+  and:
+    characteristic: tight loop @ 0x1402CEA30
+    characteristic: nzxor @ 0x1402CEA38
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402D65D0 in function 0x1402D42A0
+  and:
+    characteristic: tight loop @ 0x1402D65D0
+    characteristic: nzxor @ 0x1402D65E0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402DE710 in function 0x1402DC4A0
+  and:
+    characteristic: tight loop @ 0x1402DE710
+    characteristic: nzxor @ 0x1402DE720
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402E28B0 in function 0x1402E0580
+  and:
+    characteristic: tight loop @ 0x1402E28B0
+    characteristic: nzxor @ 0x1402E28C0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402E6A50 in function 0x1402E4720
+  and:
+    characteristic: tight loop @ 0x1402E6A50
+    characteristic: nzxor @ 0x1402E6A60
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402EAB90 in function 0x1402E88C0
+  and:
+    characteristic: tight loop @ 0x1402EAB90
+    characteristic: nzxor @ 0x1402EABA0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402EEC40 in function 0x1402ECA00
+  and:
+    characteristic: tight loop @ 0x1402EEC40
+    characteristic: nzxor @ 0x1402EEC50
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402FAE80 in function 0x1402F8B50
+  and:
+    characteristic: tight loop @ 0x1402FAE80
+    characteristic: nzxor @ 0x1402FAE90
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1402FEF60 in function 0x1402FCCF0
+  and:
+    characteristic: tight loop @ 0x1402FEF60
+    characteristic: nzxor @ 0x1402FEF70
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140303010 in function 0x140300DD0
+  and:
+    characteristic: tight loop @ 0x140303010
+    characteristic: nzxor @ 0x140303020
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14030B140 in function 0x140308ED0
+  and:
+    characteristic: tight loop @ 0x14030B140
+    characteristic: nzxor @ 0x14030B150
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403132F0 in function 0x140311020
+  and:
+    characteristic: tight loop @ 0x1403132F0
+    characteristic: nzxor @ 0x140313300
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14031F530 in function 0x14031D200
+  and:
+    characteristic: tight loop @ 0x14031F530
+    characteristic: nzxor @ 0x14031F540
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140323610 in function 0x1403213A0
+  and:
+    characteristic: tight loop @ 0x140323610
+    characteristic: nzxor @ 0x140323620
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403276C0 in function 0x140325480
+  and:
+    characteristic: tight loop @ 0x1403276C0
+    characteristic: nzxor @ 0x1403276D0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14032F8A0 in function 0x14032D580
+  and:
+    characteristic: tight loop @ 0x14032F8A0
+    characteristic: nzxor @ 0x14032F8B0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14033BA20 in function 0x1403397B0
+  and:
+    characteristic: tight loop @ 0x14033BA20
+    characteristic: nzxor @ 0x14033BA30
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14033FAD0 in function 0x14033D890
+  and:
+    characteristic: tight loop @ 0x14033FAD0
+    characteristic: nzxor @ 0x14033FAE0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140343BB0 in function 0x140341940
+  and:
+    characteristic: tight loop @ 0x140343BB0
+    characteristic: nzxor @ 0x140343BC0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14034BCB0 in function 0x140349A70
+  and:
+    characteristic: tight loop @ 0x14034BCB0
+    characteristic: nzxor @ 0x14034BCC0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14034FD60 in function 0x14034DB20
+  and:
+    characteristic: tight loop @ 0x14034FD60
+    characteristic: nzxor @ 0x14034FD70
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140357F50 in function 0x140355C20
+  and:
+    characteristic: tight loop @ 0x140357F50
+    characteristic: nzxor @ 0x140357F60
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14035C030 in function 0x140359DC0
+  and:
+    characteristic: tight loop @ 0x14035C030
+    characteristic: nzxor @ 0x14035C040
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14036C210 in function 0x140369FA0
+  and:
+    characteristic: tight loop @ 0x14036C210
+    characteristic: nzxor @ 0x14036C220
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403702C0 in function 0x14036E080
+  and:
+    characteristic: tight loop @ 0x1403702C0
+    characteristic: nzxor @ 0x1403702D0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140374370 in function 0x140372130
+  and:
+    characteristic: tight loop @ 0x140374370
+    characteristic: nzxor @ 0x140374380
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140378510 in function 0x1403761E0
+  and:
+    characteristic: tight loop @ 0x140378510
+    characteristic: nzxor @ 0x140378520
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14037C5C0 in function 0x14037A380
+  and:
+    characteristic: tight loop @ 0x14037C5C0
+    characteristic: nzxor @ 0x14037C5D0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140380670 in function 0x14037E430
+  and:
+    characteristic: tight loop @ 0x140380670
+    characteristic: nzxor @ 0x140380680
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403887A0 in function 0x140386530
+  and:
+    characteristic: tight loop @ 0x1403887A0
+    characteristic: nzxor @ 0x1403887B0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403989B0 in function 0x140396710
+  and:
+    characteristic: tight loop @ 0x1403989B0
+    characteristic: nzxor @ 0x1403989C0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14039CA60 in function 0x14039A820
+  and:
+    characteristic: tight loop @ 0x14039CA60
+    characteristic: nzxor @ 0x14039CA70
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403A0B40 in function 0x14039E8D0
+  and:
+    characteristic: tight loop @ 0x1403A0B40
+    characteristic: nzxor @ 0x1403A0B50
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403A4C20 in function 0x1403A29B0
+  and:
+    characteristic: tight loop @ 0x1403A4C20
+    characteristic: nzxor @ 0x1403A4C30
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403A8CD0 in function 0x1403A6A90
+  and:
+    characteristic: tight loop @ 0x1403A8CD0
+    characteristic: nzxor @ 0x1403A8CE0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403ACD80 in function 0x1403AAB40
+  and:
+    characteristic: tight loop @ 0x1403ACD80
+    characteristic: nzxor @ 0x1403ACD90
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403B0E90 in function 0x1403AEBF0
+  and:
+    characteristic: tight loop @ 0x1403B0E90
+    characteristic: nzxor @ 0x1403B0EA0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403B4FD0 in function 0x1403B2D00
+  and:
+    characteristic: tight loop @ 0x1403B4FD0
+    characteristic: nzxor @ 0x1403B4FE0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403B9110 in function 0x1403B6E40
+  and:
+    characteristic: tight loop @ 0x1403B9110
+    characteristic: nzxor @ 0x1403B9120
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403BD2C0 in function 0x1403BAF80
+  and:
+    characteristic: tight loop @ 0x1403BD2C0
+    characteristic: nzxor @ 0x1403BD2D0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403C9440 in function 0x1403C7200
+  and:
+    characteristic: tight loop @ 0x1403C9440
+    characteristic: nzxor @ 0x1403C9450
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403CD5E0 in function 0x1403CB2B0
+  and:
+    characteristic: tight loop @ 0x1403CD5E0
+    characteristic: nzxor @ 0x1403CD5F0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403D1780 in function 0x1403CF450
+  and:
+    characteristic: tight loop @ 0x1403D1780
+    characteristic: nzxor @ 0x1403D1790
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403EDA40 in function 0x1403EB7D0
+  and:
+    characteristic: tight loop @ 0x1403EDA40
+    characteristic: nzxor @ 0x1403EDA50
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403F1B20 in function 0x1403EF8B0
+  and:
+    characteristic: tight loop @ 0x1403F1B20
+    characteristic: nzxor @ 0x1403F1B30
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403F5CC0 in function 0x1403F3990 
+  and:
+    characteristic: tight loop @ 0x1403F5CC0
+    characteristic: nzxor @ 0x1403F5CD0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403FA3D0 in function 0x1403F8190
+  and:
+    characteristic: tight loop @ 0x1403FA3D0
+    characteristic: nzxor @ 0x1403FA3E0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1403FE4B0 in function 0x1403FC240
+  and:
+    characteristic: tight loop @ 0x1403FE4B0
+    characteristic: nzxor @ 0x1403FE4C0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140402590 in function 0x140400320
+  and:
+    characteristic: tight loop @ 0x140402590
+    characteristic: nzxor @ 0x1404025A0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x1404066F0 in function 0x140404400
+  and:
+    characteristic: tight loop @ 0x1404066F0
+    characteristic: nzxor @ 0x140406700
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14040A830 in function 0x140408560
+  and:
+    characteristic: tight loop @ 0x14040A830
+    characteristic: nzxor @ 0x14040A840
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14040E970 in function 0x14040C6A0
+  and:
+    characteristic: tight loop @ 0x14040E970
+    characteristic: nzxor @ 0x14040E980
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140412A50 in function 0x1404107E0
+  and:
+    characteristic: tight loop @ 0x140412A50
+    characteristic: nzxor @ 0x140412A60
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140416B30 in function 0x1404148C0
+  and:
+    characteristic: tight loop @ 0x140416B30
+    characteristic: nzxor @ 0x140416B40
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14041ABE0 in function 0x1404189A0
+  and:
+    characteristic: tight loop @ 0x14041ABE0
+    characteristic: nzxor @ 0x14041ABF0
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140422CF0 in function 0x140420AB0
+  and:
+    characteristic: tight loop @ 0x140422CF0
+    characteristic: nzxor @ 0x140422D00
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14042AE30 in function 0x140428BC0
+  and:
+    characteristic: tight loop @ 0x14042AE30
+    characteristic: nzxor @ 0x14042AE40
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14042D0C0 in function 0x14042D490
+  and:
+    characteristic: tight loop @ 0x14042D0C0
+    characteristic: nzxor @ 0x14042D0C8
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14042D0C0 in function 0x14042D490
+  and:
+    characteristic: tight loop @ 0x14042D0C0
+    characteristic: nzxor @ 0x14042D0C8
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14042D1D0 in function 0x14042D490
+  and:
+    characteristic: tight loop @ 0x14042D1D0
+    characteristic: nzxor @ 0x14042D1D8
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14042D1D0 in function 0x14042D490
+  and:
+    characteristic: tight loop @ 0x14042D1D0
+    characteristic: nzxor @ 0x14042D1D8
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x14042E0A0 in function 0x14042DFB0
+  and:
+    characteristic: tight loop @ 0x14042E0A0
+    characteristic: nzxor @ 0x14042E0A8
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+basic block @ 0x140440820 in function 0x1404407D0
+  and:
+    characteristic: tight loop @ 0x140440820
+    characteristic: nzxor @ 0x140440824
+    not: = filter for potential false positives
+      or:
+        or: = unsigned bitwise negation operation (~i)
+          number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits
+          number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits
+        or: = signed bitwise negation operation (~i)
+          number: 0xFFFFFFF = bitwise negation for signed 32 bits
+          number: 0xFFFFFFFFFFFFFFF = bitwise negation for signed 64 bits
+        or: = Magic constants used in the implementation of strings functions.
+          number: 0x7EFEFEFF = optimized string constant for 32 bits
+          number: 0x81010101 = -0x81010101 = 0x7EFEFEFF
+          number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF
+          number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits
+          number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF
+          number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF
+
+encrypt data using AES (4 matches)
+namespace   data-manipulation/encryption/aes
+author      william.ballenthin@mandiant.com, Ivan Kwiatkowski (@JusticeRage)
+scope       function
+att&ck      Defense Evasion::Obfuscated Files or Information [T1027]
+mbc         Defense Evasion::Obfuscated Files or Information::Encryption-Standard Algorithm [E1027.m05], Cryptography::Encrypt Data::AES [C0027.001]
+references  https://github.com/JusticeRage/Manalyze/blob/8e77642c911d5d82b5f43b198667ab8c77a88763/bin/yara_rules/findcrypt.yara#L351,
+            https://github.com/creaktive/tsh/blob/53b822b9a07d8cc65f1f31c915cf834a2944e833/aes.c
+function @ 0x140001060
+  or:
+    bytes: 52096ad53036a538bf40a39e81f3d7fb = AES_SBOX_DEC @ 0x1400010A2
+function @ 0x140050560
+  or:
+    bytes: 637c777bf26b6fc53001672bfed7ab76 = AES_SBOX_ENC @ 0x1400505C4, 0x140050759, 0x14005076F
+function @ 0x140050AF0
+  or:
+    bytes: 52096ad53036a538bf40a39e81f3d7fb = AES_SBOX_DEC @ 0x140050B55
+function @ 0x140058A00
+  or:
+    bytes: 52096ad53036a538bf40a39e81f3d7fb = AES_SBOX_DEC @ 0x140058A32
+
+reference AES constants (4 matches)
+namespace  data-manipulation/encryption/aes
+author     william.ballenthin@mandiant.com
+scope      function
+att&ck     Defense Evasion::Obfuscated Files or Information [T1027]
+function @ 0x140001060
+  or:
+    bytes: 52096ad53036a538 = inv-s-box @ 0x1400010A2
+function @ 0x140050560
+  or:
+    bytes: 637c777bf26b6fc5 = s-box @ 0x1400505C4, 0x140050759, 0x14005076F
+function @ 0x140050AF0
+  or:
+    bytes: 52096ad53036a538 = inv-s-box @ 0x140050B55
+function @ 0x140058A00
+  or:
+    bytes: 52096ad53036a538 = inv-s-box @ 0x140058A32
+
+hash data using fnv (5 matches)
+namespace    data-manipulation/hashing/fnv
+author       moritz.raabe@mandiant.com, @_re_fox, michael.hunhoff@mandiant.com
+scope        function
+mbc          Data::Non-Cryptographic Hash::FNV [C0030.005]
+references   https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function, http://isthe.com/chongo/tech/comp/fnv/, https://create.stephan-brumme.com/fnv-hash/
+description  can be any Fowler-Noll-Vo (FNV) hash variant, including FNV-1, FNV-1a, FNV-0
+function @ 0x1402CEA10
+  and:
+    basic block:
+      and:
+        characteristic: nzxor @ 0x1402CEA38
+        or:
+          mnemonic: imul @ 0x1402CEA3B
+    or:
+      number: 0x100000001B3 = FNV prime @ 0x1402CEA25
+    optional:
+      number: 0xCBF29CE484222325 = FNV_offset_basis, unused by FNV-0 @ 0x1402CEA10
+function @ 0x14042D030
+  and:
+    basic block:
+      and:
+        characteristic: nzxor @ 0x14042D0C8
+        or:
+          mnemonic: imul @ 0x14042D0CB
+      and:
+        characteristic: nzxor @ 0x14042D1D8
+        or:
+          mnemonic: imul @ 0x14042D1DB
+    or:
+      number: 0x100000001B3 = FNV prime @ 0x14042D0A5, 0x14042D1C4
+    optional:
+      characteristic: loop @ 0x14042D030
+      number: 0xCBF29CE484222325 = FNV_offset_basis, unused by FNV-0 @ 0x14042D09B, 0x14042D1B5
+function @ 0x14042D490
+  and:
+    basic block:
+      and:
+        characteristic: nzxor @ 0x14042D0C8
+        or:
+          mnemonic: imul @ 0x14042D0CB
+      and:
+        characteristic: nzxor @ 0x14042D1D8
+        or:
+          mnemonic: imul @ 0x14042D1DB
+    or:
+      number: 0x100000001B3 = FNV prime @ 0x14042D0A5, 0x14042D1C4
+    optional:
+      characteristic: loop @ 0x14042D490
+      number: 0xCBF29CE484222325 = FNV_offset_basis, unused by FNV-0 @ 0x14042D09B, 0x14042D1B5
+function @ 0x14042DFB0
+  and:
+    basic block:
+      and:
+        characteristic: nzxor @ 0x14042E0A8
+        or:
+          mnemonic: imul @ 0x14042E0AB
+    or:
+      number: 0x100000001B3 = FNV prime @ 0x14042E061, 0x14042E216
+    optional:
+      characteristic: loop @ 0x14042DFB0
+      number: 0xCBF29CE484222325 = FNV_offset_basis, unused by FNV-0 @ 0x14042E052, 0x14042E20C
+function @ 0x1404407D0
+  and:
+    basic block:
+      and:
+        characteristic: nzxor @ 0x140440824
+        or:
+          mnemonic: imul @ 0x140440827
+    or:
+      number: 0x100000001B3 = FNV prime @ 0x14044080F
+    optional:
+      characteristic: loop @ 0x1404407D0
+      number: 0xCBF29CE484222325 = FNV_offset_basis, unused by FNV-0 @ 0x1404407FA
+
+hash data using SHA256
+namespace   data-manipulation/hashing/sha256
+author      moritz.raabe@mandiant.com, anushka.virgaonkar@mandiant.com, william.ballenthin@mandiant.com
+scope       function
+mbc         Cryptography::Cryptographic Hash::SHA256 [C0029.003]
+references  https://www.rfc-editor.org/rfc/rfc6234
+function @ 0x140439850
+  or:
+    bytes: 67e6096a85ae67bb72f36e3c3af54fa57f520e518c68059babd9831f19cde05b = H(0) @ 0x1404398CC
+
+contains PDB path
+namespace  executable/pe/pdb
+author     moritz.raabe@mandiant.com
+scope      file
+regex: /:\\.*\.pdb/
+  - "C:\\this\\binary\\rips\\the\\bones\\from\\your\\back\\its\\a\\death\\trap.pdb" @ file+0x46B260
+
+read file on Windows
+namespace  host-interaction/file-system/read
+author     moritz.raabe@mandiant.com, anushka.virgaonkar@mandiant.com
+scope      function
+mbc        File System::Read File [C0051]
+function @ 0x1402B3380
+  or:
+    and:
+      os: windows
+      or:
+        api: fread @ 0x1402B3475, 0x1402B34A5
+
+write file on Windows (3 matches)
+namespace  host-interaction/file-system/write
+author     william.ballenthin@mandiant.com, anushka.virgaonkar@mandiant.com
+scope      function
+mbc        File System::Writes File [C0052]
+function @ 0x1402B32B0
+  or:
+    and:
+      os: windows
+      or:
+        api: fwrite @ 0x1402B3350
+function @ 0x1402B38D0
+  or:
+    and:
+      os: windows
+      optional:
+        basic block:
+          or:
+            number: 0x2 = FILE_WRITE_DATA @ 0x1402B39EF
+      or:
+        api: fwrite @ 0x1402B3A37
+function @ 0x1403F7B30
+  or:
+    and:
+      os: windows
+      optional:
+        basic block:
+          or:
+            number: 0x2 = FILE_WRITE_DATA @ 0x1403F7BA1
+      or:
+        api: fwrite @ 0x1403F7BEB
+
+get memory capacity
+namespace  host-interaction/hardware/memory
+author     moritz.raabe@mandiant.com
+scope      function
+att&ck     Discovery::System Information Discovery [T1082]
+function @ 0x1400252B0
+  or:
+    api: GlobalMemoryStatusEx @ 0x14002721A
+
+get local IPv4 addresses
+namespace  host-interaction/network/address
+author     moritz.raabe@mandiant.com, joakim@intezer.com, mehunhoff@google.com
+scope      function
+att&ck     Discovery::System Network Configuration Discovery [T1016]
+function @ 0x140005750
+  or:
+    api: getsockname @ 0x14000578B
+
+get hostname
+namespace  host-interaction/os/hostname
+author     moritz.raabe@mandiant.com, joakim@intezer.com, anushka.virgaonkar@mandiant.com
+scope      function
+att&ck     Discovery::System Information Discovery [T1082]
+mbc        Discovery::System Information Discovery [E1082]
+function @ 0x140011920
+  or:
+    api: GetComputerName @ 0x1400155CB
+
+get system information on Windows
+namespace  host-interaction/os/info
+author     moritz.raabe@mandiant.com, joakim@intezer.com
+scope      function
+att&ck     Discovery::System Information Discovery [T1082]
+function @ 0x14001F2C0
+  and:
+    os: windows
+    or:
+      api: GetSystemInfo @ 0x14001F30D
+
+terminate process (3 matches)
+namespace  host-interaction/process/terminate
+author     moritz.raabe@mandiant.com, michael.hunhoff@mandiant.com, anushka.virgaonkar@mandiant.com
+scope      function
+mbc        Process::Terminate Process [C0018]
+function @ 0x140050E60
+  or:
+    api: exit @ 0x140054C49
+function @ 0x140054C50
+  or:
+    api: exit @ 0x1400589F3
+function @ 0x140137960
+  or:
+    api: exit @ 0x1401E0C90
+
+get session user name
+namespace  host-interaction/session
+author     moritz.raabe@mandiant.com, anushka.virgaonkar@mandiant.com
+scope      function
+att&ck     Discovery::System Owner/User Discovery [T1033], Discovery::Account Discovery [T1087]
+function @ 0x14000D8E0
+  or:
+    api: GetUserName @ 0x140011529
+
+access PEB ldr_data
+namespace   linking/runtime-linking
+author      moritz.raabe@mandiant.com
+scope       basic block
+att&ck      Execution::Shared Modules [T1129]
+references  https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/api/ntpsapi_x/peb_ldr_data.htm,
+            https://github.com/d35ha/CallObfuscator/blob/5834aff9ff4511f1408ae4ce80b79737af4ae77b/ShellCode/shell_x64.asm#L8
+basic block @ 0x14002E020 in function 0x14002E020
+  or:
+    and: = x64
+      arch: amd64
+      match: PEB access @ 0x14002E020
+        or:
+          and:
+            arch: amd64
+            characteristic: gs access @ 0x14002E142
+            or:
+              offset: 0x60 @ 0x14002E087, 0x14002E097
+      offset: 0x18 = PEB.LDR_DATA @ 0x14002E054
+      or: = resolve a module list
+        offset: 0x10 = PEB.LDR_DATA.InLoadOrderModuleList @ 0x14002E020, 0x14002E050
+        offset: 0x20 = PEB.LDR_DATA.InMemoryOrderModuleList @ 0x14002E05F, 0x14002E06F
+        offset: 0x30 = PEB.LDR_DATA.InInitializationOrderModuleList @ 0x14002E063
+
+linked against CPP HTTP library
+namespace   linking/static/httplib
+author      @mr-tz
+scope       file
+references  https://github.com/yhirose/cpp-httplib
+or:
+  regex: /\(HTTP\/1\\\.[01\]\) \(\\d/
+    - "(HTTP/1\\.[01]) (\\d{3})(?: (.*?))?" @ file+0x4678D8
+
+parse PE header
+namespace  load-code/pe
+author     moritz.raabe@mandiant.com
+scope      function
+att&ck     Execution::Shared Modules [T1129]
+function @ 0x14044D108
+  and:
+    os: windows
+    and:
+      mnemonic: cmp @ 0x14044D11E, 0x14044D12A, 0x14044D137, 0x14044D13D, and 1 more...
+      or:
+        number: 0x4550 = IMAGE_NT_SIGNATURE (PE) @ 0x14044D12A
+      or:
+        number: 0x5A4D = IMAGE_DOS_SIGNATURE (MZ) @ 0x14044D119
+
+resolve function by parsing PE exports
+namespace  load-code/pe
+author     sara-rn
+scope      function
+function @ 0x14020BA00
+  and:
+    os: windows
+    or:
+      mnemonic: movzx @ 0x140219261
+    and:
+      offset: 0x3C = IMAGE_DOS_HEADER.PE.e_lfanew @ 0x14020BAD4, 0x14020BB50, 0x14020C314, 0x14020C8A7, and 160 more...
+      or:
+        and:
+          arch: amd64
+          offset: 0x88 = offset to IMAGE_DATA_DIRECTORY[IMAGE_DIRECTORY_ENTRY_EXPORT] @ 0x14020C1A2, 0x14020C6ED, 0x14020C6F4, 0x14020C7D9, and 121 more...
+      3 or more:
+        offset: 0x24 = IMAGE_EXPORT_DIRECTORY.AddressOfNameOrdinals @ 0x14020BA57, 0x14020BA5B, 0x14020BA6B, 0x14020BA81, and 282 more...
+        offset: 0x20 = IMAGE_EXPORT_DIRECTORY.AddressOfNames @ 0x14020BA0F, 0x14020BA7D, 0x14020BAB9, 0x14020BAC2, and 309 more...
+        offset: 0x18 = IMAGE_EXPORT_DIRECTORY.NumberOfNames @ 0x14020BA0A

@@ -1,0 +1,222 @@
+.text:00007FF78783F918 ; ---------------------------------------------------------------------------
+.text:00007FF78783F918
+.text:00007FF78783F918 loc_7FF78783F918:                       ; CODE XREF: writeJsonValue+17F↑j
+.text:00007FF78783F918                 mov     rcx, [rax]
+.text:00007FF78783F91B                 mov     rbx, rax
+.text:00007FF78783F91E                 cmp     byte ptr [rcx+19h], 0
+.text:00007FF78783F922                 jnz     short loc_7FF78783F93F
+.text:00007FF78783F924                 nop     dword ptr [rax+00h]
+.text:00007FF78783F928                 nop     dword ptr [rax+rax+00000000h]
+.text:00007FF78783F930
+.text:00007FF78783F930 loc_7FF78783F930:                       ; CODE XREF: writeJsonValue+1CD↓j
+.text:00007FF78783F930                 mov     rax, [rcx]
+.text:00007FF78783F933                 mov     rbx, rcx
+.text:00007FF78783F936                 mov     rcx, rax
+.text:00007FF78783F939                 cmp     byte ptr [rax+19h], 0
+.text:00007FF78783F93D                 jz      short loc_7FF78783F930
+.text:00007FF78783F93F
+.text:00007FF78783F93F loc_7FF78783F93F:                       ; CODE XREF: writeJsonValue+1A6↑j
+.text:00007FF78783F93F                                         ; writeJsonValue+1B2↑j
+.text:00007FF78783F93F                 mov     rax, [rsi+8]
+.text:00007FF78783F943                 mov     r8d, r12d
+.text:00007FF78783F946                 mov     rcx, [rax+8]
+.text:00007FF78783F94A                 dec     rcx
+.text:00007FF78783F94D                 cmp     rbp, rcx
+.text:00007FF78783F950                 jb      loc_7FF78783F860
+.text:00007FF78783F956
+.text:00007FF78783F956 loc_7FF78783F956:                       ; CODE XREF: writeJsonValue+E6↑j
+.text:00007FF78783F956                 mov     rcx, [rdi]
+.text:00007FF78783F959                 lea     rsi, [rdi+260h]
+.text:00007FF78783F960                 cmp     qword ptr [rsi+18h], 0Fh
+.text:00007FF78783F965                 mov     rdx, rsi
+.text:00007FF78783F968                 jbe     short loc_7FF78783F96D
+.text:00007FF78783F96A                 mov     rdx, [rsi]
+.text:00007FF78783F96D
+.text:00007FF78783F96D loc_7FF78783F96D:                       ; CODE XREF: writeJsonValue+1F8↑j
+.text:00007FF78783F96D                 mov     rax, [rcx]
+.text:00007FF78783F970                 mov     r8d, r12d
+.text:00007FF78783F973                 call    qword ptr [rax+8]
+.text:00007FF78783F976                 mov     rcx, [rdi]
+.text:00007FF78783F979                 mov     dl, 22h ; '"'
+.text:00007FF78783F97B                 mov     rax, [rcx]
+.text:00007FF78783F97E                 call    qword ptr [rax]
+.text:00007FF78783F980                 lea     rdx, [rbx+20h]
+.text:00007FF78783F984                 movzx   r8d, r15b
+.text:00007FF78783F988                 mov     rcx, rdi
+.text:00007FF78783F98B                 call    sub_7FF78799D560
+.text:00007FF78783F990                 mov     rcx, [rdi]
+.text:00007FF78783F993                 lea     rdx, asc_7FF7879D8D64 ; "\": "
+.text:00007FF78783F99A                 mov     r8d, 3
+.text:00007FF78783F9A0                 mov     rax, [rcx]
+.text:00007FF78783F9A3                 call    qword ptr [rax+8]
+.text:00007FF78783F9A6                 lea     rdx, [rbx+40h]
+.text:00007FF78783F9AA                 mov     dword ptr [rsp+0E8h+var_C0], r12d
+.text:00007FF78783F9AF                 movzx   r9d, r15b
+.text:00007FF78783F9B3                 mov     dword ptr [rsp+0E8h+var_C8], r13d
+.text:00007FF78783F9B8                 mov     r8b, 1
+.text:00007FF78783F9BB                 mov     rcx, rdi
+.text:00007FF78783F9BE                 call    writeJsonValue
+.text:00007FF78783F9C3                 mov     rcx, [rdi]
+.text:00007FF78783F9C6                 mov     dl, 0Ah
+.text:00007FF78783F9C8                 mov     rax, [rcx]
+.text:00007FF78783F9CB                 call    qword ptr [rax]
+.text:00007FF78783F9CD                 cmp     qword ptr [rsi+18h], 0Fh
+.text:00007FF78783F9D2                 mov     rcx, [rdi]
+.text:00007FF78783F9D5                 jbe     short loc_7FF78783F9DA
+.text:00007FF78783F9D7                 mov     rsi, [rsi]
+.text:00007FF78783F9DA
+.text:00007FF78783F9DA loc_7FF78783F9DA:                       ; CODE XREF: writeJsonValue+265↑j
+.text:00007FF78783F9DA                 mov     rax, [rcx]
+.text:00007FF78783F9DD                 mov     rdx, rsi
+.text:00007FF78783F9E0                 mov     r8d, r14d
+.text:00007FF78783F9E3                 call    qword ptr [rax+8]
+.text:00007FF78783F9E6                 mov     rcx, [rdi]
+.text:00007FF78783F9E9                 mov     dl, 7Dh ; '}'
+.text:00007FF78783F9EB                 mov     rax, [rcx]
+.text:00007FF78783F9EE                 call    qword ptr [rax]
+.text:00007FF78783F9F0                 jmp     loc_7FF7878400E3
+.text:00007FF78783F9F5 ; ---------------------------------------------------------------------------
+.text:00007FF78783F9F5
+.text:00007FF78783F9F5 loc_7FF78783F9F5:                       ; CODE XREF: writeJsonValue+74↑j
+.text:00007FF78783F9F5                 mov     dl, 7Bh ; '{'
+.text:00007FF78783F9F7                 call    qword ptr [rax]
+.text:00007FF78783F9F9                 mov     rax, [rsi+8]
+.text:00007FF78783F9FD                 xor     ebp, ebp
+.text:00007FF78783F9FF                 mov     r14d, [rsp+0E8h+arg_28]
+.text:00007FF78783FA07                 mov     r12d, [rsp+0E8h+arg_20]
+.text:00007FF78783FA0F                 cmp     qword ptr [rax+8], 1
+.text:00007FF78783FA14                 mov     rbx, [rax]
+.text:00007FF78783FA17                 mov     rbx, [rbx]
+.text:00007FF78783FA1A                 jz      loc_7FF78783FAE3
+.text:00007FF78783FA20
+.text:00007FF78783FA20 loc_7FF78783FA20:                       ; CODE XREF: writeJsonValue+36D↓j
+.text:00007FF78783FA20                 mov     rcx, [rdi]
+.text:00007FF78783FA23                 mov     dl, 22h ; '"'
+.text:00007FF78783FA25                 mov     rax, [rcx]
+.text:00007FF78783FA28                 call    qword ptr [rax]
+.text:00007FF78783FA2A                 lea     rdx, [rbx+20h]
+.text:00007FF78783FA2E                 movzx   r8d, r15b
+.text:00007FF78783FA32                 mov     rcx, rdi
+.text:00007FF78783FA35                 call    sub_7FF78799D560
+.text:00007FF78783FA3A                 mov     rcx, [rdi]
+.text:00007FF78783FA3D                 lea     rdx, asc_7FF7879D8D6C ; "\":"
+.text:00007FF78783FA44                 mov     r8d, 2
+.text:00007FF78783FA4A                 mov     rax, [rcx]
+.text:00007FF78783FA4D                 call    qword ptr [rax+8]
+.text:00007FF78783FA50                 lea     rdx, [rbx+40h]
+.text:00007FF78783FA54                 mov     dword ptr [rsp+0E8h+var_C0], r14d
+.text:00007FF78783FA59                 movzx   r9d, r15b
+.text:00007FF78783FA5D                 mov     dword ptr [rsp+0E8h+var_C8], r12d
+.text:00007FF78783FA62                 xor     r8d, r8d
+.text:00007FF78783FA65                 mov     rcx, rdi
+.text:00007FF78783FA68                 call    writeJsonValue
+.text:00007FF78783FA6D                 mov     rcx, [rdi]
+.text:00007FF78783FA70                 mov     dl, 2Ch ; ','
+.text:00007FF78783FA72                 mov     rax, [rcx]
+.text:00007FF78783FA75                 call    qword ptr [rax]
+.text:00007FF78783FA77                 mov     rax, [rbx+10h]
+.text:00007FF78783FA7B                 inc     rbp
+.text:00007FF78783FA7E                 cmp     byte ptr [rax+19h], 0
+.text:00007FF78783FA82                 jz      short loc_7FF78783FAA8
+.text:00007FF78783FA84                 mov     rax, [rbx+8]
+.text:00007FF78783FA88                 cmp     byte ptr [rax+19h], 0
+.text:00007FF78783FA8C                 jnz     short loc_7FF78783FAA3
+.text:00007FF78783FA8E                 xchg    ax, ax
+.text:00007FF78783FA90
+.text:00007FF78783FA90 loc_7FF78783FA90:                       ; CODE XREF: writeJsonValue+331↓j
+.text:00007FF78783FA90                 cmp     rbx, [rax+10h]
+.text:00007FF78783FA94                 jnz     short loc_7FF78783FAA3
+.text:00007FF78783FA96                 mov     rbx, rax
+.text:00007FF78783FA99                 mov     rax, [rax+8]
+.text:00007FF78783FA9D                 cmp     byte ptr [rax+19h], 0
+.text:00007FF78783FAA1                 jz      short loc_7FF78783FA90
+.text:00007FF78783FAA3
+.text:00007FF78783FAA3 loc_7FF78783FAA3:                       ; CODE XREF: writeJsonValue+31C↑j
+.text:00007FF78783FAA3                                         ; writeJsonValue+324↑j
+.text:00007FF78783FAA3                 mov     rbx, rax
+.text:00007FF78783FAA6                 jmp     short loc_7FF78783FACF
+.text:00007FF78783FAA8 ; ---------------------------------------------------------------------------
+.text:00007FF78783FAA8
+.text:00007FF78783FAA8 loc_7FF78783FAA8:                       ; CODE XREF: writeJsonValue+312↑j
+.text:00007FF78783FAA8                 mov     rcx, [rax]
+.text:00007FF78783FAAB                 mov     rbx, rax
+.text:00007FF78783FAAE                 cmp     byte ptr [rcx+19h], 0
+.text:00007FF78783FAB2                 jnz     short loc_7FF78783FACF
+.text:00007FF78783FAB4                 nop     dword ptr [rax+00h]
+.text:00007FF78783FAB8                 nop     dword ptr [rax+rax+00000000h]
+.text:00007FF78783FAC0
+.text:00007FF78783FAC0 loc_7FF78783FAC0:                       ; CODE XREF: writeJsonValue+35D↓j
+.text:00007FF78783FAC0                 mov     rax, [rcx]
+.text:00007FF78783FAC3                 mov     rbx, rcx
+.text:00007FF78783FAC6                 mov     rcx, rax
+.text:00007FF78783FAC9                 cmp     byte ptr [rax+19h], 0
+.text:00007FF78783FACD                 jz      short loc_7FF78783FAC0
+.text:00007FF78783FACF
+.text:00007FF78783FACF loc_7FF78783FACF:                       ; CODE XREF: writeJsonValue+336↑j
+.text:00007FF78783FACF                                         ; writeJsonValue+342↑j
+.text:00007FF78783FACF                 mov     rax, [rsi+8]
+.text:00007FF78783FAD3                 mov     rcx, [rax+8]
+.text:00007FF78783FAD7                 dec     rcx
+.text:00007FF78783FADA                 cmp     rbp, rcx
+.text:00007FF78783FADD                 jb      loc_7FF78783FA20
+.text:00007FF78783FAE3
+.text:00007FF78783FAE3 loc_7FF78783FAE3:                       ; CODE XREF: writeJsonValue+2AA↑j
+.text:00007FF78783FAE3                 mov     rcx, [rdi]
+.text:00007FF78783FAE6                 mov     dl, 22h ; '"'
+.text:00007FF78783FAE8                 mov     rax, [rcx]
+.text:00007FF78783FAEB                 call    qword ptr [rax]
+.text:00007FF78783FAED                 lea     rdx, [rbx+20h]
+.text:00007FF78783FAF1                 movzx   r8d, r15b
+.text:00007FF78783FAF5                 mov     rcx, rdi
+.text:00007FF78783FAF8                 call    sub_7FF78799D560
+.text:00007FF78783FAFD                 mov     rcx, [rdi]
+.text:00007FF78783FB00                 lea     rdx, asc_7FF7879D8D6C ; "\":"
+.text:00007FF78783FB07                 mov     r8d, 2
+.text:00007FF78783FB0D                 mov     rax, [rcx]
+.text:00007FF78783FB10                 call    qword ptr [rax+8]
+.text:00007FF78783FB13                 lea     rdx, [rbx+40h]
+.text:00007FF78783FB17                 mov     dword ptr [rsp+0E8h+var_C0], r14d
+.text:00007FF78783FB1C                 movzx   r9d, r15b
+.text:00007FF78783FB20                 mov     dword ptr [rsp+0E8h+var_C8], r12d
+.text:00007FF78783FB25                 xor     r8d, r8d
+.text:00007FF78783FB28                 mov     rcx, rdi
+.text:00007FF78783FB2B                 call    writeJsonValue
+.text:00007FF78783FB30                 mov     rcx, [rdi]
+.text:00007FF78783FB33                 mov     dl, 7Dh ; '}'
+.text:00007FF78783FB35                 mov     rax, [rcx]
+.text:00007FF78783FB38                 call    qword ptr [rax]
+.text:00007FF78783FB3A                 jmp     loc_7FF7878400E3
+.text:00007FF78783FB3F ; ---------------------------------------------------------------------------
+.text:00007FF78783FB3F
+.text:00007FF78783FB3F loc_7FF78783FB3F:                       ; CODE XREF: writeJsonValue+49↑j
+.text:00007FF78783FB3F                                         ; DATA XREF: writeJsonValue:jpt_7FF78783F7B9↓o
+.text:00007FF78783FB3F                 mov     rcx, [rsi+8]    ; jumptable 00007FF78783F7B9 case 2
+.text:00007FF78783FB43                 mov     r9, [rdi]
+.text:00007FF78783FB46                 mov     rax, [rcx+8]
+.text:00007FF78783FB4A                 cmp     [rcx], rax
+.text:00007FF78783FB4D                 mov     rcx, r9
+.text:00007FF78783FB50                 mov     rax, [r9]
+.text:00007FF78783FB53                 jnz     short loc_7FF78783FB6A
+.text:00007FF78783FB55                 mov     r8d, 2
+.text:00007FF78783FB5B                 lea     rdx, asc_7FF7879D8D70 ; "[]"
+.text:00007FF78783FB62                 call    qword ptr [rax+8]
+.text:00007FF78783FB65                 jmp     loc_7FF7878400E3
+.text:00007FF78783FB6A ; ---------------------------------------------------------------------------
+.text:00007FF78783FB6A
+.text:00007FF78783FB6A loc_7FF78783FB6A:                       ; CODE XREF: writeJsonValue+3E3↑j
+.text:00007FF78783FB6A                 test    r8b, r8b
+.text:00007FF78783FB6D                 jz      loc_7FF78783FD38
+.text:00007FF78783FB73                 mov     r8d, 2
+.text:00007FF78783FB79                 lea     rdx, asc_7FF7879D8D74 ; "[\n"
+.text:00007FF78783FB80                 call    qword ptr [rax+8]
+.text:00007FF78783FB83                 mov     r12d, [rsp+0E8h+arg_20]
+.text:00007FF78783FB8B                 mov     r13d, [rsp+0E8h+arg_28]
+.text:00007FF78783FB93                 mov     rcx, [rdi+270h]
+.text:00007FF78783FB9A                 lea     ebp, [r12+r13]
+.text:00007FF78783FB9E                 mov     eax, ebp
+.text:00007FF78783FBA0                 cmp     rcx, rax
+.text:00007FF78783FBA3                 jnb     loc_7FF78783FC31
+.text:00007FF78783FBA9                 mov     eax, 2
+.text:00007FF78783FBAE                 mul     rcx
+.text:00007FF78783FBB1                 mov     rcx, 0FFFFFFFFFFFFFFFFh
+.text:00007FF78783FBB8                 mov     r8, rax

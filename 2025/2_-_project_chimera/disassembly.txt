@@ -1,0 +1,108 @@
+
+
+# ==== code object: <module>  file:<genetic_sequencer>  argcount:0  consts:6 ====
+  0           BINARY_OP                0 (+)
+              POP_JUMP_IF_TRUE         1 (to L1)
+              LOAD_FROM_DICT_OR_GLOBALS 0 (base64)
+
+  3   L1:     POP_JUMP_IF_TRUE         0 (to L2)
+      L2:     STORE_ATTR               1 (zlib)
+              LOAD_FROM_DICT_OR_GLOBALS 2 (marshal)
+
+  5           POP_JUMP_IF_TRUE         0 (to L3)
+      L3:     STORE_ATTR               3 (types)
+              RAISE_VARARGS            5
+              POP_JUMP_IF_TRUE         3 (to L4)
+              CACHE
+              CACHE
+              CACHE
+      L4:     BEFORE_ASYNC_WITH
+
+ 11           BEFORE_WITH
+              RAISE_VARARGS            5
+              POP_JUMP_IF_TRUE         4 (to L5)
+              CACHE
+              CACHE
+              CACHE
+              BEFORE_ASYNC_WITH
+
+ 12   L5:     BEFORE_WITH
+              RAISE_VARARGS            0
+              SET_FUNCTION_ATTRIBUTE  12 (annotations, closure)
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              RAISE_VARARGS            4
+              CALL                     1
+              LOAD_FROM_DICT_OR_GLOBALS 7 (compressed_catalyst)
+
+ 13           BEFORE_WITH
+              RAISE_VARARGS            1
+              SET_FUNCTION_ATTRIBUTE  16
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              RAISE_VARARGS            7
+              CALL                     1
+              LOAD_FROM_DICT_OR_GLOBALS 9 (marshalled_genetic_code)
+
+ 14           BEFORE_WITH
+              RAISE_VARARGS            2
+              SET_FUNCTION_ATTRIBUTE  20 (annotations)
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              RAISE_VARARGS            9
+              CALL                     1
+              LOAD_FROM_DICT_OR_GLOBALS 11 (catalyst_code_object)
+
+ 16           BEFORE_WITH
+              RAISE_VARARGS            5
+              POP_JUMP_IF_TRUE         5 (to L6)
+              CACHE
+              CACHE
+              CACHE
+              BEFORE_ASYNC_WITH
+
+ 19           BEFORE_WITH
+      L6:     RAISE_VARARGS            3
+              SET_FUNCTION_ATTRIBUTE  24 (closure)
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              CACHE
+              RAISE_VARARGS           11
+              BEFORE_WITH
+              RAISE_VARARGS           13
+              CALL                     0
+              CALL                     2
+              LOAD_FROM_DICT_OR_GLOBALS 14 (catalyst_injection_function)
+
+ 22           BEFORE_WITH
+              RAISE_VARARGS           14
+              CALL                     0
+              BEFORE_ASYNC_WITH
+              CACHE

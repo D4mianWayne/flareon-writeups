@@ -1,0 +1,66 @@
+
+0000000140012E57 push    r12
+0000000140012E59 push    rsi
+0000000140012E5A push    rdi
+0000000140012E5B push    rbx
+0000000140012E5C mov     eax, 1008h
+0000000140012E61 call    __alloca_probe
+0000000140012E66 sub     rsp, rax
+0000000140012E69 lea     rbp, [rsp+80h]
+0000000140012E71 mov     [rbp+0FC0h+var_40], 0FFFFFFFFFFFFFFFEh
+0000000140012E7C mov     [rbp+0FC0h+var_8B8], rcx
+0000000140012E83 lea     rbx, [rbp+0FC0h+var_108]
+0000000140012E8A mov     [rbp+0FC0h+var_2A8], rbx
+0000000140012E91 lea     rdi, [rbp+0FC0h+var_B0]
+0000000140012E98 mov     [rbp+0FC0h+var_2C8], rdi
+0000000140012E9F lea     r10, [rbp+0FC0h+var_168]
+0000000140012EA6 mov     [rbp+0FC0h+var_2B0], r10
+0000000140012EAD mov     [rbp+0FC0h+var_2C0], r10
+0000000140012EB4 lea     rdx, [rbp+0FC0h+var_180]
+0000000140012EBB mov     [rbp+0FC0h+var_2A0], rdx
+0000000140012EC2 lea     rsi, [rbp+0FC0h+var_F0]
+0000000140012EC9 mov     [rbp+0FC0h+var_2D8], rsi
+0000000140012ED0 mov     [rbp+0FC0h+var_2F8], rbx
+0000000140012ED7 lea     r9, [rbp+0FC0h+var_298]
+0000000140012EDE mov     [rbp+0FC0h+var_2E0], r9
+0000000140012EE5 lea     r12, [rbp+0FC0h+var_268]
+0000000140012EEC mov     [rbp+0FC0h+var_898], r12
+0000000140012EF3 mov     [rbp+0FC0h+var_2F0], r12
+0000000140012EFA mov     [rbp+0FC0h+var_2D0], r9
+0000000140012F01 mov     [rbp+0FC0h+var_308], rbx
+0000000140012F08 lea     rax, [rbp+0FC0h+var_1D8]
+0000000140012F0F mov     [rbp+0FC0h+var_8B0], rax
+0000000140012F16 mov     [rbp+0FC0h+var_328], rax
+0000000140012F1D lea     rcx, [rbp+0FC0h+var_2F8]
+0000000140012F24 mov     [rbp+0FC0h+var_310], rcx
+0000000140012F2B lea     r15, [rbp+0FC0h+var_C8]
+0000000140012F32 mov     [rbp+0FC0h+var_320], r15
+0000000140012F39 mov     [rbp+0FC0h+var_300], rcx
+0000000140012F40 mov     [rbp+0FC0h+var_338], rdi
+0000000140012F47 lea     r8, [rbp+0FC0h+var_200]
+0000000140012F4E mov     [rbp+0FC0h+var_368], r8
+0000000140012F55 lea     r14, [rbp+0FC0h+var_2C8]
+0000000140012F5C mov     [rbp+0FC0h+var_8A0], r14
+0000000140012F63 mov     [rbp+0FC0h+var_388], r14
+0000000140012F6A lea     r11, [rbp+0FC0h+var_358]
+0000000140012F71 mov     [rbp+0FC0h+var_8A8], r11
+0000000140012F78 mov     [rbp+0FC0h+var_370], r11
+0000000140012F7F mov     [rbp+0FC0h+var_380], r15
+0000000140012F86 lea     r11, [rbp+0FC0h+var_120]
+0000000140012F8D mov     [rbp+0FC0h+var_360], r11
+0000000140012F94 mov     [rbp+0FC0h+var_398], r12
+0000000140012F9B mov     [rbp+0FC0h+var_3B8], rsi
+0000000140012FA2 mov     [rbp+0FC0h+var_3C8], r15
+0000000140012FA9 lea     r13, [rbp+0FC0h+var_78]
+0000000140012FB0 mov     [rbp+0FC0h+var_3E8], r13
+0000000140012FB7 mov     [rbp+0FC0h+var_3F8], r14
+0000000140012FBE mov     [rbp+0FC0h+var_418], rax
+0000000140012FC5 mov     rax, [rbp+0FC0h+var_8A8]
+0000000140012FCC mov     [rbp+0FC0h+var_400], rdi
+0000000140012FD3 mov     [rbp+0FC0h+var_410], r14
+0000000140012FDA mov     [rbp+0FC0h+var_3F0], r14
+0000000140012FE1 mov     [rbp+0FC0h+var_428], r9
+0000000140012FE8 lea     r14, [rbp+0FC0h+var_388]
+0000000140012FEF mov     [rbp+0FC0h+var_448], r14
+0000000140012FF6 mov     [rbp+0FC0h+var_430], r12
+0000000140012FFD mov     [rbp+0FC0h+var_458], rax

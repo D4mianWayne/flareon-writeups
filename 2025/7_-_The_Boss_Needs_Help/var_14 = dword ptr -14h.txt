@@ -1,0 +1,2432 @@
+ var_14          = dword ptr -14h
+.text:00007FF7877E36F0 arg_0           = dword ptr  10h
+.text:00007FF7877E36F0 arg_8           = dword ptr  18h
+.text:00007FF7877E36F0 arg_10          = dword ptr  20h
+.text:00007FF7877E36F0 arg_18          = dword ptr  28h
+.text:00007FF7877E36F0
+.text:00007FF7877E36F0                 push    rbp
+.text:00007FF7877E36F2                 push    rbx
+.text:00007FF7877E36F3                 lea     rbp, [rsp-0F8h]
+.text:00007FF7877E36FB                 sub     rsp, 1F8h
+.text:00007FF7877E3702                 mov     eax, cs:dword_7FF7879EA3B0
+.text:00007FF7877E3708                 mov     rbx, rcx
+.text:00007FF7877E370B                 xor     eax, 0FCFFFF7Fh
+.text:00007FF7877E3710                 mov     ecx, 3F321AE2h
+.text:00007FF7877E3715                 or      eax, 7CF8EF7Fh
+.text:00007FF7877E371A                 not     eax
+.text:00007FF7877E371C                 mov     [rsp+200h+var_1C8], eax
+.text:00007FF7877E3720                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E3724                 xor     eax, 0BE147238h
+.text:00007FF7877E3729                 add     eax, 6E038E76h
+.text:00007FF7877E372E                 mov     [rbp+100h+arg_0], eax
+.text:00007FF7877E3734                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E373A                 xor     eax, 0A42B8509h
+.text:00007FF7877E373F                 sub     ecx, eax
+.text:00007FF7877E3741                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E3747                 xor     eax, 2361F848h
+.text:00007FF7877E374C                 sub     eax, 2170F61Ch
+.text:00007FF7877E3751                 xor     eax, ecx
+.text:00007FF7877E3753                 not     eax
+.text:00007FF7877E3755                 mov     [rbp+100h+arg_18], eax
+.text:00007FF7877E375B                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E3761                 xor     eax, 0FCF7EB7Dh
+.text:00007FF7877E3766                 not     eax
+.text:00007FF7877E3768                 and     eax, 4B0C35A2h
+.text:00007FF7877E376D                 add     eax, 6B82A3A2h
+.text:00007FF7877E3772                 mov     [rsp+200h+var_1D0], eax
+.text:00007FF7877E3776                 mov     ecx, [rbp+100h+arg_0]
+.text:00007FF7877E377C                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E3782                 xor     ecx, eax
+.text:00007FF7877E3784                 xor     ecx, 0FEFCBFF6h
+.text:00007FF7877E378A                 not     ecx
+.text:00007FF7877E378C                 or      ecx, 0B67C1BE6h
+.text:00007FF7877E3792                 mov     [rbp+100h+var_140], ecx
+.text:00007FF7877E3795                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E379B                 mov     ecx, [rbp+100h+arg_18]
+.text:00007FF7877E37A1                 xor     eax, 0FF5FBFFFh
+.text:00007FF7877E37A6                 xor     ecx, 0FF75FFFFh
+.text:00007FF7877E37AC                 and     ecx, eax
+.text:00007FF7877E37AE                 and     ecx, 2AA5000h
+.text:00007FF7877E37B4                 mov     [rsp+200h+var_1D4], ecx
+.text:00007FF7877E37B8                 mov     ecx, [rbp+100h+arg_18]
+.text:00007FF7877E37BE                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E37C4                 xor     ecx, 983A9333h
+.text:00007FF7877E37CA                 add     eax, 7C7A4A92h
+.text:00007FF7877E37CF                 not     ecx
+.text:00007FF7877E37D1                 or      eax, ecx
+.text:00007FF7877E37D3                 sub     eax, 881BB1Dh
+.text:00007FF7877E37D8                 mov     [rsp+200h+var_1D8], eax
+.text:00007FF7877E37DC                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E37E2                 and     eax, 7450449Eh
+.text:00007FF7877E37E7                 not     eax
+.text:00007FF7877E37E9                 mov     [rsp+200h+var_184], eax
+.text:00007FF7877E37ED                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E37F0                 mov     ecx, [rsp+200h+var_1D8]
+.text:00007FF7877E37F4                 xor     eax, 0FDEE69BAh
+.text:00007FF7877E37F9                 and     eax, 0A311BFDFh
+.text:00007FF7877E37FE                 and     ecx, 4E66F80h
+.text:00007FF7877E3804                 or      ecx, eax
+.text:00007FF7877E3806                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E380A                 add     eax, 4515A2B1h
+.text:00007FF7877E380F                 or      eax, ecx
+.text:00007FF7877E3811                 mov     [rbp+100h+var_88], eax
+.text:00007FF7877E3814                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E381A                 xor     eax, 223CF723h
+.text:00007FF7877E381F                 add     eax, 1824725Ch
+.text:00007FF7877E3824                 or      eax, 7B3CF142h
+.text:00007FF7877E3829                 mov     [rbp+100h+var_180], eax
+.text:00007FF7877E382C                 mov     ecx, [rsp+200h+var_1D4]
+.text:00007FF7877E3830                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E3834                 xor     ecx, 25104E5h
+.text:00007FF7877E383A                 xor     eax, 0F5BFFB9Ah
+.text:00007FF7877E383F                 not     ecx
+.text:00007FF7877E3841                 or      eax, ecx
+.text:00007FF7877E3843                 or      eax, 0E5AE9B12h
+.text:00007FF7877E3848                 mov     [rbp+100h+var_17C], eax
+.text:00007FF7877E384B                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E384F                 xor     eax, 1F6A765h
+.text:00007FF7877E3854                 mov     [rsp+200h+var_1A0], eax
+.text:00007FF7877E3858                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E385E                 mov     ecx, [rbp+100h+arg_0]
+.text:00007FF7877E3864                 xor     eax, 0E8319112h
+.text:00007FF7877E3869                 xor     ecx, 0B84B1441h
+.text:00007FF7877E386F                 and     ecx, eax
+.text:00007FF7877E3871                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E3875                 and     eax, 8A664086h
+.text:00007FF7877E387A                 add     eax, ecx
+.text:00007FF7877E387C                 not     eax
+.text:00007FF7877E387E                 mov     [rsp+200h+var_198], eax
+.text:00007FF7877E3882                 mov     ecx, cs:dword_7FF7879EA3B0
+.text:00007FF7877E3888                 mov     eax, cs:dword_7FF7879EA3B0
+.text:00007FF7877E388E                 xor     ecx, eax
+.text:00007FF7877E3890                 mov     eax, cs:dword_7FF7879EA3B0
+.text:00007FF7877E3896                 xor     ecx, 21EE0A06h
+.text:00007FF7877E389C                 xor     eax, 0B00088Dh
+.text:00007FF7877E38A1                 and     eax, 0BF0C8DEFh
+.text:00007FF7877E38A6                 sub     ecx, eax
+.text:00007FF7877E38A8                 add     ecx, 2E4D1B5Fh
+.text:00007FF7877E38AE                 mov     [rbp+100h+var_134], ecx
+.text:00007FF7877E38B1                 mov     ecx, 70342F7Ch
+.text:00007FF7877E38B6                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E38BA                 xor     eax, 0D6EF279Fh
+.text:00007FF7877E38BF                 sub     ecx, eax
+.text:00007FF7877E38C1                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E38C7                 xor     eax, 5ABFFEF9h
+.text:00007FF7877E38CC                 sub     ecx, eax
+.text:00007FF7877E38CE                 not     ecx
+.text:00007FF7877E38D0                 mov     [rsp+200h+var_1B0], ecx
+.text:00007FF7877E38D4                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E38D7                 or      eax, 0B37B6B72h
+.text:00007FF7877E38DC                 mov     [rbp+100h+var_B4], eax
+.text:00007FF7877E38DF                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E38E2                 mov     ecx, [rbp+100h+var_180]
+.text:00007FF7877E38E5                 xor     eax, 30E94CCAh
+.text:00007FF7877E38EA                 not     eax
+.text:00007FF7877E38EC                 xor     ecx, 0E20704FBh
+.text:00007FF7877E38F2                 not     ecx
+.text:00007FF7877E38F4                 add     ecx, eax
+.text:00007FF7877E38F6                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E38F9                 xor     eax, 0FAAE3CFFh
+.text:00007FF7877E38FE                 and     eax, 1F77CB38h
+.text:00007FF7877E3903                 add     eax, ecx
+.text:00007FF7877E3905                 mov     [rsp+200h+var_1C4], eax
+.text:00007FF7877E3909                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E390D                 and     eax, 99271D84h
+.text:00007FF7877E3912                 mov     [rsp+200h+var_1CC], eax
+.text:00007FF7877E3916                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E391A                 sub     eax, 54093535h
+.text:00007FF7877E391F                 mov     [rbp+100h+var_13C], eax
+.text:00007FF7877E3922                 mov     ecx, [rbp+100h+var_180]
+.text:00007FF7877E3925                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E3928                 or      ecx, 0E3C1A1C1h
+.text:00007FF7877E392E                 or      eax, 33F511C4h
+.text:00007FF7877E3933                 add     eax, ecx
+.text:00007FF7877E3935                 mov     [rsp+200h+var_1B8], eax
+.text:00007FF7877E3939                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E393C                 or      eax, 0FDBAF7FCh
+.text:00007FF7877E3941                 mov     [rbp+100h+var_120], eax
+.text:00007FF7877E3944                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E394A                 or      eax, 0E634017h
+.text:00007FF7877E394F                 mov     [rbp+100h+var_40], eax
+.text:00007FF7877E3955                 mov     ecx, [rsp+200h+var_1D0]
+.text:00007FF7877E3959                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E395D                 xor     ecx, eax
+.text:00007FF7877E395F                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E3963                 xor     ecx, 1898C96Bh
+.text:00007FF7877E3969                 xor     eax, 0F8CA50ADh
+.text:00007FF7877E396E                 not     eax
+.text:00007FF7877E3970                 sub     eax, ecx
+.text:00007FF7877E3972                 or      eax, 0F2CAEAB5h
+.text:00007FF7877E3977                 mov     [rbp+100h+var_68], eax
+.text:00007FF7877E397D                 mov     eax, [rbp+100h+var_88]
+.text:00007FF7877E3980                 mov     ecx, [rbp+100h+var_88]
+.text:00007FF7877E3983                 xor     eax, 645440F6h
+.text:00007FF7877E3988                 xor     ecx, 1C4FBC0Bh
+.text:00007FF7877E398E                 add     ecx, eax
+.text:00007FF7877E3990                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E3994                 xor     eax, 7274AE2Dh
+.text:00007FF7877E3999                 or      ecx, 48B00770h
+.text:00007FF7877E399F                 not     eax
+.text:00007FF7877E39A1                 and     eax, ecx
+.text:00007FF7877E39A3                 mov     [rsp+200h+var_18C], eax
+.text:00007FF7877E39A7                 mov     edx, [rbp+100h+var_120]
+.text:00007FF7877E39AA                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E39AE                 xor     edx, 509EEBD2h
+.text:00007FF7877E39B4                 xor     eax, 0C3025015h
+.text:00007FF7877E39B9                 add     eax, 9FF21E5Bh
+.text:00007FF7877E39BE                 add     edx, eax
+.text:00007FF7877E39C0                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E39C3                 mov     ecx, [rbp+100h+var_140]
+.text:00007FF7877E39C6                 xor     eax, 8F3C4A19h
+.text:00007FF7877E39CB                 xor     ecx, 0AB33B7D9h
+.text:00007FF7877E39D1                 sub     ecx, eax
+.text:00007FF7877E39D3                 and     ecx, 0C79EB08Dh
+.text:00007FF7877E39D9                 xor     ecx, edx
+.text:00007FF7877E39DB                 mov     [rbp+100h+var_3C], ecx
+.text:00007FF7877E39E1                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E39E5                 xor     eax, 0FFEEFEFFh
+.text:00007FF7877E39EA                 and     eax, 411010Ah
+.text:00007FF7877E39EF                 or      eax, 0B1228641h
+.text:00007FF7877E39F4                 mov     [rbp+100h+var_FC], eax
+.text:00007FF7877E39F7                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E39FA                 or      eax, 9FECE275h
+.text:00007FF7877E39FF                 sub     eax, 777AB3CBh
+.text:00007FF7877E3A04                 mov     [rbp+100h+var_20], eax
+.text:00007FF7877E3A0A                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E3A0E                 add     eax, 3C2154EDh
+.text:00007FF7877E3A13                 mov     [rsp+200h+var_1C0], eax
+.text:00007FF7877E3A17                 mov     eax, [rbp+100h+var_3C]
+.text:00007FF7877E3A1D                 xor     eax, 0EFD57B75h
+.text:00007FF7877E3A22                 and     eax, 0B62E86BAh
+.text:00007FF7877E3A27                 not     eax
+.text:00007FF7877E3A29                 add     eax, 25F422ABh
+.text:00007FF7877E3A2E                 mov     [rbp+100h+var_28], eax
+.text:00007FF7877E3A34                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E3A38                 and     eax, 420D64FDh
+.text:00007FF7877E3A3D                 mov     [rbp+100h+var_114], eax
+.text:00007FF7877E3A40                 mov     eax, [rbp+100h+var_B4]
+.text:00007FF7877E3A43                 add     eax, 137B6FCFh
+.text:00007FF7877E3A48                 not     eax
+.text:00007FF7877E3A4A                 or      eax, 0A37BDC1Ch
+.text:00007FF7877E3A4F                 mov     [rbp+100h+var_F0], eax
+.text:00007FF7877E3A52                 mov     eax, [rbp+100h+var_40]
+.text:00007FF7877E3A58                 xor     eax, 617AA36Eh
+.text:00007FF7877E3A5D                 sub     eax, 5878EC7Dh
+.text:00007FF7877E3A62                 xor     eax, 0EBBDA2C2h
+.text:00007FF7877E3A67                 mov     [rbp+100h+var_118], eax
+.text:00007FF7877E3A6A                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E3A6E                 xor     eax, 90B8D88Dh
+.text:00007FF7877E3A73                 sub     eax, 38D12091h
+.text:00007FF7877E3A78                 mov     [rbp+100h+var_B0], eax
+.text:00007FF7877E3A7B                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E3A7F                 add     eax, 3A468A80h
+.text:00007FF7877E3A84                 mov     [rbp+100h+var_60], eax
+.text:00007FF7877E3A8A                 mov     ecx, [rsp+200h+var_1C0]
+.text:00007FF7877E3A8E                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E3A92                 xor     ecx, eax
+.text:00007FF7877E3A94                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E3A98                 xor     ecx, 0FFFFFFFBh
+.text:00007FF7877E3A9B                 and     eax, ecx
+.text:00007FF7877E3A9D                 and     eax, 20003014h
+.text:00007FF7877E3AA2                 mov     [rsp+200h+var_1E0], eax
+.text:00007FF7877E3AA6                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E3AA9                 xor     eax, 0FDCD2FF0h
+.text:00007FF7877E3AAE                 add     eax, 72B24EC2h
+.text:00007FF7877E3AB3                 mov     [rbp+100h+arg_10], eax
+.text:00007FF7877E3AB9                 mov     eax, [rbp+100h+var_118]
+.text:00007FF7877E3ABC                 mov     ecx, [rsp+200h+var_1B8]
+.text:00007FF7877E3AC0                 xor     eax, 415BA7E1h
+.text:00007FF7877E3AC5                 xor     ecx, 676A54F6h
+.text:00007FF7877E3ACB                 sub     ecx, eax
+.text:00007FF7877E3ACD                 sub     ecx, 5F9A2A55h
+.text:00007FF7877E3AD3                 mov     [rbp+100h+var_E8], ecx
+.text:00007FF7877E3AD6                 mov     ecx, 156390D2h
+.text:00007FF7877E3ADB                 mov     eax, [rbp+100h+var_E8]
+.text:00007FF7877E3ADE                 xor     eax, 3C56E218h
+.text:00007FF7877E3AE3                 sub     ecx, eax
+.text:00007FF7877E3AE5                 mov     eax, 6278D596h
+.text:00007FF7877E3AEA                 xor     ecx, 0E7EA1522h
+.text:00007FF7877E3AF0                 sub     eax, ecx
+.text:00007FF7877E3AF2                 mov     [rbp+100h+var_AC], eax
+.text:00007FF7877E3AF5                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E3AF9                 xor     eax, 40h
+.text:00007FF7877E3AFC                 and     eax, 881041h
+.text:00007FF7877E3B01                 or      eax, 12014300h
+.text:00007FF7877E3B06                 mov     ecx, 12DA6882h
+.text:00007FF7877E3B0B                 mov     [rsp+200h+var_194], eax
+.text:00007FF7877E3B0F                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E3B12                 xor     eax, 130704CBh
+.text:00007FF7877E3B17                 or      eax, 2CA8FB14h
+.text:00007FF7877E3B1C                 mov     [rbp+100h+var_5C], eax
+.text:00007FF7877E3B22                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E3B26                 or      eax, 176A2A5Eh
+.text:00007FF7877E3B2B                 mov     [rbp+100h+var_178], eax
+.text:00007FF7877E3B2E                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E3B34                 add     eax, 32B53FB9h
+.text:00007FF7877E3B39                 mov     [rsp+200h+var_1DC], eax
+.text:00007FF7877E3B3D                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E3B41                 sub     ecx, eax
+.text:00007FF7877E3B43                 or      ecx, 0B856BC8Eh
+.text:00007FF7877E3B49                 mov     [rbp+100h+var_12C], ecx
+.text:00007FF7877E3B4C                 mov     ecx, 0E5C45F45h
+.text:00007FF7877E3B51                 mov     eax, [rbp+100h+var_13C]
+.text:00007FF7877E3B54                 and     eax, 9AF68232h
+.text:00007FF7877E3B59                 not     eax
+.text:00007FF7877E3B5B                 mov     [rsp+200h+var_1A8], eax
+.text:00007FF7877E3B5F                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E3B62                 xor     eax, 0A5610DEh
+.text:00007FF7877E3B67                 mov     [rbp+100h+var_A8], eax
+.text:00007FF7877E3B6A                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E3B6E                 xor     eax, 1C954FFDh
+.text:00007FF7877E3B73                 sub     ecx, eax
+.text:00007FF7877E3B75                 mov     eax, [rbp+100h+var_B0]
+.text:00007FF7877E3B78                 add     eax, ecx
+.text:00007FF7877E3B7A                 mov     [rbp+100h+var_E4], eax
+.text:00007FF7877E3B7D                 mov     ecx, [rbp+100h+var_13C]
+.text:00007FF7877E3B80                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E3B86                 xor     ecx, 6B05050h
+.text:00007FF7877E3B8C                 xor     eax, 0AB87EEE2h
+.text:00007FF7877E3B91                 and     ecx, 0C7B05450h
+.text:00007FF7877E3B97                 not     ecx
+.text:00007FF7877E3B99                 sub     ecx, eax
+.text:00007FF7877E3B9B                 mov     [rbp+100h+var_2C], ecx
+.text:00007FF7877E3BA1                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E3BA7                 xor     eax, 1020084h
+.text:00007FF7877E3BAC                 not     eax
+.text:00007FF7877E3BAE                 and     eax, 310A8AA5h
+.text:00007FF7877E3BB3                 mov     [rbp+100h+var_160], eax
+.text:00007FF7877E3BB6                 mov     eax, [rbp+100h+var_13C]
+.text:00007FF7877E3BB9                 xor     eax, 4218CB02h
+.text:00007FF7877E3BBE                 mov     [rbp+100h+var_78], eax
+.text:00007FF7877E3BC4                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E3BC8                 add     eax, 7875B76Ah
+.text:00007FF7877E3BCD                 not     eax
+.text:00007FF7877E3BCF                 and     eax, 9F2ED1CDh
+.text:00007FF7877E3BD4                 mov     [rbp+100h+var_128], eax
+.text:00007FF7877E3BD7                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E3BDD                 xor     eax, 0A0A4ECEBh
+.text:00007FF7877E3BE2                 mov     [rbp+100h+var_7C], eax
+.text:00007FF7877E3BE8                 mov     ecx, [rbp+100h+var_78]
+.text:00007FF7877E3BEE                 mov     eax, [rbp+100h+var_78]
+.text:00007FF7877E3BF4                 xor     ecx, 0B8D2F7F7h
+.text:00007FF7877E3BFA                 xor     eax, 2B233561h
+.text:00007FF7877E3BFF                 or      ecx, 8C2C5E3h
+.text:00007FF7877E3C05                 sub     ecx, eax
+.text:00007FF7877E3C07                 add     ecx, 333B41C0h
+.text:00007FF7877E3C0D                 mov     [rbp+100h+var_54], ecx
+.text:00007FF7877E3C13                 mov     ecx, 0F7880A60h
+.text:00007FF7877E3C18                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E3C1C                 xor     eax, 0A77B3992h
+.text:00007FF7877E3C21                 sub     ecx, eax
+.text:00007FF7877E3C23                 mov     eax, 272D444Ch
+.text:00007FF7877E3C28                 and     ecx, 1B1B7B05h
+.text:00007FF7877E3C2E                 sub     ecx, 212751FEh
+.text:00007FF7877E3C34                 mov     [rbp+100h+var_150], ecx
+.text:00007FF7877E3C37                 mov     ecx, [rsp+200h+var_1C0]
+.text:00007FF7877E3C3B                 xor     ecx, 0D7A0DD4Eh
+.text:00007FF7877E3C41                 sub     eax, ecx
+.text:00007FF7877E3C43                 mov     [rbp+100h+var_DC], eax
+.text:00007FF7877E3C46                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E3C4A                 or      eax, 557546E8h
+.text:00007FF7877E3C4F                 xor     eax, 25AD6E18h
+.text:00007FF7877E3C54                 mov     [rbp+100h+var_A0], eax
+.text:00007FF7877E3C57                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E3C5B                 xor     eax, 0E78FEBF9h
+.text:00007FF7877E3C60                 or      eax, 0A7856A11h
+.text:00007FF7877E3C65                 mov     ecx, 6808CE77h
+.text:00007FF7877E3C6A                 mov     [rsp+200h+var_190], eax
+.text:00007FF7877E3C6E                 mov     edx, 80B5DBF4h
+.text:00007FF7877E3C73                 mov     eax, [rbp+100h+var_68]
+.text:00007FF7877E3C79                 sub     ecx, eax
+.text:00007FF7877E3C7B                 mov     [rbp+100h+var_110], ecx
+.text:00007FF7877E3C7E                 mov     eax, [rbp+100h+var_FC]
+.text:00007FF7877E3C81                 xor     eax, 8C68Ch
+.text:00007FF7877E3C86                 or      eax, 0F6F73133h
+.text:00007FF7877E3C8B                 add     eax, 63300680h
+.text:00007FF7877E3C90                 mov     [rbp+100h+var_10C], eax
+.text:00007FF7877E3C93                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E3C97                 add     eax, 781F1335h
+.text:00007FF7877E3C9C                 mov     [rbp+100h+var_154], eax
+.text:00007FF7877E3C9F                 mov     eax, [rbp+100h+var_118]
+.text:00007FF7877E3CA2                 and     eax, 0C1AF20E4h
+.text:00007FF7877E3CA7                 mov     [rbp+100h+var_130], eax
+.text:00007FF7877E3CAA                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E3CB0                 mov     ecx, [rbp+100h+arg_10]
+.text:00007FF7877E3CB6                 xor     eax, 0C057AB79h
+.text:00007FF7877E3CBB                 xor     ecx, 4EA75371h
+.text:00007FF7877E3CC1                 sub     ecx, eax
+.text:00007FF7877E3CC3                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E3CC9                 xor     eax, 0EE276994h
+.text:00007FF7877E3CCE                 sub     edx, eax
+.text:00007FF7877E3CD0                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E3CD6                 xor     eax, 0FFFDDBE3h
+.text:00007FF7877E3CDB                 xor     edx, ecx
+.text:00007FF7877E3CDD                 and     eax, 646261Fh
+.text:00007FF7877E3CE2                 xor     eax, edx
+.text:00007FF7877E3CE4                 mov     [rbp+100h+var_158], eax
+.text:00007FF7877E3CE7                 mov     ecx, [rsp+200h+var_1A0]
+.text:00007FF7877E3CEB                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E3CEF                 xor     ecx, 0FEFFE9A7h
+.text:00007FF7877E3CF5                 xor     eax, 824C0D8h
+.text:00007FF7877E3CFA                 or      ecx, 0D08B6921h
+.text:00007FF7877E3D00                 and     eax, 0AC35CEF9h
+.text:00007FF7877E3D05                 sub     eax, ecx
+.text:00007FF7877E3D07                 and     eax, 0BCDA5AEBh
+.text:00007FF7877E3D0C                 mov     [rbp+100h+var_A4], eax
+.text:00007FF7877E3D0F                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E3D13                 xor     eax, 3FB8F250h
+.text:00007FF7877E3D18                 mov     [rbp+100h+var_E0], eax
+.text:00007FF7877E3D1B                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E3D1F                 mov     ecx, [rbp+100h+arg_0]
+.text:00007FF7877E3D25                 xor     eax, 0E48526E1h
+.text:00007FF7877E3D2A                 xor     ecx, 0D2FBFDF9h
+.text:00007FF7877E3D30                 or      ecx, eax
+.text:00007FF7877E3D32                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E3D38                 xor     eax, 421A79D3h
+.text:00007FF7877E3D3D                 add     eax, 0B640AED4h
+.text:00007FF7877E3D42                 add     eax, ecx
+.text:00007FF7877E3D44                 mov     [rbp+100h+var_15C], eax
+.text:00007FF7877E3D47                 mov     eax, [rbp+100h+var_E8]
+.text:00007FF7877E3D4A                 or      eax, 0FF5DE563h
+.text:00007FF7877E3D4F                 xor     eax, 0F2A15DFEh
+.text:00007FF7877E3D54                 mov     [rbp+100h+var_124], eax
+.text:00007FF7877E3D57                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E3D5B                 add     eax, 48859D5Ch
+.text:00007FF7877E3D60                 not     eax
+.text:00007FF7877E3D62                 mov     [rbp+100h+arg_8], eax
+.text:00007FF7877E3D68                 mov     eax, [rbp+100h+var_F0]
+.text:00007FF7877E3D6B                 xor     eax, 0F2B4FC16h
+.text:00007FF7877E3D70                 sub     eax, 344D09D0h
+.text:00007FF7877E3D75                 or      eax, 999176CEh
+.text:00007FF7877E3D7A                 not     eax
+.text:00007FF7877E3D7C                 mov     [rbp+100h+var_58], eax
+.text:00007FF7877E3D82                 mov     ecx, [rsp+200h+var_184]
+.text:00007FF7877E3D86                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E3D89                 xor     ecx, 0BD8BEAEEh
+.text:00007FF7877E3D8F                 xor     eax, 0C9E54708h
+.text:00007FF7877E3D94                 sub     ecx, eax
+.text:00007FF7877E3D96                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E3D99                 xor     eax, 212185E1h
+.text:00007FF7877E3D9E                 and     eax, 0B16187E3h
+.text:00007FF7877E3DA3                 or      eax, ecx
+.text:00007FF7877E3DA5                 not     eax
+.text:00007FF7877E3DA7                 mov     [rbp+100h+var_174], eax
+.text:00007FF7877E3DAA                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E3DB0                 add     eax, 76DD6717h
+.text:00007FF7877E3DB5                 mov     [rbp+100h+var_170], eax
+.text:00007FF7877E3DB8                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E3DBC                 xor     eax, 4F9470DEh
+.text:00007FF7877E3DC1                 not     eax
+.text:00007FF7877E3DC3                 sub     eax, 4E976FACh
+.text:00007FF7877E3DC8                 xor     eax, 497575BBh
+.text:00007FF7877E3DCD                 mov     [rbp+100h+var_80], eax
+.text:00007FF7877E3DD3                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E3DD7                 xor     eax, 0E8B6BD6Dh
+.text:00007FF7877E3DDC                 mov     [rbp+100h+var_F4], eax
+.text:00007FF7877E3DDF                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E3DE2                 mov     ecx, [rbp+100h+var_78]
+.text:00007FF7877E3DE8                 xor     eax, 65F15FBh
+.text:00007FF7877E3DED                 add     eax, 0C2C836Fh
+.text:00007FF7877E3DF2                 xor     ecx, 1021111h
+.text:00007FF7877E3DF8                 and     ecx, eax
+.text:00007FF7877E3DFA                 and     ecx, 134A3155h
+.text:00007FF7877E3E00                 xor     ecx, 2A9E854h
+.text:00007FF7877E3E06                 mov     [rsp+200h+var_1B4], ecx
+.text:00007FF7877E3E0A                 mov     eax, [rbp+100h+var_130]
+.text:00007FF7877E3E0D                 xor     eax, 2AB2D7B4h
+.text:00007FF7877E3E12                 not     eax
+.text:00007FF7877E3E14                 mov     [rbp+100h+var_1C], eax
+.text:00007FF7877E3E1A                 mov     ecx, [rbp+100h+var_13C]
+.text:00007FF7877E3E1D                 mov     eax, [rbp+100h+var_110]
+.text:00007FF7877E3E20                 xor     ecx, 0D932A3E2h
+.text:00007FF7877E3E26                 xor     eax, 0D3B7562Ch
+.text:00007FF7877E3E2B                 sub     ecx, eax
+.text:00007FF7877E3E2D                 mov     eax, [rbp+100h+var_110]
+.text:00007FF7877E3E30                 and     ecx, 57821159h
+.text:00007FF7877E3E36                 sub     ecx, 5E193FB7h
+.text:00007FF7877E3E3C                 add     eax, ecx
+.text:00007FF7877E3E3E                 mov     [rsp+200h+var_1A4], eax
+.text:00007FF7877E3E42                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E3E46                 xor     eax, 0AD8C5387h
+.text:00007FF7877E3E4B                 mov     [rbp+100h+var_74], eax
+.text:00007FF7877E3E51                 mov     eax, [rsp+200h+var_194]
+.text:00007FF7877E3E55                 mov     ecx, [rsp+200h+var_194]
+.text:00007FF7877E3E59                 xor     eax, 0FDBDFC7Dh
+.text:00007FF7877E3E5E                 mov     edx, [rsp+200h+var_194]
+.text:00007FF7877E3E62                 or      eax, 0F99D3431h
+.text:00007FF7877E3E67                 add     ecx, 21BEC1ABh
+.text:00007FF7877E3E6D                 xor     edx, 28092046h
+.text:00007FF7877E3E73                 xor     ecx, eax
+.text:00007FF7877E3E75                 or      edx, 87649998h
+.text:00007FF7877E3E7B                 mov     eax, [rsp+200h+var_194]
+.text:00007FF7877E3E7F                 add     edx, ecx
+.text:00007FF7877E3E81                 or      eax, 41097E73h
+.text:00007FF7877E3E86                 add     eax, edx
+.text:00007FF7877E3E88                 mov     [rbp+100h+var_D8], eax
+.text:00007FF7877E3E8B                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E3E8E                 or      eax, 51FBEA51h
+.text:00007FF7877E3E93                 add     eax, 2740B307h
+.text:00007FF7877E3E98                 mov     [rbp+100h+var_14C], eax
+.text:00007FF7877E3E9B                 mov     eax, 0B57224B4h
+.text:00007FF7877E3EA0                 mov     ecx, [rbp+100h+var_110]
+.text:00007FF7877E3EA3                 xor     ecx, 32DB1C57h
+.text:00007FF7877E3EA9                 sub     eax, ecx
+.text:00007FF7877E3EAB                 mov     [rbp+100h+var_50], eax
+.text:00007FF7877E3EB1                 mov     ecx, [rbp+100h+var_170]
+.text:00007FF7877E3EB4                 mov     eax, [rbp+100h+var_170]
+.text:00007FF7877E3EB7                 xor     ecx, 0F21ABD80h
+.text:00007FF7877E3EBD                 not     ecx
+.text:00007FF7877E3EBF                 xor     eax, 0FFFEA7AFh
+.text:00007FF7877E3EC4                 or      eax, 0FDDAA72Fh
+.text:00007FF7877E3EC9                 xor     eax, ecx
+.text:00007FF7877E3ECB                 not     eax
+.text:00007FF7877E3ECD                 mov     [rbp+100h+var_108], eax
+.text:00007FF7877E3ED0                 mov     ecx, [rbp+100h+var_A0]
+.text:00007FF7877E3ED3                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E3ED7                 xor     ecx, eax
+.text:00007FF7877E3ED9                 xor     ecx, 24C2FEB1h
+.text:00007FF7877E3EDF                 mov     eax, 0E7B73915h
+.text:00007FF7877E3EE4                 sub     ecx, 4F4AE561h
+.text:00007FF7877E3EEA                 mov     [rbp+100h+var_EC], ecx
+.text:00007FF7877E3EED                 mov     ecx, [rbp+100h+var_B0]
+.text:00007FF7877E3EF0                 xor     ecx, 821CA8h
+.text:00007FF7877E3EF6                 and     ecx, 6AC29DA8h
+.text:00007FF7877E3EFC                 sub     eax, ecx
+.text:00007FF7877E3EFE                 mov     [rsp+200h+var_1AC], eax
+.text:00007FF7877E3F02                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E3F06                 mov     ecx, [rsp+200h+var_198]
+.text:00007FF7877E3F0A                 xor     eax, 0BFDBE4F2h
+.text:00007FF7877E3F0F                 xor     ecx, 0EE6468BEh
+.text:00007FF7877E3F15                 or      ecx, eax
+.text:00007FF7877E3F17                 add     ecx, 6818E6F2h
+.text:00007FF7877E3F1D                 mov     [rbp+100h+var_C4], ecx
+.text:00007FF7877E3F20                 mov     ecx, 75537EDFh
+.text:00007FF7877E3F25                 mov     eax, [rbp+100h+var_5C]
+.text:00007FF7877E3F2B                 xor     eax, 0EAD6D323h
+.text:00007FF7877E3F30                 not     eax
+.text:00007FF7877E3F32                 mov     [rbp+100h+var_C8], eax
+.text:00007FF7877E3F35                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E3F38                 xor     eax, 73FAFAC4h
+.text:00007FF7877E3F3D                 sub     ecx, eax
+.text:00007FF7877E3F3F                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E3F42                 xor     eax, ecx
+.text:00007FF7877E3F44                 xor     eax, 8134547Ch
+.text:00007FF7877E3F49                 mov     [rbp+100h+var_CC], eax
+.text:00007FF7877E3F4C                 mov     eax, [rsp+200h+var_1B4]
+.text:00007FF7877E3F50                 mov     ecx, [rsp+200h+var_1B4]
+.text:00007FF7877E3F54                 xor     eax, 2A1594F4h
+.text:00007FF7877E3F59                 xor     ecx, 43D6B9F6h
+.text:00007FF7877E3F5F                 add     ecx, eax
+.text:00007FF7877E3F61                 xor     ecx, 622A42CDh
+.text:00007FF7877E3F67                 mov     [rbp+100h+var_D0], ecx
+.text:00007FF7877E3F6A                 mov     eax, [rbp+100h+var_DC]
+.text:00007FF7877E3F6D                 xor     eax, 8C21B603h
+.text:00007FF7877E3F72                 sub     eax, 13FEE64Dh
+.text:00007FF7877E3F77                 mov     [rbp+100h+var_4C], eax
+.text:00007FF7877E3F7D                 mov     eax, [rbp+100h+var_58]
+.text:00007FF7877E3F83                 add     eax, 34D18D28h
+.text:00007FF7877E3F88                 xor     eax, 798BBC17h
+.text:00007FF7877E3F8D                 not     eax
+.text:00007FF7877E3F8F                 mov     [rbp+100h+var_16C], eax
+.text:00007FF7877E3F92                 mov     eax, [rbp+100h+var_5C]
+.text:00007FF7877E3F98                 mov     ecx, [rbp+100h+var_108]
+.text:00007FF7877E3F9B                 xor     eax, 0F6E95476h
+.text:00007FF7877E3FA0                 xor     ecx, 3A4B5E16h
+.text:00007FF7877E3FA6                 or      ecx, eax
+.text:00007FF7877E3FA8                 add     ecx, 0AF24A12h
+.text:00007FF7877E3FAE                 not     ecx
+.text:00007FF7877E3FB0                 mov     [rbp+100h+var_30], ecx
+.text:00007FF7877E3FB6                 mov     ecx, [rbp+100h+var_154]
+.text:00007FF7877E3FB9                 mov     eax, [rbp+100h+var_154]
+.text:00007FF7877E3FBC                 xor     ecx, 908D09FAh
+.text:00007FF7877E3FC2                 add     eax, 29C7DA41h
+.text:00007FF7877E3FC7                 add     ecx, eax
+.text:00007FF7877E3FC9                 mov     [rbp+100h+var_B8], ecx
+.text:00007FF7877E3FCC                 mov     ecx, [rbp+100h+var_CC]
+.text:00007FF7877E3FCF                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E3FD5                 xor     ecx, eax
+.text:00007FF7877E3FD7                 xor     ecx, 26688A45h
+.text:00007FF7877E3FDD                 not     ecx
+.text:00007FF7877E3FDF                 mov     [rsp+200h+var_19C], ecx
+.text:00007FF7877E3FE3                 mov     ecx, 2CB8902Fh
+.text:00007FF7877E3FE8                 mov     edx, [rbp+100h+var_124]
+.text:00007FF7877E3FEB                 mov     eax, [rbp+100h+var_124]
+.text:00007FF7877E3FEE                 xor     edx, 3D25858Dh
+.text:00007FF7877E3FF4                 xor     eax, 15D6678Eh
+.text:00007FF7877E3FF9                 sub     ecx, eax
+.text:00007FF7877E3FFB                 and     ecx, edx
+.text:00007FF7877E3FFD                 mov     [rbp+100h+var_84], ecx
+.text:00007FF7877E4000                 mov     ecx, [rbp+100h+var_130]
+.text:00007FF7877E4003                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E4007                 xor     ecx, 0D4CD94Fh
+.text:00007FF7877E400D                 xor     eax, 449F97E2h
+.text:00007FF7877E4012                 and     eax, ecx
+.text:00007FF7877E4014                 mov     [rbp+100h+var_168], eax
+.text:00007FF7877E4017                 mov     eax, [rbp+100h+var_B8]
+.text:00007FF7877E401A                 or      eax, 0AF4D9EC7h
+.text:00007FF7877E401F                 mov     [rbp+100h+var_164], eax
+.text:00007FF7877E4022                 mov     eax, [rbp+100h+var_B4]
+.text:00007FF7877E4025                 mov     ecx, [rbp+100h+var_B4]
+.text:00007FF7877E4028                 or      eax, 67F4328Ah
+.text:00007FF7877E402D                 xor     ecx, 0C5DAC9E1h
+.text:00007FF7877E4033                 and     ecx, eax
+.text:00007FF7877E4035                 mov     eax, [rbp+100h+var_B4]
+.text:00007FF7877E4038                 xor     eax, ecx
+.text:00007FF7877E403A                 xor     eax, 0DB9445F3h
+.text:00007FF7877E403F                 mov     [rbp+100h+var_11C], eax
+.text:00007FF7877E4042                 mov     eax, [rbp+100h+var_124]
+.text:00007FF7877E4045                 xor     eax, 0C4D00826h
+.text:00007FF7877E404A                 mov     ecx, 722D2C6Dh
+.text:00007FF7877E404F                 add     eax, 0CC3E93Dh
+.text:00007FF7877E4054                 or      eax, 89DBDF8Dh
+.text:00007FF7877E4059                 not     eax
+.text:00007FF7877E405B                 mov     [rbp+100h+var_8C], eax
+.text:00007FF7877E405E                 mov     eax, [rbp+100h+var_128]
+.text:00007FF7877E4061                 sub     ecx, eax
+.text:00007FF7877E4063                 mov     [rbp+100h+var_BC], ecx
+.text:00007FF7877E4066                 mov     ecx, 41BBB7B7h
+.text:00007FF7877E406B                 mov     eax, [rsp+200h+var_19C]
+.text:00007FF7877E406F                 or      eax, 99A96185h
+.text:00007FF7877E4074                 mov     [rbp+100h+var_18], eax
+.text:00007FF7877E407A                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E407E                 sub     eax, 3E2D28B8h
+.text:00007FF7877E4083                 and     eax, 6B4A9B01h
+.text:00007FF7877E4088                 mov     [rbp+100h+var_C0], eax
+.text:00007FF7877E408B                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E4091                 mov     edx, [rbp+100h+arg_0]
+.text:00007FF7877E4097                 xor     eax, 0E91C8A7Bh
+.text:00007FF7877E409C                 xor     edx, 46CF1036h
+.text:00007FF7877E40A2                 and     edx, eax
+.text:00007FF7877E40A4                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E40AA                 sub     ecx, eax
+.text:00007FF7877E40AC                 not     edx
+.text:00007FF7877E40AE                 and     ecx, edx
+.text:00007FF7877E40B0                 mov     [rbp+100h+var_38], ecx
+.text:00007FF7877E40B6                 mov     eax, [rbp+100h+var_F0]
+.text:00007FF7877E40B9                 sub     eax, 20908290h
+.text:00007FF7877E40BE                 mov     [rbp+100h+var_F8], eax
+.text:00007FF7877E40C1                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E40C4                 or      eax, 964D1EECh
+.text:00007FF7877E40C9                 mov     [rbp+100h+var_148], eax
+.text:00007FF7877E40CC                 mov     ecx, [rsp+200h+var_1A8]
+.text:00007FF7877E40D0                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E40D4                 xor     ecx, 2405200h
+.text:00007FF7877E40DA                 xor     eax, 0DCB45A49h
+.text:00007FF7877E40DF                 or      ecx, 0E99D2DCBh
+.text:00007FF7877E40E5                 add     eax, 0AC96CA6Ah
+.text:00007FF7877E40EA                 add     eax, ecx
+.text:00007FF7877E40EC                 mov     [rbp+100h+var_138], eax
+.text:00007FF7877E40EF                 mov     eax, 0F0B1FF55h
+.text:00007FF7877E40F4                 mov     ecx, [rbp+100h+var_150]
+.text:00007FF7877E40F7                 sub     ecx, 5C8ACF6Eh
+.text:00007FF7877E40FD                 or      ecx, 1FF35F4h
+.text:00007FF7877E4103                 sub     eax, ecx
+.text:00007FF7877E4105                 mov     [rbp+100h+var_24], eax
+.text:00007FF7877E410B                 mov     ecx, [rsp+200h+var_1DC]
+.text:00007FF7877E410F                 mov     eax, [rsp+200h+var_190]
+.text:00007FF7877E4113                 xor     ecx, 51E36042h
+.text:00007FF7877E4119                 xor     eax, 7A826CABh
+.text:00007FF7877E411E                 sub     ecx, eax
+.text:00007FF7877E4120                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E4124                 xor     eax, 0ED71AFF9h
+.text:00007FF7877E4129                 and     eax, ecx
+.text:00007FF7877E412B                 and     eax, 57CEF4E7h
+.text:00007FF7877E4130                 not     eax
+.text:00007FF7877E4132                 mov     [rbp+100h+var_14], eax
+.text:00007FF7877E4138                 mov     eax, [rbp+100h+var_A4]
+.text:00007FF7877E413B                 or      eax, 0D9EF3F5Eh
+.text:00007FF7877E4140                 mov     [rbp+100h+var_144], eax
+.text:00007FF7877E4143                 mov     ecx, [rsp+200h+var_1B4]
+.text:00007FF7877E4147                 mov     eax, [rbp+100h+var_40]
+.text:00007FF7877E414D                 xor     ecx, 14021BB3h
+.text:00007FF7877E4153                 xor     eax, 0E4853B52h
+.text:00007FF7877E4158                 not     ecx
+.text:00007FF7877E415A                 add     eax, 0EF995054h
+.text:00007FF7877E415F                 add     ecx, eax
+.text:00007FF7877E4161                 and     ecx, 6D139B9Fh
+.text:00007FF7877E4167                 mov     [rbp+100h+var_64], ecx
+.text:00007FF7877E416D                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E4171                 sub     eax, 4C5F7C9h
+.text:00007FF7877E4176                 or      eax, 0DBBDBC95h
+.text:00007FF7877E417B                 mov     [rbp+100h+var_34], eax
+.text:00007FF7877E4181                 mov     eax, [rbp+100h+var_128]
+.text:00007FF7877E4184                 mov     ecx, [rbp+100h+var_128]
+.text:00007FF7877E4187                 xor     eax, 9395285h
+.text:00007FF7877E418C                 xor     ecx, 601800Dh
+.text:00007FF7877E4192                 and     ecx, eax
+.text:00007FF7877E4194                 mov     eax, [rbp+100h+var_128]
+.text:00007FF7877E4197                 or      eax, ecx
+.text:00007FF7877E4199                 or      eax, 0B0C62872h
+.text:00007FF7877E419E                 xor     eax, 5B7940A8h
+.text:00007FF7877E41A3                 mov     [rsp+200h+var_188], eax
+.text:00007FF7877E41A7                 mov     eax, [rbp+100h+var_50]
+.text:00007FF7877E41AD                 xor     eax, 2014CF57h
+.text:00007FF7877E41B2                 mov     [rbp+100h+var_9C], eax
+.text:00007FF7877E41B5                 mov     ecx, [rbp+100h+var_D0]
+.text:00007FF7877E41B8                 mov     eax, [rbp+100h+var_D0]
+.text:00007FF7877E41BB                 xor     ecx, 0FB99C6E0h
+.text:00007FF7877E41C1                 xor     eax, 0FCDBCDA5h
+.text:00007FF7877E41C6                 not     ecx
+.text:00007FF7877E41C8                 not     eax
+.text:00007FF7877E41CA                 add     eax, ecx
+.text:00007FF7877E41CC                 and     eax, 0BA7C5E8h
+.text:00007FF7877E41D1                 mov     [rbp+100h+var_D4], eax
+.text:00007FF7877E41D4                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E41D8                 xor     eax, 0FBF6EEBFh
+.text:00007FF7877E41DD                 and     eax, 851F1357h
+.text:00007FF7877E41E2                 mov     [rbp+100h+var_98], eax
+.text:00007FF7877E41E5                 mov     ecx, [rbp+100h+var_174]
+.text:00007FF7877E41E8                 mov     eax, [rbp+100h+var_174]
+.text:00007FF7877E41EB                 add     eax, 224B8442h
+.text:00007FF7877E41F0                 add     ecx, eax
+.text:00007FF7877E41F2                 mov     [rbp+100h+var_70], ecx
+.text:00007FF7877E41F8                 mov     ecx, [rsp+200h+var_1B0]
+.text:00007FF7877E41FC                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E4200                 xor     ecx, 0FFE7F7FEh
+.text:00007FF7877E4206                 or      eax, 0FFC7FF7Fh
+.text:00007FF7877E420B                 not     ecx
+.text:00007FF7877E420D                 and     eax, ecx
+.text:00007FF7877E420F                 mov     ecx, 4DE139CDh
+.text:00007FF7877E4214                 and     eax, 40B8C891h
+.text:00007FF7877E4219                 mov     [rbp+100h+var_104], eax
+.text:00007FF7877E421C                 mov     eax, [rbp+100h+var_108]
+.text:00007FF7877E421F                 xor     eax, 7C1CF6E6h
+.text:00007FF7877E4224                 not     eax
+.text:00007FF7877E4226                 mov     [rbp+100h+var_6C], eax
+.text:00007FF7877E422C                 mov     eax, [rbp+100h+var_D8]
+.text:00007FF7877E422F                 xor     eax, 0A24E053Eh
+.text:00007FF7877E4234                 sub     ecx, eax
+.text:00007FF7877E4236                 xor     ecx, 67155A79h
+.text:00007FF7877E423C                 mov     [rbp+100h+var_94], ecx
+.text:00007FF7877E423F                 mov     ecx, [rsp+200h+var_1A8]
+.text:00007FF7877E4243                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E4247                 xor     ecx, 0ECDFD31Bh
+.text:00007FF7877E424D                 sub     eax, 59326BA2h
+.text:00007FF7877E4252                 or      ecx, 44DF5212h
+.text:00007FF7877E4258                 not     ecx
+.text:00007FF7877E425A                 and     eax, ecx
+.text:00007FF7877E425C                 mov     [rbp+100h+var_100], eax
+.text:00007FF7877E425F                 mov     eax, [rbp+100h+var_144]
+.text:00007FF7877E4262                 mov     ecx, [rbp+100h+var_144]
+.text:00007FF7877E4265                 xor     eax, 281950h
+.text:00007FF7877E426A                 xor     ecx, 4200120h
+.text:00007FF7877E4270                 or      ecx, eax
+.text:00007FF7877E4272                 mov     eax, 0D141878Ch
+.text:00007FF7877E4277                 or      ecx, 7BC7268Fh
+.text:00007FF7877E427D                 sub     eax, ecx
+.text:00007FF7877E427F                 mov     [rbp+100h+var_44], eax
+.text:00007FF7877E4285                 mov     eax, [rbp+100h+var_B8]
+.text:00007FF7877E4288                 sub     eax, 7EAF4C1Ch
+.text:00007FF7877E428D                 mov     [rsp+200h+var_1BC], eax
+.text:00007FF7877E4291                 mov     eax, [rbp+100h+var_74]
+.text:00007FF7877E4297                 mov     ecx, [rbp+100h+var_174]
+.text:00007FF7877E429A                 and     eax, 0F675807Ah
+.text:00007FF7877E429F                 xor     ecx, eax
+.text:00007FF7877E42A1                 mov     eax, [rbp+100h+var_174]
+.text:00007FF7877E42A4                 xor     eax, ecx
+.text:00007FF7877E42A6                 xor     eax, 98E67189h
+.text:00007FF7877E42AB                 not     eax
+.text:00007FF7877E42AD                 mov     [rbp+100h+var_90], eax
+.text:00007FF7877E42B0                 mov     eax, [rbp+100h+var_70]
+.text:00007FF7877E42B6                 xor     eax, 3C278D4Fh
+.text:00007FF7877E42BB                 sub     eax, 0AC88738h
+.text:00007FF7877E42C0                 or      eax, 354E113Ch
+.text:00007FF7877E42C5                 mov     [rbp+100h+var_48], eax
+.text:00007FF7877E42CB                 mov     ecx, [rbp+100h+var_100]
+.text:00007FF7877E42CE                 mov     eax, [rbp+100h+var_B0]
+.text:00007FF7877E42D1                 cmp     ecx, eax
+.text:00007FF7877E42D3                 jz      short loc_7FF7877E42E3
+.text:00007FF7877E42D5                 mov     eax, [rbp+100h+var_74]
+.text:00007FF7877E42DB                 dec     eax
+.text:00007FF7877E42DD                 mov     [rbp+100h+var_74], eax
+.text:00007FF7877E42E3
+.text:00007FF7877E42E3 loc_7FF7877E42E3:                       ; CODE XREF: sub_7FF7877E36F0+BE3↑j
+.text:00007FF7877E42E3                 mov     ecx, [rbp+100h+var_4C]
+.text:00007FF7877E42E9                 mov     eax, [rbp+100h+var_E4]
+.text:00007FF7877E42EC                 cmp     ecx, eax
+.text:00007FF7877E42EE                 jge     short loc_7FF7877E42F8
+.text:00007FF7877E42F0                 mov     eax, [rbp+100h+var_170]
+.text:00007FF7877E42F3                 inc     eax
+.text:00007FF7877E42F5                 mov     [rbp+100h+var_170], eax
+.text:00007FF7877E42F8
+.text:00007FF7877E42F8 loc_7FF7877E42F8:                       ; CODE XREF: sub_7FF7877E36F0+BFE↑j
+.text:00007FF7877E42F8                 mov     ecx, [rbp+100h+var_160]
+.text:00007FF7877E42FB                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E42FF                 add     ecx, eax
+.text:00007FF7877E4301                 mov     [rsp+200h+var_1A8], ecx
+.text:00007FF7877E4305                 mov     ecx, [rbp+100h+var_128]
+.text:00007FF7877E4308                 mov     eax, [rbp+100h+var_160]
+.text:00007FF7877E430B                 cmp     eax, ecx
+.text:00007FF7877E430D                 jl      short loc_7FF7877E4319
+.text:00007FF7877E430F                 mov     eax, [rsp+200h+var_190]
+.text:00007FF7877E4313                 dec     eax
+.text:00007FF7877E4315                 mov     [rsp+200h+var_190], eax
+.text:00007FF7877E4319
+.text:00007FF7877E4319 loc_7FF7877E4319:                       ; CODE XREF: sub_7FF7877E36F0+C1D↑j
+.text:00007FF7877E4319                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E431D                 test    eax, eax
+.text:00007FF7877E431F                 jz      short loc_7FF7877E4332
+.text:00007FF7877E4321                 mov     eax, [rbp+100h+var_38]
+.text:00007FF7877E4327                 mov     ecx, [rsp+200h+var_1C8]
+.text:00007FF7877E432B                 cdq
+.text:00007FF7877E432C                 idiv    ecx
+.text:00007FF7877E432E                 mov     [rsp+200h+var_1DC], edx
+.text:00007FF7877E4332
+.text:00007FF7877E4332 loc_7FF7877E4332:                       ; CODE XREF: sub_7FF7877E36F0+C2F↑j
+.text:00007FF7877E4332                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E4336                 and     eax, 90A0h
+.text:00007FF7877E433B                 mov     [rsp+200h+var_1D4], eax
+.text:00007FF7877E433F                 mov     eax, [rbp+100h+var_30]
+.text:00007FF7877E4345                 add     eax, 9422h
+.text:00007FF7877E434A                 mov     [rbp+100h+var_30], eax
+.text:00007FF7877E4350                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E4353                 test    eax, eax
+.text:00007FF7877E4355                 jz      short loc_7FF7877E4366
+.text:00007FF7877E4357                 mov     eax, [rbp+100h+var_28]
+.text:00007FF7877E435D                 mov     ecx, [rbp+100h+var_134]
+.text:00007FF7877E4360                 cdq
+.text:00007FF7877E4361                 idiv    ecx
+.text:00007FF7877E4363                 mov     [rbp+100h+var_D8], edx
+.text:00007FF7877E4366
+.text:00007FF7877E4366 loc_7FF7877E4366:                       ; CODE XREF: sub_7FF7877E36F0+C65↑j
+.text:00007FF7877E4366                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E4369                 xor     r8d, r8d
+.text:00007FF7877E436C                 mov     ecx, [rbp+100h+var_E8]
+.text:00007FF7877E436F                 sub     ecx, eax
+.text:00007FF7877E4371                 mov     [rbp+100h+var_E8], ecx
+.text:00007FF7877E4374                 mov     eax, [rbp+100h+var_80]
+.text:00007FF7877E437A                 mov     [rbp+100h+var_80], r8d
+.text:00007FF7877E4381                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E4387                 or      eax, 51F7h
+.text:00007FF7877E438C                 mov     [rbp+100h+arg_10], eax
+.text:00007FF7877E4392                 mov     eax, [rbp+100h+var_104]
+.text:00007FF7877E4395                 or      eax, 0A540h
+.text:00007FF7877E439A                 mov     [rbp+100h+var_104], eax
+.text:00007FF7877E439D                 mov     ecx, [rbp+100h+var_144]
+.text:00007FF7877E43A0                 mov     eax, [rsp+200h+var_190]
+.text:00007FF7877E43A4                 or      ecx, eax
+.text:00007FF7877E43A6                 mov     [rbp+100h+var_144], ecx
+.text:00007FF7877E43A9                 mov     ecx, [rsp+200h+var_1C4]
+.text:00007FF7877E43AD                 mov     eax, [rbp+100h+var_88]
+.text:00007FF7877E43B0                 cmp     ecx, eax
+.text:00007FF7877E43B2                 jz      short loc_7FF7877E43BC
+.text:00007FF7877E43B4                 mov     eax, [rbp+100h+var_170]
+.text:00007FF7877E43B7                 inc     eax
+.text:00007FF7877E43B9                 mov     [rbp+100h+var_170], eax
+.text:00007FF7877E43BC
+.text:00007FF7877E43BC loc_7FF7877E43BC:                       ; CODE XREF: sub_7FF7877E36F0+CC2↑j
+.text:00007FF7877E43BC                 mov     ecx, [rbp+100h+var_108]
+.text:00007FF7877E43BF                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E43C2                 and     ecx, eax
+.text:00007FF7877E43C4                 mov     [rbp+100h+var_168], ecx
+.text:00007FF7877E43C7                 mov     ecx, [rbp+100h+var_8C]
+.text:00007FF7877E43CA                 mov     eax, [rbp+100h+var_174]
+.text:00007FF7877E43CD                 cmp     eax, ecx
+.text:00007FF7877E43CF                 jg      short loc_7FF7877E43D9
+.text:00007FF7877E43D1                 mov     eax, [rbp+100h+var_F0]
+.text:00007FF7877E43D4                 dec     eax
+.text:00007FF7877E43D6                 mov     [rbp+100h+var_F0], eax
+.text:00007FF7877E43D9
+.text:00007FF7877E43D9 loc_7FF7877E43D9:                       ; CODE XREF: sub_7FF7877E36F0+CDF↑j
+.text:00007FF7877E43D9                 mov     eax, [rbp+100h+var_C8]
+.text:00007FF7877E43DC                 test    eax, eax
+.text:00007FF7877E43DE                 jz      short loc_7FF7877E43EC
+.text:00007FF7877E43E0                 mov     ecx, [rbp+100h+var_C8]
+.text:00007FF7877E43E3                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E43E6                 cdq
+.text:00007FF7877E43E7                 idiv    ecx
+.text:00007FF7877E43E9                 mov     [rbp+100h+var_14C], edx
+.text:00007FF7877E43EC
+.text:00007FF7877E43EC loc_7FF7877E43EC:                       ; CODE XREF: sub_7FF7877E36F0+CEE↑j
+.text:00007FF7877E43EC                 mov     ecx, [rbp+100h+var_D0]
+.text:00007FF7877E43EF                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E43F2                 shl     eax, cl
+.text:00007FF7877E43F4                 mov     [rbp+100h+var_44], eax
+.text:00007FF7877E43FA                 mov     ecx, [rsp+200h+var_19C]
+.text:00007FF7877E43FE                 mov     eax, [rbp+100h+var_60]
+.text:00007FF7877E4404                 sar     eax, cl
+.text:00007FF7877E4406                 mov     [rbp+100h+var_60], eax
+.text:00007FF7877E440C                 mov     eax, [rbp+100h+var_F8]
+.text:00007FF7877E440F                 xor     eax, 1083h
+.text:00007FF7877E4414                 mov     [rbp+100h+var_F8], eax
+.text:00007FF7877E4417                 mov     ecx, [rbp+100h+var_18]
+.text:00007FF7877E441D                 mov     eax, [rbp+100h+var_84]
+.text:00007FF7877E4420                 cmp     ecx, eax
+.text:00007FF7877E4422                 jg      short loc_7FF7877E442C
+.text:00007FF7877E4424                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E4427                 inc     eax
+.text:00007FF7877E4429                 mov     [rbp+100h+var_14C], eax
+.text:00007FF7877E442C
+.text:00007FF7877E442C loc_7FF7877E442C:                       ; CODE XREF: sub_7FF7877E36F0+D32↑j
+.text:00007FF7877E442C                 mov     eax, [rbp+100h+var_144]
+.text:00007FF7877E442F                 mov     ecx, [rbp+100h+var_C0]
+.text:00007FF7877E4432                 sub     ecx, eax
+.text:00007FF7877E4434                 mov     [rbp+100h+var_C0], ecx
+.text:00007FF7877E4437                 mov     eax, [rbp+100h+var_E8]
+.text:00007FF7877E443A                 mov     ecx, [rbp+100h+var_17C]
+.text:00007FF7877E443D                 sar     eax, cl
+.text:00007FF7877E443F                 mov     [rbp+100h+var_154], eax
+.text:00007FF7877E4442                 mov     ecx, [rbp+100h+var_EC]
+.text:00007FF7877E4445                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E4448                 shl     eax, cl
+.text:00007FF7877E444A                 mov     [rbp+100h+var_178], eax
+.text:00007FF7877E444D                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E4451                 test    eax, eax
+.text:00007FF7877E4453                 jz      short loc_7FF7877E4465
+.text:00007FF7877E4455                 mov     ecx, [rsp+200h+var_1A8]
+.text:00007FF7877E4459                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E445F                 cdq
+.text:00007FF7877E4460                 idiv    ecx
+.text:00007FF7877E4462                 mov     [rbp+100h+var_108], edx
+.text:00007FF7877E4465
+.text:00007FF7877E4465 loc_7FF7877E4465:                       ; CODE XREF: sub_7FF7877E36F0+D63↑j
+.text:00007FF7877E4465                 mov     eax, [rbp+100h+var_12C]
+.text:00007FF7877E4468                 or      eax, 0FDCCh
+.text:00007FF7877E446D                 mov     [rbp+100h+var_12C], eax
+.text:00007FF7877E4470                 mov     ecx, [rsp+200h+var_1B4]
+.text:00007FF7877E4474                 mov     eax, [rbp+100h+var_80]
+.text:00007FF7877E447A                 cmp     ecx, eax
+.text:00007FF7877E447C                 jl      short loc_7FF7877E4488
+.text:00007FF7877E447E                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E4482                 inc     eax
+.text:00007FF7877E4484                 mov     [rsp+200h+var_184], eax
+.text:00007FF7877E4488
+.text:00007FF7877E4488 loc_7FF7877E4488:                       ; CODE XREF: sub_7FF7877E36F0+D8C↑j
+.text:00007FF7877E4488                 mov     eax, [rbp+100h+var_11C]
+.text:00007FF7877E448B                 mov     [rbp+100h+var_CC], r8d
+.text:00007FF7877E448F                 mov     eax, [rbp+100h+var_6C]
+.text:00007FF7877E4495                 or      eax, 0BF91h
+.text:00007FF7877E449A                 mov     [rbp+100h+var_E0], eax
+.text:00007FF7877E449D                 mov     ecx, [rbp+100h+arg_8]
+.text:00007FF7877E44A3                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E44A7                 sar     eax, cl
+.text:00007FF7877E44A9                 mov     [rsp+200h+var_1CC], eax
+.text:00007FF7877E44AD                 mov     eax, [rbp+100h+var_9C]
+.text:00007FF7877E44B0                 sar     eax, 1Fh
+.text:00007FF7877E44B3                 mov     [rbp+100h+var_104], eax
+.text:00007FF7877E44B6                 mov     ecx, [rbp+100h+var_148]
+.text:00007FF7877E44B9                 mov     eax, [rbp+100h+var_128]
+.text:00007FF7877E44BC                 cmp     eax, ecx
+.text:00007FF7877E44BE                 jg      short loc_7FF7877E44CE
+.text:00007FF7877E44C0                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E44C6                 inc     eax
+.text:00007FF7877E44C8                 mov     [rbp+100h+arg_10], eax
+.text:00007FF7877E44CE
+.text:00007FF7877E44CE loc_7FF7877E44CE:                       ; CODE XREF: sub_7FF7877E36F0+DCE↑j
+.text:00007FF7877E44CE                 mov     ecx, [rbp+100h+var_30]
+.text:00007FF7877E44D4                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E44DA                 xor     ecx, eax
+.text:00007FF7877E44DC                 mov     [rbp+100h+var_118], ecx
+.text:00007FF7877E44DF                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E44E3                 sub     eax, 58C2h
+.text:00007FF7877E44E8                 mov     [rbp+100h+var_C4], eax
+.text:00007FF7877E44EB                 mov     ecx, [rsp+200h+var_1E0]
+.text:00007FF7877E44EF                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E44F3                 cmp     eax, ecx
+.text:00007FF7877E44F5                 jg      short loc_7FF7877E4501
+.text:00007FF7877E44F7                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E44FB                 inc     eax
+.text:00007FF7877E44FD                 mov     [rsp+200h+var_198], eax
+.text:00007FF7877E4501
+.text:00007FF7877E4501 loc_7FF7877E4501:                       ; CODE XREF: sub_7FF7877E36F0+E05↑j
+.text:00007FF7877E4501                 mov     ecx, [rbp+100h+var_9C]
+.text:00007FF7877E4504                 mov     eax, [rsp+200h+var_19C]
+.text:00007FF7877E4508                 cmp     ecx, eax
+.text:00007FF7877E450A                 jge     short loc_7FF7877E4514
+.text:00007FF7877E450C                 mov     eax, [rbp+100h+var_90]
+.text:00007FF7877E450F                 inc     eax
+.text:00007FF7877E4511                 mov     [rbp+100h+var_90], eax
+.text:00007FF7877E4514
+.text:00007FF7877E4514 loc_7FF7877E4514:                       ; CODE XREF: sub_7FF7877E36F0+E1A↑j
+.text:00007FF7877E4514                 mov     ecx, [rbp+100h+var_70]
+.text:00007FF7877E451A                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E451E                 cmp     ecx, eax
+.text:00007FF7877E4520                 jl      short loc_7FF7877E452A
+.text:00007FF7877E4522                 mov     eax, [rbp+100h+var_100]
+.text:00007FF7877E4525                 inc     eax
+.text:00007FF7877E4527                 mov     [rbp+100h+var_100], eax
+.text:00007FF7877E452A
+.text:00007FF7877E452A loc_7FF7877E452A:                       ; CODE XREF: sub_7FF7877E36F0+E30↑j
+.text:00007FF7877E452A                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E4530                 mov     ecx, [rbp+100h+var_158]
+.text:00007FF7877E4533                 shl     eax, cl
+.text:00007FF7877E4535                 mov     [rbp+100h+arg_8], eax
+.text:00007FF7877E453B                 mov     ecx, [rbp+100h+var_108]
+.text:00007FF7877E453E                 mov     eax, [rbp+100h+var_128]
+.text:00007FF7877E4541                 cmp     ecx, eax
+.text:00007FF7877E4543                 jz      short loc_7FF7877E454F
+.text:00007FF7877E4545                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E4549                 inc     eax
+.text:00007FF7877E454B                 mov     [rsp+200h+var_1CC], eax
+.text:00007FF7877E454F
+.text:00007FF7877E454F loc_7FF7877E454F:                       ; CODE XREF: sub_7FF7877E36F0+E53↑j
+.text:00007FF7877E454F                 mov     ecx, [rbp+100h+var_154]
+.text:00007FF7877E4552                 mov     eax, [rbp+100h+var_12C]
+.text:00007FF7877E4555                 cmp     eax, ecx
+.text:00007FF7877E4557                 jge     short loc_7FF7877E4563
+.text:00007FF7877E4559                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E455D                 inc     eax
+.text:00007FF7877E455F                 mov     [rsp+200h+var_1C8], eax
+.text:00007FF7877E4563
+.text:00007FF7877E4563 loc_7FF7877E4563:                       ; CODE XREF: sub_7FF7877E36F0+E67↑j
+.text:00007FF7877E4563                 mov     eax, [rbp+100h+var_13C]
+.text:00007FF7877E4566                 or      eax, 0AE71h
+.text:00007FF7877E456B                 mov     [rbp+100h+var_13C], eax
+.text:00007FF7877E456E                 mov     eax, [rbp+100h+var_16C]
+.text:00007FF7877E4571                 test    eax, eax
+.text:00007FF7877E4573                 jz      short loc_7FF7877E4581
+.text:00007FF7877E4575                 mov     ecx, [rbp+100h+var_16C]
+.text:00007FF7877E4578                 mov     eax, [rbp+100h+var_170]
+.text:00007FF7877E457B                 cdq
+.text:00007FF7877E457C                 idiv    ecx
+.text:00007FF7877E457E                 mov     [rbp+100h+var_11C], eax
+.text:00007FF7877E4581
+.text:00007FF7877E4581 loc_7FF7877E4581:                       ; CODE XREF: sub_7FF7877E36F0+E83↑j
+.text:00007FF7877E4581                 mov     ecx, [rbp+100h+var_15C]
+.text:00007FF7877E4584                 mov     eax, [rbp+100h+var_54]
+.text:00007FF7877E458A                 imul    ecx, eax
+.text:00007FF7877E458D                 mov     [rbp+100h+var_15C], ecx
+.text:00007FF7877E4590                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E4594                 imul    ecx, eax, 13F7h
+.text:00007FF7877E459A                 mov     [rsp+200h+var_1D4], ecx
+.text:00007FF7877E459E                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E45A4                 sar     eax, 1Fh
+.text:00007FF7877E45A7                 mov     [rbp+100h+arg_8], eax
+.text:00007FF7877E45AD                 mov     eax, [rbp+100h+var_164]
+.text:00007FF7877E45B0                 imul    ecx, eax, 5FA2h
+.text:00007FF7877E45B6                 mov     [rbp+100h+var_F4], ecx
+.text:00007FF7877E45B9                 mov     ecx, [rsp+200h+var_188]
+.text:00007FF7877E45BD                 mov     eax, [rbp+100h+var_124]
+.text:00007FF7877E45C0                 or      ecx, eax
+.text:00007FF7877E45C2                 mov     [rbp+100h+var_124], ecx
+.text:00007FF7877E45C5                 mov     ecx, [rsp+200h+var_1D4]
+.text:00007FF7877E45C9                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E45CD                 cmp     ecx, eax
+.text:00007FF7877E45CF                 jl      short loc_7FF7877E45DB
+.text:00007FF7877E45D1                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E45D5                 dec     eax
+.text:00007FF7877E45D7                 mov     [rsp+200h+var_184], eax
+.text:00007FF7877E45DB
+.text:00007FF7877E45DB loc_7FF7877E45DB:                       ; CODE XREF: sub_7FF7877E36F0+EDF↑j
+.text:00007FF7877E45DB                 mov     ecx, [rbp+100h+var_CC]
+.text:00007FF7877E45DE                 mov     eax, [rbp+100h+var_170]
+.text:00007FF7877E45E1                 cmp     ecx, eax
+.text:00007FF7877E45E3                 jg      short loc_7FF7877E45ED
+.text:00007FF7877E45E5                 mov     eax, [rbp+100h+var_A8]
+.text:00007FF7877E45E8                 inc     eax
+.text:00007FF7877E45EA                 mov     [rbp+100h+var_A8], eax
+.text:00007FF7877E45ED
+.text:00007FF7877E45ED loc_7FF7877E45ED:                       ; CODE XREF: sub_7FF7877E36F0+EF3↑j
+.text:00007FF7877E45ED                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E45F1                 imul    ecx, eax, 1621h
+.text:00007FF7877E45F7                 mov     [rbp+100h+var_E8], ecx
+.text:00007FF7877E45FA                 mov     eax, [rbp+100h+var_F4]
+.text:00007FF7877E45FD                 xor     eax, 4A0h
+.text:00007FF7877E4602                 mov     [rbp+100h+var_EC], eax
+.text:00007FF7877E4605                 mov     eax, [rbp+100h+var_10C]
+.text:00007FF7877E4608                 test    eax, eax
+.text:00007FF7877E460A                 jz      short loc_7FF7877E461E
+.text:00007FF7877E460C                 mov     ecx, [rbp+100h+var_10C]
+.text:00007FF7877E460F                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E4615                 cdq
+.text:00007FF7877E4616                 idiv    ecx
+.text:00007FF7877E4618                 mov     [rbp+100h+var_78], edx
+.text:00007FF7877E461E
+.text:00007FF7877E461E loc_7FF7877E461E:                       ; CODE XREF: sub_7FF7877E36F0+F1A↑j
+.text:00007FF7877E461E                 mov     eax, [rbp+100h+var_8C]
+.text:00007FF7877E4621                 and     eax, 0BEC8h
+.text:00007FF7877E4626                 mov     [rbp+100h+var_58], eax
+.text:00007FF7877E462C                 mov     ecx, [rbp+100h+var_BC]
+.text:00007FF7877E462F                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E4633                 sar     eax, cl
+.text:00007FF7877E4635                 mov     [rsp+200h+var_1A0], eax
+.text:00007FF7877E4639                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E463D                 sub     eax, 6FDDh
+.text:00007FF7877E4642                 mov     [rsp+200h+var_1B4], eax
+.text:00007FF7877E4646                 mov     ecx, [rbp+100h+var_DC]
+.text:00007FF7877E4649                 mov     eax, [rbp+100h+var_88]
+.text:00007FF7877E464C                 cmp     eax, ecx
+.text:00007FF7877E464E                 jl      short loc_7FF7877E4658
+.text:00007FF7877E4650                 mov     eax, [rbp+100h+var_150]
+.text:00007FF7877E4653                 dec     eax
+.text:00007FF7877E4655                 mov     [rbp+100h+var_150], eax
+.text:00007FF7877E4658
+.text:00007FF7877E4658 loc_7FF7877E4658:                       ; CODE XREF: sub_7FF7877E36F0+F5E↑j
+.text:00007FF7877E4658                 mov     ecx, [rbp+100h+var_50]
+.text:00007FF7877E465E                 mov     eax, [rbp+100h+var_FC]
+.text:00007FF7877E4661                 cmp     eax, ecx
+.text:00007FF7877E4663                 jz      short loc_7FF7877E466D
+.text:00007FF7877E4665                 mov     eax, [rbp+100h+var_124]
+.text:00007FF7877E4668                 inc     eax
+.text:00007FF7877E466A                 mov     [rbp+100h+var_124], eax
+.text:00007FF7877E466D
+.text:00007FF7877E466D loc_7FF7877E466D:                       ; CODE XREF: sub_7FF7877E36F0+F73↑j
+.text:00007FF7877E466D                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E4671                 test    eax, eax
+.text:00007FF7877E4673                 jz      short loc_7FF7877E4684
+.text:00007FF7877E4675                 mov     eax, [rsp+200h+var_1BC]
+.text:00007FF7877E4679                 mov     ecx, [rsp+200h+var_1C4]
+.text:00007FF7877E467D                 cdq
+.text:00007FF7877E467E                 idiv    ecx
+.text:00007FF7877E4680                 mov     [rsp+200h+var_1C4], edx
+.text:00007FF7877E4684
+.text:00007FF7877E4684 loc_7FF7877E4684:                       ; CODE XREF: sub_7FF7877E36F0+F83↑j
+.text:00007FF7877E4684                 mov     ecx, [rbp+100h+var_134]
+.text:00007FF7877E4687                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E468B                 cmp     eax, ecx
+.text:00007FF7877E468D                 jz      short loc_7FF7877E4697
+.text:00007FF7877E468F                 mov     eax, [rbp+100h+var_16C]
+.text:00007FF7877E4692                 dec     eax
+.text:00007FF7877E4694                 mov     [rbp+100h+var_16C], eax
+.text:00007FF7877E4697
+.text:00007FF7877E4697 loc_7FF7877E4697:                       ; CODE XREF: sub_7FF7877E36F0+F9D↑j
+.text:00007FF7877E4697                 mov     ecx, [rsp+200h+var_1BC]
+.text:00007FF7877E469B                 mov     eax, [rbp+100h+var_DC]
+.text:00007FF7877E469E                 cmp     ecx, eax
+.text:00007FF7877E46A0                 jl      short loc_7FF7877E46AC
+.text:00007FF7877E46A2                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E46A6                 inc     eax
+.text:00007FF7877E46A8                 mov     [rsp+200h+var_1D4], eax
+.text:00007FF7877E46AC
+.text:00007FF7877E46AC loc_7FF7877E46AC:                       ; CODE XREF: sub_7FF7877E36F0+FB0↑j
+.text:00007FF7877E46AC                 mov     eax, [rbp+100h+var_158]
+.text:00007FF7877E46AF                 mov     ecx, [rbp+100h+var_10C]
+.text:00007FF7877E46B2                 sar     eax, cl
+.text:00007FF7877E46B4                 mov     [rbp+100h+var_C4], eax
+.text:00007FF7877E46B7                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E46BB                 xor     eax, 6198h
+.text:00007FF7877E46C0                 mov     [rsp+200h+var_198], eax
+.text:00007FF7877E46C4                 mov     ecx, [rsp+200h+var_1BC]
+.text:00007FF7877E46C8                 mov     eax, [rbp+100h+var_50]
+.text:00007FF7877E46CE                 cmp     eax, ecx
+.text:00007FF7877E46D0                 jg      short loc_7FF7877E46DA
+.text:00007FF7877E46D2                 mov     eax, [rbp+100h+var_11C]
+.text:00007FF7877E46D5                 inc     eax
+.text:00007FF7877E46D7                 mov     [rbp+100h+var_11C], eax
+.text:00007FF7877E46DA
+.text:00007FF7877E46DA loc_7FF7877E46DA:                       ; CODE XREF: sub_7FF7877E36F0+FE0↑j
+.text:00007FF7877E46DA                 mov     ecx, [rsp+200h+var_18C]
+.text:00007FF7877E46DE                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E46E4                 cmp     eax, ecx
+.text:00007FF7877E46E6                 jz      short loc_7FF7877E46F2
+.text:00007FF7877E46E8                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E46EC                 inc     eax
+.text:00007FF7877E46EE                 mov     [rsp+200h+var_1C8], eax
+.text:00007FF7877E46F2
+.text:00007FF7877E46F2 loc_7FF7877E46F2:                       ; CODE XREF: sub_7FF7877E36F0+FF6↑j
+.text:00007FF7877E46F2                 mov     ecx, [rbp+100h+arg_8]
+.text:00007FF7877E46F8                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E46FC                 and     ecx, eax
+.text:00007FF7877E46FE                 mov     [rbp+100h+var_15C], ecx
+.text:00007FF7877E4701                 mov     ecx, [rsp+200h+var_188]
+.text:00007FF7877E4705                 mov     eax, [rsp+200h+var_190]
+.text:00007FF7877E4709                 cmp     ecx, eax
+.text:00007FF7877E470B                 jz      short loc_7FF7877E4715
+.text:00007FF7877E470D                 mov     eax, [rbp+100h+var_138]
+.text:00007FF7877E4710                 inc     eax
+.text:00007FF7877E4712                 mov     [rbp+100h+var_138], eax
+.text:00007FF7877E4715
+.text:00007FF7877E4715 loc_7FF7877E4715:                       ; CODE XREF: sub_7FF7877E36F0+101B↑j
+.text:00007FF7877E4715                 mov     eax, [rbp+100h+var_68]
+.text:00007FF7877E471B                 test    eax, eax
+.text:00007FF7877E471D                 jz      short loc_7FF7877E472F
+.text:00007FF7877E471F                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E4723                 mov     ecx, [rbp+100h+var_68]
+.text:00007FF7877E4729                 cdq
+.text:00007FF7877E472A                 idiv    ecx
+.text:00007FF7877E472C                 mov     [rbp+100h+var_178], eax
+.text:00007FF7877E472F
+.text:00007FF7877E472F loc_7FF7877E472F:                       ; CODE XREF: sub_7FF7877E36F0+102D↑j
+.text:00007FF7877E472F                 mov     ecx, [rbp+100h+var_38]
+.text:00007FF7877E4735                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E4739                 sar     eax, cl
+.text:00007FF7877E473B                 mov     [rbp+100h+var_168], eax
+.text:00007FF7877E473E                 mov     ecx, [rbp+100h+var_90]
+.text:00007FF7877E4741                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E4745                 cmp     eax, ecx
+.text:00007FF7877E4747                 jg      short loc_7FF7877E4753
+.text:00007FF7877E4749                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E474D                 dec     eax
+.text:00007FF7877E474F                 mov     [rsp+200h+var_1E0], eax
+.text:00007FF7877E4753
+.text:00007FF7877E4753 loc_7FF7877E4753:                       ; CODE XREF: sub_7FF7877E36F0+1057↑j
+.text:00007FF7877E4753                 mov     ecx, [rbp+100h+var_F4]
+.text:00007FF7877E4756                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E4759                 cmp     ecx, eax
+.text:00007FF7877E475B                 jge     short loc_7FF7877E4767
+.text:00007FF7877E475D                 mov     eax, [rsp+200h+var_1A4]
+.text:00007FF7877E4761                 inc     eax
+.text:00007FF7877E4763                 mov     [rsp+200h+var_1A4], eax
+.text:00007FF7877E4767
+.text:00007FF7877E4767 loc_7FF7877E4767:                       ; CODE XREF: sub_7FF7877E36F0+106B↑j
+.text:00007FF7877E4767                 mov     ecx, [rbp+100h+var_F8]
+.text:00007FF7877E476A                 mov     eax, [rbp+100h+var_2C]
+.text:00007FF7877E4770                 cmp     eax, ecx
+.text:00007FF7877E4772                 jl      short loc_7FF7877E4782
+.text:00007FF7877E4774                 mov     eax, [rbp+100h+var_64]
+.text:00007FF7877E477A                 inc     eax
+.text:00007FF7877E477C                 mov     [rbp+100h+var_64], eax
+.text:00007FF7877E4782
+.text:00007FF7877E4782 loc_7FF7877E4782:                       ; CODE XREF: sub_7FF7877E36F0+1082↑j
+.text:00007FF7877E4782                 mov     eax, [rbp+100h+var_F0]
+.text:00007FF7877E4785                 test    eax, eax
+.text:00007FF7877E4787                 jz      short loc_7FF7877E4795
+.text:00007FF7877E4789                 mov     eax, [rbp+100h+var_15C]
+.text:00007FF7877E478C                 mov     ecx, [rbp+100h+var_F0]
+.text:00007FF7877E478F                 cdq
+.text:00007FF7877E4790                 idiv    ecx
+.text:00007FF7877E4792                 mov     [rbp+100h+var_15C], eax
+.text:00007FF7877E4795
+.text:00007FF7877E4795 loc_7FF7877E4795:                       ; CODE XREF: sub_7FF7877E36F0+1097↑j
+.text:00007FF7877E4795                 mov     ecx, [rbp+100h+var_FC]
+.text:00007FF7877E4798                 mov     eax, [rbp+100h+var_40]
+.text:00007FF7877E479E                 cmp     ecx, eax
+.text:00007FF7877E47A0                 jl      short loc_7FF7877E47AA
+.text:00007FF7877E47A2                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E47A5                 dec     eax
+.text:00007FF7877E47A7                 mov     [rbp+100h+var_180], eax
+.text:00007FF7877E47AA
+.text:00007FF7877E47AA loc_7FF7877E47AA:                       ; CODE XREF: sub_7FF7877E36F0+10B0↑j
+.text:00007FF7877E47AA                 mov     ecx, [rbp+100h+var_168]
+.text:00007FF7877E47AD                 mov     eax, [rbp+100h+var_124]
+.text:00007FF7877E47B0                 cmp     ecx, eax
+.text:00007FF7877E47B2                 jl      short loc_7FF7877E47BC
+.text:00007FF7877E47B4                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E47B7                 dec     eax
+.text:00007FF7877E47B9                 mov     [rbp+100h+var_17C], eax
+.text:00007FF7877E47BC
+.text:00007FF7877E47BC loc_7FF7877E47BC:                       ; CODE XREF: sub_7FF7877E36F0+10C2↑j
+.text:00007FF7877E47BC                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E47C0                 sar     eax, 1Fh
+.text:00007FF7877E47C3                 mov     [rsp+200h+var_1B8], eax
+.text:00007FF7877E47C7                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E47CA                 add     eax, 23E0h
+.text:00007FF7877E47CF                 mov     [rbp+100h+var_11C], eax
+.text:00007FF7877E47D2                 mov     eax, [rbp+100h+var_174]
+.text:00007FF7877E47D5                 xor     eax, 0F8A2h
+.text:00007FF7877E47DA                 mov     [rbp+100h+var_70], eax
+.text:00007FF7877E47E0                 mov     ecx, [rbp+100h+var_138]
+.text:00007FF7877E47E3                 mov     eax, [rbp+100h+var_150]
+.text:00007FF7877E47E6                 cmp     ecx, eax
+.text:00007FF7877E47E8                 jnz     short loc_7FF7877E47F2
+.text:00007FF7877E47EA                 mov     eax, [rbp+100h+var_118]
+.text:00007FF7877E47ED                 dec     eax
+.text:00007FF7877E47EF                 mov     [rbp+100h+var_118], eax
+.text:00007FF7877E47F2
+.text:00007FF7877E47F2 loc_7FF7877E47F2:                       ; CODE XREF: sub_7FF7877E36F0+10F8↑j
+.text:00007FF7877E47F2                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E47F6                 sub     eax, 9969h
+.text:00007FF7877E47FB                 mov     [rsp+200h+var_1BC], eax
+.text:00007FF7877E47FF                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E4805                 mov     ecx, [rsp+200h+var_1E0]
+.text:00007FF7877E4809                 shl     eax, cl
+.text:00007FF7877E480B                 mov     [rbp+100h+arg_10], eax
+.text:00007FF7877E4811                 mov     ecx, [rbp+100h+var_150]
+.text:00007FF7877E4814                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E4818                 shl     eax, cl
+.text:00007FF7877E481A                 mov     [rbp+100h+var_168], eax
+.text:00007FF7877E481D                 mov     eax, [rbp+100h+var_84]
+.text:00007FF7877E4820                 test    eax, eax
+.text:00007FF7877E4822                 jz      short loc_7FF7877E4832
+.text:00007FF7877E4824                 mov     ecx, [rbp+100h+var_84]
+.text:00007FF7877E4827                 mov     eax, [rsp+200h+var_19C]
+.text:00007FF7877E482B                 cdq
+.text:00007FF7877E482C                 idiv    ecx
+.text:00007FF7877E482E                 mov     [rsp+200h+var_19C], edx
+.text:00007FF7877E4832
+.text:00007FF7877E4832 loc_7FF7877E4832:                       ; CODE XREF: sub_7FF7877E36F0+1132↑j
+.text:00007FF7877E4832                 mov     ecx, [rbp+100h+var_7C]
+.text:00007FF7877E4838                 mov     eax, 81E51375h
+.text:00007FF7877E483D                 imul    ecx
+.text:00007FF7877E483F                 add     edx, ecx
+.text:00007FF7877E4841                 sar     edx, 0Fh
+.text:00007FF7877E4844                 mov     eax, edx
+.text:00007FF7877E4846                 shr     eax, 1Fh
+.text:00007FF7877E4849                 add     edx, eax
+.text:00007FF7877E484B                 imul    eax, edx, 0FC44h
+.text:00007FF7877E4851                 sub     ecx, eax
+.text:00007FF7877E4853                 mov     [rbp+100h+var_108], ecx
+.text:00007FF7877E4856                 mov     eax, [rsp+200h+var_188]
+.text:00007FF7877E485A                 sub     eax, 2948h
+.text:00007FF7877E485F                 mov     [rbp+100h+var_24], eax
+.text:00007FF7877E4865                 mov     ecx, [rsp+200h+var_188]
+.text:00007FF7877E4869                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E486D                 cmp     eax, ecx
+.text:00007FF7877E486F                 jg      short loc_7FF7877E487B
+.text:00007FF7877E4871                 mov     eax, [rsp+200h+var_194]
+.text:00007FF7877E4875                 dec     eax
+.text:00007FF7877E4877                 mov     [rsp+200h+var_194], eax
+.text:00007FF7877E487B
+.text:00007FF7877E487B loc_7FF7877E487B:                       ; CODE XREF: sub_7FF7877E36F0+117F↑j
+.text:00007FF7877E487B                 mov     ecx, [rbp+100h+var_8C]
+.text:00007FF7877E487E                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E4882                 cmp     eax, ecx
+.text:00007FF7877E4884                 jge     short loc_7FF7877E4890
+.text:00007FF7877E4886                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E488A                 inc     eax
+.text:00007FF7877E488C                 mov     [rsp+200h+var_1B8], eax
+.text:00007FF7877E4890
+.text:00007FF7877E4890 loc_7FF7877E4890:                       ; CODE XREF: sub_7FF7877E36F0+1194↑j
+.text:00007FF7877E4890                 mov     ecx, [rbp+100h+var_A4]
+.text:00007FF7877E4893                 mov     eax, [rbp+100h+var_120]
+.text:00007FF7877E4896                 cmp     eax, ecx
+.text:00007FF7877E4898                 jl      short loc_7FF7877E48A2
+.text:00007FF7877E489A                 mov     eax, [rbp+100h+var_154]
+.text:00007FF7877E489D                 inc     eax
+.text:00007FF7877E489F                 mov     [rbp+100h+var_154], eax
+.text:00007FF7877E48A2
+.text:00007FF7877E48A2 loc_7FF7877E48A2:                       ; CODE XREF: sub_7FF7877E36F0+11A8↑j
+.text:00007FF7877E48A2                 mov     ecx, [rbp+100h+var_E0]
+.text:00007FF7877E48A5                 mov     eax, [rbp+100h+var_2C]
+.text:00007FF7877E48AB                 sub     ecx, eax
+.text:00007FF7877E48AD                 mov     [rbp+100h+var_E0], ecx
+.text:00007FF7877E48B0                 mov     ecx, [rbp+100h+var_144]
+.text:00007FF7877E48B3                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E48B7                 cmp     ecx, eax
+.text:00007FF7877E48B9                 jle     short loc_7FF7877E48C5
+.text:00007FF7877E48BB                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E48BF                 inc     eax
+.text:00007FF7877E48C1                 mov     [rsp+200h+var_1C0], eax
+.text:00007FF7877E48C5
+.text:00007FF7877E48C5 loc_7FF7877E48C5:                       ; CODE XREF: sub_7FF7877E36F0+11C9↑j
+.text:00007FF7877E48C5                 mov     eax, [rsp+200h+var_194]
+.text:00007FF7877E48C9                 imul    ecx, eax, 5C69h
+.text:00007FF7877E48CF                 mov     [rsp+200h+var_194], ecx
+.text:00007FF7877E48D3                 mov     eax, [rbp+100h+var_108]
+.text:00007FF7877E48D6                 sub     eax, 30DEh
+.text:00007FF7877E48DB                 mov     [rbp+100h+var_B0], eax
+.text:00007FF7877E48DE                 mov     eax, [rbp+100h+var_F4]
+.text:00007FF7877E48E1                 sar     eax, 1Fh
+.text:00007FF7877E48E4                 mov     [rbp+100h+var_F4], eax
+.text:00007FF7877E48E7                 mov     ecx, [rbp+100h+var_84]
+.text:00007FF7877E48EA                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E48F0                 cmp     ecx, eax
+.text:00007FF7877E48F2                 jle     short loc_7FF7877E4902
+.text:00007FF7877E48F4                 mov     eax, [rbp+100h+var_3C]
+.text:00007FF7877E48FA                 inc     eax
+.text:00007FF7877E48FC                 mov     [rbp+100h+var_3C], eax
+.text:00007FF7877E4902
+.text:00007FF7877E4902 loc_7FF7877E4902:                       ; CODE XREF: sub_7FF7877E36F0+1202↑j
+.text:00007FF7877E4902                 mov     ecx, [rbp+100h+var_150]
+.text:00007FF7877E4905                 mov     eax, 5C966305h
+.text:00007FF7877E490A                 imul    ecx
+.text:00007FF7877E490C                 sar     edx, 0Eh
+.text:00007FF7877E490F                 mov     eax, edx
+.text:00007FF7877E4911                 shr     eax, 1Fh
+.text:00007FF7877E4914                 add     edx, eax
+.text:00007FF7877E4916                 mov     [rbp+100h+var_150], edx
+.text:00007FF7877E4919                 mov     ecx, [rbp+100h+var_9C]
+.text:00007FF7877E491C                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E4920                 cmp     eax, ecx
+.text:00007FF7877E4922                 jz      short loc_7FF7877E492E
+.text:00007FF7877E4924                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E4928                 inc     eax
+.text:00007FF7877E492A                 mov     [rsp+200h+var_1A8], eax
+.text:00007FF7877E492E
+.text:00007FF7877E492E loc_7FF7877E492E:                       ; CODE XREF: sub_7FF7877E36F0+1232↑j
+.text:00007FF7877E492E                 mov     ecx, [rbp+100h+var_FC]
+.text:00007FF7877E4931                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E4935                 cmp     ecx, eax
+.text:00007FF7877E4937                 jge     short loc_7FF7877E4941
+.text:00007FF7877E4939                 mov     eax, [rbp+100h+var_AC]
+.text:00007FF7877E493C                 inc     eax
+.text:00007FF7877E493E                 mov     [rbp+100h+var_AC], eax
+.text:00007FF7877E4941
+.text:00007FF7877E4941 loc_7FF7877E4941:                       ; CODE XREF: sub_7FF7877E36F0+1247↑j
+.text:00007FF7877E4941                 mov     ecx, [rbp+100h+var_154]
+.text:00007FF7877E4944                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E4947                 cmp     eax, ecx
+.text:00007FF7877E4949                 jge     short loc_7FF7877E4955
+.text:00007FF7877E494B                 mov     eax, [rsp+200h+var_1AC]
+.text:00007FF7877E494F                 dec     eax
+.text:00007FF7877E4951                 mov     [rsp+200h+var_1AC], eax
+.text:00007FF7877E4955
+.text:00007FF7877E4955 loc_7FF7877E4955:                       ; CODE XREF: sub_7FF7877E36F0+1259↑j
+.text:00007FF7877E4955                 mov     ecx, [rbp+100h+var_BC]
+.text:00007FF7877E4958                 mov     eax, [rbp+100h+var_110]
+.text:00007FF7877E495B                 cmp     eax, ecx
+.text:00007FF7877E495D                 jnz     short loc_7FF7877E4967
+.text:00007FF7877E495F                 mov     eax, [rbp+100h+var_DC]
+.text:00007FF7877E4962                 dec     eax
+.text:00007FF7877E4964                 mov     [rbp+100h+var_DC], eax
+.text:00007FF7877E4967
+.text:00007FF7877E4967 loc_7FF7877E4967:                       ; CODE XREF: sub_7FF7877E36F0+126D↑j
+.text:00007FF7877E4967                 mov     ecx, [rbp+100h+var_C0]
+.text:00007FF7877E496A                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E496E                 xor     ecx, eax
+.text:00007FF7877E4970                 mov     [rbp+100h+var_C8], ecx
+.text:00007FF7877E4973                 mov     eax, 0A035D215h
+.text:00007FF7877E4978                 mov     ecx, [rbp+100h+var_114]
+.text:00007FF7877E497B                 imul    ecx
+.text:00007FF7877E497D                 add     edx, ecx
+.text:00007FF7877E497F                 sar     edx, 0Fh
+.text:00007FF7877E4982                 mov     eax, edx
+.text:00007FF7877E4984                 shr     eax, 1Fh
+.text:00007FF7877E4987                 add     edx, eax
+.text:00007FF7877E4989                 mov     [rbp+100h+var_114], edx
+.text:00007FF7877E498C                 mov     ecx, [rbp+100h+var_80]
+.text:00007FF7877E4992                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E4996                 cmp     ecx, eax
+.text:00007FF7877E4998                 jge     short loc_7FF7877E49A4
+.text:00007FF7877E499A                 mov     eax, [rsp+200h+var_1AC]
+.text:00007FF7877E499E                 inc     eax
+.text:00007FF7877E49A0                 mov     [rsp+200h+var_1AC], eax
+.text:00007FF7877E49A4
+.text:00007FF7877E49A4 loc_7FF7877E49A4:                       ; CODE XREF: sub_7FF7877E36F0+12A8↑j
+.text:00007FF7877E49A4                 mov     eax, [rbp+100h+var_164]
+.text:00007FF7877E49A7                 mov     ecx, [rbp+100h+var_150]
+.text:00007FF7877E49AA                 shl     eax, cl
+.text:00007FF7877E49AC                 mov     [rbp+100h+var_164], eax
+.text:00007FF7877E49AF                 mov     eax, [rbp+100h+var_120]
+.text:00007FF7877E49B2                 mov     ecx, [rsp+200h+var_1B0]
+.text:00007FF7877E49B6                 shl     eax, cl
+.text:00007FF7877E49B8                 mov     [rbp+100h+var_120], eax
+.text:00007FF7877E49BB                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E49BF                 xor     eax, 0CDAAh
+.text:00007FF7877E49C4                 mov     [rbp+100h+var_104], eax
+.text:00007FF7877E49C7                 mov     ecx, [rbp+100h+var_138]
+.text:00007FF7877E49CA                 mov     eax, [rbp+100h+var_160]
+.text:00007FF7877E49CD                 cmp     eax, ecx
+.text:00007FF7877E49CF                 jnz     short loc_7FF7877E49DB
+.text:00007FF7877E49D1                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E49D5                 inc     eax
+.text:00007FF7877E49D7                 mov     [rsp+200h+var_1DC], eax
+.text:00007FF7877E49DB
+.text:00007FF7877E49DB loc_7FF7877E49DB:                       ; CODE XREF: sub_7FF7877E36F0+12DF↑j
+.text:00007FF7877E49DB                 mov     eax, [rbp+100h+var_164]
+.text:00007FF7877E49DE                 test    eax, eax
+.text:00007FF7877E49E0                 jz      short loc_7FF7877E49F0
+.text:00007FF7877E49E2                 mov     ecx, [rbp+100h+var_164]
+.text:00007FF7877E49E5                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E49E9                 cdq
+.text:00007FF7877E49EA                 idiv    ecx
+.text:00007FF7877E49EC                 mov     [rsp+200h+var_184], eax
+.text:00007FF7877E49F0
+.text:00007FF7877E49F0 loc_7FF7877E49F0:                       ; CODE XREF: sub_7FF7877E36F0+12F0↑j
+.text:00007FF7877E49F0                 mov     ecx, [rbp+100h+var_4C]
+.text:00007FF7877E49F6                 mov     eax, 6D8BD237h
+.text:00007FF7877E49FB                 imul    ecx
+.text:00007FF7877E49FD                 sar     edx, 0Bh
+.text:00007FF7877E4A00                 mov     eax, edx
+.text:00007FF7877E4A02                 shr     eax, 1Fh
+.text:00007FF7877E4A05                 add     edx, eax
+.text:00007FF7877E4A07                 imul    eax, edx, 12B2h
+.text:00007FF7877E4A0D                 sub     ecx, eax
+.text:00007FF7877E4A0F                 mov     [rbp+100h+var_4C], ecx
+.text:00007FF7877E4A15                 mov     ecx, [rbp+100h+var_B8]
+.text:00007FF7877E4A18                 mov     eax, [rsp+200h+var_184]
+.text:00007FF7877E4A1C                 cmp     eax, ecx
+.text:00007FF7877E4A1E                 jle     short loc_7FF7877E4A2A
+.text:00007FF7877E4A20                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E4A24                 inc     eax
+.text:00007FF7877E4A26                 mov     [rsp+200h+var_1CC], eax
+.text:00007FF7877E4A2A
+.text:00007FF7877E4A2A loc_7FF7877E4A2A:                       ; CODE XREF: sub_7FF7877E36F0+132E↑j
+.text:00007FF7877E4A2A                 mov     ecx, [rbp+100h+var_130]
+.text:00007FF7877E4A2D                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E4A31                 cmp     eax, ecx
+.text:00007FF7877E4A33                 jge     short loc_7FF7877E4A3F
+.text:00007FF7877E4A35                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E4A39                 inc     eax
+.text:00007FF7877E4A3B                 mov     [rsp+200h+var_1B8], eax
+.text:00007FF7877E4A3F
+.text:00007FF7877E4A3F loc_7FF7877E4A3F:                       ; CODE XREF: sub_7FF7877E36F0+1343↑j
+.text:00007FF7877E4A3F                 mov     ecx, [rbp+100h+var_168]
+.text:00007FF7877E4A42                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E4A46                 cmp     eax, ecx
+.text:00007FF7877E4A48                 jg      short loc_7FF7877E4A58
+.text:00007FF7877E4A4A                 mov     eax, [rbp+100h+var_44]
+.text:00007FF7877E4A50                 dec     eax
+.text:00007FF7877E4A52                 mov     [rbp+100h+var_44], eax
+.text:00007FF7877E4A58
+.text:00007FF7877E4A58 loc_7FF7877E4A58:                       ; CODE XREF: sub_7FF7877E36F0+1358↑j
+.text:00007FF7877E4A58                 mov     ecx, [rsp+200h+var_1BC]
+.text:00007FF7877E4A5C                 mov     eax, [rbp+100h+var_34]
+.text:00007FF7877E4A62                 cmp     ecx, eax
+.text:00007FF7877E4A64                 jg      short loc_7FF7877E4A70
+.text:00007FF7877E4A66                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E4A6A                 inc     eax
+.text:00007FF7877E4A6C                 mov     [rsp+200h+var_1DC], eax
+.text:00007FF7877E4A70
+.text:00007FF7877E4A70 loc_7FF7877E4A70:                       ; CODE XREF: sub_7FF7877E36F0+1374↑j
+.text:00007FF7877E4A70                 mov     ecx, [rbp+100h+var_148]
+.text:00007FF7877E4A73                 mov     eax, [rbp+100h+var_7C]
+.text:00007FF7877E4A79                 xor     ecx, eax
+.text:00007FF7877E4A7B                 mov     [rbp+100h+var_148], ecx
+.text:00007FF7877E4A7E                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E4A84                 mov     [rbp+100h+arg_0], r8d
+.text:00007FF7877E4A8B                 mov     ecx, [rsp+200h+var_1A4]
+.text:00007FF7877E4A8F                 mov     eax, [rbp+100h+var_FC]
+.text:00007FF7877E4A92                 xor     ecx, eax
+.text:00007FF7877E4A94                 mov     [rbp+100h+var_160], ecx
+.text:00007FF7877E4A97                 mov     eax, [rbp+100h+var_A0]
+.text:00007FF7877E4A9A                 sar     eax, 1Fh
+.text:00007FF7877E4A9D                 mov     [rbp+100h+var_A0], eax
+.text:00007FF7877E4AA0                 mov     eax, [rbp+100h+var_C0]
+.text:00007FF7877E4AA3                 mov     ecx, [rbp+100h+var_C0]
+.text:00007FF7877E4AA6                 shl     eax, cl
+.text:00007FF7877E4AA8                 mov     [rbp+100h+var_64], eax
+.text:00007FF7877E4AAE                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E4AB1                 add     eax, 0F659h
+.text:00007FF7877E4AB6                 mov     [rbp+100h+var_178], eax
+.text:00007FF7877E4AB9                 mov     eax, [rbp+100h+var_94]
+.text:00007FF7877E4ABC                 test    eax, eax
+.text:00007FF7877E4ABE                 jz      short loc_7FF7877E4ACD
+.text:00007FF7877E4AC0                 mov     ecx, [rbp+100h+var_94]
+.text:00007FF7877E4AC3                 mov     eax, [rsp+200h+var_190]
+.text:00007FF7877E4AC7                 cdq
+.text:00007FF7877E4AC8                 idiv    ecx
+.text:00007FF7877E4ACA                 mov     [rbp+100h+var_A4], eax
+.text:00007FF7877E4ACD
+.text:00007FF7877E4ACD loc_7FF7877E4ACD:                       ; CODE XREF: sub_7FF7877E36F0+13CE↑j
+.text:00007FF7877E4ACD                 mov     eax, [rbp+100h+var_7C]
+.text:00007FF7877E4AD3                 test    eax, eax
+.text:00007FF7877E4AD5                 jz      short loc_7FF7877E4AE6
+.text:00007FF7877E4AD7                 mov     ecx, [rbp+100h+var_7C]
+.text:00007FF7877E4ADD                 mov     eax, [rbp+100h+var_A8]
+.text:00007FF7877E4AE0                 cdq
+.text:00007FF7877E4AE1                 idiv    ecx
+.text:00007FF7877E4AE3                 mov     [rbp+100h+var_A8], edx
+.text:00007FF7877E4AE6
+.text:00007FF7877E4AE6 loc_7FF7877E4AE6:                       ; CODE XREF: sub_7FF7877E36F0+13E5↑j
+.text:00007FF7877E4AE6                 mov     eax, [rbp+100h+var_164]
+.text:00007FF7877E4AE9                 mov     ecx, [rsp+200h+var_190]
+.text:00007FF7877E4AED                 sar     eax, cl
+.text:00007FF7877E4AEF                 mov     [rbp+100h+var_164], eax
+.text:00007FF7877E4AF2                 mov     eax, [rbp+100h+var_90]
+.text:00007FF7877E4AF5                 sar     eax, 1Fh
+.text:00007FF7877E4AF8                 mov     [rbp+100h+var_158], eax
+.text:00007FF7877E4AFB                 mov     ecx, [rbp+100h+var_C8]
+.text:00007FF7877E4AFE                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E4B02                 cmp     eax, ecx
+.text:00007FF7877E4B04                 jl      short loc_7FF7877E4B0E
+.text:00007FF7877E4B06                 mov     eax, [rbp+100h+var_16C]
+.text:00007FF7877E4B09                 inc     eax
+.text:00007FF7877E4B0B                 mov     [rbp+100h+var_16C], eax
+.text:00007FF7877E4B0E
+.text:00007FF7877E4B0E loc_7FF7877E4B0E:                       ; CODE XREF: sub_7FF7877E36F0+1414↑j
+.text:00007FF7877E4B0E                 mov     ecx, [rbp+100h+var_98]
+.text:00007FF7877E4B11                 mov     eax, [rbp+100h+var_28]
+.text:00007FF7877E4B17                 and     ecx, eax
+.text:00007FF7877E4B19                 mov     [rbp+100h+var_74], ecx
+.text:00007FF7877E4B1F                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E4B23                 sar     eax, 1Fh
+.text:00007FF7877E4B26                 mov     [rsp+200h+var_1CC], eax
+.text:00007FF7877E4B2A                 mov     ecx, [rsp+200h+var_1E0]
+.text:00007FF7877E4B2E                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E4B31                 cmp     eax, ecx
+.text:00007FF7877E4B33                 jl      short loc_7FF7877E4B3D
+.text:00007FF7877E4B35                 mov     eax, [rbp+100h+var_B8]
+.text:00007FF7877E4B38                 inc     eax
+.text:00007FF7877E4B3A                 mov     [rbp+100h+var_B8], eax
+.text:00007FF7877E4B3D
+.text:00007FF7877E4B3D loc_7FF7877E4B3D:                       ; CODE XREF: sub_7FF7877E36F0+1443↑j
+.text:00007FF7877E4B3D                 mov     ecx, [rbp+100h+var_98]
+.text:00007FF7877E4B40                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E4B46                 cmp     ecx, eax
+.text:00007FF7877E4B48                 jge     short loc_7FF7877E4B52
+.text:00007FF7877E4B4A                 mov     eax, [rbp+100h+var_EC]
+.text:00007FF7877E4B4D                 inc     eax
+.text:00007FF7877E4B4F                 mov     [rbp+100h+var_EC], eax
+.text:00007FF7877E4B52
+.text:00007FF7877E4B52 loc_7FF7877E4B52:                       ; CODE XREF: sub_7FF7877E36F0+1458↑j
+.text:00007FF7877E4B52                 mov     ecx, [rbp+100h+var_58]
+.text:00007FF7877E4B58                 mov     eax, [rbp+100h+var_130]
+.text:00007FF7877E4B5B                 cmp     eax, ecx
+.text:00007FF7877E4B5D                 jge     short loc_7FF7877E4B69
+.text:00007FF7877E4B5F                 mov     eax, [rsp+200h+var_1AC]
+.text:00007FF7877E4B63                 inc     eax
+.text:00007FF7877E4B65                 mov     [rsp+200h+var_1AC], eax
+.text:00007FF7877E4B69
+.text:00007FF7877E4B69 loc_7FF7877E4B69:                       ; CODE XREF: sub_7FF7877E36F0+146D↑j
+.text:00007FF7877E4B69                 mov     ecx, [rbp+100h+var_D4]
+.text:00007FF7877E4B6C                 mov     eax, [rsp+200h+var_1AC]
+.text:00007FF7877E4B70                 xor     ecx, eax
+.text:00007FF7877E4B72                 mov     [rbp+100h+var_D4], ecx
+.text:00007FF7877E4B75                 mov     ecx, [rsp+200h+var_1CC]
+.text:00007FF7877E4B79                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E4B7D                 cmp     eax, ecx
+.text:00007FF7877E4B7F                 jnz     short loc_7FF7877E4B89
+.text:00007FF7877E4B81                 mov     eax, [rbp+100h+var_16C]
+.text:00007FF7877E4B84                 dec     eax
+.text:00007FF7877E4B86                 mov     [rbp+100h+var_16C], eax
+.text:00007FF7877E4B89
+.text:00007FF7877E4B89 loc_7FF7877E4B89:                       ; CODE XREF: sub_7FF7877E36F0+148F↑j
+.text:00007FF7877E4B89                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E4B8D                 sub     eax, 0E126h
+.text:00007FF7877E4B92                 mov     [rsp+200h+var_1D4], eax
+.text:00007FF7877E4B96                 mov     eax, 6355A81Dh
+.text:00007FF7877E4B9B                 mov     ecx, [rsp+200h+var_1A4]
+.text:00007FF7877E4B9F                 imul    ecx
+.text:00007FF7877E4BA1                 sar     edx, 0Ch
+.text:00007FF7877E4BA4                 mov     eax, edx
+.text:00007FF7877E4BA6                 shr     eax, 1Fh
+.text:00007FF7877E4BA9                 add     edx, eax
+.text:00007FF7877E4BAB                 mov     [rsp+200h+var_1D8], edx
+.text:00007FF7877E4BAF                 mov     ecx, [rbp+100h+var_D4]
+.text:00007FF7877E4BB2                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E4BB8                 cmp     eax, ecx
+.text:00007FF7877E4BBA                 jle     short loc_7FF7877E4BC4
+.text:00007FF7877E4BBC                 mov     eax, [rbp+100h+var_110]
+.text:00007FF7877E4BBF                 dec     eax
+.text:00007FF7877E4BC1                 mov     [rbp+100h+var_110], eax
+.text:00007FF7877E4BC4
+.text:00007FF7877E4BC4 loc_7FF7877E4BC4:                       ; CODE XREF: sub_7FF7877E36F0+14CA↑j
+.text:00007FF7877E4BC4                 mov     eax, [rbp+100h+var_6C]
+.text:00007FF7877E4BCA                 add     eax, 0F27Fh
+.text:00007FF7877E4BCF                 mov     [rsp+200h+var_1B4], eax
+.text:00007FF7877E4BD3                 mov     ecx, [rsp+200h+var_190]
+.text:00007FF7877E4BD7                 mov     eax, [rbp+100h+var_88]
+.text:00007FF7877E4BDA                 cmp     eax, ecx
+.text:00007FF7877E4BDC                 jnz     short loc_7FF7877E4BE8
+.text:00007FF7877E4BDE                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E4BE2                 inc     eax
+.text:00007FF7877E4BE4                 mov     [rsp+200h+var_1B0], eax
+.text:00007FF7877E4BE8
+.text:00007FF7877E4BE8 loc_7FF7877E4BE8:                       ; CODE XREF: sub_7FF7877E36F0+14EC↑j
+.text:00007FF7877E4BE8                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E4BEC                 add     eax, 0E759h
+.text:00007FF7877E4BF1                 mov     [rsp+200h+var_1E0], eax
+.text:00007FF7877E4BF5                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E4BFB                 add     eax, 0AC49h
+.text:00007FF7877E4C00                 mov     [rbp+100h+var_158], eax
+.text:00007FF7877E4C03                 mov     eax, [rsp+200h+var_188]
+.text:00007FF7877E4C07                 xor     eax, 4366h
+.text:00007FF7877E4C0C                 mov     [rsp+200h+var_188], eax
+.text:00007FF7877E4C10                 mov     ecx, [rbp+100h+var_138]
+.text:00007FF7877E4C13                 mov     eax, [rbp+100h+var_148]
+.text:00007FF7877E4C16                 and     ecx, eax
+.text:00007FF7877E4C18                 mov     [rbp+100h+var_148], ecx
+.text:00007FF7877E4C1B                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E4C1E                 test    eax, eax
+.text:00007FF7877E4C20                 jz      short loc_7FF7877E4C2E
+.text:00007FF7877E4C22                 mov     eax, [rbp+100h+var_94]
+.text:00007FF7877E4C25                 mov     ecx, [rbp+100h+var_14C]
+.text:00007FF7877E4C28                 cdq
+.text:00007FF7877E4C29                 idiv    ecx
+.text:00007FF7877E4C2B                 mov     [rbp+100h+var_94], eax
+.text:00007FF7877E4C2E
+.text:00007FF7877E4C2E loc_7FF7877E4C2E:                       ; CODE XREF: sub_7FF7877E36F0+1530↑j
+.text:00007FF7877E4C2E                 mov     ecx, [rbp+100h+arg_8]
+.text:00007FF7877E4C34                 mov     eax, [rbp+100h+var_A4]
+.text:00007FF7877E4C37                 or      ecx, eax
+.text:00007FF7877E4C39                 mov     [rsp+200h+var_1BC], ecx
+.text:00007FF7877E4C3D                 mov     ecx, [rbp+100h+var_D8]
+.text:00007FF7877E4C40                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E4C44                 cmp     ecx, eax
+.text:00007FF7877E4C46                 jge     short loc_7FF7877E4C52
+.text:00007FF7877E4C48                 mov     eax, [rsp+200h+var_188]
+.text:00007FF7877E4C4C                 dec     eax
+.text:00007FF7877E4C4E                 mov     [rsp+200h+var_188], eax
+.text:00007FF7877E4C52
+.text:00007FF7877E4C52 loc_7FF7877E4C52:                       ; CODE XREF: sub_7FF7877E36F0+1556↑j
+.text:00007FF7877E4C52                 mov     eax, [rbp+100h+var_168]
+.text:00007FF7877E4C55                 mov     ecx, [rbp+100h+var_140]
+.text:00007FF7877E4C58                 shl     eax, cl
+.text:00007FF7877E4C5A                 mov     [rsp+200h+var_194], eax
+.text:00007FF7877E4C5E                 mov     eax, [rsp+200h+var_190]
+.text:00007FF7877E4C62                 sar     eax, 1Fh
+.text:00007FF7877E4C65                 mov     [rsp+200h+var_190], eax
+.text:00007FF7877E4C69                 mov     ecx, [rsp+200h+var_19C]
+.text:00007FF7877E4C6D                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E4C70                 cmp     eax, ecx
+.text:00007FF7877E4C72                 jnz     short loc_7FF7877E4C7E
+.text:00007FF7877E4C74                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E4C78                 inc     eax
+.text:00007FF7877E4C7A                 mov     [rsp+200h+var_1D8], eax
+.text:00007FF7877E4C7E
+.text:00007FF7877E4C7E loc_7FF7877E4C7E:                       ; CODE XREF: sub_7FF7877E36F0+1582↑j
+.text:00007FF7877E4C7E                 mov     ecx, [rbp+100h+var_BC]
+.text:00007FF7877E4C81                 mov     eax, [rbp+100h+var_158]
+.text:00007FF7877E4C84                 cmp     eax, ecx
+.text:00007FF7877E4C86                 jl      short loc_7FF7877E4C90
+.text:00007FF7877E4C88                 mov     eax, [rbp+100h+var_118]
+.text:00007FF7877E4C8B                 dec     eax
+.text:00007FF7877E4C8D                 mov     [rbp+100h+var_118], eax
+.text:00007FF7877E4C90
+.text:00007FF7877E4C90 loc_7FF7877E4C90:                       ; CODE XREF: sub_7FF7877E36F0+1596↑j
+.text:00007FF7877E4C90                 mov     ecx, [rsp+200h+var_190]
+.text:00007FF7877E4C94                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E4C98                 cmp     ecx, eax
+.text:00007FF7877E4C9A                 jz      short loc_7FF7877E4CA6
+.text:00007FF7877E4C9C                 mov     eax, [rsp+200h+var_1A4]
+.text:00007FF7877E4CA0                 dec     eax
+.text:00007FF7877E4CA2                 mov     [rsp+200h+var_1A4], eax
+.text:00007FF7877E4CA6
+.text:00007FF7877E4CA6 loc_7FF7877E4CA6:                       ; CODE XREF: sub_7FF7877E36F0+15AA↑j
+.text:00007FF7877E4CA6                 mov     eax, [rsp+200h+var_188]
+.text:00007FF7877E4CAA                 test    eax, eax
+.text:00007FF7877E4CAC                 jz      short loc_7FF7877E4CBE
+.text:00007FF7877E4CAE                 mov     ecx, [rsp+200h+var_188]
+.text:00007FF7877E4CB2                 mov     eax, [rbp+100h+var_158]
+.text:00007FF7877E4CB5                 cdq
+.text:00007FF7877E4CB6                 idiv    ecx
+.text:00007FF7877E4CB8                 mov     [rbp+100h+var_1C], edx
+.text:00007FF7877E4CBE
+.text:00007FF7877E4CBE loc_7FF7877E4CBE:                       ; CODE XREF: sub_7FF7877E36F0+15BC↑j
+.text:00007FF7877E4CBE                 mov     ecx, [rbp+100h+var_24]
+.text:00007FF7877E4CC4                 mov     eax, [rbp+100h+var_EC]
+.text:00007FF7877E4CC7                 cmp     eax, ecx
+.text:00007FF7877E4CC9                 jg      short loc_7FF7877E4CD3
+.text:00007FF7877E4CCB                 mov     eax, [rbp+100h+var_160]
+.text:00007FF7877E4CCE                 dec     eax
+.text:00007FF7877E4CD0                 mov     [rbp+100h+var_160], eax
+.text:00007FF7877E4CD3
+.text:00007FF7877E4CD3 loc_7FF7877E4CD3:                       ; CODE XREF: sub_7FF7877E36F0+15D9↑j
+.text:00007FF7877E4CD3                 mov     eax, [rbp+100h+var_130]
+.text:00007FF7877E4CD6                 test    eax, eax
+.text:00007FF7877E4CD8                 jz      short loc_7FF7877E4CE6
+.text:00007FF7877E4CDA                 mov     eax, [rbp+100h+var_138]
+.text:00007FF7877E4CDD                 mov     ecx, [rbp+100h+var_130]
+.text:00007FF7877E4CE0                 cdq
+.text:00007FF7877E4CE1                 idiv    ecx
+.text:00007FF7877E4CE3                 mov     [rbp+100h+var_B0], eax
+.text:00007FF7877E4CE6
+.text:00007FF7877E4CE6 loc_7FF7877E4CE6:                       ; CODE XREF: sub_7FF7877E36F0+15E8↑j
+.text:00007FF7877E4CE6                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E4CEA                 sar     eax, 1Fh
+.text:00007FF7877E4CED                 mov     [rbp+100h+var_118], eax
+.text:00007FF7877E4CF0                 mov     eax, [rsp+200h+var_1B4]
+.text:00007FF7877E4CF4                 imul    ecx, eax, 0E1ADh
+.text:00007FF7877E4CFA                 mov     [rsp+200h+var_1B4], ecx
+.text:00007FF7877E4CFE                 mov     ecx, [rsp+200h+var_19C]
+.text:00007FF7877E4D02                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E4D05                 cmp     eax, ecx
+.text:00007FF7877E4D07                 jge     short loc_7FF7877E4D11
+.text:00007FF7877E4D09                 mov     eax, [rbp+100h+var_AC]
+.text:00007FF7877E4D0C                 inc     eax
+.text:00007FF7877E4D0E                 mov     [rbp+100h+var_AC], eax
+.text:00007FF7877E4D11
+.text:00007FF7877E4D11 loc_7FF7877E4D11:                       ; CODE XREF: sub_7FF7877E36F0+1617↑j
+.text:00007FF7877E4D11                 mov     ecx, [rbp+100h+var_12C]
+.text:00007FF7877E4D14                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E4D18                 cmp     eax, ecx
+.text:00007FF7877E4D1A                 jz      short loc_7FF7877E4D2A
+.text:00007FF7877E4D1C                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E4D22                 dec     eax
+.text:00007FF7877E4D24                 mov     [rbp+100h+arg_18], eax
+.text:00007FF7877E4D2A
+.text:00007FF7877E4D2A loc_7FF7877E4D2A:                       ; CODE XREF: sub_7FF7877E36F0+162A↑j
+.text:00007FF7877E4D2A                 mov     ecx, [rsp+200h+var_1BC]
+.text:00007FF7877E4D2E                 mov     eax, [rbp+100h+var_B0]
+.text:00007FF7877E4D31                 and     ecx, eax
+.text:00007FF7877E4D33                 mov     [rsp+200h+var_1BC], ecx
+.text:00007FF7877E4D37                 mov     ecx, [rsp+200h+var_1AC]
+.text:00007FF7877E4D3B                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E4D3F                 and     ecx, eax
+.text:00007FF7877E4D41                 mov     [rsp+200h+var_1AC], ecx
+.text:00007FF7877E4D45                 mov     ecx, [rbp+100h+var_13C]
+.text:00007FF7877E4D48                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E4D4C                 or      ecx, eax
+.text:00007FF7877E4D4E                 mov     [rbp+100h+var_130], ecx
+.text:00007FF7877E4D51                 mov     ecx, [rbp+100h+var_CC]
+.text:00007FF7877E4D54                 mov     eax, [rbp+100h+var_E4]
+.text:00007FF7877E4D57                 cmp     ecx, eax
+.text:00007FF7877E4D59                 jl      short loc_7FF7877E4D65
+.text:00007FF7877E4D5B                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E4D5F                 dec     eax
+.text:00007FF7877E4D61                 mov     [rsp+200h+var_1D0], eax
+.text:00007FF7877E4D65
+.text:00007FF7877E4D65 loc_7FF7877E4D65:                       ; CODE XREF: sub_7FF7877E36F0+1669↑j
+.text:00007FF7877E4D65                 mov     ecx, [rbp+100h+var_38]
+.text:00007FF7877E4D6B                 mov     eax, [rbp+100h+var_B4]
+.text:00007FF7877E4D6E                 cmp     ecx, eax
+.text:00007FF7877E4D70                 jle     short loc_7FF7877E4D7A
+.text:00007FF7877E4D72                 mov     eax, [rbp+100h+var_D8]
+.text:00007FF7877E4D75                 dec     eax
+.text:00007FF7877E4D77                 mov     [rbp+100h+var_D8], eax
+.text:00007FF7877E4D7A
+.text:00007FF7877E4D7A loc_7FF7877E4D7A:                       ; CODE XREF: sub_7FF7877E36F0+1680↑j
+.text:00007FF7877E4D7A                 mov     ecx, [rbp+100h+var_174]
+.text:00007FF7877E4D7D                 mov     eax, [rbp+100h+var_54]
+.text:00007FF7877E4D83                 sub     ecx, eax
+.text:00007FF7877E4D85                 mov     [rbp+100h+var_9C], ecx
+.text:00007FF7877E4D88                 mov     ecx, [rbp+100h+var_168]
+.text:00007FF7877E4D8B                 mov     eax, [rbp+100h+var_AC]
+.text:00007FF7877E4D8E                 add     ecx, eax
+.text:00007FF7877E4D90                 mov     [rbp+100h+var_114], ecx
+.text:00007FF7877E4D93                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E4D97                 test    eax, eax
+.text:00007FF7877E4D99                 jz      short loc_7FF7877E4DA8
+.text:00007FF7877E4D9B                 mov     eax, [rbp+100h+var_168]
+.text:00007FF7877E4D9E                 mov     ecx, [rsp+200h+var_1D8]
+.text:00007FF7877E4DA2                 cdq
+.text:00007FF7877E4DA3                 idiv    ecx
+.text:00007FF7877E4DA5                 mov     [rbp+100h+var_10C], eax
+.text:00007FF7877E4DA8
+.text:00007FF7877E4DA8 loc_7FF7877E4DA8:                       ; CODE XREF: sub_7FF7877E36F0+16A9↑j
+.text:00007FF7877E4DA8                 mov     ecx, [rbp+100h+var_D0]
+.text:00007FF7877E4DAB                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E4DAF                 add     ecx, eax
+.text:00007FF7877E4DB1                 mov     [rbp+100h+var_D0], ecx
+.text:00007FF7877E4DB4                 mov     ecx, [rbp+100h+var_144]
+.text:00007FF7877E4DB7                 mov     eax, [rbp+100h+var_E0]
+.text:00007FF7877E4DBA                 xor     ecx, eax
+.text:00007FF7877E4DBC                 mov     [rbp+100h+var_E0], ecx
+.text:00007FF7877E4DBF                 mov     ecx, [rbp+100h+var_164]
+.text:00007FF7877E4DC2                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E4DC6                 sub     ecx, eax
+.text:00007FF7877E4DC8                 mov     [rsp+200h+var_1D8], ecx
+.text:00007FF7877E4DCC                 mov     eax, [rbp+100h+var_E4]
+.text:00007FF7877E4DCF                 test    eax, eax
+.text:00007FF7877E4DD1                 jz      short loc_7FF7877E4DE2
+.text:00007FF7877E4DD3                 mov     ecx, [rbp+100h+var_E4]
+.text:00007FF7877E4DD6                 mov     eax, [rbp+100h+var_13C]
+.text:00007FF7877E4DD9                 cdq
+.text:00007FF7877E4DDA                 idiv    ecx
+.text:00007FF7877E4DDC                 mov     [rbp+100h+var_34], edx
+.text:00007FF7877E4DE2
+.text:00007FF7877E4DE2 loc_7FF7877E4DE2:                       ; CODE XREF: sub_7FF7877E36F0+16E1↑j
+.text:00007FF7877E4DE2                 mov     ecx, [rbp+100h+var_144]
+.text:00007FF7877E4DE5                 mov     eax, [rbp+100h+var_114]
+.text:00007FF7877E4DE8                 sar     eax, cl
+.text:00007FF7877E4DEA                 mov     [rsp+200h+var_194], eax
+.text:00007FF7877E4DEE                 mov     ecx, [rsp+200h+var_1CC]
+.text:00007FF7877E4DF2                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E4DF6                 add     ecx, eax
+.text:00007FF7877E4DF8                 mov     [rsp+200h+var_1D8], ecx
+.text:00007FF7877E4DFC                 mov     eax, [rsp+200h+var_1B4]
+.text:00007FF7877E4E00                 add     eax, 0EC70h
+.text:00007FF7877E4E05                 mov     [rsp+200h+var_1B4], eax
+.text:00007FF7877E4E09                 mov     eax, 0AC8C5D3h
+.text:00007FF7877E4E0E                 mov     ecx, [rsp+200h+var_1AC]
+.text:00007FF7877E4E12                 imul    ecx
+.text:00007FF7877E4E14                 sar     edx, 0Ah
+.text:00007FF7877E4E17                 mov     eax, edx
+.text:00007FF7877E4E19                 shr     eax, 1Fh
+.text:00007FF7877E4E1C                 add     edx, eax
+.text:00007FF7877E4E1E                 imul    eax, edx, 5EF4h
+.text:00007FF7877E4E24                 sub     ecx, eax
+.text:00007FF7877E4E26                 mov     [rbp+100h+var_114], ecx
+.text:00007FF7877E4E29                 mov     ecx, [rsp+200h+var_1A4]
+.text:00007FF7877E4E2D                 mov     eax, [rbp+100h+var_114]
+.text:00007FF7877E4E30                 imul    ecx, eax
+.text:00007FF7877E4E33                 mov     [rbp+100h+var_154], ecx
+.text:00007FF7877E4E36                 mov     ecx, [rbp+100h+var_15C]
+.text:00007FF7877E4E39                 mov     eax, [rbp+100h+var_140]
+.text:00007FF7877E4E3C                 or      ecx, eax
+.text:00007FF7877E4E3E                 mov     [rbp+100h+var_114], ecx
+.text:00007FF7877E4E41                 mov     eax, [rbp+100h+var_CC]
+.text:00007FF7877E4E44                 mov     ecx, [rbp+100h+var_34]
+.text:00007FF7877E4E4A                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E4E4E                 cmp     ecx, eax
+.text:00007FF7877E4E50                 jnz     short loc_7FF7877E4E5A
+.text:00007FF7877E4E52                 mov     eax, [rbp+100h+var_168]
+.text:00007FF7877E4E55                 dec     eax
+.text:00007FF7877E4E57                 mov     [rbp+100h+var_168], eax
+.text:00007FF7877E4E5A
+.text:00007FF7877E4E5A loc_7FF7877E4E5A:                       ; CODE XREF: sub_7FF7877E36F0+1760↑j
+.text:00007FF7877E4E5A                 mov     ecx, [rbp+100h+var_100]
+.text:00007FF7877E4E5D                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E4E63                 cmp     ecx, eax
+.text:00007FF7877E4E65                 jge     short loc_7FF7877E4E71
+.text:00007FF7877E4E67                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E4E6B                 inc     eax
+.text:00007FF7877E4E6D                 mov     [rsp+200h+var_1B0], eax
+.text:00007FF7877E4E71
+.text:00007FF7877E4E71 loc_7FF7877E4E71:                       ; CODE XREF: sub_7FF7877E36F0+1775↑j
+.text:00007FF7877E4E71                 mov     eax, [rsp+200h+var_19C]
+.text:00007FF7877E4E75                 or      eax, 447Eh
+.text:00007FF7877E4E7A                 mov     [rsp+200h+var_19C], eax
+.text:00007FF7877E4E7E                 mov     ecx, [rbp+100h+var_BC]
+.text:00007FF7877E4E81                 mov     eax, [rbp+100h+var_EC]
+.text:00007FF7877E4E84                 cmp     ecx, eax
+.text:00007FF7877E4E86                 jg      short loc_7FF7877E4E90
+.text:00007FF7877E4E88                 mov     eax, [rbp+100h+var_120]
+.text:00007FF7877E4E8B                 inc     eax
+.text:00007FF7877E4E8D                 mov     [rbp+100h+var_120], eax
+.text:00007FF7877E4E90
+.text:00007FF7877E4E90 loc_7FF7877E4E90:                       ; CODE XREF: sub_7FF7877E36F0+1796↑j
+.text:00007FF7877E4E90                 mov     ecx, [rbp+100h+var_16C]
+.text:00007FF7877E4E93                 mov     eax, [rbp+100h+var_DC]
+.text:00007FF7877E4E96                 cmp     ecx, eax
+.text:00007FF7877E4E98                 jge     short loc_7FF7877E4EA4
+.text:00007FF7877E4E9A                 mov     eax, [rsp+200h+var_1CC]
+.text:00007FF7877E4E9E                 inc     eax
+.text:00007FF7877E4EA0                 mov     [rsp+200h+var_1CC], eax
+.text:00007FF7877E4EA4
+.text:00007FF7877E4EA4 loc_7FF7877E4EA4:                       ; CODE XREF: sub_7FF7877E36F0+17A8↑j
+.text:00007FF7877E4EA4                 mov     ecx, [rbp+100h+var_11C]
+.text:00007FF7877E4EA7                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E4EAB                 add     ecx, eax
+.text:00007FF7877E4EAD                 mov     [rbp+100h+var_11C], ecx
+.text:00007FF7877E4EB0                 mov     eax, [rbp+100h+var_148]
+.text:00007FF7877E4EB3                 mov     [rbp+100h+var_148], r8d
+.text:00007FF7877E4EB7                 mov     eax, 23E8FEBDh
+.text:00007FF7877E4EBC                 mov     ecx, [rbp+100h+var_15C]
+.text:00007FF7877E4EBF                 imul    ecx
+.text:00007FF7877E4EC1                 sar     edx, 0Dh
+.text:00007FF7877E4EC4                 mov     eax, edx
+.text:00007FF7877E4EC6                 shr     eax, 1Fh
+.text:00007FF7877E4EC9                 add     edx, eax
+.text:00007FF7877E4ECB                 imul    eax, edx, 0E420h
+.text:00007FF7877E4ED1                 sub     ecx, eax
+.text:00007FF7877E4ED3                 mov     [rsp+200h+var_1B8], ecx
+.text:00007FF7877E4ED7                 mov     ecx, [rbp+100h+var_158]
+.text:00007FF7877E4EDA                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E4EDD                 cmp     ecx, eax
+.text:00007FF7877E4EDF                 jge     short loc_7FF7877E4EE9
+.text:00007FF7877E4EE1                 mov     eax, [rbp+100h+var_100]
+.text:00007FF7877E4EE4                 dec     eax
+.text:00007FF7877E4EE6                 mov     [rbp+100h+var_100], eax
+.text:00007FF7877E4EE9
+.text:00007FF7877E4EE9 loc_7FF7877E4EE9:                       ; CODE XREF: sub_7FF7877E36F0+17EF↑j
+.text:00007FF7877E4EE9                 mov     ecx, [rsp+200h+var_1BC]
+.text:00007FF7877E4EED                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E4EF0                 or      ecx, eax
+.text:00007FF7877E4EF2                 mov     [rsp+200h+var_1BC], ecx
+.text:00007FF7877E4EF6                 mov     eax, [rbp+100h+var_158]
+.text:00007FF7877E4EF9                 mov     ecx, [rbp+100h+var_154]
+.text:00007FF7877E4EFC                 shl     eax, cl
+.text:00007FF7877E4EFE                 mov     [rbp+100h+arg_18], eax
+.text:00007FF7877E4F04                 mov     ecx, [rbp+100h+var_11C]
+.text:00007FF7877E4F07                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E4F0D                 cmp     ecx, eax
+.text:00007FF7877E4F0F                 jz      short loc_7FF7877E4F19
+.text:00007FF7877E4F11                 mov     eax, [rbp+100h+var_8C]
+.text:00007FF7877E4F14                 inc     eax
+.text:00007FF7877E4F16                 mov     [rbp+100h+var_8C], eax
+.text:00007FF7877E4F19
+.text:00007FF7877E4F19 loc_7FF7877E4F19:                       ; CODE XREF: sub_7FF7877E36F0+181F↑j
+.text:00007FF7877E4F19                 mov     ecx, [rsp+200h+var_1BC]
+.text:00007FF7877E4F1D                 mov     eax, [rbp+100h+var_80]
+.text:00007FF7877E4F23                 cmp     eax, ecx
+.text:00007FF7877E4F25                 jl      short loc_7FF7877E4F31
+.text:00007FF7877E4F27                 mov     eax, [rsp+200h+var_1B4]
+.text:00007FF7877E4F2B                 inc     eax
+.text:00007FF7877E4F2D                 mov     [rsp+200h+var_1B4], eax
+.text:00007FF7877E4F31
+.text:00007FF7877E4F31 loc_7FF7877E4F31:                       ; CODE XREF: sub_7FF7877E36F0+1835↑j
+.text:00007FF7877E4F31                 mov     eax, [rbp+100h+var_C4]
+.text:00007FF7877E4F34                 and     eax, 1D7Dh
+.text:00007FF7877E4F39                 mov     [rbp+100h+var_C4], eax
+.text:00007FF7877E4F3C                 mov     ecx, [rsp+200h+var_1A8]
+.text:00007FF7877E4F40                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E4F43                 cmp     eax, ecx
+.text:00007FF7877E4F45                 jge     short loc_7FF7877E4F4F
+.text:00007FF7877E4F47                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E4F4A                 dec     eax
+.text:00007FF7877E4F4C                 mov     [rbp+100h+var_17C], eax
+.text:00007FF7877E4F4F
+.text:00007FF7877E4F4F loc_7FF7877E4F4F:                       ; CODE XREF: sub_7FF7877E36F0+1855↑j
+.text:00007FF7877E4F4F                 mov     ecx, [rsp+200h+var_19C]
+.text:00007FF7877E4F53                 mov     eax, [rbp+100h+var_A8]
+.text:00007FF7877E4F56                 cmp     eax, ecx
+.text:00007FF7877E4F58                 jge     short loc_7FF7877E4F62
+.text:00007FF7877E4F5A                 mov     eax, [rbp+100h+var_138]
+.text:00007FF7877E4F5D                 dec     eax
+.text:00007FF7877E4F5F                 mov     [rbp+100h+var_138], eax
+.text:00007FF7877E4F62
+.text:00007FF7877E4F62 loc_7FF7877E4F62:                       ; CODE XREF: sub_7FF7877E36F0+1868↑j
+.text:00007FF7877E4F62                 mov     ecx, [rbp+100h+var_104]
+.text:00007FF7877E4F65                 mov     eax, [rbp+100h+var_F8]
+.text:00007FF7877E4F68                 cmp     ecx, eax
+.text:00007FF7877E4F6A                 jle     short loc_7FF7877E4F76
+.text:00007FF7877E4F6C                 mov     eax, [rsp+200h+var_1AC]
+.text:00007FF7877E4F70                 dec     eax
+.text:00007FF7877E4F72                 mov     [rsp+200h+var_1AC], eax
+.text:00007FF7877E4F76
+.text:00007FF7877E4F76 loc_7FF7877E4F76:                       ; CODE XREF: sub_7FF7877E36F0+187A↑j
+.text:00007FF7877E4F76                 mov     eax, [rbp+100h+var_F4]
+.text:00007FF7877E4F79                 sar     eax, 1Fh
+.text:00007FF7877E4F7C                 mov     [rbp+100h+var_F4], eax
+.text:00007FF7877E4F7F                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E4F83                 imul    ecx, eax, 0E4BAh
+.text:00007FF7877E4F89                 mov     [rsp+200h+var_1D4], ecx
+.text:00007FF7877E4F8D                 mov     eax, [rsp+200h+var_1A4]
+.text:00007FF7877E4F91                 or      eax, 0FB2Ah
+.text:00007FF7877E4F96                 mov     [rsp+200h+var_1A4], eax
+.text:00007FF7877E4F9A                 mov     ecx, [rbp+100h+var_158]
+.text:00007FF7877E4F9D                 mov     eax, [rbp+100h+var_54]
+.text:00007FF7877E4FA3                 cmp     ecx, eax
+.text:00007FF7877E4FA5                 jnz     short loc_7FF7877E4FAF
+.text:00007FF7877E4FA7                 mov     eax, [rbp+100h+var_C4]
+.text:00007FF7877E4FAA                 dec     eax
+.text:00007FF7877E4FAC                 mov     [rbp+100h+var_C4], eax
+.text:00007FF7877E4FAF
+.text:00007FF7877E4FAF loc_7FF7877E4FAF:                       ; CODE XREF: sub_7FF7877E36F0+18B5↑j
+.text:00007FF7877E4FAF                 mov     ecx, [rsp+200h+var_1B8]
+.text:00007FF7877E4FB3                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E4FB7                 cmp     eax, ecx
+.text:00007FF7877E4FB9                 jg      short loc_7FF7877E4FC5
+.text:00007FF7877E4FBB                 mov     eax, [rsp+200h+var_1B0]
+.text:00007FF7877E4FBF                 dec     eax
+.text:00007FF7877E4FC1                 mov     [rsp+200h+var_1B0], eax
+.text:00007FF7877E4FC5
+.text:00007FF7877E4FC5 loc_7FF7877E4FC5:                       ; CODE XREF: sub_7FF7877E36F0+18C9↑j
+.text:00007FF7877E4FC5                 mov     ecx, [rbp+100h+var_D8]
+.text:00007FF7877E4FC8                 mov     eax, [rbp+100h+var_120]
+.text:00007FF7877E4FCB                 shl     eax, cl
+.text:00007FF7877E4FCD                 mov     [rbp+100h+var_120], eax
+.text:00007FF7877E4FD0                 mov     ecx, [rbp+100h+var_E0]
+.text:00007FF7877E4FD3                 mov     eax, [rbp+100h+var_150]
+.text:00007FF7877E4FD6                 cmp     ecx, eax
+.text:00007FF7877E4FD8                 jg      short loc_7FF7877E4FE2
+.text:00007FF7877E4FDA                 mov     eax, [rbp+100h+var_160]
+.text:00007FF7877E4FDD                 inc     eax
+.text:00007FF7877E4FDF                 mov     [rbp+100h+var_160], eax
+.text:00007FF7877E4FE2
+.text:00007FF7877E4FE2 loc_7FF7877E4FE2:                       ; CODE XREF: sub_7FF7877E36F0+18E8↑j
+.text:00007FF7877E4FE2                 mov     ecx, [rbp+100h+var_A0]
+.text:00007FF7877E4FE5                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E4FE9                 cmp     eax, ecx
+.text:00007FF7877E4FEB                 jg      short loc_7FF7877E4FF7
+.text:00007FF7877E4FED                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E4FF1                 inc     eax
+.text:00007FF7877E4FF3                 mov     [rsp+200h+var_1DC], eax
+.text:00007FF7877E4FF7
+.text:00007FF7877E4FF7 loc_7FF7877E4FF7:                       ; CODE XREF: sub_7FF7877E36F0+18FB↑j
+.text:00007FF7877E4FF7                 mov     ecx, [rbp+100h+var_10C]
+.text:00007FF7877E4FFA                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E4FFD                 or      ecx, eax
+.text:00007FF7877E4FFF                 mov     [rbp+100h+var_178], ecx
+.text:00007FF7877E5002                 mov     ecx, [rbp+100h+var_90]
+.text:00007FF7877E5005                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E5009                 cmp     eax, ecx
+.text:00007FF7877E500B                 jle     short loc_7FF7877E5015
+.text:00007FF7877E500D                 mov     eax, [rbp+100h+var_164]
+.text:00007FF7877E5010                 inc     eax
+.text:00007FF7877E5012                 mov     [rbp+100h+var_164], eax
+.text:00007FF7877E5015
+.text:00007FF7877E5015 loc_7FF7877E5015:                       ; CODE XREF: sub_7FF7877E36F0+191B↑j
+.text:00007FF7877E5015                 mov     ecx, [rbp+100h+var_B4]
+.text:00007FF7877E5018                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E501E                 xor     ecx, eax
+.text:00007FF7877E5020                 mov     [rbp+100h+var_B8], ecx
+.text:00007FF7877E5023                 mov     ecx, [rbp+100h+var_138]
+.text:00007FF7877E5026                 mov     eax, [rbp+100h+var_C8]
+.text:00007FF7877E5029                 cmp     eax, ecx
+.text:00007FF7877E502B                 jg      short loc_7FF7877E5035
+.text:00007FF7877E502D                 mov     eax, [rbp+100h+var_BC]
+.text:00007FF7877E5030                 dec     eax
+.text:00007FF7877E5032                 mov     [rbp+100h+var_BC], eax
+.text:00007FF7877E5035
+.text:00007FF7877E5035 loc_7FF7877E5035:                       ; CODE XREF: sub_7FF7877E36F0+193B↑j
+.text:00007FF7877E5035                 mov     ecx, [rbp+100h+var_98]
+.text:00007FF7877E5038                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E503B                 cmp     ecx, eax
+.text:00007FF7877E503D                 jg      short loc_7FF7877E504D
+.text:00007FF7877E503F                 mov     eax, [rbp+100h+var_6C]
+.text:00007FF7877E5045                 inc     eax
+.text:00007FF7877E5047                 mov     [rbp+100h+var_6C], eax
+.text:00007FF7877E504D
+.text:00007FF7877E504D loc_7FF7877E504D:                       ; CODE XREF: sub_7FF7877E36F0+194D↑j
+.text:00007FF7877E504D                 mov     ecx, [rbp+100h+var_84]
+.text:00007FF7877E5050                 mov     eax, [rbp+100h+var_20]
+.text:00007FF7877E5056                 cmp     ecx, eax
+.text:00007FF7877E5058                 jl      short loc_7FF7877E5062
+.text:00007FF7877E505A                 mov     eax, [rbp+100h+var_130]
+.text:00007FF7877E505D                 dec     eax
+.text:00007FF7877E505F                 mov     [rbp+100h+var_130], eax
+.text:00007FF7877E5062
+.text:00007FF7877E5062 loc_7FF7877E5062:                       ; CODE XREF: sub_7FF7877E36F0+1968↑j
+.text:00007FF7877E5062                 mov     eax, [rsp+200h+var_1A0]
+.text:00007FF7877E5066                 mov     [rsp+200h+var_1A4], r8d
+.text:00007FF7877E506B                 mov     eax, [rbp+100h+var_D4]
+.text:00007FF7877E506E                 add     eax, 1092h
+.text:00007FF7877E5073                 mov     [rbp+100h+var_D4], eax
+.text:00007FF7877E5076                 mov     ecx, [rsp+200h+var_1AC]
+.text:00007FF7877E507A                 mov     eax, [rbp+100h+var_A0]
+.text:00007FF7877E507D                 cmp     eax, ecx
+.text:00007FF7877E507F                 jl      short loc_7FF7877E508F
+.text:00007FF7877E5081                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E5087                 dec     eax
+.text:00007FF7877E5089                 mov     [rbp+100h+arg_8], eax
+.text:00007FF7877E508F
+.text:00007FF7877E508F loc_7FF7877E508F:                       ; CODE XREF: sub_7FF7877E36F0+198F↑j
+.text:00007FF7877E508F                 mov     ecx, [rbp+100h+var_148]
+.text:00007FF7877E5092                 mov     eax, [rsp+200h+var_1C8]
+.text:00007FF7877E5096                 imul    ecx, eax
+.text:00007FF7877E5099                 mov     [rbp+100h+var_148], ecx
+.text:00007FF7877E509C                 mov     eax, [rbp+100h+var_C0]
+.text:00007FF7877E509F                 mov     ecx, [rbp+100h+var_160]
+.text:00007FF7877E50A2                 sar     eax, cl
+.text:00007FF7877E50A4                 mov     [rbp+100h+var_16C], eax
+.text:00007FF7877E50A7                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E50AB                 mov     [rsp+200h+var_1C4], r8d
+.text:00007FF7877E50B0                 mov     ecx, [rbp+100h+var_48]
+.text:00007FF7877E50B6                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E50BA                 add     ecx, eax
+.text:00007FF7877E50BC                 mov     [rbp+100h+var_144], ecx
+.text:00007FF7877E50BF                 mov     eax, [rbp+100h+var_13C]
+.text:00007FF7877E50C2                 or      eax, 2FA5h
+.text:00007FF7877E50C7                 mov     [rbp+100h+arg_10], eax
+.text:00007FF7877E50CD                 mov     ecx, [rbp+100h+var_C8]
+.text:00007FF7877E50D0                 mov     eax, [rsp+200h+var_194]
+.text:00007FF7877E50D4                 or      ecx, eax
+.text:00007FF7877E50D6                 mov     [rbp+100h+arg_0], ecx
+.text:00007FF7877E50DC                 mov     ecx, [rsp+200h+var_188]
+.text:00007FF7877E50E0                 mov     eax, [rbp+100h+var_EC]
+.text:00007FF7877E50E3                 cmp     ecx, eax
+.text:00007FF7877E50E5                 jz      short loc_7FF7877E50EF
+.text:00007FF7877E50E7                 mov     eax, [rbp+100h+var_12C]
+.text:00007FF7877E50EA                 dec     eax
+.text:00007FF7877E50EC                 mov     [rbp+100h+var_12C], eax
+.text:00007FF7877E50EF
+.text:00007FF7877E50EF loc_7FF7877E50EF:                       ; CODE XREF: sub_7FF7877E36F0+19F5↑j
+.text:00007FF7877E50EF                 mov     eax, [rbp+100h+var_D4]
+.text:00007FF7877E50F2                 imul    ecx, eax, 0ADE2h
+.text:00007FF7877E50F8                 mov     [rsp+200h+var_198], ecx
+.text:00007FF7877E50FC                 mov     ecx, [rbp+100h+var_15C]
+.text:00007FF7877E50FF                 mov     eax, [rbp+100h+arg_18]
+.text:00007FF7877E5105                 cmp     ecx, eax
+.text:00007FF7877E5107                 jg      short loc_7FF7877E5113
+.text:00007FF7877E5109                 mov     eax, [rsp+200h+var_1E0]
+.text:00007FF7877E510D                 inc     eax
+.text:00007FF7877E510F                 mov     [rsp+200h+var_1E0], eax
+.text:00007FF7877E5113
+.text:00007FF7877E5113 loc_7FF7877E5113:                       ; CODE XREF: sub_7FF7877E36F0+1A17↑j
+.text:00007FF7877E5113                 mov     ecx, [rbp+100h+var_100]
+.text:00007FF7877E5116                 mov     eax, [rbp+100h+var_12C]
+.text:00007FF7877E5119                 xor     ecx, eax
+.text:00007FF7877E511B                 mov     [rsp+200h+var_1B4], ecx
+.text:00007FF7877E511F                 mov     eax, [rbp+100h+var_104]
+.text:00007FF7877E5122                 mov     ecx, [rbp+100h+var_64]
+.text:00007FF7877E5128                 shl     eax, cl
+.text:00007FF7877E512A                 mov     [rbp+100h+var_104], eax
+.text:00007FF7877E512D                 mov     ecx, [rbp+100h+var_F8]
+.text:00007FF7877E5130                 mov     eax, [rbp+100h+var_E4]
+.text:00007FF7877E5133                 cmp     ecx, eax
+.text:00007FF7877E5135                 jle     short loc_7FF7877E5145
+.text:00007FF7877E5137                 mov     eax, [rbp+100h+var_60]
+.text:00007FF7877E513D                 dec     eax
+.text:00007FF7877E513F                 mov     [rbp+100h+var_60], eax
+.text:00007FF7877E5145
+.text:00007FF7877E5145 loc_7FF7877E5145:                       ; CODE XREF: sub_7FF7877E36F0+1A45↑j
+.text:00007FF7877E5145                 mov     ecx, [rsp+200h+var_1A4]
+.text:00007FF7877E5149                 mov     eax, [rbp+100h+var_15C]
+.text:00007FF7877E514C                 add     ecx, eax
+.text:00007FF7877E514E                 mov     [rsp+200h+var_1A4], ecx
+.text:00007FF7877E5152                 mov     eax, [rsp+200h+var_1D0]
+.text:00007FF7877E5156                 sub     eax, 0DE14h
+.text:00007FF7877E515B                 mov     [rbp+100h+var_A4], eax
+.text:00007FF7877E515E                 mov     ecx, [rbp+100h+var_114]
+.text:00007FF7877E5161                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E5165                 xor     ecx, eax
+.text:00007FF7877E5167                 mov     [rsp+200h+var_18C], ecx
+.text:00007FF7877E516B                 mov     eax, 411EF053h
+.text:00007FF7877E5170                 mov     ecx, [rbp+100h+arg_10]
+.text:00007FF7877E5176                 imul    ecx
+.text:00007FF7877E5178                 sar     edx, 0Dh
+.text:00007FF7877E517B                 mov     eax, edx
+.text:00007FF7877E517D                 shr     eax, 1Fh
+.text:00007FF7877E5180                 add     edx, eax
+.text:00007FF7877E5182                 mov     [rbp+100h+arg_10], edx
+.text:00007FF7877E5188                 mov     eax, [rsp+200h+var_19C]
+.text:00007FF7877E518C                 mov     ecx, [rbp+100h+var_12C]
+.text:00007FF7877E518F                 sar     eax, cl
+.text:00007FF7877E5191                 mov     [rsp+200h+var_19C], eax
+.text:00007FF7877E5195                 mov     ecx, [rbp+100h+var_110]
+.text:00007FF7877E5198                 mov     eax, [rbp+100h+var_F0]
+.text:00007FF7877E519B                 sub     ecx, eax
+.text:00007FF7877E519D                 mov     [rbp+100h+var_128], ecx
+.text:00007FF7877E51A0                 mov     ecx, [rsp+200h+var_1C0]
+.text:00007FF7877E51A4                 mov     eax, [rbp+100h+var_20]
+.text:00007FF7877E51AA                 cmp     eax, ecx
+.text:00007FF7877E51AC                 jl      short loc_7FF7877E51B6
+.text:00007FF7877E51AE                 mov     eax, [rbp+100h+var_98]
+.text:00007FF7877E51B1                 dec     eax
+.text:00007FF7877E51B3                 mov     [rbp+100h+var_98], eax
+.text:00007FF7877E51B6
+.text:00007FF7877E51B6 loc_7FF7877E51B6:                       ; CODE XREF: sub_7FF7877E36F0+1ABC↑j
+.text:00007FF7877E51B6                 mov     eax, [rbp+100h+var_10C]
+.text:00007FF7877E51B9                 add     eax, 7927h
+.text:00007FF7877E51BE                 mov     [rbp+100h+var_10C], eax
+.text:00007FF7877E51C1                 mov     ecx, [rbp+100h+var_70]
+.text:00007FF7877E51C7                 mov     eax, [rbp+100h+var_170]
+.text:00007FF7877E51CA                 cmp     eax, ecx
+.text:00007FF7877E51CC                 jz      short loc_7FF7877E51DC
+.text:00007FF7877E51CE                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E51D4                 dec     eax
+.text:00007FF7877E51D6                 mov     [rbp+100h+arg_8], eax
+.text:00007FF7877E51DC
+.text:00007FF7877E51DC loc_7FF7877E51DC:                       ; CODE XREF: sub_7FF7877E36F0+1ADC↑j
+.text:00007FF7877E51DC                 mov     eax, [rsp+200h+var_1DC]
+.text:00007FF7877E51E0                 add     eax, 5DA3h
+.text:00007FF7877E51E5                 mov     [rsp+200h+var_1C8], eax
+.text:00007FF7877E51E9                 mov     eax, [rbp+100h+var_F8]
+.text:00007FF7877E51EC                 or      eax, 25BDh
+.text:00007FF7877E51F1                 mov     [rbp+100h+var_F8], eax
+.text:00007FF7877E51F4                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E51FA                 imul    ecx, eax, 477Bh
+.text:00007FF7877E5200                 mov     [rbp+100h+arg_0], ecx
+.text:00007FF7877E5206                 mov     eax, [rbp+100h+var_94]
+.text:00007FF7877E5209                 xor     eax, 7072h
+.text:00007FF7877E520E                 mov     [rsp+200h+var_1DC], eax
+.text:00007FF7877E5212                 mov     eax, [rbp+100h+var_5C]
+.text:00007FF7877E5218                 sar     eax, 1Fh
+.text:00007FF7877E521B                 mov     [rbp+100h+var_68], eax
+.text:00007FF7877E5221                 mov     eax, [rsp+200h+var_1BC]
+.text:00007FF7877E5225                 or      eax, 0D971h
+.text:00007FF7877E522A                 mov     [rsp+200h+var_1BC], eax
+.text:00007FF7877E522E                 mov     eax, [rbp+100h+var_E4]
+.text:00007FF7877E5231                 sub     eax, 0B45Ah
+.text:00007FF7877E5236                 mov     [rsp+200h+var_18C], eax
+.text:00007FF7877E523A                 mov     eax, [rbp+100h+var_D0]
+.text:00007FF7877E523D                 add     eax, 7469h
+.text:00007FF7877E5242                 mov     [rbp+100h+var_9C], eax
+.text:00007FF7877E5245                 mov     ecx, [rbp+100h+var_48]
+.text:00007FF7877E524B                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E524F                 and     ecx, eax
+.text:00007FF7877E5251                 mov     [rbp+100h+var_48], ecx
+.text:00007FF7877E5257                 mov     eax, [rbp+100h+var_174]
+.text:00007FF7877E525A                 sub     eax, 7Dh ; '}'
+.text:00007FF7877E525D                 mov     [rbp+100h+var_FC], eax
+.text:00007FF7877E5260                 mov     eax, [rsp+200h+var_18C]
+.text:00007FF7877E5264                 imul    ecx, eax, 0F4BFh
+.text:00007FF7877E526A                 mov     [rsp+200h+var_18C], ecx
+.text:00007FF7877E526E                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E5272                 imul    ecx, eax, 1FEBh
+.text:00007FF7877E5278                 mov     [rbp+100h+var_170], ecx
+.text:00007FF7877E527B                 mov     eax, [rbp+100h+var_FC]
+.text:00007FF7877E527E                 sub     eax, 0A6C1h
+.text:00007FF7877E5283                 mov     [rbp+100h+arg_8], eax
+.text:00007FF7877E5289                 mov     eax, [rbp+100h+var_178]
+.text:00007FF7877E528C                 mov     ecx, [rbp+100h+var_5C]
+.text:00007FF7877E5292                 sub     ecx, eax
+.text:00007FF7877E5294                 mov     eax, [rsp+200h+var_1A8]
+.text:00007FF7877E5298                 add     eax, ecx
+.text:00007FF7877E529A                 mov     ecx, [rbp+100h+var_12C]
+.text:00007FF7877E529D                 mov     edx, [rsp+200h+var_1DC]
+.text:00007FF7877E52A1                 add     ecx, eax
+.text:00007FF7877E52A3                 add     edx, ecx
+.text:00007FF7877E52A5                 mov     ecx, [rbp+100h+var_AC]
+.text:00007FF7877E52A8                 mov     eax, [rbp+100h+var_E8]
+.text:00007FF7877E52AB                 add     ecx, eax
+.text:00007FF7877E52AD                 mov     eax, [rbp+100h+arg_10]
+.text:00007FF7877E52B3                 mov     r8d, [rsp+200h+var_194]
+.text:00007FF7877E52B8                 add     eax, ecx
+.text:00007FF7877E52BA                 and     eax, edx
+.text:00007FF7877E52BC                 mov     edx, [rbp+100h+var_7C]
+.text:00007FF7877E52C2                 and     r8d, eax
+.text:00007FF7877E52C5                 mov     eax, [rbp+100h+var_128]
+.text:00007FF7877E52C8                 mov     ecx, [rbp+100h+var_78]
+.text:00007FF7877E52CE                 add     edx, eax
+.text:00007FF7877E52D0                 mov     eax, [rbp+100h+var_160]
+.text:00007FF7877E52D3                 add     ecx, eax
+.text:00007FF7877E52D5                 and     ecx, edx
+.text:00007FF7877E52D7                 mov     edx, [rbp+100h+var_2C]
+.text:00007FF7877E52DD                 mov     r9d, [rbp+100h+var_E4]
+.text:00007FF7877E52E1                 and     edx, ecx
+.text:00007FF7877E52E3                 mov     eax, [rbp+100h+var_A8]
+.text:00007FF7877E52E6                 xor     edx, r8d
+.text:00007FF7877E52E9                 mov     ecx, [rbp+100h+var_174]
+.text:00007FF7877E52EC                 and     r9d, eax
+.text:00007FF7877E52EF                 mov     eax, [rbp+100h+var_58]
+.text:00007FF7877E52F5                 xor     r9d, edx
+.text:00007FF7877E52F8                 add     ecx, eax
+.text:00007FF7877E52FA                 mov     eax, [rbp+100h+arg_8]
+.text:00007FF7877E5300                 add     eax, ecx
+.text:00007FF7877E5302                 mov     ecx, [rbp+100h+var_170]
+.text:00007FF7877E5305                 and     ecx, eax
+.text:00007FF7877E5307                 mov     eax, [rbp+100h+var_124]
+.text:00007FF7877E530A                 mov     edx, [rbp+100h+var_15C]
+.text:00007FF7877E530D                 and     eax, ecx
+.text:00007FF7877E530F                 and     edx, eax
+.text:00007FF7877E5311                 mov     eax, [rbp+100h+var_E0]
+.text:00007FF7877E5314                 mov     ecx, [rbp+100h+var_158]
+.text:00007FF7877E5317                 mov     r8d, [rbp+100h+var_A4]
+.text:00007FF7877E531B                 sub     ecx, eax
+.text:00007FF7877E531D                 mov     eax, [rbp+100h+var_110]
+.text:00007FF7877E5320                 add     r8d, ecx
+.text:00007FF7877E5323                 mov     ecx, [rsp+200h+var_190]
+.text:00007FF7877E5327                 xor     r8d, edx
+.text:00007FF7877E532A                 sub     ecx, eax
+.text:00007FF7877E532C                 or      r8d, r9d
+.text:00007FF7877E532F                 mov     eax, [rbp+100h+var_154]
+.text:00007FF7877E5332                 add     eax, ecx
+.text:00007FF7877E5334                 mov     ecx, [rbp+100h+var_10C]
+.text:00007FF7877E5337                 mov     edx, [rbp+100h+var_A0]
+.text:00007FF7877E533A                 add     ecx, eax
+.text:00007FF7877E533C                 mov     eax, [rbp+100h+var_DC]
+.text:00007FF7877E533F                 add     edx, eax
+.text:00007FF7877E5341                 mov     r9d, [rbp+100h+var_150]
+.text:00007FF7877E5345                 and     edx, ecx
+.text:00007FF7877E5347                 mov     eax, [rbp+100h+var_54]
+.text:00007FF7877E534D                 add     r9d, eax
+.text:00007FF7877E5350                 mov     eax, [rsp+200h+var_1A4]
+.text:00007FF7877E5354                 and     r9d, edx
+.text:00007FF7877E5357                 mov     ecx, [rbp+100h+var_1C]
+.text:00007FF7877E535D                 or      r9d, r8d
+.text:00007FF7877E5360                 sub     ecx, eax
+.text:00007FF7877E5362                 mov     eax, [rbp+100h+var_74]
+.text:00007FF7877E5368                 sub     ecx, eax
+.text:00007FF7877E536A                 mov     eax, [rbp+100h+var_14C]
+.text:00007FF7877E536D                 and     eax, ecx
+.text:00007FF7877E536F                 mov     ecx, [rbp+100h+var_D8]
+.text:00007FF7877E5372                 and     ecx, eax
+.text:00007FF7877E5374                 mov     eax, [rbp+100h+var_108]
+.text:00007FF7877E5377                 mov     r8d, [rbp+100h+var_50]
+.text:00007FF7877E537E                 sub     r8d, eax
+.text:00007FF7877E5381                 mov     eax, [rbp+100h+var_104]
+.text:00007FF7877E5384                 xor     r8d, ecx
+.text:00007FF7877E5387                 mov     ecx, [rbp+100h+var_9C]
+.text:00007FF7877E538A                 sub     ecx, eax
+.text:00007FF7877E538C                 or      r8d, r9d
+.text:00007FF7877E538F                 mov     eax, [rbp+100h+var_70]
+.text:00007FF7877E5395                 add     eax, ecx
+.text:00007FF7877E5397                 mov     ecx, [rbp+100h+var_98]
+.text:00007FF7877E539A                 mov     edx, [rbp+100h+var_D4]
+.text:00007FF7877E539D                 add     ecx, eax
+.text:00007FF7877E539F                 mov     eax, [rbp+100h+var_94]
+.text:00007FF7877E53A2                 add     edx, ecx
+.text:00007FF7877E53A4                 mov     r9d, [rbp+100h+var_6C]
+.text:00007FF7877E53AB                 mov     ecx, [rbp+100h+var_16C]
+.text:00007FF7877E53AE                 sub     r9d, eax
+.text:00007FF7877E53B1                 mov     eax, [rbp+100h+var_4C]
+.text:00007FF7877E53B7                 xor     r9d, edx
+.text:00007FF7877E53BA                 mov     edx, [rbp+100h+var_D0]
+.text:00007FF7877E53BD                 add     ecx, eax
+.text:00007FF7877E53BF                 mov     eax, [rbp+100h+var_CC]
+.text:00007FF7877E53C2                 and     edx, ecx
+.text:00007FF7877E53C4                 mov     ecx, [rbp+100h+var_C8]
+.text:00007FF7877E53C7                 or      r9d, r8d
+.text:00007FF7877E53CA                 mov     r8d, [rbp+100h+var_C4]
+.text:00007FF7877E53CE                 sub     ecx, eax
+.text:00007FF7877E53D0                 xor     ecx, edx
+.text:00007FF7877E53D2                 xor     r8d, ecx
+.text:00007FF7877E53D5                 mov     ecx, [rbp+100h+var_48]
+.text:00007FF7877E53DB                 mov     eax, [rbp+100h+var_90]
+.text:00007FF7877E53DE                 or      r8d, r9d
+.text:00007FF7877E53E1                 mov     edx, [rsp+200h+var_1BC]
+.text:00007FF7877E53E5                 and     ecx, eax
+.text:00007FF7877E53E7                 mov     r9d, [rbp+100h+var_44]
+.text:00007FF7877E53EE                 and     edx, ecx
+.text:00007FF7877E53F0                 mov     eax, [rbp+100h+var_100]
+.text:00007FF7877E53F3                 and     r9d, eax
+.text:00007FF7877E53F6                 mov     ecx, [rsp+200h+var_18C]
+.text:00007FF7877E53FA                 xor     r9d, edx
+.text:00007FF7877E53FD                 mov     eax, [rbp+100h+var_68]
+.text:00007FF7877E5403                 or      r9d, r8d
+.text:00007FF7877E5406                 mov     edx, [rbp+100h+var_40]
+.text:00007FF7877E540C                 and     ecx, eax
+.text:00007FF7877E540E                 mov     r8d, [rbp+100h+var_FC]
+.text:00007FF7877E5412                 and     edx, ecx
+.text:00007FF7877E5414                 mov     eax, [rbp+100h+var_3C]
+.text:00007FF7877E541A                 add     r8d, eax
+.text:00007FF7877E541D                 mov     eax, [rbp+100h+var_148]
+.text:00007FF7877E5420                 mov     ecx, [rbp+100h+var_38]
+.text:00007FF7877E5426                 xor     r8d, edx
+.text:00007FF7877E5429                 sub     ecx, eax
+.text:00007FF7877E542B                 or      r8d, r9d
+.text:00007FF7877E542E                 mov     eax, [rbp+100h+var_F8]
+.text:00007FF7877E5431                 add     eax, ecx
+.text:00007FF7877E5433                 mov     ecx, [rbp+100h+var_C0]
+.text:00007FF7877E5436                 and     ecx, eax
+.text:00007FF7877E5438                 mov     eax, [rbp+100h+var_18]
+.text:00007FF7877E543E                 and     eax, ecx
+.text:00007FF7877E5440                 mov     ecx, [rbp+100h+var_BC]
+.text:00007FF7877E5443                 mov     edx, [rbp+100h+var_8C]
+.text:00007FF7877E5446                 and     ecx, eax
+.text:00007FF7877E5448                 mov     eax, [rbp+100h+var_144]
+.text:00007FF7877E544B                 xor     edx, ecx
+.text:00007FF7877E544D                 mov     ecx, [rbp+100h+var_14]
+.text:00007FF7877E5453                 or      edx, r8d
+.text:00007FF7877E5456                 sub     ecx, eax
+.text:00007FF7877E5458                 mov     eax, [rbp+100h+var_64]
+.text:00007FF7877E545E                 sub     ecx, eax
+.text:00007FF7877E5460                 mov     eax, [rsp+200h+var_188]
+.text:00007FF7877E5464                 mov     r8d, [rbp+100h+var_34]
+.text:00007FF7877E546B                 xor     eax, ecx
+.text:00007FF7877E546D                 mov     ecx, [rsp+200h+var_184]
+.text:00007FF7877E5471                 xor     r8d, eax
+.text:00007FF7877E5474                 mov     eax, [rsp+200h+var_1D8]
+.text:00007FF7877E5478                 or      r8d, edx
+.text:00007FF7877E547B                 add     ecx, eax
+.text:00007FF7877E547D                 mov     eax, [rsp+200h+var_1D4]
+.text:00007FF7877E5481                 add     eax, ecx
+.text:00007FF7877E5483                 mov     ecx, [rbp+100h+var_140]
+.text:00007FF7877E5486                 mov     edx, [rsp+200h+var_1D0]
+.text:00007FF7877E548A                 add     ecx, eax
+.text:00007FF7877E548C                 mov     eax, [rbp+100h+var_180]
+.text:00007FF7877E548F                 xor     edx, ecx
+.text:00007FF7877E5491                 mov     ecx, [rbp+100h+var_88]
+.text:00007FF7877E5494                 or      edx, r8d
+.text:00007FF7877E5497                 sub     ecx, eax
+.text:00007FF7877E5499                 mov     eax, [rbp+100h+var_17C]
+.text:00007FF7877E549C                 mov     r8d, [rsp+200h+var_1A0]
+.text:00007FF7877E54A1                 sub     ecx, eax
+.text:00007FF7877E54A3                 xor     r8d, ecx
+.text:00007FF7877E54A6                 mov     ecx, [rbp+100h+var_120]
+.text:00007FF7877E54A9                 mov     eax, [rsp+200h+var_1B8]
+.text:00007FF7877E54AD                 or      r8d, edx
+.text:00007FF7877E54B0                 add     ecx, eax
+.text:00007FF7877E54B2                 mov     eax, [rbp+100h+var_13C]
+.text:00007FF7877E54B5                 mov     edx, [rsp+200h+var_1CC]
+.text:00007FF7877E54B9                 add     eax, ecx
+.text:00007FF7877E54BB                 and     edx, eax
+.text:00007FF7877E54BD                 mov     eax, [rbp+100h+var_84]
+.text:00007FF7877E54C0                 mov     ecx, [rsp+200h+var_19C]
+.text:00007FF7877E54C4                 or      edx, r8d
+.text:00007FF7877E54C7                 mov     r8d, [rbp+100h+var_168]
+.text:00007FF7877E54CB                 sub     ecx, eax
+.text:00007FF7877E54CD                 xor     r8d, ecx
+.text:00007FF7877E54D0                 mov     ecx, [rsp+200h+var_1B4]
+.text:00007FF7877E54D4                 mov     eax, [rbp+100h+var_F4]
+.text:00007FF7877E54D7                 or      r8d, edx
+.text:00007FF7877E54DA                 mov     r9d, [rbp+100h+var_80]
+.text:00007FF7877E54E1                 add     ecx, eax
+.text:00007FF7877E54E3                 and     r9d, ecx
+.text:00007FF7877E54E6                 mov     ecx, [rbp+100h+arg_18]
+.text:00007FF7877E54EC                 mov     eax, [rbp+100h+arg_0]
+.text:00007FF7877E54F2                 or      r9d, r8d
+.text:00007FF7877E54F5                 mov     edx, [rsp+200h+var_1C8]
+.text:00007FF7877E54F9                 add     ecx, eax
+.text:00007FF7877E54FB                 mov     eax, [rbp+100h+var_11C]
+.text:00007FF7877E54FE                 add     edx, ecx
+.text:00007FF7877E5500                 mov     ecx, [rbp+100h+var_164]
+.text:00007FF7877E5503                 or      edx, r9d
+.text:00007FF7877E5506                 sub     ecx, eax
+.text:00007FF7877E5508                 or      ecx, edx
+.text:00007FF7877E550A                 mov     edx, [rbp+100h+var_B8]
+.text:00007FF7877E550D                 mov     eax, [rbp+100h+var_30]
+.text:00007FF7877E5513                 xor     edx, eax
+.text:00007FF7877E5515                 or      edx, ecx
+.text:00007FF7877E5517                 mov     ecx, [rbp+100h+var_118]
+.text:00007FF7877E551A                 mov     eax, [rbp+100h+var_F0]
+.text:00007FF7877E551D                 and     ecx, eax
+.text:00007FF7877E551F                 or      ecx, edx
+.text:00007FF7877E5521                 mov     edx, [rbp+100h+var_114]
+.text:00007FF7877E5524                 mov     eax, [rbp+100h+var_28]
+.text:00007FF7877E552A                 add     edx, eax
+.text:00007FF7877E552C                 or      edx, ecx
+.text:00007FF7877E552E                 mov     ecx, [rbp+100h+var_24]
+.text:00007FF7877E5534                 mov     eax, [rbp+100h+var_138]
+.text:00007FF7877E5537                 and     ecx, eax
+.text:00007FF7877E5539                 mov     eax, [rsp+200h+var_1C4]
+.text:00007FF7877E553D                 or      ecx, edx
+.text:00007FF7877E553F                 mov     edx, [rbp+100h+var_B4]
+.text:00007FF7877E5542                 sub     edx, eax
+.text:00007FF7877E5544                 or      edx, ecx
+.text:00007FF7877E5546                 mov     ecx, [rsp+200h+var_1B0]
+.text:00007FF7877E554A                 mov     eax, [rbp+100h+var_134]
+.text:00007FF7877E554D                 xor     ecx, eax
+.text:00007FF7877E554F                 mov     eax, [rsp+200h+var_1AC]
+.text:00007FF7877E5553                 or      ecx, edx
+.text:00007FF7877E5555                 or      eax, ecx
+.text:00007FF7877E5557                 mov     ecx, [rbp+100h+var_EC]
+.text:00007FF7877E555A                 or      ecx, eax
+.text:00007FF7877E555C                 mov     eax, [rbp+100h+var_130]
+.text:00007FF7877E555F                 or      eax, ecx
+.text:00007FF7877E5561                 mov     ecx, [rsp+200h+var_1E0]
+.text:00007FF7877E5565                 or      ecx, eax
+.text:00007FF7877E5567                 mov     eax, [rbp+100h+var_60]
+.text:00007FF7877E556D                 or      eax, ecx
+.text:00007FF7877E556F                 mov     ecx, [rbp+100h+var_B0]
+.text:00007FF7877E5572                 or      ecx, eax
+.text:00007FF7877E5574                 mov     eax, [rsp+200h+var_1C0]
+.text:00007FF7877E5578                 or      eax, ecx
+.text:00007FF7877E557A                 mov     ecx, [rbp+100h+var_20]
+.text:00007FF7877E5580                 or      ecx, eax
+.text:00007FF7877E5582                 mov     eax, [rsp+200h+var_198]
+.text:00007FF7877E5586                 or      eax, ecx
+.text:00007FF7877E5588                 mov     rcx, rbx
+.text:00007FF7877E558B                 mov     cs:dword_7FF7879EA3B4, eax
+.text:00007FF7877E5591                 call    sub_7FF7878E2130
+.text:00007FF7877E5596                 mov     rax, rbx
+.text:00007FF7877E5599                 add     rsp, 1F8h
+.text:00007FF7877E55A0                 pop     rbx
+.text:00007FF7877E55A1                 pop     rbp
+.text:00007FF7877E55A2                 retn
+.text:00007FF7877E55A2 sub_7FF7877E36F0 endp
+.text:00007FF7877E55A2

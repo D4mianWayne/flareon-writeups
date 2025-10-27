@@ -1,0 +1,2330 @@
+0000000140081760 sub_140081760 proc near
+0000000140081760
+0000000140081760 var_550= dword ptr -550h
+0000000140081760 var_54C= dword ptr -54Ch
+0000000140081760 var_548= dword ptr -548h
+0000000140081760 var_544= dword ptr -544h
+0000000140081760 var_540= qword ptr -540h
+0000000140081760 var_534= dword ptr -534h
+0000000140081760 var_530= dword ptr -530h
+0000000140081760 var_52C= dword ptr -52Ch
+0000000140081760 var_528= qword ptr -528h
+0000000140081760 var_520= qword ptr -520h
+0000000140081760 var_518= qword ptr -518h
+0000000140081760 var_510= qword ptr -510h
+0000000140081760 var_508= dword ptr -508h
+0000000140081760 var_504= dword ptr -504h
+0000000140081760 var_500= dword ptr -500h
+0000000140081760 var_4FC= dword ptr -4FCh
+0000000140081760 var_4F8= qword ptr -4F8h
+0000000140081760 var_4EC= dword ptr -4ECh
+0000000140081760 var_4E8= qword ptr -4E8h
+0000000140081760 var_4E0= qword ptr -4E0h
+0000000140081760 var_4D8= qword ptr -4D8h
+0000000140081760 var_4D0= qword ptr -4D0h
+0000000140081760 var_4C8= dword ptr -4C8h
+0000000140081760 var_4C4= dword ptr -4C4h
+0000000140081760 var_4C0= qword ptr -4C0h
+0000000140081760 var_4B8= dword ptr -4B8h
+0000000140081760 var_4B4= dword ptr -4B4h
+0000000140081760 var_4B0= dword ptr -4B0h
+0000000140081760 var_4AC= dword ptr -4ACh
+0000000140081760 var_4A8= qword ptr -4A8h
+0000000140081760 var_4A0= qword ptr -4A0h
+0000000140081760 var_498= qword ptr -498h
+0000000140081760 var_490= qword ptr -490h
+0000000140081760 var_488= dword ptr -488h
+0000000140081760 var_484= dword ptr -484h
+0000000140081760 var_480= dword ptr -480h
+0000000140081760 var_47C= dword ptr -47Ch
+0000000140081760 var_478= qword ptr -478h
+0000000140081760 var_470= qword ptr -470h
+0000000140081760 var_468= qword ptr -468h
+0000000140081760 var_460= qword ptr -460h
+0000000140081760 var_458= qword ptr -458h
+0000000140081760 var_450= qword ptr -450h
+0000000140081760 var_448= qword ptr -448h
+0000000140081760 var_440= qword ptr -440h
+0000000140081760 var_42C= dword ptr -42Ch
+0000000140081760 var_428= qword ptr -428h
+0000000140081760 var_41A= word ptr -41Ah
+0000000140081760 var_418= qword ptr -418h
+0000000140081760 var_410= dword ptr -410h
+0000000140081760 var_40C= dword ptr -40Ch
+0000000140081760 var_408= dword ptr -408h
+0000000140081760 var_404= dword ptr -404h
+0000000140081760 var_400= dword ptr -400h
+0000000140081760 var_3FC= dword ptr -3FCh
+0000000140081760 var_3F8= dword ptr -3F8h
+0000000140081760 var_3F4= dword ptr -3F4h
+0000000140081760 var_3F0= dword ptr -3F0h
+0000000140081760 var_3EC= dword ptr -3ECh
+0000000140081760 var_3E8= dword ptr -3E8h
+0000000140081760 var_3E4= dword ptr -3E4h
+0000000140081760 var_3E0= dword ptr -3E0h
+0000000140081760 var_3DC= dword ptr -3DCh
+0000000140081760 var_3D8= dword ptr -3D8h
+0000000140081760 var_3D4= dword ptr -3D4h
+0000000140081760 var_3D0= dword ptr -3D0h
+0000000140081760 var_3CC= dword ptr -3CCh
+0000000140081760 var_3C8= dword ptr -3C8h
+0000000140081760 var_3C4= dword ptr -3C4h
+0000000140081760 var_3C0= dword ptr -3C0h
+0000000140081760 var_3BC= dword ptr -3BCh
+0000000140081760 var_3B8= dword ptr -3B8h
+0000000140081760 var_3B4= dword ptr -3B4h
+0000000140081760 var_3B0= qword ptr -3B0h
+0000000140081760 var_39C= dword ptr -39Ch
+0000000140081760 var_398= qword ptr -398h
+0000000140081760 var_380= qword ptr -380h
+0000000140081760 var_378= qword ptr -378h
+0000000140081760 var_368= qword ptr -368h
+0000000140081760 var_360= qword ptr -360h
+0000000140081760 var_350= qword ptr -350h
+0000000140081760 var_348= qword ptr -348h
+0000000140081760 var_338= qword ptr -338h
+0000000140081760 var_320= qword ptr -320h
+0000000140081760 var_318= qword ptr -318h
+0000000140081760 var_2D8= qword ptr -2D8h
+0000000140081760 var_2C0= qword ptr -2C0h
+0000000140081760 var_2B8= qword ptr -2B8h
+0000000140081760 var_1F8= qword ptr -1F8h
+0000000140081760 var_1E8= qword ptr -1E8h
+0000000140081760 var_1E0= qword ptr -1E0h
+0000000140081760 var_1D0= qword ptr -1D0h
+0000000140081760 var_1C8= qword ptr -1C8h
+0000000140081760 var_1C0= qword ptr -1C0h
+0000000140081760 var_1B8= qword ptr -1B8h
+0000000140081760 var_1A0= qword ptr -1A0h
+0000000140081760 var_198= qword ptr -198h
+0000000140081760 var_188= qword ptr -188h
+0000000140081760 var_180= qword ptr -180h
+0000000140081760 var_170= qword ptr -170h
+0000000140081760 var_168= qword ptr -168h
+0000000140081760 var_160= qword ptr -160h
+0000000140081760 var_158= byte ptr -158h
+0000000140081760 var_128= qword ptr -128h
+0000000140081760 var_110= qword ptr -110h
+0000000140081760 var_108= qword ptr -108h
+0000000140081760 var_F8= dword ptr -0F8h
+0000000140081760 var_F4= dword ptr -0F4h
+0000000140081760 var_F0= dword ptr -0F0h
+0000000140081760 var_EC= dword ptr -0ECh
+0000000140081760 var_E8= dword ptr -0E8h
+0000000140081760 var_E4= dword ptr -0E4h
+0000000140081760 var_E0= qword ptr -0E0h
+0000000140081760 var_D8= qword ptr -0D8h
+0000000140081760 var_B8= qword ptr -0B8h
+0000000140081760 var_A8= byte ptr -0A8h
+0000000140081760 var_98= qword ptr -98h
+0000000140081760 var_90= byte ptr -90h
+0000000140081760 var_70= qword ptr -70h
+0000000140081760 var_68= word ptr -68h
+0000000140081760 var_48= qword ptr -48h
+0000000140081760 var_40= byte ptr -40h
+0000000140081760 var_30= dword ptr -30h
+0000000140081760 var_28= byte ptr -28h
+0000000140081760 var_18= dword ptr -18h
+0000000140081760
+0000000140081760 push    rsi
+0000000140081761 push    rdi
+0000000140081762 sub     rsp, 568h
+0000000140081769 mov     [rsp+578h+var_41A], dx
+0000000140081771 mov     [rsp+578h+var_418], rcx
+0000000140081779 lea     rax, [rsp+578h+var_28]
+0000000140081781 mov     [rsp+578h+var_B8], rax
+0000000140081789 lea     rax, [rsp+578h+var_28]
+0000000140081791 mov     [rsp+578h+var_D8], rax
+0000000140081799 lea     rax, [rsp+578h+var_D8]
+00000001400817A1 mov     [rsp+578h+var_108], rax
+00000001400817A9 lea     rax, [rsp+578h+var_A8]
+00000001400817B1 mov     [rsp+578h+var_128], rax
+00000001400817B9 lea     rax, [rsp+578h+var_A8]
+00000001400817C1 mov     [rsp+578h+var_110], rax
+00000001400817C9 lea     rax, [rsp+578h+var_28]
+00000001400817D1 mov     [rsp+578h+var_168], rax
+00000001400817D9 lea     rax, [rsp+578h+var_28]
+00000001400817E1 mov     [rsp+578h+var_188], rax
+00000001400817E9 lea     rax, [rsp+578h+var_90]
+00000001400817F1 mov     [rsp+578h+var_170], rax
+00000001400817F9 lea     rax, [rsp+578h+var_158]
+0000000140081801 mov     [rsp+578h+var_180], rax
+0000000140081809 lea     rax, [rsp+578h+var_90]
+0000000140081811 mov     [rsp+578h+var_160], rax
+0000000140081819 lea     rax, [rsp+578h+var_128]
+0000000140081821 mov     [rsp+578h+var_198], rax
+0000000140081829 lea     rax, [rsp+578h+var_A8]
+0000000140081831 mov     [rsp+578h+var_1B8], rax
+0000000140081839 lea     rax, [rsp+578h+var_D8]
+0000000140081841 mov     [rsp+578h+var_1A0], rax
+0000000140081849 lea     rax, [rsp+578h+var_D8]
+0000000140081851 mov     [rsp+578h+var_1C8], rax
+0000000140081859 lea     rax, [rsp+578h+var_D8]
+0000000140081861 mov     [rsp+578h+var_1E8], rax
+0000000140081869 lea     rax, [rsp+578h+var_28]
+0000000140081871 mov     [rsp+578h+var_1D0], rax
+0000000140081879 lea     rax, [rsp+578h+var_188]
+0000000140081881 mov     [rsp+578h+var_1E0], rax
+0000000140081889 lea     rax, [rsp+578h+var_40]
+0000000140081891 mov     [rsp+578h+var_1C0], rax
+0000000140081899 lea     rax, [rsp+578h+var_A8]
+00000001400818A1 mov     [rsp+578h+var_1F8], rax
+00000001400818A9 lea     rax, [rsp+578h+var_158]
+00000001400818B1 mov     [rsp+578h+var_2B8], rax
+00000001400818B9 lea     rax, [rsp+578h+var_D8]
+00000001400818C1 mov     [rsp+578h+var_2D8], rax
+00000001400818C9 lea     rax, [rsp+578h+var_40]
+00000001400818D1 mov     [rsp+578h+var_2C0], rax
+00000001400818D9 lea     rax, [rsp+578h+var_128]
+00000001400818E1 mov     [rsp+578h+var_318], rax
+00000001400818E9 lea     rax, [rsp+578h+var_1E8]
+00000001400818F1 mov     [rsp+578h+var_338], rax
+00000001400818F9 lea     rax, [rsp+578h+var_128]
+0000000140081901 mov     [rsp+578h+var_320], rax
+0000000140081909 lea     rax, [rsp+578h+var_2D8]
+0000000140081911 mov     [rsp+578h+var_348], rax
+0000000140081919 lea     rax, [rsp+578h+var_338]
+0000000140081921 mov     [rsp+578h+var_368], rax
+0000000140081929 lea     rax, [rsp+578h+var_90]
+0000000140081931 mov     [rsp+578h+var_350], rax
+0000000140081939 lea     rax, [rsp+578h+var_D8]
+0000000140081941 mov     [rsp+578h+var_360], rax
+0000000140081949 lea     rax, [rsp+578h+var_188]
+0000000140081951 mov     [rsp+578h+var_378], rax
+0000000140081959 lea     rax, [rsp+578h+var_338]
+0000000140081961 mov     [rsp+578h+var_398], rax
+0000000140081969 lea     rax, [rsp+578h+var_1E8]
+0000000140081971 mov     [rsp+578h+var_380], rax
+0000000140081979 mov     [rsp+578h+var_98], 2419h
+0000000140081985 mov     rax, cs:off_1400B9068
+000000014008198C mov     rcx, 0A78D14E40E66D20Ah
+0000000140081996 sub     rax, rcx
+0000000140081999 lea     rcx, [rsp+578h+var_368]
+00000001400819A1 call    rax			; Unable to find target at 0x4F1A29C95CCF5FF4
+00000001400819A3 mov     rax, [rax]
+00000001400819A6 mov     qword ptr [rax+20h], 2419h
+00000001400819AE mov     rax, cs:off_1400B1320
+00000001400819B5 mov     rcx, 6E13404C09705A63h
+00000001400819BF sub     rax, rcx
+00000001400819C2 lea     rcx, [rsp+578h+var_368]
+00000001400819CA call    rax			; Unable to find target at 0xDC26809952E68776
+00000001400819CC mov     rcx, [rax]
+00000001400819CF mov     rax, cs:off_1400A0A98
+00000001400819D6 mov     rdx, 0B7A12B075CED726Eh
+00000001400819E0 sub     rax, rdx
+00000001400819E3 call    rax			; Unable to find target at 0x6F42560FF9E0C19C
+00000001400819E5 mov     rax, [rax]
+00000001400819E8 add     rax, 10h
+00000001400819EC mov     [rsp+578h+var_48], rax
+00000001400819F4 lea     rax, [rsp+578h+var_68]
+00000001400819FC add     rax, 20h ; ' '
+0000000140081A00 mov     [rsp+578h+var_428], rax
+0000000140081A08 mov     rax, cs:off_1400AA398
+0000000140081A0F mov     rcx, 7F5AC0F49AD8C498h
+0000000140081A19 sub     rax, rcx
+0000000140081A1C lea     rcx, [rsp+578h+var_368]
+0000000140081A24 call    rax			; Unable to find target at 0xFEB581EA75B9FDC0
+0000000140081A26 mov     rcx, [rax]
+0000000140081A29 mov     rax, cs:off_1400BD6F0
+0000000140081A30 mov     rdx, 0CD4232E387619D2Ch
+0000000140081A3A sub     rax, rdx
+0000000140081A3D call    rax			; Unable to find target at 0x9A8465C84ECB9358
+0000000140081A3F mov     rcx, [rsp+578h+var_428]
+0000000140081A47 mov     dx, [rsp+578h+var_41A]
+0000000140081A4F mov     rax, [rax]
+0000000140081A52 mov     [rax+10h], rcx
+0000000140081A56 mov     [rsp+578h+var_68], dx
+0000000140081A5E mov     rax, cs:off_1400B3BB8
+0000000140081A65 mov     rcx, 1A8735EF884305A5h
+0000000140081A6F sub     rax, rcx
+0000000140081A72 lea     rcx, [rsp+578h+var_368]
+0000000140081A7A call    rax			; Unable to find target at 0x350E6BE0508969AA
+0000000140081A7C mov     rcx, [rax]
+0000000140081A7F mov     rax, cs:off_1400A6448
+0000000140081A86 mov     rdx, 0D7287323F40E8C58h
+0000000140081A90 sub     rax, rdx
+0000000140081A93 call    rax			; Unable to find target at 0xAE50E64928255520
+0000000140081A95 mov     rcx, [rax]
+0000000140081A98 mov     rax, cs:off_1400BB2F0
+0000000140081A9F mov     rdx, 217D66047B9EDF3h
+0000000140081AA9 sub     rax, rdx
+0000000140081AAC call    rax			; Unable to find target at 0x042FACC1CF75B766
+0000000140081AAE mov     rcx, [rax]
+0000000140081AB1 mov     rax, cs:off_1400A6588
+0000000140081AB8 mov     rdx, 23F66C859BDCE3D5h
+0000000140081AC2 sub     rax, rdx
+0000000140081AC5 call    rax			; Unable to find target at 0x47ECD90C77BD352A
+0000000140081AC7 mov     rcx, [rsp+578h+var_418]
+0000000140081ACF mov     rax, [rax]
+0000000140081AD2 mov     [rax], rcx
+0000000140081AD5 movzx   eax, [rsp+578h+var_68]
+0000000140081ADD mov     [rsp+578h+var_18], eax
+0000000140081AE4 mov     eax, [rsp+578h+var_18]
+0000000140081AEB mov     [rsp+578h+var_3F8], eax
+0000000140081AF2 mov     r8d, dword ptr [rsp+578h+var_48]
+0000000140081AFA mov     [rsp+578h+var_410], r8d
+0000000140081B02 mov     ecx, [rsp+578h+var_30]
+0000000140081B09 mov     [rsp+578h+var_40C], ecx
+0000000140081B10 mov     eax, r8d
+0000000140081B13 or      eax, ecx
+0000000140081B15 mov     r10d, r8d
+0000000140081B18 add     r10d, ecx
+0000000140081B1B sub     r10d, eax
+0000000140081B1E mov     eax, ecx
+0000000140081B20 xor     eax, 0FFFFFFFFh
+0000000140081B23 mov     edx, r8d
+0000000140081B26 xor     edx, 0FFFFFFFFh
+0000000140081B29 or      edx, eax
+0000000140081B2B mov     eax, r8d
+0000000140081B2E add     eax, ecx
+0000000140081B30 add     eax, 1
+0000000140081B33 add     eax, edx
+0000000140081B35 xor     r9d, r9d
+0000000140081B38 sub     r9d, r10d
+0000000140081B3B mov     edx, eax
+0000000140081B3D and     edx, r9d
+0000000140081B40 shl     edx, 1
+0000000140081B42 xor     r9d, r9d
+0000000140081B45 sub     r9d, r10d
+0000000140081B48 xor     eax, r9d
+0000000140081B4B add     eax, edx
+0000000140081B4D mov     edx, ecx
+0000000140081B4F or      edx, r8d
+0000000140081B52 mov     r9d, ecx
+0000000140081B55 add     r9d, r8d
+0000000140081B58 sub     r9d, edx
+0000000140081B5B mov     r10d, r8d
+0000000140081B5E xor     r10d, 0FFFFFFFFh
+0000000140081B62 mov     edx, ecx
+0000000140081B64 xor     edx, 0FFFFFFFFh
+0000000140081B67 or      edx, r10d
+0000000140081B6A add     ecx, r8d
+0000000140081B6D add     ecx, 1
+0000000140081B70 add     ecx, edx
+0000000140081B72 xor     r8d, r8d
+0000000140081B75 sub     r8d, r9d
+0000000140081B78 mov     edx, ecx
+0000000140081B7A and     edx, r8d
+0000000140081B7D shl     edx, 1
+0000000140081B7F xor     r8d, r8d
+0000000140081B82 sub     r8d, r9d
+0000000140081B85 xor     ecx, r8d
+0000000140081B88 add     ecx, edx
+0000000140081B8A xor     r9d, r9d
+0000000140081B8D sub     r9d, ecx
+0000000140081B90 mov     r8d, eax
+0000000140081B93 or      r8d, r9d
+0000000140081B96 mov     edx, eax
+0000000140081B98 add     edx, r9d
+0000000140081B9B sub     edx, r8d
+0000000140081B9E shl     edx, 1
+0000000140081BA0 xor     r8d, r8d
+0000000140081BA3 sub     r8d, ecx
+0000000140081BA6 mov     ecx, eax
+0000000140081BA8 and     ecx, r8d
+0000000140081BAB or      eax, r8d
+0000000140081BAE sub     eax, ecx
+0000000140081BB0 mov     ecx, eax
+0000000140081BB2 or      ecx, edx
+0000000140081BB4 and     eax, edx
+0000000140081BB6 add     eax, ecx
+0000000140081BB8 mov     [rsp+578h+var_408], eax
+0000000140081BBF mov     ecx, eax
+0000000140081BC1 xor     ecx, 0FFFFFFFFh
+0000000140081BC4 or      ecx, 0FFFFFFD2h
+0000000140081BC7 mov     r8d, eax
+0000000140081BCA add     r8d, 2Dh ; '-'
+0000000140081BCE add     r8d, 1
+0000000140081BD2 add     r8d, ecx
+0000000140081BD5 mov     edx, eax
+0000000140081BD7 or      edx, 2Dh
+0000000140081BDA mov     ecx, eax
+0000000140081BDC add     ecx, 2Dh ; '-'
+0000000140081BDF sub     ecx, edx
+0000000140081BE1 mov     edx, ecx
+0000000140081BE3 or      edx, r8d
+0000000140081BE6 and     ecx, r8d
+0000000140081BE9 add     ecx, edx
+0000000140081BEB mov     [rsp+578h+var_404], ecx
+0000000140081BF2 mov     ecx, eax
+0000000140081BF4 xor     ecx, 0FFFFFFFFh
+0000000140081BF7 or      ecx, 0FFFFFFEFh
+0000000140081BFA mov     edx, eax
+0000000140081BFC add     edx, 10h
+0000000140081BFF add     edx, 1
+0000000140081C02 add     edx, ecx
+0000000140081C04 mov     ecx, eax
+0000000140081C06 or      ecx, 10h
+0000000140081C09 add     eax, 10h
+0000000140081C0C sub     eax, ecx
+0000000140081C0E mov     ecx, eax
+0000000140081C10 or      ecx, edx
+0000000140081C12 and     eax, edx
+0000000140081C14 add     eax, ecx
+0000000140081C16 mov     [rsp+578h+var_400], eax
+0000000140081C1D mov     rax, cs:off_1400A5500
+0000000140081C24 mov     rcx, 8256592F6E675368h
+0000000140081C2E sub     rax, rcx
+0000000140081C31 lea     rcx, [rsp+578h+var_368]
+0000000140081C39 call    rax			; Unable to find target at 0x04ACB2601CD09F50
+0000000140081C3B mov     rcx, [rax]
+0000000140081C3E mov     rax, cs:off_1400AF788
+0000000140081C45 mov     rdx, 3618BB138358868Eh
+0000000140081C4F sub     rax, rdx
+0000000140081C52 call    rax			; Unable to find target at 0x6C31762846B2C0CC
+0000000140081C54 mov     edx, [rsp+578h+var_404]
+0000000140081C5B mov     rcx, rax
+0000000140081C5E mov     eax, [rsp+578h+var_400]
+0000000140081C65 mov     rcx, [rcx]
+0000000140081C68 mov     [rcx+10h], edx
+0000000140081C6B mov     dword ptr [rsp+578h+var_48], eax
+0000000140081C72 mov     eax, dword ptr [rsp+578h+var_48]
+0000000140081C79 mov     [rsp+578h+var_3FC], eax
+0000000140081C80 mov     rax, cs:off_1400BD5E0
+0000000140081C87 mov     rcx, 8D81C08565B8D2F1h
+0000000140081C91 sub     rax, rcx
+0000000140081C94 lea     rcx, [rsp+578h+var_368]
+0000000140081C9C call    rax			; Unable to find target at 0x1B03810C0B79FD42
+0000000140081C9E mov     rcx, [rax]
+0000000140081CA1 mov     rax, cs:off_1400A01F0
+0000000140081CA8 mov     rdx, 4BC10E3EFE1C7842h
+0000000140081CB2 sub     rax, rdx
+0000000140081CB5 call    rax			; Unable to find target at 0x97821C7F3C3ACFB4
+0000000140081CB7 mov     rcx, [rax]
+0000000140081CBA mov     rax, cs:off_1400BE7E8
+0000000140081CC1 mov     rdx, 963B4917CA56D8E2h
+0000000140081CCB sub     rax, rdx
+0000000140081CCE call    rax			; Unable to find target at 0x2C769230D4B56C14
+0000000140081CD0 mov     r9d, [rsp+578h+var_3FC]
+0000000140081CD8 mov     rcx, rax
+0000000140081CDB mov     eax, [rsp+578h+var_3F8]
+0000000140081CE2 mov     rcx, [rcx]
+0000000140081CE5 mov     edx, [rcx+10h]
+0000000140081CE8 mov     r8d, r9d
+0000000140081CEB xor     r8d, 0FFFFFFFFh
+0000000140081CEF mov     ecx, edx
+0000000140081CF1 xor     ecx, 0FFFFFFFFh
+0000000140081CF4 or      ecx, r8d
+0000000140081CF7 mov     r8d, edx
+0000000140081CFA add     r8d, r9d
+0000000140081CFD add     r8d, 1
+0000000140081D01 add     r8d, ecx
+0000000140081D04 mov     ecx, edx
+0000000140081D06 or      ecx, r9d
+0000000140081D09 add     edx, r9d
+0000000140081D0C sub     edx, ecx
+0000000140081D0E mov     ecx, edx
+0000000140081D10 or      ecx, r8d
+0000000140081D13 and     edx, r8d
+0000000140081D16 add     edx, ecx
+0000000140081D18 mov     ecx, eax
+0000000140081D1A or      ecx, edx
+0000000140081D1C mov     r8d, eax
+0000000140081D1F add     r8d, edx
+0000000140081D22 sub     r8d, ecx
+0000000140081D25 mov     r9d, edx
+0000000140081D28 xor     r9d, 0FFFFFFFFh
+0000000140081D2C mov     ecx, eax
+0000000140081D2E xor     ecx, 0FFFFFFFFh
+0000000140081D31 or      ecx, r9d
+0000000140081D34 add     eax, edx
+0000000140081D36 add     eax, 1
+0000000140081D39 add     eax, ecx
+0000000140081D3B xor     edx, edx
+0000000140081D3D sub     edx, r8d
+0000000140081D40 mov     ecx, eax
+0000000140081D42 and     ecx, edx
+0000000140081D44 shl     ecx, 1
+0000000140081D46 xor     edx, edx
+0000000140081D48 sub     edx, r8d
+0000000140081D4B xor     eax, edx
+0000000140081D4D add     eax, ecx
+0000000140081D4F mov     [rsp+578h+var_3EC], eax   // some value from an address is retrieved and subtracted
+0000000140081D56 mov     rax, cs:off_1400ABAD0
+0000000140081D5D mov     rcx, 8DCBEE300E3E42C4h
+0000000140081D67 sub     rax, rcx
+0000000140081D6A lea     rcx, [rsp+578h+var_D8]
+0000000140081D72 call    rax			; Unable to find target at 0x1B97DC615C7C9F28
+0000000140081D74 mov     rax, [rax]
+0000000140081D77 mov     eax, [rax+10h]
+0000000140081D7A mov     [rsp+578h+var_3F0], eax
+0000000140081D81 mov     eax, dword ptr [rsp+578h+var_48]
+0000000140081D88 mov     [rsp+578h+var_3F4], eax
+0000000140081D8F mov     rax, cs:off_1400A5A50
+0000000140081D96 mov     rcx, 655495CE7BA8A36Bh
+0000000140081DA0 sub     rax, rcx
+0000000140081DA3 lea     rcx, [rsp+578h+var_368]
+0000000140081DAB call    rax			; Unable to find target at 0xCAA92B9E37598A66
+0000000140081DAD mov     rcx, [rax]
+0000000140081DB0 mov     rax, cs:off_1400C3C78
+0000000140081DB7 mov     rdx, 72C13237CB5A0E6Dh
+0000000140081DC1 sub     rax, rdx
+0000000140081DC4 call    rax			; Unable to find target at 0xE5826470D6B5FEDA
+0000000140081DC6 mov     rcx, [rax]
+0000000140081DC9 mov     rax, cs:off_1400B6770
+0000000140081DD0 mov     rdx, 7501886A1736C275h
+0000000140081DDA sub     rax, rdx
+0000000140081DDD call    rax			; Unable to find target at 0xEA0310D56E6D9D8A
+0000000140081DDF mov     r10d, [rsp+578h+var_3F4]
+0000000140081DE7 mov     edx, [rsp+578h+var_3F0]
+0000000140081DEE mov     rcx, rax
+0000000140081DF1 mov     eax, [rsp+578h+var_3EC]
+0000000140081DF8 mov     rcx, [rcx]
+0000000140081DFB mov     r8d, [rcx+10h]
+0000000140081DFF mov     [rsp+578h+var_3E8], r8d
+0000000140081E07 mov     ecx, r10d
+0000000140081E0A or      ecx, r8d
+0000000140081E0D mov     esi, r10d
+0000000140081E10 add     esi, r8d
+0000000140081E13 sub     esi, ecx
+0000000140081E15 mov     ecx, r8d
+0000000140081E18 xor     ecx, 0FFFFFFFFh
+0000000140081E1B mov     r9d, r10d
+0000000140081E1E xor     r9d, 0FFFFFFFFh
+0000000140081E22 or      r9d, ecx
+0000000140081E25 mov     ecx, r10d
+0000000140081E28 add     ecx, r8d
+0000000140081E2B add     ecx, 1
+0000000140081E2E add     ecx, r9d
+0000000140081E31 xor     r11d, r11d
+0000000140081E34 sub     r11d, esi
+0000000140081E37 mov     r9d, ecx
+0000000140081E3A and     r9d, r11d
+0000000140081E3D shl     r9d, 1
+0000000140081E40 xor     r11d, r11d
+0000000140081E43 sub     r11d, esi
+0000000140081E46 xor     ecx, r11d
+0000000140081E49 add     ecx, r9d
+0000000140081E4C mov     r9d, r8d
+0000000140081E4F or      r9d, r10d
+0000000140081E52 mov     r11d, r8d
+0000000140081E55 add     r11d, r10d
+0000000140081E58 sub     r11d, r9d
+0000000140081E5B mov     esi, r10d
+0000000140081E5E xor     esi, 0FFFFFFFFh
+0000000140081E61 mov     r9d, r8d
+0000000140081E64 xor     r9d, 0FFFFFFFFh
+0000000140081E68 or      r9d, esi
+0000000140081E6B add     r8d, r10d
+0000000140081E6E add     r8d, 1
+0000000140081E72 add     r8d, r9d
+0000000140081E75 xor     r10d, r10d
+0000000140081E78 sub     r10d, r11d
+0000000140081E7B mov     r9d, r8d
+0000000140081E7E and     r9d, r10d
+0000000140081E81 shl     r9d, 1
+0000000140081E84 xor     r10d, r10d
+0000000140081E87 sub     r10d, r11d
+0000000140081E8A xor     r8d, r10d
+0000000140081E8D add     r8d, r9d
+0000000140081E90 xor     r11d, r11d
+0000000140081E93 sub     r11d, r8d
+0000000140081E96 mov     r10d, ecx
+0000000140081E99 or      r10d, r11d
+0000000140081E9C mov     r9d, ecx
+0000000140081E9F add     r9d, r11d
+0000000140081EA2 sub     r9d, r10d
+0000000140081EA5 shl     r9d, 1
+0000000140081EA8 xor     r10d, r10d
+0000000140081EAB sub     r10d, r8d
+0000000140081EAE mov     r8d, ecx
+0000000140081EB1 and     r8d, r10d
+0000000140081EB4 or      ecx, r10d
+0000000140081EB7 sub     ecx, r8d
+0000000140081EBA mov     r8d, ecx
+0000000140081EBD or      r8d, r9d
+0000000140081EC0 and     ecx, r9d
+0000000140081EC3 add     ecx, r8d
+0000000140081EC6 mov     [rsp+578h+var_3E4], ecx
+0000000140081ECD mov     r8d, ecx
+0000000140081ED0 xor     r8d, 0FFFFFFFFh
+0000000140081ED4 or      r8d, 0FFFFFFF8h
+0000000140081ED8 mov     r10d, ecx
+0000000140081EDB add     r10d, 7
+0000000140081EDF add     r10d, 1
+0000000140081EE3 add     r10d, r8d
+0000000140081EE6 mov     r9d, ecx
+0000000140081EE9 or      r9d, 7
+0000000140081EED mov     r8d, ecx
+0000000140081EF0 add     r8d, 7
+0000000140081EF4 sub     r8d, r9d
+0000000140081EF7 mov     r9d, r8d
+0000000140081EFA or      r9d, r10d
+0000000140081EFD and     r8d, r10d
+0000000140081F00 add     r8d, r9d
+0000000140081F03 mov     r9d, ecx
+0000000140081F06 xor     r9d, 0FFFFFFFFh
+0000000140081F0A or      r9d, 0FFFFFFF6h
+0000000140081F0E mov     r10d, ecx
+0000000140081F11 add     r10d, 9
+0000000140081F15 add     r10d, 1
+0000000140081F19 add     r10d, r9d
+0000000140081F1C mov     r9d, ecx
+0000000140081F1F or      r9d, 9
+0000000140081F23 add     ecx, 9
+0000000140081F26 sub     ecx, r9d
+0000000140081F29 mov     r9d, ecx
+0000000140081F2C or      r9d, r10d
+0000000140081F2F and     ecx, r10d
+0000000140081F32 add     ecx, r9d
+0000000140081F35 mov     [rsp+578h+var_30], r8d
+0000000140081F3D mov     dword ptr [rsp+578h+var_48], ecx
+0000000140081F44 mov     r10d, dword ptr [rsp+578h+var_48]
+0000000140081F4C mov     ecx, [rsp+578h+var_30]
+0000000140081F53 mov     r9d, r10d
+0000000140081F56 xor     r9d, 0FFFFFFFFh
+0000000140081F5A mov     r8d, ecx
+0000000140081F5D xor     r8d, 0FFFFFFFFh
+0000000140081F61 or      r8d, r9d
+0000000140081F64 mov     r9d, ecx
+0000000140081F67 add     r9d, r10d
+0000000140081F6A add     r9d, 1
+0000000140081F6E add     r9d, r8d
+0000000140081F71 mov     r8d, ecx
+0000000140081F74 or      r8d, r10d
+0000000140081F77 add     ecx, r10d
+0000000140081F7A sub     ecx, r8d
+0000000140081F7D mov     r8d, ecx
+0000000140081F80 or      r8d, r9d
+0000000140081F83 and     ecx, r9d
+0000000140081F86 add     ecx, r8d
+0000000140081F89 shr     edx, cl
+0000000140081F8B mov     ecx, eax
+0000000140081F8D or      ecx, edx
+0000000140081F8F mov     r8d, eax
+0000000140081F92 add     r8d, edx
+0000000140081F95 sub     r8d, ecx
+0000000140081F98 mov     r9d, edx
+0000000140081F9B xor     r9d, 0FFFFFFFFh
+0000000140081F9F mov     ecx, eax
+0000000140081FA1 xor     ecx, 0FFFFFFFFh
+0000000140081FA4 or      ecx, r9d
+0000000140081FA7 add     eax, edx
+0000000140081FA9 add     eax, 1
+0000000140081FAC add     eax, ecx
+0000000140081FAE xor     edx, edx
+0000000140081FB0 sub     edx, r8d
+0000000140081FB3 mov     ecx, eax
+0000000140081FB5 and     ecx, edx
+0000000140081FB7 shl     ecx, 1
+0000000140081FB9 xor     edx, edx
+0000000140081FBB sub     edx, r8d
+0000000140081FBE xor     eax, edx
+0000000140081FC0 add     eax, ecx
+0000000140081FC2 mov     [rsp+578h+var_18], eax
+0000000140081FC9 mov     rax, cs:off_1400AACA0
+0000000140081FD0 mov     rcx, 1005D9C35266434Bh
+0000000140081FDA sub     rax, rcx
+0000000140081FDD lea     rcx, [rsp+578h+var_368]
+0000000140081FE5 call    rax			; Unable to find target at 0x200BB387E4CE7196
+0000000140081FE7 mov     rcx, [rax]
+0000000140081FEA mov     rax, cs:off_1400B3018
+0000000140081FF1 mov     rdx, 0E18C33C0E3C678C4h
+0000000140081FFB sub     rax, rdx
+0000000140081FFE call    rax			; Unable to find target at 0xC318678307950528
+0000000140082000 mov     rcx, [rax]
+0000000140082003 mov     rax, cs:off_1400B80B8
+000000014008200A mov     rdx, 0BC259E90E01FAD17h
+0000000140082014 sub     rax, rdx
+0000000140082017 call    rax			; Unable to find target at 0x784B3D2300479E3E
+0000000140082019 mov     rax, [rax]
+000000014008201C mov     eax, [rax+10h]
+000000014008201F mov     [rsp+578h+var_3C8], eax
+0000000140082026 mov     rax, cs:off_1400B0018
+000000014008202D mov     rcx, 4283612C3D275C69h
+0000000140082037 sub     rax, rcx
+000000014008203A lea     rcx, [rsp+578h+var_1E8]
+0000000140082042 call    rax			; Unable to find target at 0x8506C259BA5713C2
+0000000140082044 mov     rcx, [rax]
+0000000140082047 mov     rax, cs:off_1400BB110
+000000014008204E mov     rdx, 0E434B970364B7F93h
+0000000140082058 sub     rax, rdx
+000000014008205B call    rax			; Unable to find target at 0xC86972E1AC99F166
+000000014008205D mov     rax, [rax]
+0000000140082060 mov     eax, [rax+10h]
+0000000140082063 mov     [rsp+578h+var_3CC], eax
+000000014008206A mov     eax, dword ptr [rsp+578h+var_48]
+0000000140082071 mov     [rsp+578h+var_3E0], eax
+0000000140082078 mov     rax, cs:off_1400A6328
+000000014008207F mov     rcx, 99F111DC38D206C9h
+0000000140082089 sub     rax, rcx
+000000014008208C lea     rcx, [rsp+578h+var_368]
+0000000140082094 call    rax			; Unable to find target at 0x33E223B9B1A5CF52
+0000000140082096 mov     rcx, [rax]
+0000000140082099 mov     rax, cs:off_1400B4108
+00000001400820A0 mov     rdx, 3DD05D1E743B84C1h
+00000001400820AA sub     rax, rdx
+00000001400820AD call    rax			; Unable to find target at 0x7BA0BA3E287F0C82
+00000001400820AF mov     rcx, [rax]
+00000001400820B2 mov     rax, cs:off_1400BE940
+00000001400820B9 mov     rdx, 57B356DFF03B6D43h
+00000001400820C3 sub     rax, rdx
+00000001400820C6 call    rax			; Unable to find target at 0xAF66ADC1207E8466
+00000001400820C8 mov     r8d, [rsp+578h+var_3E0]
+00000001400820D0 mov     rax, [rax]
+00000001400820D3 mov     ecx, [rax+10h]
+00000001400820D6 mov     [rsp+578h+var_3DC], ecx
+00000001400820DD mov     eax, r8d
+00000001400820E0 or      eax, ecx
+00000001400820E2 mov     r10d, r8d
+00000001400820E5 add     r10d, ecx
+00000001400820E8 sub     r10d, eax
+00000001400820EB mov     eax, ecx
+00000001400820ED xor     eax, 0FFFFFFFFh
+00000001400820F0 mov     edx, r8d
+00000001400820F3 xor     edx, 0FFFFFFFFh
+00000001400820F6 or      edx, eax
+00000001400820F8 mov     eax, r8d
+00000001400820FB add     eax, ecx
+00000001400820FD add     eax, 1
+0000000140082100 add     eax, edx
+0000000140082102 xor     r9d, r9d
+0000000140082105 sub     r9d, r10d
+0000000140082108 mov     edx, eax
+000000014008210A and     edx, r9d
+000000014008210D shl     edx, 1
+000000014008210F xor     r9d, r9d
+0000000140082112 sub     r9d, r10d
+0000000140082115 xor     eax, r9d
+0000000140082118 add     eax, edx
+000000014008211A mov     edx, ecx
+000000014008211C or      edx, r8d
+000000014008211F mov     r9d, ecx
+0000000140082122 add     r9d, r8d
+0000000140082125 sub     r9d, edx
+0000000140082128 mov     r10d, r8d
+000000014008212B xor     r10d, 0FFFFFFFFh
+000000014008212F mov     edx, ecx
+0000000140082131 xor     edx, 0FFFFFFFFh
+0000000140082134 or      edx, r10d
+0000000140082137 add     ecx, r8d
+000000014008213A add     ecx, 1
+000000014008213D add     ecx, edx
+000000014008213F xor     r8d, r8d
+0000000140082142 sub     r8d, r9d
+0000000140082145 mov     edx, ecx
+0000000140082147 and     edx, r8d
+000000014008214A shl     edx, 1
+000000014008214C xor     r8d, r8d
+000000014008214F sub     r8d, r9d
+0000000140082152 xor     ecx, r8d
+0000000140082155 add     ecx, edx
+0000000140082157 xor     r9d, r9d
+000000014008215A sub     r9d, ecx
+000000014008215D mov     r8d, eax
+0000000140082160 or      r8d, r9d
+0000000140082163 mov     edx, eax
+0000000140082165 add     edx, r9d
+0000000140082168 sub     edx, r8d
+000000014008216B shl     edx, 1
+000000014008216D xor     r8d, r8d
+0000000140082170 sub     r8d, ecx
+0000000140082173 mov     ecx, eax
+0000000140082175 and     ecx, r8d
+0000000140082178 or      eax, r8d
+000000014008217B sub     eax, ecx
+000000014008217D mov     ecx, eax
+000000014008217F or      ecx, edx
+0000000140082181 and     eax, edx
+0000000140082183 add     eax, ecx
+0000000140082185 mov     [rsp+578h+var_3D8], eax
+000000014008218C mov     ecx, eax
+000000014008218E xor     ecx, 0FFFFFFFFh
+0000000140082191 or      ecx, 0FFFFFFFEh
+0000000140082194 mov     r8d, eax
+0000000140082197 add     r8d, 1
+000000014008219B add     r8d, 1
+000000014008219F add     r8d, ecx
+00000001400821A2 mov     edx, eax
+00000001400821A4 or      edx, 1
+00000001400821A7 mov     ecx, eax
+00000001400821A9 add     ecx, 1
+00000001400821AC sub     ecx, edx
+00000001400821AE mov     edx, ecx
+00000001400821B0 or      edx, r8d
+00000001400821B3 and     ecx, r8d
+00000001400821B6 add     ecx, edx
+00000001400821B8 mov     [rsp+578h+var_3D4], ecx
+00000001400821BF mov     ecx, eax
+00000001400821C1 xor     ecx, 0FFFFFFFFh
+00000001400821C4 or      ecx, 0FFFFFFFDh
+00000001400821C7 mov     edx, eax
+00000001400821C9 add     edx, 2
+00000001400821CC add     edx, 1
+00000001400821CF add     edx, ecx
+00000001400821D1 mov     ecx, eax
+00000001400821D3 or      ecx, 2
+00000001400821D6 add     eax, 2
+00000001400821D9 sub     eax, ecx
+00000001400821DB mov     ecx, eax
+00000001400821DD or      ecx, edx
+00000001400821DF and     eax, edx
+00000001400821E1 add     eax, ecx
+00000001400821E3 mov     [rsp+578h+var_3D0], eax
+00000001400821EA mov     rax, cs:off_1400B12E8
+00000001400821F1 mov     rcx, 62D0E913E7FDC0D4h
+00000001400821FB sub     rax, rcx
+00000001400821FE lea     rcx, [rsp+578h+var_1E8]
+0000000140082206 call    rax			; Unable to find target at 0xC5A1D2290FFC5128
+0000000140082208 mov     r9d, [rsp+578h+var_3D4]
+0000000140082210 mov     ecx, [rsp+578h+var_3D0]
+0000000140082217 mov     r8d, [rsp+578h+var_3CC]
+000000014008221F mov     rdx, rax
+0000000140082222 mov     eax, [rsp+578h+var_3C8]
+0000000140082229 mov     rdx, [rdx]
+000000014008222C mov     [rdx+10h], r9d
+0000000140082230 mov     dword ptr [rsp+578h+var_48], ecx
+0000000140082237 mov     r10d, dword ptr [rsp+578h+var_48]
+000000014008223F mov     ecx, [rsp+578h+var_30]
+0000000140082246 mov     r9d, r10d
+0000000140082249 xor     r9d, 0FFFFFFFFh
+000000014008224D mov     edx, ecx
+000000014008224F xor     edx, 0FFFFFFFFh
+0000000140082252 or      edx, r9d
+0000000140082255 mov     r9d, ecx
+0000000140082258 add     r9d, r10d
+000000014008225B add     r9d, 1
+000000014008225F add     r9d, edx
+0000000140082262 mov     edx, ecx
+0000000140082264 or      edx, r10d
+0000000140082267 add     ecx, r10d
+000000014008226A sub     ecx, edx
+000000014008226C mov     edx, ecx
+000000014008226E or      edx, r9d
+0000000140082271 and     ecx, r9d
+0000000140082274 add     ecx, edx
+0000000140082276 shl     r8d, cl
+0000000140082279 mov     edx, r8d
+000000014008227C xor     edx, 0FFFFFFFFh
+000000014008227F mov     ecx, eax
+0000000140082281 xor     ecx, 0FFFFFFFFh
+0000000140082284 or      ecx, edx
+0000000140082286 mov     edx, eax
+0000000140082288 add     edx, r8d
+000000014008228B add     edx, 1
+000000014008228E add     edx, ecx
+0000000140082290 mov     ecx, eax
+0000000140082292 or      ecx, r8d
+0000000140082295 add     eax, r8d
+0000000140082298 sub     eax, ecx
+000000014008229A mov     ecx, eax
+000000014008229C or      ecx, edx
+000000014008229E and     eax, edx
+00000001400822A0 add     eax, ecx
+00000001400822A2 mov     [rsp+578h+var_18], eax
+00000001400822A9 mov     eax, [rsp+578h+var_18]
+00000001400822B0 mov     [rsp+578h+var_F8], eax
+00000001400822B7 mov     eax, [rsp+578h+var_18]
+00000001400822BE mov     [rsp+578h+var_F4], eax
+00000001400822C5 mov     eax, dword ptr [rsp+578h+var_48]
+00000001400822CC mov     [rsp+578h+var_3C4], eax
+00000001400822D3 mov     rax, cs:off_1400A2178
+00000001400822DA mov     rcx, 3496659EE3D09B0h
+00000001400822E4 sub     rax, rcx
+00000001400822E7 lea     rcx, [rsp+578h+var_368]
+00000001400822EF call    rax			; Unable to find target at 0x0692CCB51C7BDCC0
+00000001400822F1 mov     rcx, [rax]
+00000001400822F4 mov     rax, cs:off_1400C35A8
+00000001400822FB mov     rdx, 2B55D1033568F427h
+0000000140082305 sub     rax, rdx
+0000000140082308 call    rax			; Unable to find target at 0x56ABA207AAD3DE6E
+000000014008230A mov     rcx, [rax]
+000000014008230D mov     rax, cs:off_1400C0830
+0000000140082314 mov     rdx, 0E8F6E1AEBCCFF8F5h
+000000014008231E sub     rax, rdx
+0000000140082321 call    rax			; Unable to find target at 0xD1EDC35EB9A1CE8A
+0000000140082323 mov     r8d, [rsp+578h+var_3C4]
+000000014008232B mov     rax, [rax]
+000000014008232E mov     ecx, [rax+10h]
+0000000140082331 mov     [rsp+578h+var_3C0], ecx
+0000000140082338 mov     eax, r8d
+000000014008233B or      eax, ecx
+000000014008233D mov     r10d, r8d
+0000000140082340 add     r10d, ecx
+0000000140082343 sub     r10d, eax
+0000000140082346 mov     eax, ecx
+0000000140082348 xor     eax, 0FFFFFFFFh
+000000014008234B mov     edx, r8d
+000000014008234E xor     edx, 0FFFFFFFFh
+0000000140082351 or      edx, eax
+0000000140082353 mov     eax, r8d
+0000000140082356 add     eax, ecx
+0000000140082358 add     eax, 1
+000000014008235B add     eax, edx
+000000014008235D xor     r9d, r9d
+0000000140082360 sub     r9d, r10d
+0000000140082363 mov     edx, eax
+0000000140082365 and     edx, r9d
+0000000140082368 shl     edx, 1
+000000014008236A xor     r9d, r9d
+000000014008236D sub     r9d, r10d
+0000000140082370 xor     eax, r9d
+0000000140082373 add     eax, edx
+0000000140082375 mov     edx, ecx
+0000000140082377 or      edx, r8d
+000000014008237A mov     r9d, ecx
+000000014008237D add     r9d, r8d
+0000000140082380 sub     r9d, edx
+0000000140082383 mov     r10d, r8d
+0000000140082386 xor     r10d, 0FFFFFFFFh
+000000014008238A mov     edx, ecx
+000000014008238C xor     edx, 0FFFFFFFFh
+000000014008238F or      edx, r10d
+0000000140082392 add     ecx, r8d
+0000000140082395 add     ecx, 1
+0000000140082398 add     ecx, edx
+000000014008239A xor     r8d, r8d
+000000014008239D sub     r8d, r9d
+00000001400823A0 mov     edx, ecx
+00000001400823A2 and     edx, r8d
+00000001400823A5 shl     edx, 1
+00000001400823A7 xor     r8d, r8d
+00000001400823AA sub     r8d, r9d
+00000001400823AD xor     ecx, r8d
+00000001400823B0 add     ecx, edx
+00000001400823B2 xor     r9d, r9d
+00000001400823B5 sub     r9d, ecx
+00000001400823B8 mov     r8d, eax
+00000001400823BB or      r8d, r9d
+00000001400823BE mov     edx, eax
+00000001400823C0 add     edx, r9d
+00000001400823C3 sub     edx, r8d
+00000001400823C6 shl     edx, 1
+00000001400823C8 xor     r8d, r8d
+00000001400823CB sub     r8d, ecx
+00000001400823CE mov     ecx, eax
+00000001400823D0 and     ecx, r8d
+00000001400823D3 or      eax, r8d
+00000001400823D6 sub     eax, ecx
+00000001400823D8 mov     ecx, eax
+00000001400823DA or      ecx, edx
+00000001400823DC and     eax, edx
+00000001400823DE add     eax, ecx
+00000001400823E0 mov     [rsp+578h+var_3BC], eax
+00000001400823E7 mov     ecx, eax
+00000001400823E9 xor     ecx, 0FFFFFFFFh
+00000001400823EC or      ecx, 0FFFFFFFEh
+00000001400823EF mov     r8d, eax
+00000001400823F2 add     r8d, 1
+00000001400823F6 add     r8d, 1
+00000001400823FA add     r8d, ecx
+00000001400823FD mov     edx, eax
+00000001400823FF or      edx, 1
+0000000140082402 mov     ecx, eax
+0000000140082404 add     ecx, 1
+0000000140082407 sub     ecx, edx
+0000000140082409 mov     edx, ecx
+000000014008240B or      edx, r8d
+000000014008240E and     ecx, r8d
+0000000140082411 add     ecx, edx
+0000000140082413 mov     [rsp+578h+var_3B8], ecx
+000000014008241A mov     ecx, eax
+000000014008241C xor     ecx, 0FFFFFFFFh
+000000014008241F or      ecx, 0FFFFFFFCh
+0000000140082422 mov     edx, eax
+0000000140082424 add     edx, 3
+0000000140082427 add     edx, 1
+000000014008242A add     edx, ecx
+000000014008242C mov     ecx, eax
+000000014008242E or      ecx, 3
+0000000140082431 add     eax, 3
+0000000140082434 sub     eax, ecx
+0000000140082436 mov     ecx, eax
+0000000140082438 or      ecx, edx
+000000014008243A and     eax, edx
+000000014008243C add     eax, ecx
+000000014008243E mov     [rsp+578h+var_3B4], eax
+0000000140082445 mov     rax, cs:off_1400B54D8
+000000014008244C mov     rcx, 155DE0E4EE427CBEh
+0000000140082456 sub     rax, rcx
+0000000140082459 lea     rcx, [rsp+578h+var_1E8]
+0000000140082461 call    rax			; Unable to find target at 0x2ABBC1CB1C8C714C
+0000000140082463 mov     edx, [rsp+578h+var_3B8]
+000000014008246A mov     rcx, rax
+000000014008246D mov     eax, [rsp+578h+var_3B4]
+0000000140082474 mov     rcx, [rcx]
+0000000140082477 mov     [rcx+10h], edx
+000000014008247A mov     dword ptr [rsp+578h+var_48], eax
+0000000140082481 mov     rax, cs:off_1400B3E40
+0000000140082488 mov     rcx, 5F547363BA8040E5h
+0000000140082492 sub     rax, rcx
+0000000140082495 lea     rcx, [rsp+578h+var_368]
+000000014008249D call    rax			; Unable to find target at 0xBEA8E6C8B502587A
+000000014008249F mov     rcx, [rax]
+00000001400824A2 mov     rax, cs:off_1400BD410
+00000001400824A9 mov     rdx, 5B9202008F431B82h
+00000001400824B3 sub     rax, rdx
+00000001400824B6 call    rax			; Unable to find target at 0xB72404025E892994
+00000001400824B8 mov     rcx, [rax]
+00000001400824BB mov     rax, cs:off_1400A2660
+00000001400824C2 mov     rdx, 0DACF0AF72F3F2510h
+00000001400824CC sub     rax, rdx
+00000001400824CF call    rax			; Unable to find target at 0xB59E15EF9E81B040
+00000001400824D1 mov     rcx, [rax]
+00000001400824D4 mov     rax, cs:off_1400A80A8
+00000001400824DB mov     rdx, 0A75092A55E09A82h
+00000001400824E5 sub     rax, rdx
+00000001400824E8 call    rax			; Unable to find target at 0x14EA1255EBC2DAF4
+00000001400824EA mov     rax, [rax]
+00000001400824ED imul    rax, [rax+20h], 341B2E4Dh
+00000001400824F5 mov     ecx, 3B305E4Ch
+00000001400824FA xor     edx, edx
+00000001400824FC div     rcx
+00000001400824FF mov     rax, rdx
+0000000140082502 mov     rcx, rax
+0000000140082505 or      rcx, 0FFFFFFFFF4DA4BA8h
+000000014008250C mov     rdx, rax
+000000014008250F add     rdx, 0FFFFFFFFF4DA4BA8h
+0000000140082516 sub     rdx, rcx
+0000000140082519 shl     rdx, 1
+000000014008251C mov     rcx, rax
+000000014008251F and     rcx, 0FFFFFFFFF4DA4BA8h
+0000000140082526 or      rax, 0FFFFFFFFF4DA4BA8h
+000000014008252C sub     rax, rcx
+000000014008252F mov     rcx, rax
+0000000140082532 or      rcx, rdx
+0000000140082535 and     rax, rdx
+0000000140082538 add     rax, rcx
+000000014008253B mov     ecx, 3B305E4Ch
+0000000140082540 xor     edx, edx
+0000000140082542 div     rcx
+0000000140082545 mov     [rsp+578h+var_3B0], rdx
+000000014008254D mov     rax, cs:off_1400A1B58
+0000000140082554 mov     rcx, 0A00B9E53785E29B7h
+000000014008255E sub     rax, rcx
+0000000140082561 lea     rcx, [rsp+578h+var_1E8]
+0000000140082569 call    rax			; Unable to find target at 0x40173CA830C4CB0E
+000000014008256B mov     rcx, [rax]
+000000014008256E mov     rax, cs:off_1400B2C80
+0000000140082575 mov     rdx, 0ECE653000B838CABh
+000000014008257F sub     rax, rdx
+0000000140082582 call    rax			; Unable to find target at 0xD9CCA601570E8DF6
+0000000140082584 mov     rdx, [rsp+578h+var_3B0]
+000000014008258C mov     rax, [rax]
+000000014008258F mov     [rax+20h], rdx
+0000000140082593 mov     [rsp+578h+var_39C], 0A356BCC8h
+000000014008259E
+000000014008259E loc_14008259E:
+000000014008259E mov     eax, [rsp+578h+var_39C]
+00000001400825A5 mov     [rsp+578h+var_42C], eax
+00000001400825AC sub     eax, 0A356BCC8h
+00000001400825B1 jz      near ptr loc_14008264F+6
+00000001400825B7 jmp     short $+2
+00000001400825B9
+00000001400825B9 loc_1400825B9:
+00000001400825B9 mov     eax, [rsp+578h+var_42C]
+00000001400825C0 sub     eax, 0B9369287h
+00000001400825C5 jz      short loc_14008263C
+00000001400825C7 jmp     short $+2
+00000001400825C9
+00000001400825C9 loc_1400825C9:
+00000001400825C9 mov     eax, [rsp+578h+var_42C]
+00000001400825D0 sub     eax, 1BE22863h
+00000001400825D5 jz      loc_140082C65
+00000001400825DB jmp     short $+2
+00000001400825DD
+00000001400825DD loc_1400825DD:
+00000001400825DD mov     eax, [rsp+578h+var_42C]
+00000001400825E4 sub     eax, 31AA5FDAh
+00000001400825E9 jz      short loc_140082637
+00000001400825EB jmp     short $+2
+00000001400825ED
+00000001400825ED loc_1400825ED:
+00000001400825ED mov     eax, [rsp+578h+var_42C]
+00000001400825F4 sub     eax, 49BBE3FAh
+00000001400825F9 jz      short loc_140082632
+00000001400825FB jmp     short $+2
+00000001400825FD
+00000001400825FD loc_1400825FD:
+00000001400825FD mov     eax, [rsp+578h+var_42C]
+0000000140082604 sub     eax, 4A0D7292h
+0000000140082609 jz      short loc_14008262D
+000000014008260B jmp     short $+2
+000000014008260D
+000000014008260D loc_14008260D:
+000000014008260D mov     eax, [rsp+578h+var_42C]
+0000000140082614 sub     eax, 54E95098h
+0000000140082619 jz      short loc_140082646
+000000014008261B jmp     short $+2
+000000014008261D
+000000014008261D loc_14008261D:
+000000014008261D mov     eax, [rsp+578h+var_42C]
+0000000140082624 sub     eax, 66951443h
+0000000140082629 jz      short loc_140082641
+000000014008262B jmp     short loc_14008264B
+000000014008262D
+000000014008262D loc_14008262D:
+000000014008262D jmp     loc_1400836BC
+0000000140082632
+0000000140082632 loc_140082632:
+0000000140082632 jmp     loc_14008321A
+0000000140082637
+0000000140082637 loc_140082637:
+0000000140082637 jmp     loc_1400831DA
+000000014008263C
+000000014008263C loc_14008263C:
+000000014008263C jmp     loc_140082D70
+0000000140082641
+0000000140082641 loc_140082641:
+0000000140082641 jmp     loc_140082C41
+0000000140082646
+0000000140082646 loc_140082646:
+0000000140082646 jmp     loc_140082715
+000000014008264B
+000000014008264B loc_14008264B:
+000000014008264B nop
+000000014008264C icebp
+000000014008264D push    rdx
+000000014008264F
+000000014008264F loc_14008264F:
+000000014008264F mov     ds:58B48000014B6E9h, al
+0000000140082658 movsb
+0000000140082659 db 0Fh, 4, 0, 48h, 0B9h, 26h, 0DEh
+0000000140082660 dq 14815DA6C3F5C45h, 210248C8D48C8h, 8B48008B48D0FF00h
+0000000140082678 dq 140248489482040h, 3158F058B480000h, 0EAFC69CCB1B94800h
+0000000140082690 dq 8D48C801483C46BBh, 0D0FF00000360248Ch
+00000001400826A0 dq 140248C8B48h, 4810408B48008B48h, 58B48C1940FC829h
+00000001400826B8 dq 48C9B60F00033B0Ch, 7DAB75B848C80C8Dh
+00000001400826C8 dq 0C8B48DA92522EB3h, 75205E2E4FB84808h
+00000001400826D8 dq 2DAE7AB949F12DAAh, 450F4CA16A7A0797h
+00000001400826E8 dq 48D8F749C8894DC8h, 0CA8948C0094CC889h
+00000001400826F8 dq 214CC22948CA294Ch, 48C82948D20148C1h
+0000000140082708 dq 0D02148D10948C189h
+0000000140082710 add     rax, rcx
+0000000140082713 jmp     rax
+0000000140082715
+0000000140082715 loc_140082715:
+0000000140082715 mov     r8d, dword ptr [rsp+578h+var_48]
+000000014008271D mov     ecx, [rsp+578h+var_30]
+0000000140082724 mov     eax, r8d
+0000000140082727 not     eax
+0000000140082729 mov     r10d, ecx
+000000014008272C not     r10d
+000000014008272F or      r10d, eax
+0000000140082732 mov     eax, ecx
+0000000140082734 add     eax, r8d
+0000000140082737 mov     r9d, eax
+000000014008273A mov     edx, r10d
+000000014008273D lea     edx, [rdx+r9+1]
+0000000140082742 or      ecx, r8d
+0000000140082745 sub     eax, ecx
+0000000140082747 mov     ecx, eax
+0000000140082749 or      ecx, edx
+000000014008274B and     eax, edx
+000000014008274D add     eax, ecx
+000000014008274F mov     edx, [rsp+578h+var_F4]
+0000000140082756 mov     cl, al
+0000000140082758 shr     edx, cl
+000000014008275A mov     r9d, [rsp+578h+var_F8]
+0000000140082762 mov     ecx, r9d
+0000000140082765 or      ecx, edx
+0000000140082767 mov     eax, r9d
+000000014008276A add     eax, edx
+000000014008276C not     edx
+000000014008276E not     r9d
+0000000140082771 or      r9d, edx
+0000000140082774 mov     r8d, eax
+0000000140082777 mov     edx, r9d
+000000014008277A lea     edx, [rdx+r8+1]
+000000014008277F sub     ecx, eax
+0000000140082781 mov     eax, edx
+0000000140082783 and     eax, ecx
+0000000140082785 xor     edx, ecx
+0000000140082787 mov     ecx, eax
+0000000140082789 mov     eax, edx
+000000014008278B lea     eax, [rax+rcx*2]
+000000014008278E mov     [rsp+578h+var_18], eax
+0000000140082795 mov     eax, [rsp+578h+var_18]
+000000014008279C mov     dword ptr [rsp+578h+var_478], eax
+00000001400827A3 mov     eax, dword ptr [rsp+578h+var_48]
+00000001400827AA mov     [rsp+578h+var_488], eax
+00000001400827B1 mov     rax, cs:off_1400A93B8
+00000001400827B8 mov     rcx, 9DD477A3969E6F57h
+00000001400827C2 add     rax, rcx
+00000001400827C5 lea     rcx, [rsp+578h+var_368]
+00000001400827CD mov     [rsp+578h+var_448], rcx
+00000001400827D5 call    rax			; Junk call -> 0x000000014001E740		; mov     rax, rcx
+00000001400827D7 mov     rcx, [rax]
+00000001400827DA mov     rax, cs:off_1400C1F28
+00000001400827E1 mov     rdx, 0C4CA2688E44D4CEBh
+00000001400827EB add     rax, rdx
+00000001400827EE call    rax			; Junk call -> 0x0000000140036000		; mov     rax, rcx
+00000001400827F0 mov     r9d, [rsp+578h+var_488]
+00000001400827F8 mov     rax, [rax]
+00000001400827FB mov     edx, [rax+10h]
+00000001400827FE mov     ecx, r9d
+0000000140082801 or      ecx, edx
+0000000140082803 mov     eax, r9d
+0000000140082806 add     eax, edx
+0000000140082808 not     edx
+000000014008280A not     r9d
+000000014008280D or      r9d, edx
+0000000140082810 mov     r8d, eax
+0000000140082813 mov     edx, r9d
+0000000140082816 lea     edx, [rdx+r8+1]
+000000014008281B sub     ecx, eax
+000000014008281D mov     eax, edx
+000000014008281F and     eax, ecx
+0000000140082821 xor     edx, ecx
+0000000140082823 mov     ecx, eax
+0000000140082825 mov     eax, edx
+0000000140082827 lea     eax, [rax+rcx*2]
+000000014008282A mov     edx, eax
+000000014008282C neg     edx
+000000014008282E mov     r8d, eax
+0000000140082831 or      r8d, edx
+0000000140082834 mov     ecx, r8d
+0000000140082837 neg     ecx
+0000000140082839 and     eax, edx
+000000014008283B add     ecx, ecx
+000000014008283D sub     r8d, eax
+0000000140082840 mov     eax, r8d
+0000000140082843 or      eax, ecx
+0000000140082845 and     r8d, ecx
+0000000140082848 mov     ecx, r8d
+000000014008284B add     ecx, eax
+000000014008284D mov     r9d, ecx
+0000000140082850 not     r9d
+0000000140082853 mov     esi, r9d
+0000000140082856 or      esi, 0EF7B9F3Fh
+000000014008285C mov     edx, eax
+000000014008285E mov     eax, r8d
+0000000140082861 lea     r10d, [rax+rdx+108460C0h]
+0000000140082869 mov     r8d, ecx
+000000014008286C mov     r11d, esi
+000000014008286F lea     esi, [r11+r8+108460C1h]
+0000000140082877 mov     r11d, ecx
+000000014008287A or      r11d, 108460C0h
+0000000140082881 sub     r10d, r11d
+0000000140082884 mov     r11d, r10d
+0000000140082887 or      r11d, esi
+000000014008288A and     r10d, esi
+000000014008288D add     r10d, r11d
+0000000140082890 mov     [rsp+578h+var_484], r10d
+0000000140082898 or      r9d, 0E8AF7546h
+000000014008289F lea     eax, [rax+rdx+17508AB9h]
+00000001400828A6 mov     edx, r9d
+00000001400828A9 lea     edx, [rdx+r8+17508ABAh]
+00000001400828B1 or      ecx, 17508AB9h
+00000001400828B7 sub     eax, ecx
+00000001400828B9 mov     ecx, eax
+00000001400828BB or      ecx, edx
+00000001400828BD and     eax, edx
+00000001400828BF add     eax, ecx
+00000001400828C1 mov     [rsp+578h+var_480], eax
+00000001400828C8 mov     rax, cs:off_1400C17F8
+00000001400828CF mov     rcx, 0A45CA58742DDCDE1h
+00000001400828D9 add     rax, rcx
+00000001400828DC lea     rcx, [rsp+578h+var_1E8]
+00000001400828E4 mov     [rsp+578h+var_468], rcx
+00000001400828EC call    rax			; Junk call -> 0x000000014001E5A0		; mov     rax, rcx
+00000001400828EE mov     r8d, [rsp+578h+var_484]
+00000001400828F6 mov     rcx, [rsp+578h+var_468]
+00000001400828FE mov     rdx, rax
+0000000140082901 mov     eax, [rsp+578h+var_480]
+0000000140082908 mov     rdx, [rdx]
+000000014008290B mov     [rdx+10h], r8d
+000000014008290F mov     dword ptr [rsp+578h+var_48], eax
+0000000140082916 mov     eax, dword ptr [rsp+578h+var_48]
+000000014008291D mov     [rsp+578h+var_47C], eax
+0000000140082924 mov     rax, cs:off_1400B1130
+000000014008292B mov     rdx, 9A1DFD45C1ED3411h
+0000000140082935 add     rax, rdx
+0000000140082938 call    rax			; Junk call -> 0x000000014001D170		; mov     rax, rcx
+000000014008293A mov     r9d, [rsp+578h+var_47C]
+0000000140082942 mov     rcx, rax
+0000000140082945 mov     eax, dword ptr [rsp+578h+var_478]
+000000014008294C mov     rcx, [rcx]
+000000014008294F mov     edx, [rcx+10h]
+0000000140082952 mov     ecx, r9d
+0000000140082955 not     ecx
+0000000140082957 mov     r11d, edx
+000000014008295A not     r11d
+000000014008295D or      r11d, ecx
+0000000140082960 mov     ecx, edx
+0000000140082962 add     ecx, r9d
+0000000140082965 mov     r10d, ecx
+0000000140082968 mov     r8d, r11d
+000000014008296B lea     r8d, [r8+r10+1]
+0000000140082970 or      edx, r9d
+0000000140082973 sub     ecx, edx
+0000000140082975 mov     edx, ecx
+0000000140082977 or      edx, r8d
+000000014008297A and     ecx, r8d
+000000014008297D add     ecx, edx
+000000014008297F imul    eax, ecx
+0000000140082982 mov     dword ptr [rsp+578h+var_478+4], eax
+0000000140082989 mov     rax, cs:off_1400AF230
+0000000140082990 mov     rcx, 0C0D26235EFA708E6h
+000000014008299A add     rax, rcx
+000000014008299D lea     rcx, [rsp+578h+var_D8]
+00000001400829A5 mov     [rsp+578h+var_470], rcx
+00000001400829AD call    rax			; Junk call -> sub_140080140		; mov     rax, rcx
+00000001400829AF mov     edx, dword ptr [rsp+578h+var_478+4]
+00000001400829B6 mov     rcx, [rsp+578h+var_470]
+00000001400829BE mov     rax, [rax]
+00000001400829C1 mov     [rax+10h], edx
+00000001400829C4 mov     rax, cs:off_1400B7D70
+00000001400829CB mov     rdx, 7D69C005EE0DF21Dh
+00000001400829D5 add     rax, rdx
+00000001400829D8 call    rax			; Junk call -> 0x000000014001DD00		; mov     rax, rcx
+00000001400829DA mov     rcx, [rsp+578h+var_468]
+00000001400829E2 mov     rax, [rax]
+00000001400829E5 mov     eax, [rax+10h]
+00000001400829E8 mov     [rsp+578h+var_F0], eax
+00000001400829EF mov     rax, cs:off_1400AB030
+00000001400829F6 mov     rdx, 0FD6BC6AB9DBC32D8h
+0000000140082A00 add     rax, rdx
+0000000140082A03 call    rax			; Junk call -> 0x0000000140076400		; mov     rax, rcx
+0000000140082A05 mov     rcx, [rax]
+0000000140082A08 mov     rax, cs:off_1400BF9E8
+0000000140082A0F mov     rdx, 525BA8DB7B4AAF5Fh
+0000000140082A19 add     rax, rdx
+0000000140082A1C call    rax			; Junk call -> 0x0000000140001AE0		; mov     rax, rcx
+0000000140082A1E mov     rcx, [rsp+578h+var_448]
+0000000140082A26 mov     rax, [rax]
+0000000140082A29 mov     eax, [rax+10h]
+0000000140082A2C mov     [rsp+578h+var_EC], eax
+0000000140082A33 mov     r10d, dword ptr [rsp+578h+var_48]
+0000000140082A3B mov     r8d, [rsp+578h+var_30]
+0000000140082A43 mov     edx, r10d
+0000000140082A46 or      edx, r8d
+0000000140082A49 mov     eax, r10d
+0000000140082A4C add     eax, r8d
+0000000140082A4F not     r8d
+0000000140082A52 not     r10d
+0000000140082A55 or      r10d, r8d
+0000000140082A58 mov     r9d, eax
+0000000140082A5B mov     r8d, r10d
+0000000140082A5E lea     r8d, [r8+r9+1]
+0000000140082A63 sub     edx, eax
+0000000140082A65 mov     eax, r8d
+0000000140082A68 and     eax, edx
+0000000140082A6A xor     r8d, edx
+0000000140082A6D mov     edx, eax
+0000000140082A6F mov     eax, r8d
+0000000140082A72 lea     eax, [rax+rdx*2]
+0000000140082A75 mov     [rsp+578h+var_E8], eax
+0000000140082A7C mov     [rsp+578h+var_E4], eax
+0000000140082A83 mov     rax, [rsp+578h+var_70]
+0000000140082A8B imul    r8, rax, 329E550Ch
+0000000140082A92 mov     rax, r8
+0000000140082A95 shr     rax, 2
+0000000140082A99 mov     rdx, 114CEF8539690B99h
+0000000140082AA3 mov     [rsp+578h+var_460], rdx
+0000000140082AAB mul     rdx
+0000000140082AAE mov     rax, rdx
+0000000140082AB1 mov     rdx, [rsp+578h+var_460]
+0000000140082AB9 shr     rax, 18h
+0000000140082ABD imul    rax, 3B305E4Ch
+0000000140082AC4 sub     r8, rax
+0000000140082AC7 mov     rax, r8
+0000000140082ACA or      rax, 0FFFFFFFFC992D3D5h
+0000000140082AD0 mov     r10d, eax
+0000000140082AD3 mov     r9d, r8d
+0000000140082AD6 sub     r9d, r10d
+0000000140082AD9 add     r9d, r9d
+0000000140082ADC and     r8d, 992D3D4h
+0000000140082AE3 add     r9, 0FFFFFFFF9325A7AAh
+0000000140082AEA sub     rax, r8
+0000000140082AED mov     r8, rax
+0000000140082AF0 or      r8, r9
+0000000140082AF3 and     rax, r9
+0000000140082AF6 add     rax, r8
+0000000140082AF9 mov     [rsp+578h+var_458], rax
+0000000140082B01 shr     rax, 2
+0000000140082B05 mul     rdx
+0000000140082B08 mov     rax, [rsp+578h+var_458]
+0000000140082B10 shr     rdx, 18h
+0000000140082B14 imul    rdx, 3B305E4Ch
+0000000140082B1B sub     rax, rdx
+0000000140082B1E mov     [rsp+578h+var_450], rax
+0000000140082B26 mov     rax, cs:off_1400A3338
+0000000140082B2D mov     rdx, 22AE3ED8A2B59010h
+0000000140082B37 add     rax, rdx
+0000000140082B3A call    rax			; Junk call -> 0x0000000140083C40		; mov     rax, rcx
+0000000140082B3C mov     rdx, [rsp+578h+var_450]
+0000000140082B44 mov     rcx, [rsp+578h+var_448]
+0000000140082B4C mov     rax, [rax]
+0000000140082B4F mov     [rax+20h], rdx
+0000000140082B53 mov     rax, cs:off_1400B25F0
+0000000140082B5A mov     rdx, 9C50D853ED693AB8h
+0000000140082B64 add     rax, rdx
+0000000140082B67 call    rax			; Junk call -> 0x0000000140072350		; mov     rax, rcx
+0000000140082B69 mov     rcx, [rsp+578h+var_448]
+0000000140082B71 mov     rax, [rax]
+0000000140082B74 mov     rax, [rax+20h]
+0000000140082B78 mov     [rsp+578h+var_440], rax
+0000000140082B80 mov     rax, cs:off_1400A3898
+0000000140082B87 mov     rdx, 0F58F5EE9CE92E098h
+0000000140082B91 add     rax, rdx
+0000000140082B94 call    rax			; Junk call -> sub_14005E960		; mov     rax, rcx
+0000000140082B96 mov     rcx, [rax]
+0000000140082B99 mov     rax, cs:off_1400B61E8
+0000000140082BA0 mov     rdx, 0CEC7B25535541AF0h
+0000000140082BAA add     rax, rdx
+0000000140082BAD call    rax			; Junk call -> 0x0000000140080280		; mov     rax, rcx
+0000000140082BAF mov     rcx, [rax]
+0000000140082BB2 mov     rax, cs:off_1400ABF48
+0000000140082BB9 mov     rdx, 0BE2B6C7A3181CDA0h
+0000000140082BC3 add     rax, rdx
+0000000140082BC6 call    rax			; Junk call -> sub_140077E50		; mov     rax, rcx
+0000000140082BC8 mov     rcx, [rsp+578h+var_440]
+0000000140082BD0 mov     rax, [rax]
+0000000140082BD3 mov     rax, [rax+10h]
+0000000140082BD7 sub     rax, rcx
+0000000140082BDA setz    al
+0000000140082BDD movzx   ecx, al
+0000000140082BE0 mov     rax, 0F12DAA75205E2E4Fh
+0000000140082BEA mov     r9, 0B551521857523DD2h
+0000000140082BF4 cmovnz  r9, rax
+0000000140082BF8 shl     ecx, 4
+0000000140082BFB mov     rax, cs:off_1400ABB68
+0000000140082C02 lea     rcx, [rax+rcx+8]
+0000000140082C07 mov     rax, 7E1C8305FDD8986Ch
+0000000140082C11 mov     rcx, [rax+rcx]
+0000000140082C15 mov     r8, r9
+0000000140082C18 neg     r8
+0000000140082C1B mov     rax, rcx
+0000000140082C1E or      rax, r8
+0000000140082C21 mov     rdx, rcx
+0000000140082C24 sub     rdx, r9
+0000000140082C27 sub     rdx, rax
+0000000140082C2A and     rcx, r8
+0000000140082C2D add     rdx, rdx
+0000000140082C30 sub     rax, rcx
+0000000140082C33 mov     rcx, rax
+0000000140082C36 or      rcx, rdx
+0000000140082C39 and     rax, rdx
+0000000140082C3C add     rax, rcx
+0000000140082C3F jmp     rax
+0000000140082C41
+0000000140082C41 loc_140082C41:
+0000000140082C41 mov     [rsp+578h+var_39C], 1BE22875h
+0000000140082C4C mov     eax, [rsp+578h+var_39C]
+0000000140082C53 xor     eax, 4Ch
+0000000140082C56 add     eax, 2Ah ; '*'
+0000000140082C59 mov     [rsp+578h+var_39C], eax
+0000000140082C60 jmp     loc_140083B0B
+0000000140082C65
+0000000140082C65 loc_140082C65:
+0000000140082C65 mov     rax, cs:off_1400BDD28
+0000000140082C6C mov     rcx, 8E406D0E6E1BE85Fh
+0000000140082C76 add     rax, rcx
+0000000140082C79 lea     rcx, [rsp+578h+var_1E8]
+0000000140082C81 call    rax			; Junk call -> 0x00000001400779F0		; mov     rax, rcx
+0000000140082C83 mov     rcx, [rax]
+0000000140082C86 mov     rax, cs:off_1400C4D28
+0000000140082C8D mov     rdx, 0F695EF1F933387D3h
+0000000140082C97 add     rax, rdx
+0000000140082C9A call    rax			; Junk call -> 0x000000014001CF20		; mov     rax, rcx
+0000000140082C9C mov     rax, [rax]
+0000000140082C9F mov     rax, [rax+20h]
+0000000140082CA3 mov     [rsp+578h+var_490], rax
+0000000140082CAB mov     rax, cs:off_1400ABE90
+0000000140082CB2 mov     rcx, 9844DD223AFB0642h
+0000000140082CBC add     rax, rcx
+0000000140082CBF lea     rcx, [rsp+578h+var_368]
+0000000140082CC7 call    rax			; Junk call -> sub_14002F660		; mov     rax, rcx
+0000000140082CC9 mov     rcx, [rax]
+0000000140082CCC mov     rax, cs:off_1400B15C0
+0000000140082CD3 mov     rdx, 94581A287DA84F43h
+0000000140082CDD add     rax, rdx
+0000000140082CE0 call    rax			; Junk call -> 0x0000000140084700		; mov     rax, rcx
+0000000140082CE2 mov     rcx, [rax]
+0000000140082CE5 mov     rax, cs:off_1400B6238
+0000000140082CEC mov     rdx, 0EDC3F272730C8F8Eh
+0000000140082CF6 add     rax, rdx
+0000000140082CF9 call    rax			; Junk call -> sub_1400853F0		; mov     rax, rcx
+0000000140082CFB mov     rcx, [rsp+578h+var_490]
+0000000140082D03 mov     rax, [rax]
+0000000140082D06 mov     rax, [rax+10h]
+0000000140082D0A sub     rax, rcx
+0000000140082D0D setnz   cl
+0000000140082D10 mov     rax, cs:off_1400C58A8
+0000000140082D17 movzx   ecx, cl
+0000000140082D1A lea     rcx, [rax+rcx*8]
+0000000140082D1E mov     rax, 9491DC99AC32C941h
+0000000140082D28 mov     rcx, [rax+rcx]
+0000000140082D2C mov     rax, 6D0A2269B1B1FBB3h
+0000000140082D36 mov     r9, 53364871181BA3E8h
+0000000140082D40 cmovz   r9, rax
+0000000140082D44 mov     r8, r9
+0000000140082D47 neg     r8
+0000000140082D4A mov     rax, rcx
+0000000140082D4D or      rax, r8
+0000000140082D50 mov     rdx, rcx
+0000000140082D53 sub     rdx, r9
+0000000140082D56 sub     rdx, rax
+0000000140082D59 and     rcx, r8
+0000000140082D5C add     rdx, rdx
+0000000140082D5F sub     rax, rcx
+0000000140082D62 mov     rcx, rax
+0000000140082D65 or      rcx, rdx
+0000000140082D68 and     rax, rdx
+0000000140082D6B add     rax, rcx
+0000000140082D6E jmp     rax
+0000000140082D70
+0000000140082D70 loc_140082D70:
+0000000140082D70 mov     r9d, [rsp+578h+var_E4]
+0000000140082D78 mov     eax, [rsp+578h+var_E8]
+0000000140082D7F mov     edx, r9d
+0000000140082D82 neg     edx
+0000000140082D84 mov     r8d, eax
+0000000140082D87 or      r8d, edx
+0000000140082D8A mov     ecx, eax
+0000000140082D8C sub     ecx, r9d
+0000000140082D8F sub     ecx, r8d
+0000000140082D92 and     eax, edx
+0000000140082D94 add     ecx, ecx
+0000000140082D96 sub     r8d, eax
+0000000140082D99 mov     eax, r8d
+0000000140082D9C or      eax, ecx
+0000000140082D9E and     r8d, ecx
+0000000140082DA1 mov     ecx, r8d
+0000000140082DA4 add     ecx, eax
+0000000140082DA6 mov     r9d, ecx
+0000000140082DA9 not     r9d
+0000000140082DAC mov     esi, r9d
+0000000140082DAF or      esi, 0FFFFFFFDh
+0000000140082DB2 mov     edx, eax
+0000000140082DB4 mov     eax, r8d
+0000000140082DB7 lea     r10d, [rax+rdx+2]
+0000000140082DBC mov     r8d, ecx
+0000000140082DBF mov     r11d, esi
+0000000140082DC2 lea     esi, [r11+r8+3]
+0000000140082DC7 mov     r11d, ecx
+0000000140082DCA or      r11d, 2
+0000000140082DCE sub     r10d, r11d
+0000000140082DD1 mov     r11d, r10d
+0000000140082DD4 or      r11d, esi
+0000000140082DD7 and     r10d, esi
+0000000140082DDA add     r10d, r11d
+0000000140082DDD mov     [rsp+578h+var_4C8], r10d
+0000000140082DE5 or      r9d, 0FFFFFFF2h
+0000000140082DE9 lea     eax, [rax+rdx+0Dh]
+0000000140082DED mov     edx, r9d
+0000000140082DF0 lea     edx, [rdx+r8+0Eh]
+0000000140082DF5 or      ecx, 0Dh
+0000000140082DF8 sub     eax, ecx
+0000000140082DFA mov     ecx, eax
+0000000140082DFC or      ecx, edx
+0000000140082DFE and     eax, edx
+0000000140082E00 add     eax, ecx
+0000000140082E02 mov     [rsp+578h+var_4C4], eax
+0000000140082E09 mov     rax, cs:off_1400AB7F0
+0000000140082E10 mov     rcx, 647FD55F664E94ACh
+0000000140082E1A add     rax, rcx
+0000000140082E1D lea     rcx, [rsp+578h+var_1E8]
+0000000140082E25 call    rax			; Junk call -> 0x0000000140085680		; mov     rax, rcx
+0000000140082E27 mov     edx, [rsp+578h+var_4C8]
+0000000140082E2E mov     rcx, rax
+0000000140082E31 mov     eax, [rsp+578h+var_4C4]
+0000000140082E38 mov     rcx, [rcx]
+0000000140082E3B mov     [rcx+10h], edx
+0000000140082E3E mov     dword ptr [rsp+578h+var_48], eax
+0000000140082E45 mov     r8d, dword ptr [rsp+578h+var_48]
+0000000140082E4D mov     ecx, [rsp+578h+var_30]
+0000000140082E54 mov     eax, r8d
+0000000140082E57 not     eax
+0000000140082E59 mov     r10d, ecx
+0000000140082E5C not     r10d
+0000000140082E5F or      r10d, eax
+0000000140082E62 mov     eax, ecx
+0000000140082E64 add     eax, r8d
+0000000140082E67 mov     r9d, eax
+0000000140082E6A mov     edx, r10d
+0000000140082E6D lea     edx, [rdx+r9+1]
+0000000140082E72 or      ecx, r8d
+0000000140082E75 sub     eax, ecx
+0000000140082E77 mov     ecx, eax
+0000000140082E79 or      ecx, edx
+0000000140082E7B and     eax, edx
+0000000140082E7D add     eax, ecx
+0000000140082E7F mov     edx, [rsp+578h+var_EC]
+0000000140082E86 mov     cl, al
+0000000140082E88 shr     edx, cl
+0000000140082E8A mov     r9d, [rsp+578h+var_F0]
+0000000140082E92 mov     ecx, r9d
+0000000140082E95 or      ecx, edx
+0000000140082E97 mov     eax, r9d
+0000000140082E9A add     eax, edx
+0000000140082E9C not     edx
+0000000140082E9E not     r9d
+0000000140082EA1 or      r9d, edx
+0000000140082EA4 mov     r8d, eax
+0000000140082EA7 mov     edx, r9d
+0000000140082EAA lea     edx, [rdx+r8+1]
+0000000140082EAF sub     ecx, eax
+0000000140082EB1 mov     eax, edx
+0000000140082EB3 and     eax, ecx
+0000000140082EB5 xor     edx, ecx
+0000000140082EB7 mov     ecx, eax
+0000000140082EB9 mov     eax, edx
+0000000140082EBB lea     eax, [rax+rcx*2]
+0000000140082EBE mov     [rsp+578h+var_18], eax
+0000000140082EC5 mov     eax, [rsp+578h+var_18]
+0000000140082ECC mov     [rsp+578h+var_4B0], eax
+0000000140082ED3 mov     r9d, dword ptr [rsp+578h+var_48]
+0000000140082EDB mov     edx, [rsp+578h+var_30]
+0000000140082EE2 mov     ecx, r9d
+0000000140082EE5 or      ecx, edx
+0000000140082EE7 mov     eax, r9d
+0000000140082EEA add     eax, edx
+0000000140082EEC not     edx
+0000000140082EEE not     r9d
+0000000140082EF1 or      r9d, edx
+0000000140082EF4 mov     r8d, eax
+0000000140082EF7 mov     edx, r9d
+0000000140082EFA lea     edx, [rdx+r8+1]
+0000000140082EFF sub     ecx, eax
+0000000140082F01 mov     eax, edx
+0000000140082F03 and     eax, ecx
+0000000140082F05 xor     edx, ecx
+0000000140082F07 mov     ecx, eax
+0000000140082F09 mov     eax, edx
+0000000140082F0B lea     eax, [rax+rcx*2]
+0000000140082F0E mov     edx, eax
+0000000140082F10 neg     edx
+0000000140082F12 mov     r8d, eax
+0000000140082F15 or      r8d, edx
+0000000140082F18 mov     ecx, r8d
+0000000140082F1B neg     ecx
+0000000140082F1D and     eax, edx
+0000000140082F1F add     ecx, ecx
+0000000140082F21 sub     r8d, eax
+0000000140082F24 mov     eax, r8d
+0000000140082F27 or      eax, ecx
+0000000140082F29 and     r8d, ecx
+0000000140082F2C mov     ecx, r8d
+0000000140082F2F add     ecx, eax
+0000000140082F31 mov     r9d, ecx
+0000000140082F34 not     r9d
+0000000140082F37 or      r9d, 0FFFFFFFDh
+0000000140082F3B mov     edx, eax
+0000000140082F3D mov     eax, r8d
+0000000140082F40 lea     eax, [rax+rdx+2]
+0000000140082F44 mov     r8d, ecx
+0000000140082F47 mov     edx, r9d
+0000000140082F4A lea     edx, [rdx+r8+3]
+0000000140082F4F or      ecx, 2
+0000000140082F52 sub     eax, ecx
+0000000140082F54 mov     ecx, eax
+0000000140082F56 or      ecx, edx
+0000000140082F58 and     eax, edx
+0000000140082F5A add     eax, ecx
+0000000140082F5C mov     [rsp+578h+var_4B8], eax
+0000000140082F63 mov     rax, cs:off_1400A8A68
+0000000140082F6A mov     rcx, 4837EDE969B8790Eh
+0000000140082F74 add     rax, rcx
+0000000140082F77 lea     rcx, [rsp+578h+var_368]
+0000000140082F7F mov     [rsp+578h+var_4C0], rcx
+0000000140082F87 call    rax			; Junk call -> sub_1400797A0		; mov     rax, rcx
+0000000140082F89 mov     rcx, [rax]
+0000000140082F8C mov     rax, cs:off_1400AAE80
+0000000140082F93 mov     rdx, 0C50F83CC9B897433h
+0000000140082F9D add     rax, rdx
+0000000140082FA0 call    rax			; Junk call -> sub_1400771B0		; mov     rax, rcx
+0000000140082FA2 mov     rcx, [rax]
+0000000140082FA5 mov     rax, cs:off_1400AF3B8
+0000000140082FAC mov     rdx, 0BC1498CEA67F68B8h
+0000000140082FB6 add     rax, rdx
+0000000140082FB9 call    rax			; Junk call -> 0x0000000140001910		; mov     rax, rcx
+0000000140082FBB mov     rcx, [rsp+578h+var_4C0]
+0000000140082FC3 mov     rdx, rax
+0000000140082FC6 mov     eax, [rsp+578h+var_4B8]
+0000000140082FCD mov     rdx, [rdx]
+0000000140082FD0 mov     [rdx+10h], eax4
+0000000140082FD3 mov     dword ptr [rsp+578h+var_48], eax
+0000000140082FDA mov     eax, dword ptr [rsp+578h+var_48]
+0000000140082FE1 mov     [rsp+578h+var_4B4], eax
+0000000140082FE8 mov     rax, cs:off_1400C4410
+0000000140082FEF mov     rdx, 0E9EAB79E1D9941A1h
+0000000140082FF9 add     rax, rdx
+0000000140082FFC call    rax			; Junk call -> 0x0000000140011C60		; mov     rax, rcx
+0000000140082FFE mov     rcx, [rax]
+0000000140083001 mov     rax, cs:off_1400A59D0
+0000000140083008 mov     rdx, 0EE411C71D2524242h
+0000000140083012 add     rax, rdx
+0000000140083015 call    rax			; Junk call -> 0x000000014005C4D0		; mov     rax, rcx
+0000000140083017 mov     r9d, [rsp+578h+var_4B4]
+000000014008301F mov     rcx, rax
+0000000140083022 mov     eax, [rsp+578h+var_4B0]
+0000000140083029 mov     rcx, [rcx]
+000000014008302C mov     edx, [rcx+10h]
+000000014008302F mov     ecx, r9d
+0000000140083032 not     ecx
+0000000140083034 mov     r11d, edx
+0000000140083037 not     r11d
+000000014008303A or      r11d, ecx
+000000014008303D mov     ecx, edx
+000000014008303F add     ecx, r9d
+0000000140083042 mov     r10d, ecx
+0000000140083045 mov     r8d, r11d
+0000000140083048 lea     r8d, [r8+r10+1]
+000000014008304D or      edx, r9d
+0000000140083050 sub     ecx, edx
+0000000140083052 mov     edx, ecx
+0000000140083054 or      edx, r8d
+0000000140083057 and     ecx, r8d
+000000014008305A add     ecx, edx
+000000014008305C shr     eax, cl
+000000014008305E mov     [rsp+578h+var_4AC], eax
+0000000140083065 mov     rax, cs:off_1400A4EF8
+000000014008306C mov     rcx, 98B5D89583874C13h
+0000000140083076 add     rax, rcx
+0000000140083079 lea     rcx, [rsp+578h+var_D8]
+0000000140083081 mov     [rsp+578h+var_4A8], rcx
+0000000140083089 call    rax			; Junk call -> sub_14007B550		; mov     rax, rcx
+000000014008308B mov     edx, [rsp+578h+var_4AC]
+0000000140083092 mov     rcx, [rsp+578h+var_4A8]
+000000014008309A mov     rax, [rax]
+000000014008309D mov     [rax+10h], edx
+00000001400830A0 mov     rax, cs:off_1400C4FA8
+00000001400830A7 mov     rdx, 631555D4394B9B3Eh
+00000001400830B1 add     rax, rdx
+00000001400830B4 call    rax			; Junk call -> sub_1400808B0		; mov     rax, rcx
+00000001400830B6 mov     rax, [rax]
+00000001400830B9 mov     eax, [rax+10h]
+00000001400830BC mov     [rsp+578h+var_E0], rax
+00000001400830C4 mov     rax, [rsp+578h+var_70]
+00000001400830CC imul    rax, 0BEEF398h
+00000001400830D3 mov     [rsp+578h+var_4A0], rax
+00000001400830DB shr     rax, 2
+00000001400830DF mov     rcx, 114CEF8539690B99h
+00000001400830E9 mul     rcx
+00000001400830EC mov     rax, rdx
+00000001400830EF mov     rdx, [rsp+578h+var_4A0]
+00000001400830F7 shr     rax, 18h
+00000001400830FB imul    rax, 3B305E4Ch
+0000000140083102 sub     rdx, rax
+0000000140083105 mov     rax, rdx
+0000000140083108 or      rax, 0FFFFFFFFF8673555h
+000000014008310E mov     r9d, eax
+0000000140083111 mov     r8d, edx
+0000000140083114 sub     r8d, r9d
+0000000140083117 add     r8d, r8d
+000000014008311A and     edx, 38673554h
+0000000140083120 add     r8, 0FFFFFFFFF0CE6AAAh
+0000000140083127 sub     rax, rdx
+000000014008312A mov     rdx, rax
+000000014008312D or      rdx, r8
+0000000140083130 and     rax, r8
+0000000140083133 add     rax, rdx
+0000000140083136 mov     [rsp+578h+var_498], rax
+000000014008313E shr     rax, 2
+0000000140083142 mul     rcx
+0000000140083145 mov     rax, [rsp+578h+var_498]
+000000014008314D shr     rdx, 18h
+0000000140083151 imul    rcx, rdx, 3B305E4Ch
+0000000140083158 sub     rax, rcx
+000000014008315B mov     [rsp+578h+var_70], rax
+0000000140083163 mov     rcx, [rsp+578h+var_70]
+000000014008316B mov     rax, [rsp+578h+var_98]
+0000000140083173 sub     rax, rcx
+0000000140083176 setz    cl
+0000000140083179 mov     rax, cs:off_1400B1ED8
+0000000140083180 movzx   ecx, cl
+0000000140083183 lea     rcx, [rax+rcx*8+30h]
+0000000140083188 mov     rax, 3195EE96AC4F233Eh
+0000000140083192 mov     rcx, [rax+rcx]
+0000000140083196 mov     rax, 3AC042CD21EC7F77h
+00000001400831A0 mov     r9, 53364871181BA3E8h
+00000001400831AA cmovz   r9, rax
+00000001400831AE mov     r8, r9
+00000001400831B1 neg     r8
+00000001400831B4 mov     rax, rcx
+00000001400831B7 or      rax, r8
+00000001400831BA mov     rdx, rcx
+00000001400831BD sub     rdx, r9
+00000001400831C0 sub     rdx, rax
+00000001400831C3 and     rcx, r8
+00000001400831C6 add     rdx, rdx
+00000001400831C9 sub     rax, rcx
+00000001400831CC mov     rcx, rax
+00000001400831CF or      rcx, rdx
+00000001400831D2 and     rax, rdx
+00000001400831D5 add     rax, rcx
+00000001400831D8 jmp     rax
+00000001400831DA
+00000001400831DA loc_1400831DA:
+00000001400831DA mov     rax, cs:off_1400A1158
+00000001400831E1 mov     rcx, 0C39C7BCA83AB66A3h
+00000001400831EB sub     rax, rcx
+00000001400831EE mov     rcx, [rax]
+00000001400831F1 mov     rax, cs:off_1400C1B10
+00000001400831F8 mov     rdx, 60656C99E9C3CADDh
+0000000140083202 sub     rax, rdx
+0000000140083205 mov     [rax], rcx
+0000000140083208 mov     rax, [rsp+578h+var_E0]
+0000000140083210 add     rsp, 568h
+0000000140083217 pop     rdi
+0000000140083218 pop     rsi
+0000000140083219 retn
+000000014008321A
+000000014008321A loc_14008321A:
+000000014008321A mov     r8d, dword ptr [rsp+578h+var_48]
+0000000140083222 mov     ecx, [rsp+578h+var_30]
+0000000140083229 mov     eax, r8d
+000000014008322C not     eax
+000000014008322E mov     r10d, ecx
+0000000140083231 not     r10d
+0000000140083234 or      r10d, eax
+0000000140083237 mov     eax, ecx
+0000000140083239 add     eax, r8d
+000000014008323C mov     r9d, eax
+000000014008323F mov     edx, r10d
+0000000140083242 lea     edx, [rdx+r9+1]
+0000000140083247 or      ecx, r8d
+000000014008324A sub     eax, ecx
+000000014008324C mov     ecx, eax
+000000014008324E or      ecx, edx
+0000000140083250 and     eax, edx
+0000000140083252 add     eax, ecx
+0000000140083254 mov     edx, [rsp+578h+var_F4]
+000000014008325B mov     cl, al
+000000014008325D shr     edx, cl
+000000014008325F mov     r9d, [rsp+578h+var_F8]
+0000000140083267 mov     ecx, r9d
+000000014008326A or      ecx, edx
+000000014008326C mov     eax, r9d
+000000014008326F add     eax, edx
+0000000140083271 not     edx
+0000000140083273 not     r9d
+0000000140083276 or      r9d, edx
+0000000140083279 mov     r8d, eax
+000000014008327C mov     edx, r9d
+000000014008327F lea     edx, [rdx+r8+1]
+0000000140083284 sub     ecx, eax
+0000000140083286 mov     eax, edx
+0000000140083288 and     eax, ecx
+000000014008328A xor     edx, ecx
+000000014008328C mov     ecx, eax
+000000014008328E mov     eax, edx
+0000000140083290 lea     eax, [rax+rcx*2]
+0000000140083293 mov     [rsp+578h+var_508], eax
+0000000140083297 mov     rax, cs:off_1400B9FE0
+000000014008329E mov     rcx, 48DB48DC23BECB81h
+00000001400832A8 add     rax, rcx
+00000001400832AB lea     rcx, [rsp+578h+var_368]
+00000001400832B3 mov     [rsp+578h+var_4F8], rcx
+00000001400832BB call    rax			; Junk call -> sub_14001A390		; mov     rax, rcx
+00000001400832BD mov     rcx, [rax]
+00000001400832C0 mov     rax, cs:off_1400C54B0
+00000001400832C7 mov     rdx, 0D9D0F3FF352CAEFFh
+00000001400832D1 add     rax, rdx
+00000001400832D4 call    rax			; Junk call -> 0x00000001400121A0		; mov     rax, rcx
+00000001400832D6 mov     rcx, [rax]
+00000001400832D9 mov     rax, cs:off_1400C03A0
+00000001400832E0 mov     rdx, 0EB30CBC22EF80ED3h
+00000001400832EA add     rax, rdx
+00000001400832ED call    rax			; Junk call -> 0x000000014001F170		; mov     rax, rcx
+00000001400832EF mov     rcx, [rax]
+00000001400832F2 mov     rax, cs:off_1400BB408
+00000001400832F9 mov     rdx, 75B7C71660BFEC8Fh
+0000000140083303 add     rax, rdx
+0000000140083306 call    rax			; Junk call -> 0x000000014001CE20		; mov     rax, rcx
+0000000140083308 mov     ecx, [rsp+578h+var_508]
+000000014008330C mov     rax, [rax]
+000000014008330F mov     [rax+10h], ecx
+0000000140083312 mov     rax, cs:off_1400B0E68
+0000000140083319 mov     rcx, 978CA8FD3D78D292h
+0000000140083323 add     rax, rcx
+0000000140083326 lea     rcx, [rsp+578h+var_1E8]
+000000014008332E mov     [rsp+578h+var_4E8], rcx
+0000000140083336 call    rax			; Junk call -> sub_1400370B0		; mov     rax, rcx
+0000000140083338 mov     rcx, [rax]
+000000014008333B mov     rax, cs:off_1400B8310
+0000000140083342 mov     rdx, 0F3A83B64ADE8A500h
+000000014008334C add     rax, rdx
+000000014008334F call    rax			; Junk call -> 0x0000000140077970		; mov     rax, rcx
+0000000140083351 mov     rcx, [rsp+578h+var_4F8]
+0000000140083359 mov     rax, [rax]
+000000014008335C mov     eax, [rax+10h]
+000000014008335F mov     [rsp+578h+var_4EC], eax
+0000000140083366 mov     eax, dword ptr [rsp+578h+var_48]
+000000014008336D mov     [rsp+578h+var_504], eax
+0000000140083371 mov     rax, cs:off_1400C4170
+0000000140083378 mov     rdx, 0B2A535E356B5C1E9h
+0000000140083382 add     rax, rdx
+0000000140083385 call    rax			; Junk call -> 0x0000000140077800		; mov     rax, rcx
+0000000140083387 mov     rcx, [rax]
+000000014008338A mov     rax, cs:off_1400C5F98
+0000000140083391 mov     rdx, 61AEE043FE7F163Ch
+000000014008339B add     rax, rdx
+000000014008339E call    rax			; Junk call -> 0x000000014001A7C0		; mov     rax, rcx
+00000001400833A0 mov     r10d, [rsp+578h+var_504]
+00000001400833A5 mov     rcx, [rsp+578h+var_4E8]
+00000001400833AD mov     rax, [rax]
+00000001400833B0 mov     r8d, [rax+10h]
+00000001400833B4 mov     edx, r10d
+00000001400833B7 or      edx, r8d
+00000001400833BA mov     eax, r10d
+00000001400833BD add     eax, r8d
+00000001400833C0 not     r8d
+00000001400833C3 not     r10d
+00000001400833C6 or      r10d, r8d
+00000001400833C9 mov     r9d, eax
+00000001400833CC mov     r8d, r10d
+00000001400833CF lea     r8d, [r8+r9+1]
+00000001400833D4 sub     edx, eax
+00000001400833D6 mov     eax, r8d
+00000001400833D9 and     eax, edx
+00000001400833DB xor     r8d, edx
+00000001400833DE mov     edx, eax
+00000001400833E0 mov     eax, r8d
+00000001400833E3 lea     eax, [rax+rdx*2]
+00000001400833E6 mov     r8d, eax
+00000001400833E9 neg     r8d
+00000001400833EC mov     r9d, eax
+00000001400833EF or      r9d, r8d
+00000001400833F2 mov     edx, r9d
+00000001400833F5 neg     edx
+00000001400833F7 and     eax, r8d
+00000001400833FA add     edx, edx
+00000001400833FC sub     r9d, eax
+00000001400833FF mov     eax, r9d
+0000000140083402 or      eax, edx
+0000000140083404 and     r9d, edx
+0000000140083407 mov     edx, r9d
+000000014008340A add     edx, eax
+000000014008340C mov     r10d, edx
+000000014008340F not     r10d
+0000000140083412 mov     edi, r10d
+0000000140083415 or      edi, 0EF7B9F3Fh
+000000014008341B mov     r8d, eax
+000000014008341E mov     eax, r9d
+0000000140083421 lea     r11d, [rax+r8+108460C0h]
+0000000140083429 mov     r9d, edx
+000000014008342C mov     esi, edi
+000000014008342E lea     edi, [rsi+r9+108460C1h]
+0000000140083436 mov     esi, edx
+0000000140083438 or      esi, 108460C0h
+000000014008343E sub     r11d, esi
+0000000140083441 mov     esi, r11d
+0000000140083444 or      esi, edi
+0000000140083446 and     r11d, edi
+0000000140083449 add     r11d, esi
+000000014008344C mov     [rsp+578h+var_500], r11d
+0000000140083451 or      r10d, 0E8AF7546h
+0000000140083458 lea     eax, [rax+r8+17508AB9h]
+0000000140083460 mov     r8d, r10d
+0000000140083463 lea     r8d, [r8+r9+17508ABAh]
+000000014008346B or      edx, 17508AB9h
+0000000140083471 sub     eax, edx
+0000000140083473 mov     edx, eax
+0000000140083475 or      edx, r8d
+0000000140083478 and     eax, r8d
+000000014008347B add     eax, edx
+000000014008347D mov     [rsp+578h+var_4FC], eax
+0000000140083481 mov     rax, cs:off_1400C0148
+0000000140083488 mov     rdx, 7358024A9CAB10C7h
+0000000140083492 add     rax, rdx
+0000000140083495 call    rax			; Junk call -> 0x0000000140078260		; mov     rax, rcx
+0000000140083497 mov     r9d, [rsp+578h+var_500]
+000000014008349C mov     edx, [rsp+578h+var_4FC]
+00000001400834A0 mov     rcx, [rsp+578h+var_4F8]
+00000001400834A8 mov     r8, rax
+00000001400834AB mov     eax, [rsp+578h+var_4EC]
+00000001400834B2 mov     r8, [r8]
+00000001400834B5 mov     [r8+10h], r9d
+00000001400834B9 mov     dword ptr [rsp+578h+var_48], edx
+00000001400834C0 mov     r10d, dword ptr [rsp+578h+var_48]
+00000001400834C8 mov     r8d, [rsp+578h+var_30]
+00000001400834D0 mov     edx, r10d
+00000001400834D3 not     edx
+00000001400834D5 mov     esi, r8d
+00000001400834D8 not     esi
+00000001400834DA or      esi, edx
+00000001400834DC mov     edx, r8d
+00000001400834DF add     edx, r10d
+00000001400834E2 mov     r11d, edx
+00000001400834E5 mov     r9d, esi
+00000001400834E8 lea     r9d, [r9+r11+1]
+00000001400834ED or      r8d, r10d
+00000001400834F0 sub     edx, r8d
+00000001400834F3 mov     r8d, edx
+00000001400834F6 or      r8d, r9d
+00000001400834F9 and     edx, r9d
+00000001400834FC add     edx, r8d
+00000001400834FF imul    eax, edx
+0000000140083502 mov     [rsp+578h+var_18], eax
+0000000140083509 mov     eax, dword ptr [rsp+578h+var_48]
+0000000140083510 mov     rax, cs:off_1400B6798
+0000000140083517 mov     rdx, 8AEA45745AFAC3F0h
+0000000140083521 add     rax, rdx
+0000000140083524 call    rax			; Junk call -> sub_140086640		; mov     rax, rcx
+0000000140083526 mov     rcx, [rax]
+0000000140083529 mov     rax, cs:off_1400BB6B8
+0000000140083530 mov     rdx, 0CF3AB9C102B54425h
+000000014008353A add     rax, rdx
+000000014008353D call    rax			; Junk call -> 0x000000014002DFA0		; mov     rax, rcx
+000000014008353F mov     rcx, [rax]
+0000000140083542 mov     rax, cs:off_1400BF228
+0000000140083549 mov     rdx, 0A3505C5AC182FEA7h
+0000000140083553 add     rax, rdx
+0000000140083556 call    rax			; Junk call -> 0x0000000140081550		; mov     rax, rcx
+0000000140083558 mov     rcx, [rsp+578h+var_4E8]
+0000000140083560 mov     rax, [rax]
+0000000140083563 mov     eax, [rax+10h]
+0000000140083566 mov     rax, cs:off_1400BC4B0
+000000014008356D mov     rdx, 59A4474B2F66E1AFh
+0000000140083577 add     rax, rdx
+000000014008357A call    rax			; Junk call -> 0x00000001400128E0		; mov     rax, rcx
+000000014008357C mov     rcx, [rax]
+000000014008357F mov     rax, cs:off_1400BD280
+0000000140083586 mov     rdx, 444421E9785329CFh
+0000000140083590 add     rax, rdx
+0000000140083593 call    rax			; Junk call -> 0x0000000140079920		; mov     rax, rcx
+0000000140083595 mov     rcx, [rsp+578h+var_4E8]
+000000014008359D mov     rax, [rax]
+00000001400835A0 mov     rax, [rax+20h]
+00000001400835A4 imul    r8, rax, 329E550Ch
+00000001400835AB mov     rax, r8
+00000001400835AE shr     rax, 2
+00000001400835B2 mov     rdx, 114CEF8539690B99h
+00000001400835BC mov     [rsp+578h+var_4E0], rdx
+00000001400835C4 mul     rdx
+00000001400835C7 mov     rax, rdx
+00000001400835CA mov     rdx, [rsp+578h+var_4E0]
+00000001400835D2 shr     rax, 18h
+00000001400835D6 imul    rax, 3B305E4Ch
+00000001400835DD sub     r8, rax
+00000001400835E0 mov     rax, r8
+00000001400835E3 or      rax, 0FFFFFFFFC992D3D5h
+00000001400835E9 mov     r10d, eax
+00000001400835EC mov     r9d, r8d
+00000001400835EF sub     r9d, r10d
+00000001400835F2 add     r9d, r9d
+00000001400835F5 and     r8d, 992D3D4h
+00000001400835FC add     r9, 0FFFFFFFF9325A7AAh
+0000000140083603 sub     rax, r8
+0000000140083606 mov     r8, rax
+0000000140083609 or      r8, r9
+000000014008360C and     rax, r9
+000000014008360F add     rax, r8
+0000000140083612 mov     [rsp+578h+var_4D8], rax
+000000014008361A shr     rax, 2
+000000014008361E mul     rdx
+0000000140083621 mov     rax, [rsp+578h+var_4D8]
+0000000140083629 shr     rdx, 18h
+000000014008362D imul    rdx, 3B305E4Ch
+0000000140083634 sub     rax, rdx
+0000000140083637 mov     [rsp+578h+var_4D0], rax
+000000014008363F mov     rax, cs:off_1400AD298
+0000000140083646 mov     rdx, 64E667CE8B0A818Dh
+0000000140083650 add     rax, rdx
+0000000140083653 call    rax			; Junk call -> 0x0000000140079E00		; mov     rax, rcx
+0000000140083655 mov     rcx, [rax]
+0000000140083658 mov     rax, cs:off_1400B7718
+000000014008365F mov     rdx, 1572F25FA6327F6Eh
+0000000140083669 add     rax, rdx
+000000014008366C call    rax			; Junk call -> 0x0000000140077B60		; mov     rax, rcx
+000000014008366E mov     rcx, [rsp+578h+var_4D0]
+0000000140083676 mov     rax, [rax]
+0000000140083679 mov     [rax+20h], rcx
+000000014008367D mov     rcx, cs:off_14009D630
+0000000140083684 mov     rdx, 5E9585F868D25186h
+000000014008368E mov     rax, rcx
+0000000140083691 or      rax, rdx
+0000000140083694 mov     r8, rcx
+0000000140083697 sub     r8, rax
+000000014008369A and     rcx, rdx
+000000014008369D mov     rdx, 0BD2B0BF0D1A4A30Ch
+00000001400836A7 lea     rdx, [rdx+r8*2]
+00000001400836AB sub     rax, rcx
+00000001400836AE mov     rcx, rax
+00000001400836B1 or      rcx, rdx
+00000001400836B4 and     rax, rdx
+00000001400836B7 add     rax, rcx
+00000001400836BA jmp     rax
+00000001400836BC
+00000001400836BC loc_1400836BC:
+00000001400836BC mov     r9d, [rsp+578h+var_E4]
+00000001400836C4 mov     eax, [rsp+578h+var_E8]
+00000001400836CB mov     edx, r9d
+00000001400836CE neg     edx
+00000001400836D0 mov     r8d, eax
+00000001400836D3 or      r8d, edx
+00000001400836D6 mov     ecx, eax
+00000001400836D8 sub     ecx, r9d
+00000001400836DB sub     ecx, r8d
+00000001400836DE and     eax, edx
+00000001400836E0 add     ecx, ecx
+00000001400836E2 sub     r8d, eax
+00000001400836E5 mov     eax, r8d
+00000001400836E8 or      eax, ecx
+00000001400836EA and     r8d, ecx
+00000001400836ED mov     ecx, r8d
+00000001400836F0 add     ecx, eax
+00000001400836F2 mov     r9d, ecx
+00000001400836F5 not     r9d
+00000001400836F8 mov     esi, r9d
+00000001400836FB or      esi, 0FFFFFFFDh
+00000001400836FE mov     edx, eax
+0000000140083700 mov     eax, r8d
+0000000140083703 lea     r10d, [rax+rdx+2]
+0000000140083708 mov     r8d, ecx
+000000014008370B mov     r11d, esi
+000000014008370E lea     esi, [r11+r8+3]
+0000000140083713 mov     r11d, ecx
+0000000140083716 or      r11d, 2
+000000014008371A sub     r10d, r11d
+000000014008371D mov     r11d, r10d
+0000000140083720 or      r11d, esi
+0000000140083723 and     r10d, esi
+0000000140083726 add     r10d, r11d
+0000000140083729 mov     [rsp+578h+var_550], r10d
+000000014008372E or      r9d, 0FFFFFFF2h
+0000000140083732 lea     eax, [rax+rdx+0Dh]
+0000000140083736 mov     edx, r9d
+0000000140083739 lea     edx, [rdx+r8+0Eh]
+000000014008373E or      ecx, 0Dh
+0000000140083741 sub     eax, ecx
+0000000140083743 mov     ecx, eax
+0000000140083745 or      ecx, edx
+0000000140083747 and     eax, edx
+0000000140083749 add     eax, ecx
+000000014008374B mov     [rsp+578h+var_54C], eax
+000000014008374F mov     rax, cs:off_1400A58C8
+0000000140083756 mov     rcx, 1303D45A84F397C0h
+0000000140083760 add     rax, rcx
+0000000140083763 lea     rcx, [rsp+578h+var_368]
+000000014008376B mov     [rsp+578h+var_520], rcx
+0000000140083770 call    rax			; Junk call -> 0x0000000140077300		; mov     rax, rcx
+0000000140083772 mov     rcx, [rax]
+0000000140083775 mov     rax, cs:off_1400A0890
+000000014008377C mov     rdx, 0EA03FD39576E53h
+0000000140083786 add     rax, rdx
+0000000140083789 call    rax			; Junk call -> 0x000000014007C220		; mov     rax, rcx
+000000014008378B mov     r8d, [rsp+578h+var_550]
+0000000140083790 mov     rcx, [rsp+578h+var_520]
+0000000140083795 mov     rdx, rax
+0000000140083798 mov     eax, [rsp+578h+var_54C]
+000000014008379C mov     rdx, [rdx]
+000000014008379F mov     [rdx+10h], r8d
+00000001400837A3 mov     dword ptr [rsp+578h+var_48], eax
+00000001400837AA mov     eax, dword ptr [rsp+578h+var_48]
+00000001400837B1 mov     [rsp+578h+var_548], eax
+00000001400837B5 mov     rax, cs:off_1400BADB0
+00000001400837BC mov     rdx, 7DD86EB84CB9A9ACh
+00000001400837C6 add     rax, rdx
+00000001400837C9 call    rax			; Junk call -> sub_14007FD50		; mov     rax, rcx
+00000001400837CB mov     rcx, [rax]
+00000001400837CE mov     rax, cs:off_1400A1770
+00000001400837D5 mov     rdx, 0B7AC799F3EE7F09h
+00000001400837DF add     rax, rdx
+00000001400837E2 call    rax			; Junk call -> sub_14007A270		; mov     rax, rcx
+00000001400837E4 mov     rcx, [rax]
+00000001400837E7 mov     rax, cs:off_1400A2C70
+00000001400837EE mov     rdx, 0B9E8C4EDCC5691A8h
+00000001400837F8 add     rax, rdx
+00000001400837FB call    rax			; Junk call -> 0x0000000140087AF0		; mov     rax, rcx
+00000001400837FD mov     r8d, [rsp+578h+var_548]
+0000000140083802 mov     rax, [rax]
+0000000140083805 mov     ecx, [rax+10h]
+0000000140083808 mov     eax, r8d
+000000014008380B not     eax
+000000014008380D mov     r10d, ecx
+0000000140083810 not     r10d
+0000000140083813 or      r10d, eax
+0000000140083816 mov     eax, ecx
+0000000140083818 add     eax, r8d
+000000014008381B mov     r9d, eax
+000000014008381E mov     edx, r10d
+0000000140083821 lea     edx, [rdx+r9+1]
+0000000140083826 or      ecx, r8d
+0000000140083829 sub     eax, ecx
+000000014008382B mov     ecx, eax
+000000014008382D or      ecx, edx
+000000014008382F and     eax, edx
+0000000140083831 add     eax, ecx
+0000000140083833 mov     edx, [rsp+578h+var_EC]
+000000014008383A mov     cl, al
+000000014008383C shr     edx, cl
+000000014008383E mov     r9d, [rsp+578h+var_F0]
+0000000140083846 mov     ecx, r9d
+0000000140083849 or      ecx, edx
+000000014008384B mov     eax, r9d
+000000014008384E add     eax, edx
+0000000140083850 not     edx
+0000000140083852 not     r9d
+0000000140083855 or      r9d, edx
+0000000140083858 mov     r8d, eax
+000000014008385B mov     edx, r9d
+000000014008385E lea     edx, [rdx+r8+1]
+0000000140083863 sub     ecx, eax
+0000000140083865 mov     eax, edx
+0000000140083867 and     eax, ecx
+0000000140083869 xor     edx, ecx
+000000014008386B mov     ecx, eax
+000000014008386D mov     eax, edx
+000000014008386F lea     eax, [rax+rcx*2]
+0000000140083872 mov     [rsp+578h+var_544], eax
+0000000140083876 mov     rax, cs:off_1400A1630
+000000014008387D mov     rcx, 47C9FDFC0018798Eh
+0000000140083887 add     rax, rcx
+000000014008388A lea     rcx, [rsp+578h+var_1E8]
+0000000140083892 mov     [rsp+578h+var_540], rcx
+0000000140083897 call    rax			; Junk call -> 0x0000000140080F30		; mov     rax, rcx
+0000000140083899 mov     rcx, [rax]
+000000014008389C mov     rax, cs:off_1400A3E30
+00000001400838A3 mov     rdx, 0D32E3000BD1C918Ch
+00000001400838AD add     rax, rdx
+00000001400838B0 call    rax			; Junk call -> 0x000000014001C140		; mov     rax, rcx
+00000001400838B2 mov     edx, [rsp+578h+var_544]
+00000001400838B6 mov     rcx, [rsp+578h+var_540]
+00000001400838BB mov     rax, [rax]
+00000001400838BE mov     [rax+10h], edx
+00000001400838C1 mov     eax, [rsp+578h+var_18]
+00000001400838C8 mov     [rsp+578h+var_530], eax
+00000001400838CC mov     r10d, dword ptr [rsp+578h+var_48]
+00000001400838D4 mov     r8d, [rsp+578h+var_30]
+00000001400838DC mov     edx, r10d
+00000001400838DF or      edx, r8d
+00000001400838E2 mov     eax, r10d
+00000001400838E5 add     eax, r8d
+00000001400838E8 not     r8d
+00000001400838EB not     r10d
+00000001400838EE or      r10d, r8d
+00000001400838F1 mov     r9d, eax
+00000001400838F4 mov     r8d, r10d
+00000001400838F7 lea     r8d, [r8+r9+1]
+00000001400838FC sub     edx, eax
+00000001400838FE mov     eax, r8d
+0000000140083901 and     eax, edx
+0000000140083903 xor     r8d, edx
+0000000140083906 mov     edx, eax
+0000000140083908 mov     eax, r8d
+000000014008390B lea     eax, [rax+rdx*2]
+000000014008390E mov     r8d, eax
+0000000140083911 neg     r8d
+0000000140083914 mov     r9d, eax
+0000000140083917 or      r9d, r8d
+000000014008391A mov     edx, r9d
+000000014008391D neg     edx
+000000014008391F and     eax, r8d
+0000000140083922 add     edx, edx
+0000000140083924 sub     r9d, eax
+0000000140083927 mov     eax, r9d
+000000014008392A or      eax, edx
+000000014008392C and     r9d, edx
+000000014008392F mov     edx, r9d
+0000000140083932 add     edx, eax
+0000000140083934 mov     r10d, edx
+0000000140083937 not     r10d
+000000014008393A or      r10d, 0FFFFFFFDh
+000000014008393E mov     r8d, eax
+0000000140083941 mov     eax, r9d
+0000000140083944 lea     eax, [rax+r8+2]
+0000000140083949 mov     r9d, edx
+000000014008394C mov     r8d, r10d
+000000014008394F lea     r8d, [r8+r9+3]
+0000000140083954 or      edx, 2
+0000000140083957 sub     eax, edx
+0000000140083959 mov     edx, eax
+000000014008395B or      edx, r8d
+000000014008395E and     eax, r8d
+0000000140083961 add     eax, edx
+0000000140083963 mov     [rsp+578h+var_30], eax
+000000014008396A mov     dword ptr [rsp+578h+var_48], eax
+0000000140083971 mov     eax, dword ptr [rsp+578h+var_48]
+0000000140083978 mov     [rsp+578h+var_534], eax
+000000014008397C mov     rax, cs:off_1400B05E8
+0000000140083983 mov     rdx, 5C3A53EE1E94F19Dh
+000000014008398D add     rax, rdx
+0000000140083990 call    rax			; Junk call -> 0x0000000140086030		; mov     rax, rcx
+0000000140083992 mov     r9d, [rsp+578h+var_534]
+0000000140083997 mov     rcx, rax
+000000014008399A mov     eax, [rsp+578h+var_530]
+000000014008399E mov     rcx, [rcx]
+00000001400839A1 mov     edx, [rcx+10h]
+00000001400839A4 mov     ecx, r9d
+00000001400839A7 not     ecx
+00000001400839A9 mov     r11d, edx
+00000001400839AC not     r11d
+00000001400839AF or      r11d, ecx
+00000001400839B2 mov     ecx, edx
+00000001400839B4 add     ecx, r9d
+00000001400839B7 mov     r10d, ecx
+00000001400839BA mov     r8d, r11d
+00000001400839BD lea     r8d, [r8+r10+1]
+00000001400839C2 or      edx, r9d
+00000001400839C5 sub     ecx, edx
+00000001400839C7 mov     edx, ecx
+00000001400839C9 or      edx, r8d
+00000001400839CC and     ecx, r8d
+00000001400839CF add     ecx, edx
+00000001400839D1 shr     eax, cl
+00000001400839D3 mov     [rsp+578h+var_52C], eax
+00000001400839D7 mov     rax, cs:off_1400ABCC8
+00000001400839DE mov     rcx, 2E1F87D0EE96F480h
+00000001400839E8 add     rax, rcx
+00000001400839EB lea     rcx, [rsp+578h+var_D8]
+00000001400839F3 mov     [rsp+578h+var_528], rcx
+00000001400839F8 call    rax			; Junk call -> 0x00000001400120E0		; mov     rax, rcx
+00000001400839FA mov     edx, [rsp+578h+var_52C]
+00000001400839FE mov     rcx, [rsp+578h+var_528]
+0000000140083A03 mov     rax, [rax]
+0000000140083A06 mov     [rax+10h], edx
+0000000140083A09 mov     rax, cs:off_1400B32E8
+0000000140083A10 mov     rdx, 289396525E69BBD9h
+0000000140083A1A add     rax, rdx
+0000000140083A1D call    rax			; Junk call -> sub_140012180		; mov     rax, rcx
+0000000140083A1F mov     rcx, [rsp+578h+var_520]
+0000000140083A24 mov     rax, cs:off_1400BE398
+0000000140083A2B mov     rdx, 0DF5DF46FEBD0A069h
+0000000140083A35 add     rax, rdx
+0000000140083A38 call    rax			; Junk call -> 0x0000000140086DA0		; mov     rax, rcx
+0000000140083A3A mov     rax, [rax]
+0000000140083A3D mov     rax, [rax+20h]
+0000000140083A41 imul    rax, 0BEEF398h
+0000000140083A48 mov     [rsp+578h+var_518], rax
+0000000140083A4D shr     rax, 2
+0000000140083A51 mov     rcx, 114CEF8539690B99h
+0000000140083A5B mul     rcx
+0000000140083A5E mov     rax, rdx
+0000000140083A61 mov     rdx, [rsp+578h+var_518]
+0000000140083A66 shr     rax, 18h
+0000000140083A6A imul    rax, 3B305E4Ch
+0000000140083A71 sub     rdx, rax
+0000000140083A74 mov     rax, rdx
+0000000140083A77 or      rax, 0FFFFFFFFF8673555h
+0000000140083A7D mov     r9d, eax
+0000000140083A80 mov     r8d, edx
+0000000140083A83 sub     r8d, r9d
+0000000140083A86 add     r8d, r8d
+0000000140083A89 and     edx, 38673554h
+0000000140083A8F add     r8, 0FFFFFFFFF0CE6AAAh
+0000000140083A96 sub     rax, rdx
+0000000140083A99 mov     rdx, rax
+0000000140083A9C or      rdx, r8
+0000000140083A9F and     rax, r8
+0000000140083AA2 add     rax, rdx
+0000000140083AA5 mov     [rsp+578h+var_510], rax
+0000000140083AAA shr     rax, 2
+0000000140083AAE mul     rcx
+0000000140083AB1 mov     rax, [rsp+578h+var_510]
+0000000140083AB6 shr     rdx, 18h
+0000000140083ABA imul    rcx, rdx, 3B305E4Ch
+0000000140083AC1 sub     rax, rcx
+0000000140083AC4 mov     [rsp+578h+var_70], rax
+0000000140083ACC mov     rcx, cs:off_14009D648
+0000000140083AD3 mov     rdx, 92F5DD964E4E044Dh
+0000000140083ADD mov     rax, rcx
+0000000140083AE0 or      rax, rdx
+0000000140083AE3 mov     r8, rcx
+0000000140083AE6 sub     r8, rax
+0000000140083AE9 and     rcx, rdx
+0000000140083AEC mov     rdx, 25EBBB2C9C9C089Ah
+0000000140083AF6 lea     rdx, [rdx+r8*2]
+0000000140083AFA sub     rax, rcx
+0000000140083AFD mov     rcx, rax
+0000000140083B00 or      rcx, rdx
+0000000140083B03 and     rax, rdx
+0000000140083B06 add     rax, rcx
+0000000140083B09 jmp     rax
+0000000140083B0B
+0000000140083B0B loc_140083B0B:
+0000000140083B0B jmp     loc_14008259E
+0000000140083B0B sub_140081760 endp ; sp-analysis failed

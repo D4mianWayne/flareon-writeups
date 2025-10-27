@@ -1,0 +1,128 @@
+.text:00007FF7130015A5	call    __alloca_probe
+.text:00007FF713007967	call    _time64
+.text:00007FF71300E1B9	call    _gmtime64_s
+.text:00007FF7130115D7	call    sub_7FF713053850
+.text:00007FF7130115DF	call    sub_7FF713219E30
+.text:00007FF7130115FC	call    cs:strftime
+.text:00007FF713014815	call    sub_7FF71324F1B0
+.text:00007FF713018031	call    sub_7FF712FB7060
+.text:00007FF71301B8C8	call    sub_7FF7133AF520
+.text:00007FF71301EC44	call    __except_get_jumpbuf_sp
+.text:00007FF713022174	call    sub_7FF712F84080
+.text:00007FF713022181	call    sub_7FF713234AF0
+.text:00007FF713022199	call    sub_7FF713234A90
+.text:00007FF7130254A0	call    sub_7FF712F81F60
+.text:00007FF7130254B8	call    sub_7FF712FD8A00
+.text:00007FF713028C73	call    sub_7FF712F84080
+.text:00007FF713028C94	call    sub_7FF7130538C0
+.text:00007FF713028C9C	call    sub_7FF713217F70
+.text:00007FF713028CAC	call    sub_7FF71324F1B0
+.text:00007FF713028CF5	call    sub_7FF713053930
+.text:00007FF713028CFD	call    sub_7FF7132160B0
+.text:00007FF713028D0D	call    sub_7FF71324F1B0
+.text:00007FF713028D52	call    sub_7FF7133B1970
+.text:00007FF713028D74	call    sub_7FF713053A20
+.text:00007FF713028D7C	call    sub_7FF7132141F0
+.text:00007FF713028D8C	call    sub_7FF71324F1B0
+.text:00007FF713028DD5	call    sub_7FF712F81F60
+.text:00007FF713028DED	call    sub_7FF712FDE990
+.text:00007FF713028E12	call    sub_7FF713053A90
+.text:00007FF713028E1A	call    sub_7FF713212330
+.text:00007FF713028E2A	call    sub_7FF71324F1B0
+.text:00007FF713028E5F	call    sub_7FF7133AF5F0
+.text:00007FF713028EA4	call    sub_7FF7133B1970
+.text:00007FF713028ECB	call    unknown_libname_29; Microsoft VisualC v14 64bit runtime
+.text:00007FF713028EF5	call    sub_7FF71324E7B0
+.text:00007FF713028F15	call    ??_M@YAXPEAX_K1P6AX0@Z@Z; `eh vector destructor iterator'(void *,unsigned __int64,unsigned __int64,void (*)(void *))
+.text:00007FF713028F23	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713028F31	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713028F3F	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713028F4D	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713028F5B	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713028F69	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71302C1CB	call    sub_7FF712F84080
+.text:00007FF71302C1E0	call    sub_7FF712FB6CB0
+.text:00007FF71302C205	call    sub_7FF712FB6CE0
+.text:00007FF71302C229	call    sub_7FF712F8D5D0
+.text:00007FF71302C23E	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71302F453	call    sub_7FF712F84080
+.text:00007FF71302F486	call    sub_7FF713233BE0
+.text:00007FF71302F4AB	call    sub_7FF713053B00
+.text:00007FF71302F4C0	call    sub_7FF713210470
+.text:00007FF71302F4DD	call    sub_7FF71324F1B0
+.text:00007FF71302F527	call    sub_7FF712F8D790
+.text:00007FF71302F53C	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71302F54A	call    ?_HasCapturedContext@_ContextCallback@details@Concurrency@@QEBA_NXZ; Concurrency::details::_ContextCallback::_HasCapturedContext(void)
+.text:00007FF71302F56E	call    sub_7FF712F81F60
+.text:00007FF713032B94	call    sub_7FF713233BE0
+.text:00007FF713032BB9	call    sub_7FF712F81F60
+.text:00007FF713032BEF	call    sub_7FF7133B19D0
+.text:00007FF713032C18	call    sub_7FF713053B60
+.text:00007FF713032C2D	call    sub_7FF71320E5B0
+.text:00007FF713032C4A	call    sub_7FF71324F1B0
+.text:00007FF713032C77	call    sub_7FF713233ED0
+.text:00007FF713032C9A	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF7130360CF	call    sub_7FF712F84080
+.text:00007FF713036100	call    sub_7FF713053BC0
+.text:00007FF713036115	call    sub_7FF71320C6F0
+.text:00007FF713036132	call    sub_7FF71324F1B0
+.text:00007FF71303614F	call    sub_7FF713234000
+.text:00007FF71303616C	call    sub_7FF7133B1B20
+.text:00007FF713036189	call    sub_7FF712FE6A60
+.text:00007FF71303619E	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71303952A	call    sub_7FF712FE6BA0
+.text:00007FF71303CE9E	call    sub_7FF713233BE0
+.text:00007FF71303CECB	call    sub_7FF7133B19D0
+.text:00007FF71303CEF4	call    sub_7FF713053C20
+.text:00007FF71303CF09	call    sub_7FF71320A830
+.text:00007FF71303CF26	call    sub_7FF71324F1B0
+.text:00007FF71303CF53	call    sub_7FF713233ED0
+.text:00007FF71303CF76	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF7130403CA	call    sub_7FF713053C80
+.text:00007FF7130403DF	call    sub_7FF713208970
+.text:00007FF7130403FC	call    sub_7FF71324F1B0
+.text:00007FF713040419	call    sub_7FF713234000
+.text:00007FF713040436	call    sub_7FF7133B1B20
+.text:00007FF713043847	call    sub_7FF713053CE0
+.text:00007FF71304385C	call    sub_7FF713206AB0
+.text:00007FF713043879	call    sub_7FF71324F1B0
+.text:00007FF713043890	call    sub_7FF71324EE40
+.text:00007FF7130438A3	call    sub_7FF71324EC30
+.text:00007FF7130438B8	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713046CE4	call    sub_7FF71324EBD0
+.text:00007FF713046D11	call    sub_7FF712FB2650
+.text:00007FF713046D1F	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713049F99	call    sub_7FF71324EBD0
+.text:00007FF713049FC6	call    sub_7FF712FB49D0
+.text:00007FF713049FD4	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D182	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D190	call    sub_7FF7130AC680
+.text:00007FF71304D19E	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D1AC	call    sub_7FF713234A30
+.text:00007FF71304D1BA	call    sub_7FF7130AC680
+.text:00007FF71304D1C8	call    sub_7FF712F87B70
+.text:00007FF71304D1D6	call    sub_7FF712F8D630
+.text:00007FF71304D1E4	call    sub_7FF712F81E30
+.text:00007FF71304D1F2	call    sub_7FF713234A30
+.text:00007FF71304D200	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D20E	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D21C	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D236	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D244	call    sub_7FF7130AC680
+.text:00007FF71304D252	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71304D260	call    sub_7FF713234A30
+.text:00007FF71304D26E	call    sub_7FF7130AC680
+.text:00007FF713050590	call    sub_7FF713053DA0
+.text:00007FF7130505A5	call    sub_7FF713202D30
+.text:00007FF7130505C2	call    sub_7FF71324F1B0
+.text:00007FF7130505E7	call    sub_7FF712F81F70
+.text:00007FF713050602	call    sub_7FF712FD0E60
+.text:00007FF713050610	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71305061E	call    sub_7FF712F87B70
+.text:00007FF71305062C	call    sub_7FF712F8D630
+.text:00007FF7130537DC	call    sub_7FF712F81E30
+.text:00007FF7130537EA	call    sub_7FF713234A30
+.text:00007FF7130537F8	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713053806	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF713053814	call    ?dtor$2@?0??global@locale@std@@SA?AV12@AEBV12@@Z@4HA_0; int `std::locale::global(locale::global const &)'::`1'::dtor$2
+.text:00007FF71305382C	call    __security_check_cookie
